@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://dv1r3qybxrmhh"]
+
+[ext_resource type="Script" uid="uid://dnjk2ss4nd552" path="res://UI/main_interface.gd" id="1_51hqq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_yrl57"]
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_jmpn7"]
+font_size = 30
+
+[node name="MainInterface" type="Control" unique_id=1175301398]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_51hqq")
+
+[node name="DayLabel" type="Label" parent="." unique_id=2039451250]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 185.0
+offset_bottom = 83.0
+text = "DAY 0"
+label_settings = SubResource("LabelSettings_a6wwx")
+
+[node name="ToRevolutionLabel" type="Label" parent="." unique_id=1517534400]
+layout_mode = 0
+offset_left = 580.0
+offset_right = 1294.0
+offset_bottom = 55.0
+text = "DAYS TO REVOLUTION: X"
+label_settings = SubResource("LabelSettings_yrl57")
+horizontal_alignment = 1
+
+[node name="FoodLabel" type="Label" parent="." unique_id=1102535232]
+layout_mode = 0
+offset_left = 379.0
+offset_right = 497.0
+offset_bottom = 42.0
+text = "FOOD: 0"
+label_settings = SubResource("LabelSettings_jmpn7")
+
+[node name="GoldLabel" type="Label" parent="." unique_id=880146691]
+layout_mode = 0
+offset_left = 1345.0
+offset_right = 1463.0
+offset_bottom = 42.0
+text = "GOLD: 0"
+label_settings = SubResource("LabelSettings_jmpn7")
+
+[node name="MenuButton" type="Button" parent="." unique_id=583758082]
+layout_mode = 0
+offset_left = 1672.0
+offset_right = 1893.0
+offset_bottom = 80.0
+text = "MENU"
+
+[node name="CommonFervor" type="Label" parent="." unique_id=91270367]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 747.0
+offset_right = 117.0
+offset_bottom = 796.0
+text = "COMMONER
+OPINION"
+
+[node name="NobleFervor" type="Label" parent="." unique_id=2136776712]
+layout_mode = 0
+offset_left = 1804.0
+offset_top = 736.0
+offset_right = 1901.0
+offset_bottom = 785.0
+text = "NOBLE
+OPINION"
+horizontal_alignment = 2
+
+[node name="CommonFervorBar" type="ProgressBar" parent="." unique_id=1444342403]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 820.0
+offset_right = 95.0
+offset_bottom = 1071.0
+value = 100.0
+fill_mode = 2
+
+[node name="NobleFervorBar" type="ProgressBar" parent="." unique_id=1815256241]
+layout_mode = 0
+offset_left = 1823.0
+offset_top = 820.0
+offset_right = 1876.0
+offset_bottom = 1071.0
+value = 100.0
+fill_mode = 2

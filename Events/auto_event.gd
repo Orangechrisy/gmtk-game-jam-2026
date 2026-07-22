@@ -1,28 +1,24 @@
 extends Resource
-class_name MapEvent
-# Class for events which appear on the map - player can select and pick an option
+class_name AutoEvent
+# Class for events which fire between days automatically - player has no agency
 
 # Variables
 @export var event_name: StringName = ""
-@export var portrait: Texture2D
-@export var dialogue: Array[String] # TODO: Replace with something
+@export var portrait: Texture2D # TODO: Unnecessary?
+@export var event_desc: String = ""
 @export var one_time: bool = false
 var has_happened: bool = false
 
 @export var conditions: Array[EventCondition]
-@export var options: Array[EventOption]
+@export var effects: Array[EventEffect]
 
 # Helpers
 func get_event_name() -> StringName:
 	return event_name
 
-func get_event_dialogue() -> Array[String]:
-	return dialogue
-
-func get_options() -> Array[EventOption]:
-	return options
-
-# Functionality
+func get_event_desc() -> String:
+	return event_desc
+	
 
 # can_appear: Checks whether event is able to appear
 func can_appear() -> bool:
@@ -38,5 +34,12 @@ func can_appear() -> bool:
 # Controls one-time events
 # TODO: Could be done better?
 func event_fired() -> void:
+	do_effects()
+	
 	if one_time:
 		has_happened = true
+
+# do_effects: Fires all effects
+func do_effects() -> void:
+	for effect in effects:
+		effect.do_effect()
