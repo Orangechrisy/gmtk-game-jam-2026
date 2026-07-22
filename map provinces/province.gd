@@ -31,9 +31,9 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Area2D/CollisionPolygon2D.polygon = vertices
-	GameState.day_updated.connect(_on_day_update)
+	GameState.connect("day_updated", on_day_updated)
 
-func _on_day_update(new_day):
+func on_day_updated(new_day):
 	base_food = base_food + food_yield - food_consumption
 	base_gold = base_gold + gold_yield - gold_consumption
 	if fervor > loyalty:
