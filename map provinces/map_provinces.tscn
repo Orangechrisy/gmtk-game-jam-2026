@@ -10,11 +10,48 @@ texture = ExtResource("1_g16rl")
 centered = false
 metadata/_edit_lock_ = true
 
-[node name="Province1" parent="." unique_id=1886263090 instance=ExtResource("2_k0ye7")]
+[node name="Capital" parent="." unique_id=1886263090 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 695, 643, 602, 606)
+province_name = "Capital"
 
-[node name="Province2" parent="." unique_id=414529575 instance=ExtResource("2_k0ye7")]
+[node name="Military" parent="." unique_id=414529575 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328, 991, 278, 787, 239, 728, 285)
+province_name = "Military"
 
-[node name="Province3" parent="." unique_id=345608748 instance=ExtResource("2_k0ye7")]
+[node name="Farm" parent="." unique_id=345608748 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(996, 281, 1086, 228, 1164, 328, 1255, 332, 1305, 422, 1248, 433, 1241, 503, 1157, 522, 1127, 638, 1187, 650, 1183, 682, 1022, 614, 1022, 546, 993, 539, 1052, 318)
+province_name = "Farm"
+
+[node name="City1" parent="." unique_id=842335567 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(735, 285, 621, 445, 604, 597, 503, 589, 539, 527, 532, 373, 419, 385, 501, 335, 527, 189)
+province_name = "City1"
+
+[node name="Villa" parent="." unique_id=1302876999 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(784, 628, 733, 549, 784, 499, 944, 554, 951, 700, 1057, 760, 911, 793, 910, 901, 627, 889, 611, 709, 555, 705, 561, 608, 613, 609, 700, 638)
+province_name = "Villa"
+
+[node name="City2" parent="." unique_id=861354156 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(1030, 625, 1019, 537, 992, 530, 988, 561, 944, 554, 951, 700, 1057, 760, 964, 782, 987, 818, 1139, 793, 1144, 676)
+province_name = "City2"
+
+[node name="Mine" parent="." unique_id=262436821 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(1239, 510, 1160, 527, 1129, 637, 1187, 649, 1184, 680, 1330, 734, 1326, 644, 1264, 614, 1352, 553)
+province_name = "Mine"
+
+[node name="Port" parent="." unique_id=882006576 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(1266, 333, 1311, 417, 1242, 427, 1246, 501, 1426, 580, 1517, 496, 1606, 582, 1673, 556, 1623, 510, 1595, 405, 1477, 397, 1491, 295, 1335, 242)
+province_name = "Port"
+
+[node name="Church" parent="." unique_id=1556465871 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(1446, 716, 1330, 697, 1323, 644, 1268, 611, 1352, 553, 1426, 580, 1517, 496, 1606, 582, 1542, 647, 1518, 757, 1448, 760)
+province_name = "Church"
+
+[node name="Outskirts" parent="." unique_id=1797384215 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(328, 987, 302, 882, 222, 849, 273, 503, 380, 506, 354, 668, 544, 738, 553, 709, 603, 704, 623, 887, 438, 902, 404, 1023)
+province_name = "Outskirts"
+
+[node name="for copying values" type="Area2D" parent="." unique_id=540138476]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="for copying values" unique_id=66512878]
+polygon = PackedVector2Array(328, 987, 302, 882, 222, 849, 273, 503, 380, 506, 354, 668, 544, 738, 553, 709, 603, 704, 623, 887, 438, 902, 404, 1023)
