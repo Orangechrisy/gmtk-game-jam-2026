@@ -15,6 +15,9 @@ var food: int
 var noble_sentiment: int = 100 # TODO: Maybe make per-character
 var common_sentiment: int = 100 # TODO: Maybe make per-character
 
+var actions_per_day: int = 3
+var actions_left: int = 3
+
 # TODO: Add province tracking
 @export var provinces: Array[Node]
 
@@ -109,3 +112,14 @@ func set_noble_sentiment(val: int) -> void:
 func change_noble_sentiment(val: int) -> void:
 	noble_sentiment += val
 	noble_sentiment_updated.emit(noble_sentiment)
+
+# Actions
+
+func get_actions_left() -> int:
+	return actions_left
+
+func reduce_actions_left() -> void:
+	actions_left -= 1
+
+func reset_actions_left() -> void:
+	actions_left = actions_per_day

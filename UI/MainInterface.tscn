@@ -11,6 +11,9 @@ font_size = 40
 [sub_resource type="LabelSettings" id="LabelSettings_jmpn7"]
 font_size = 30
 
+[sub_resource type="LabelSettings" id="LabelSettings_cbx75"]
+font_size = 30
+
 [node name="MainInterface" type="Control" unique_id=1175301398]
 layout_mode = 3
 anchors_preset = 15
@@ -96,3 +99,12 @@ offset_right = 1876.0
 offset_bottom = 1071.0
 value = 100.0
 fill_mode = 2
+
+[node name="ActionsLeftLabel" type="Label" parent="." unique_id=646839059]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 93.0
+offset_right = 245.0
+offset_bottom = 135.0
+text = "ACTIONS LEFT: 3"
+label_settings = SubResource("LabelSettings_cbx75")
