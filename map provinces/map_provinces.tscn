@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://841rbvhlys17" path="res://Assets/mapish.png" id="1_g16rl"]
 [ext_resource type="PackedScene" uid="uid://dggvawrkya46m" path="res://map provinces/province.tscn" id="2_k0ye7"]
+[ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="3_vyboi"]
 
 [node name="Map Provinces" type="Node2D" unique_id=887434233]
 
@@ -13,6 +14,7 @@ metadata/_edit_lock_ = true
 [node name="Capital" parent="." unique_id=1886263090 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 695, 643, 602, 606)
 province_name = "Capital"
+potential_events = [ExtResource("3_vyboi")]
 
 [node name="Military" parent="." unique_id=414529575 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328, 991, 278, 787, 239, 728, 285)

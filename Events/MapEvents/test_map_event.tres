@@ -8,5 +8,6 @@
 [resource]
 script = ExtResource("2_unhim")
 event_name = &"Test Event"
+dialogue = Array[String](["this is a test event", "it has, test things"])
 options = Array[ExtResource("1_dqkqt")]([ExtResource("3_pupgl")])
 metadata/_custom_type_script = "uid://cipcjs28d1y2n"
