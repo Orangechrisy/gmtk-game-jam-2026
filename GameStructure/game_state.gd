@@ -77,6 +77,5 @@ func set_food(val: int) -> void:
 	food_updated.emit(food)
 
 func change_food(val: int) -> void:
-	print("Changing food!")
 	food += val
 	food_updated.emit(food)

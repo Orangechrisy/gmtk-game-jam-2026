@@ -6,5 +6,4 @@ class_name EEChangeFood
 @export var food_change: int = 0
 
 func do_effect() -> void:
-	print("Doing effect!")
 	GameState.change_food(food_change)
