@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b58jsc3gd18v3"]
+
+[ext_resource type="Texture2D" uid="uid://841rbvhlys17" path="res://Assets/mapish.png" id="1_g16rl"]
+[ext_resource type="PackedScene" uid="uid://dggvawrkya46m" path="res://map provinces/province.tscn" id="2_k0ye7"]
+
+[node name="Map Provinces" type="Node2D" unique_id=887434233]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1356999875]
+texture = ExtResource("1_g16rl")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Province1" parent="." unique_id=1886263090 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 695, 643, 602, 606)
+
+[node name="Province2" parent="." unique_id=414529575 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328, 991, 278, 787, 239, 728, 285)
+
+[node name="Province3" parent="." unique_id=345608748 instance=ExtResource("2_k0ye7")]
+vertices = PackedVector2Array(996, 281, 1086, 228, 1164, 328, 1255, 332, 1305, 422, 1248, 433, 1241, 503, 1157, 522, 1127, 638, 1187, 650, 1183, 682, 1022, 614, 1022, 546, 993, 539, 1052, 318)
