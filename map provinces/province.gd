@@ -30,6 +30,8 @@ extends Node2D
 	set(change):
 		fervor = max(0, fervor + change)
 
+var event_present: MapEvent
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Area2D/CollisionPolygon2D.polygon = vertices
@@ -46,6 +48,7 @@ func on_day_updated(new_day):
 func create_event_popup(event) -> void:
 	$EventPopup.visible = true
 	$EventPopup.position = event_location
+	event_present = event
 
 # Helper functions
 func get_curr_owner() -> int:
@@ -76,6 +79,10 @@ func roll_event_odds() -> bool:
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("province ", province_name, " clicked")
-		roll_event_odds()
+		if event_present:
+			EventScene.event_selected(event_present, self)
+			event_present = null
+		else:
+			roll_event_odds()
 
 # TODO: province hover over (to see stats?)

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://4yyww0bjv0og"]
+
+[ext_resource type="Script" uid="uid://bq311dn3ooc1b" path="res://Events/EventOptions/options_tooltip.gd" id="1_adssf"]
+
+[node name="OptionsTooltip" type="Control" unique_id=261198937]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_adssf")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1806888856]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer" unique_id=845781904]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=364648170]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=395643780]
+layout_mode = 2
+
+[node name="OptionDescription" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1132878829]
+layout_mode = 2
+
+[node name="SuccessEffect" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=296027316]
+layout_mode = 2
+
+[node name="FailureEffect" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1908653324]
+layout_mode = 2

@@ -5,6 +5,7 @@ class_name MapEvent
 # Variables
 @export var event_name: StringName = ""
 @export var portrait: Texture2D
+@export var character_name: StringName = ""
 @export var dialogue: Array[String] # TODO: Replace with something
 @export var one_time: bool = false
 var has_happened: bool = false
@@ -21,6 +22,12 @@ func get_event_dialogue() -> Array[String]:
 
 func get_options() -> Array[EventOption]:
 	return options
+
+func get_portrait() -> Texture2D:
+	return portrait
+
+func get_character_name() -> StringName:
+	return character_name
 
 # Functionality
 
