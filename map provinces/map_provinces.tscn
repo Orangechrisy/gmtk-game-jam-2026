@@ -15,10 +15,13 @@ metadata/_edit_lock_ = true
 vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 695, 643, 602, 606)
 province_name = "Capital"
 potential_events = Array[Resource]([ExtResource("3_vyboi")])
+event_location = Vector2(670, 520)
 
 [node name="Military" parent="." unique_id=414529575 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328, 991, 278, 787, 239, 728, 285)
 province_name = "Military"
+potential_events = Array[Resource]([ExtResource("3_vyboi")])
+event_location = Vector2(900, 380)
 
 [node name="Farm" parent="." unique_id=345608748 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(996, 281, 1086, 228, 1164, 328, 1255, 332, 1305, 422, 1248, 433, 1241, 503, 1157, 522, 1127, 638, 1187, 650, 1183, 682, 1022, 614, 1022, 546, 993, 539, 1052, 318)

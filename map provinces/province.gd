@@ -6,6 +6,8 @@ extends Node2D
 @export var province_image: Sprite2D
 @export var curr_owner: int = 0 # not sure what this should be, but could be an enum
 @export var potential_events: Array[Resource]
+@export var event_location: Vector2
+
 @export_group("Counters")
 @export var base_food: float
 @export var base_gold: float
@@ -31,6 +33,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Area2D/CollisionPolygon2D.polygon = vertices
+	$EventPopup.visible = false
 	GameState.connect("day_updated", on_day_updated)
 
 func on_day_updated(new_day):
@@ -39,6 +42,10 @@ func on_day_updated(new_day):
 	if fervor > loyalty:
 		curr_owner = 1
 	# change image?
+
+func create_event_popup(event) -> void:
+	$EventPopup.visible = true
+	$EventPopup.position = event_location
 
 # try to do the event, based on rng and variables of the province or something
 func try_event(event: MapEvent) -> bool:
@@ -51,6 +58,7 @@ func roll_event_odds() -> bool:
 	possible_events.shuffle()
 	for event in possible_events:
 		if try_event(event):
+			create_event_popup(event)
 			return true
 	return false
 
@@ -58,5 +66,6 @@ func roll_event_odds() -> bool:
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("province ", province_name, " clicked")
+		roll_event_odds()
 
 # TODO: province hover over (to see stats?)

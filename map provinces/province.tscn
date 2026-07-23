@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dggvawrkya46m"]
 
 [ext_resource type="Script" uid="uid://cj05e7qvgb3pj" path="res://map provinces/province.gd" id="1_pnl1e"]
+[ext_resource type="PackedScene" uid="uid://cx0d76cbtbsat" path="res://Events/MapEvents/map_event_popup.tscn" id="2_k6co4"]
 
 [node name="Province" type="Node2D" unique_id=1886263090]
 script = ExtResource("1_pnl1e")
@@ -8,8 +9,19 @@ script = ExtResource("1_pnl1e")
 [node name="Area2D" type="Area2D" parent="." unique_id=1042257964]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=727500454]
-polygon = PackedVector2Array(0, 0, 0, 0, 0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=737159659]
+
+[node name="EventPopup" parent="." unique_id=24959100 instance=ExtResource("2_k6co4")]
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_vertical = 0
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
