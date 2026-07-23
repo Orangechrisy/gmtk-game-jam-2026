@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dsonnxlyskrb5" path="res://GameStructure/game_state.gd" id="1_gctib"]
 [ext_resource type="Script" uid="uid://cv7p1w38wg4fm" path="res://Events/auto_event.gd" id="2_oyfpk"]
-[ext_resource type="Resource" path="res://Events/AutoEvents/test_auto_event.tres" id="3_dc56s"]
+[ext_resource type="Resource" uid="uid://cmoplsvudwpm5" path="res://Events/AutoEvents/test_auto_event.tres" id="3_dc56s"]
 
 [node name="GameState" type="Node" unique_id=1589165603]
 script = ExtResource("1_gctib")
