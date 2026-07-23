@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bqnp5ys3qf240"]
+
+[ext_resource type="Script" uid="uid://nq5b2qatca1p" path="res://Menu/pause_menu.gd" id="1_3ke7c"]
+[ext_resource type="PackedScene" uid="uid://dglekacdrwykk" path="res://MainMenu/OptionsMenu.tscn" id="2_7n1tg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
+font_size = 30
+
+[node name="PauseMenu" type="Control" unique_id=273141382]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3ke7c")
+
+[node name="Label" type="Label" parent="." unique_id=167713226]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 222.0
+offset_right = 1077.0
+offset_bottom = 264.0
+text = "PAUSE MENU"
+label_settings = SubResource("LabelSettings_a6wwx")
+
+[node name="ReturnToGameButton" type="Button" parent="." unique_id=1303846414]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 385.0
+offset_right = 1198.0
+offset_bottom = 494.0
+text = "RETURN TO GAME"
+
+[node name="OptionsButton" type="Button" parent="." unique_id=1029369981]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 559.0
+offset_right = 1198.0
+offset_bottom = 668.0
+text = "OPTIONS"
+
+[node name="QuitToMenuButton" type="Button" parent="." unique_id=813220131]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 736.0
+offset_right = 1198.0
+offset_bottom = 845.0
+text = "QUIT TO MAIN MENU"
+
+[node name="OptionsMenu" parent="." unique_id=806118121 instance=ExtResource("2_7n1tg")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="ReturnToGameButton" to="." method="_on_return_to_game_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]
