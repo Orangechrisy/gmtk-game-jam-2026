@@ -77,7 +77,7 @@ func roll_events() -> void:
 
 # roll_auto_event_chance: Roll an opportunity for an event to happen
 # between days
-# TODO: Implement this!
+# TODO: Finish implementing this!
 func roll_auto_event_chance() -> void:
 	if randf_range(0, 1) <= GameState.auto_event_odds:
 		GameState.auto_events.shuffle()

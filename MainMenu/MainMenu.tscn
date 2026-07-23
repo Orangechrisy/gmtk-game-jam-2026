@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://d1xxop0i5b08d"]
+
+[ext_resource type="Script" uid="uid://bsflcq4p15bta" path="res://MainMenu/main_menu.gd" id="1_otibh"]
+[ext_resource type="PackedScene" uid="uid://dglekacdrwykk" path="res://MainMenu/OptionsMenu.tscn" id="2_lbqne"]
+[ext_resource type="PackedScene" uid="uid://kykrpyebwvu2" path="res://MainMenu/CreditsMenu.tscn" id="3_430ii"]
+[ext_resource type="PackedScene" uid="uid://l485x5bqjkuf" path="res://MainMenu/QuitConfirmMenu.tscn" id="4_3p42x"]
+
+[node name="MainMenu" type="Node2D" unique_id=89832299]
+script = ExtResource("1_otibh")
+
+[node name="StartGameButton" type="Button" parent="." unique_id=1542554719]
+offset_left = 407.0
+offset_top = 479.0
+offset_right = 1477.0
+offset_bottom = 537.0
+text = "START GAME"
+
+[node name="OptionsButton" type="Button" parent="." unique_id=2008765758]
+offset_left = 407.0
+offset_top = 590.0
+offset_right = 1477.0
+offset_bottom = 648.0
+text = "OPTIONS"
+
+[node name="CreditsButton" type="Button" parent="." unique_id=42583149]
+offset_left = 407.0
+offset_top = 697.0
+offset_right = 1477.0
+offset_bottom = 755.0
+text = "CREDITS"
+
+[node name="QuitGameButton" type="Button" parent="." unique_id=1788453671]
+offset_left = 407.0
+offset_top = 805.0
+offset_right = 1477.0
+offset_bottom = 863.0
+text = "QUIT GAME"
+
+[node name="OptionsMenu" parent="." unique_id=806118121 instance=ExtResource("2_lbqne")]
+visible = false
+
+[node name="CreditsMenu" parent="." unique_id=719412781 instance=ExtResource("3_430ii")]
+visible = false
+
+[node name="QuitConfirmMenu" parent="." unique_id=129270634 instance=ExtResource("4_3p42x")]
+visible = false
+
+[connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="QuitGameButton" to="." method="_on_quit_game_button_pressed"]

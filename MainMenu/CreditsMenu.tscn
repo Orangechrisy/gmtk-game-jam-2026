@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://kykrpyebwvu2"]
+
+[ext_resource type="Script" uid="uid://bjxmbmu7ftl2l" path="res://MainMenu/credits_menu.gd" id="1_fil7c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
+font_size = 48
+
+[node name="CreditsMenu" type="Control" unique_id=806118121]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fil7c")
+
+[node name="BackButton" type="Button" parent="." unique_id=448864967]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 849.0
+offset_right = 1146.0
+offset_bottom = 944.0
+text = "BACK TO MENU"
+
+[node name="Label" type="Label" parent="." unique_id=1511288570]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 42.0
+offset_right = 1179.0
+offset_bottom = 125.0
+text = "CREDITS"
+label_settings = SubResource("LabelSettings_a6wwx")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2029490990]
+custom_minimum_size = Vector2(1000, 600)
+layout_mode = 0
+offset_left = 500.0
+offset_top = 172.0
+offset_right = 1500.0
+offset_bottom = 772.0
+
+[node name="CreditsText" type="Label" parent="ScrollContainer" unique_id=1907453449]
+custom_minimum_size = Vector2(1000, 600)
+layout_mode = 2
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

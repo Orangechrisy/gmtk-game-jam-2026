@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://l485x5bqjkuf"]
+
+[ext_resource type="Script" uid="uid://f7tc1mixxnhh" path="res://MainMenu/quit_confirm_menu.gd" id="1_sbb5r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
+font_size = 48
+
+[node name="QuitConfirmMenu" type="Control" unique_id=806118121]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sbb5r")
+
+[node name="BackButton" type="Button" parent="." unique_id=448864967]
+layout_mode = 0
+offset_left = 1067.0
+offset_top = 648.0
+offset_right = 1407.0
+offset_bottom = 743.0
+text = "NO"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1054275629]
+layout_mode = 0
+offset_left = 526.0
+offset_top = 648.0
+offset_right = 866.0
+offset_bottom = 743.0
+text = "YES"
+
+[node name="Label" type="Label" parent="." unique_id=1511288570]
+layout_mode = 0
+offset_left = 762.0
+offset_top = 246.0
+offset_right = 1173.0
+offset_bottom = 329.0
+text = "REALLY QUIT?"
+label_settings = SubResource("LabelSettings_a6wwx")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

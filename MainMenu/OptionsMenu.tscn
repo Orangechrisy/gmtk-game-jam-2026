@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dglekacdrwykk"]
+
+[ext_resource type="Script" uid="uid://d0gsden55wjor" path="res://MainMenu/options_menu.gd" id="1_pmot2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
+font_size = 48
+
+[node name="OptionsMenu" type="Control" unique_id=806118121]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pmot2")
+
+[node name="BackButton" type="Button" parent="." unique_id=448864967]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 748.0
+offset_right = 1129.0
+offset_bottom = 843.0
+text = "BACK TO MENU"
+
+[node name="Label" type="Label" parent="." unique_id=1511288570]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 42.0
+offset_right = 1179.0
+offset_bottom = 125.0
+text = "OPTIONS"
+label_settings = SubResource("LabelSettings_a6wwx")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
