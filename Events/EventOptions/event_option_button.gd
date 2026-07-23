@@ -32,3 +32,10 @@ func _on_mouse_exited() -> void:
 
 func _on_pressed() -> void:
 	print("button pressed!")
+	if randf_range(0, 1) <= success_odds:
+		for effect in success_outcome:
+			effect.do_effect()
+	else:
+		for effect in failure_outcome:
+			effect.do_effect()
+	get_node("/root/EventScene").close_event(true)

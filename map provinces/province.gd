@@ -1,5 +1,6 @@
 @tool
 extends Node2D
+class_name Province
 
 @export var vertices: PackedVector2Array
 @export var province_name: String
@@ -36,6 +37,7 @@ var event_present: MapEvent
 func _ready() -> void:
 	$Area2D/CollisionPolygon2D.polygon = vertices
 	$EventPopup.visible = false
+	$EventPopup.position = event_location
 	GameState.connect("day_updated", on_day_updated)
 
 func on_day_updated(new_day):
@@ -45,10 +47,11 @@ func on_day_updated(new_day):
 		curr_owner = 1
 	# change image?
 
-func create_event_popup(event) -> void:
-	$EventPopup.visible = true
-	$EventPopup.position = event_location
+# update the event popup and if the province has an event currently
+func update_events(event: MapEvent, show: bool):
+	$EventPopup.visible = show
 	event_present = event
+
 
 # Helper functions
 func get_curr_owner() -> int:
@@ -71,7 +74,7 @@ func roll_event_odds() -> bool:
 	possible_events.shuffle()
 	for event in possible_events:
 		if try_event(event):
-			create_event_popup(event)
+			update_events(event, true)
 			return true
 	return false
 
@@ -80,8 +83,9 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("province ", province_name, " clicked")
 		if event_present:
+			update_events(event_present, false)
+			GameManager.update_current_province(self)
 			EventScene.event_selected(event_present, self)
-			event_present = null
 		else:
 			roll_event_odds()
 

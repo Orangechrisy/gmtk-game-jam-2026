@@ -15,11 +15,9 @@ var food: int
 var noble_sentiment: int = 100 # TODO: Maybe make per-character
 var common_sentiment: int = 100 # TODO: Maybe make per-character
 
-var actions_per_day: int = 3
-var actions_left: int = 3
-
 # TODO: Add province tracking
-@export var provinces: Array[Node]
+@export var provinces: Array[Province]
+var current_province: Province
 
 @export var auto_event_odds: float = 1 # TODO: Set to something reasonable
 @export var auto_events: Array[AutoEvent]
@@ -32,7 +30,6 @@ signal gold_updated(new_gold)
 signal food_updated(new_food)
 signal common_sentiment_updated(new_sentiment)
 signal noble_sentiment_updated(new_sentiment)
-signal actions_left_updated(new_actions_left)
 
 # Day
 
@@ -117,15 +114,10 @@ func change_noble_sentiment(val: int) -> void:
 	noble_sentiment += val
 	noble_sentiment_updated.emit(noble_sentiment)
 
-# Actions
+# Province check
 
-func get_actions_left() -> int:
-	return actions_left
+func get_current_province() -> Province:
+	return current_province
 
-func reduce_actions_left() -> void:
-	actions_left -= 1
-	actions_left_updated.emit(actions_left)
-
-func reset_actions_left() -> void:
-	actions_left = actions_per_day
-	actions_left_updated.emit(actions_left)
+func set_current_province(val: Province) -> void:
+	current_province = val

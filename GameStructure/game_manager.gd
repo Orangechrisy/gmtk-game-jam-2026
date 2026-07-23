@@ -56,7 +56,7 @@ func reduce_days_to_revolution() -> void:
 # from most to least likely (fervor?) roll event odds for each province 
 # if not enough events, roll again
 func roll_events() -> void:
-	var owned_provinces: Array[Node] = GameState.provinces.filter(func(province): return province.curr_owner == 0)
+	var owned_provinces: Array[Province] = GameState.provinces.filter(func(province): return province.curr_owner == 0)
 	owned_provinces.sort_custom(func(a, b): return a.fervor > b.fervor)
 	print(owned_provinces.size())
 	var num_events: int = min(owned_provinces.size(), randi_range(3, 5))
@@ -76,3 +76,7 @@ func roll_auto_event_chance() -> void:
 			if event.can_appear():
 				event.event_fired() # TODO: Handle more cleanly, show popup
 				return
+
+# update the current province in the gamestate, 
+func update_current_province(province: Province):
+	GameState.set_current_province(province)

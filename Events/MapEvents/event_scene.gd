@@ -1,6 +1,6 @@
 extends Control
 
-
+var current_event: MapEvent
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,6 +8,7 @@ func _ready() -> void:
 
 func event_selected(event: MapEvent, province: Node2D):
 	print("event selected!")
+	current_event = event
 	%Title.text = event.get_event_name()
 	%Portrait.texture = event.get_portrait()
 	%CharacterName.text = event.get_character_name()
@@ -21,6 +22,7 @@ func set_dialogue(dialogue_strings: Array[String]):
 		%Description.text += line + '\n'
 
 func create_buttons(options: Array[EventOption]):
+	print(%Options.get_children())
 	if options.size() > 3:
 		var halfway = int(ceil(options.size() / 2.0))
 		set_button_placements(%Options, options, Vector2i(0, halfway), halfway)
@@ -38,3 +40,18 @@ func set_button_placements(container: HBoxContainer, options: Array[EventOption]
 	var area_size = container.get_parent().get_parent().size.x
 	var button_size = container.get_child(0).get_combined_maximum_size().x
 	container.add_theme_constant_override("separation", int((area_size - (button_size * num_buttons)) / num_buttons) / 2)
+
+func close_event(removed: bool):
+	visible = false
+	for button in %Options.get_children():
+		button.queue_free()
+	for button in %Options2.get_children():
+		button.queue_free()
+	if removed:
+		GameState.get_current_province().update_events(null, false)
+	else:
+		GameState.get_current_province().update_events(current_event, true)
+	GameManager.update_current_province(null)
+
+func _on_close_pressed() -> void:
+	close_event(false)

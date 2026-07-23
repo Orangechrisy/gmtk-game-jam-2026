@@ -2,7 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://841rbvhlys17" path="res://Assets/mapish.png" id="1_g16rl"]
 [ext_resource type="PackedScene" uid="uid://dggvawrkya46m" path="res://map provinces/province.tscn" id="2_k0ye7"]
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="3_sayt0"]
 [ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="3_vyboi"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_plq5i"]
+[ext_resource type="Resource" uid="uid://dgoh6t7wpr2iu" path="res://Events/EventOptions/eo_test_option.tres" id="5_pxtiu"]
+[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="6_io1nl"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="7_44qw3"]
+
+[sub_resource type="Resource" id="Resource_btrrw"]
+script = ExtResource("7_44qw3")
+event_name = &"Test Event"
+portrait = ExtResource("6_io1nl")
+character_name = &"spy master"
+dialogue = Array[String](["this is a test event", "it has, test things"])
+options = Array[ExtResource("4_plq5i")]([ExtResource("5_pxtiu"), ExtResource("5_pxtiu"), ExtResource("5_pxtiu"), ExtResource("5_pxtiu"), ExtResource("5_pxtiu")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"
 
 [node name="Map Provinces" type="Node2D" unique_id=887434233]
 
@@ -14,7 +28,7 @@ metadata/_edit_lock_ = true
 [node name="Capital" parent="." unique_id=1886263090 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 695, 643, 602, 606)
 province_name = "Capital"
-potential_events = Array[Resource]([ExtResource("3_vyboi")])
+potential_events = Array[Resource]([SubResource("Resource_btrrw")])
 event_location = Vector2(670, 520)
 
 [node name="Military" parent="." unique_id=414529575 instance=ExtResource("2_k0ye7")]
