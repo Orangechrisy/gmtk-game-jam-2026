@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AutoEvent" format=3 uid="uid://cmoplsvudwpm5"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_7ywo0"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_yqueo"]
+[ext_resource type="Script" uid="uid://cv7p1w38wg4fm" path="res://Events/auto_event.gd" id="3_qibjp"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="3_yqueo"]
+
+[sub_resource type="Resource" id="Resource_ms534"]
+script = ExtResource("3_yqueo")
+gold_change = 1
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[resource]
+script = ExtResource("3_qibjp")
+event_name = &"Test Auto Event"
+event_desc = "Test"
+effects = Array[ExtResource("2_yqueo")]([SubResource("Resource_ms534")])
+metadata/_custom_type_script = "uid://cv7p1w38wg4fm"
