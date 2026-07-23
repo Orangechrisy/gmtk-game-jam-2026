@@ -34,21 +34,11 @@ func _ready() -> void:
 	GameState.connect("day_updated", on_day_updated)
 
 func on_day_updated(new_day):
-	#base_food = base_food + food_yield - food_consumption
-	#base_gold = base_gold + gold_yield - gold_consumption
+	base_food = base_food + food_yield - food_consumption
+	base_gold = base_gold + gold_yield - gold_consumption
 	if fervor > loyalty:
 		curr_owner = 1
 	# change image?
-
-# Helper functions
-func get_curr_owner() -> int:
-	return curr_owner
-	
-func calculate_food() -> int:
-	return food_yield - food_consumption
-
-func calculate_gold() -> int:
-	return gold_yield - gold_consumption
 
 # try to do the event, based on rng and variables of the province or something
 func try_event(event: MapEvent) -> bool:

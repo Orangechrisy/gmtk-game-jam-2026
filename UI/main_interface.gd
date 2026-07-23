@@ -9,7 +9,7 @@ func _ready() -> void:
 	GameState.connect("gold_updated", on_gold_updated)
 	GameState.connect("common_sentiment_updated", on_common_sentiment_updated)
 	GameState.connect("noble_sentiment_updated", on_noble_sentiment_updated)
-	GameState.connect("actions_left_updated", on_actions_left_updated)
+
 
 # UI Updates
 
@@ -30,6 +30,3 @@ func on_common_sentiment_updated(new_sentiment: int) -> void:
 
 func on_noble_sentiment_updated(new_sentiment: int) -> void:
 	$NobleFervorBar.value = new_sentiment
-	
-func on_actions_left_updated(new_actions_left: int) -> void:
-	$ActionsLeftLabel.text = "ACTIONS LEFT: " + str(new_actions_left)

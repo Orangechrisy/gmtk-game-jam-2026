@@ -1,4 +1,5 @@
 extends EventEffect
+
 class_name EEChangeFood
 
 # Values

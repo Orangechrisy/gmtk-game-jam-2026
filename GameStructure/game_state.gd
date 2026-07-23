@@ -21,9 +21,6 @@ var actions_left: int = 3
 # TODO: Add province tracking
 @export var provinces: Array[Node]
 
-@export var auto_event_odds: float = 1 # TODO: Set to something reasonable
-@export var auto_events: Array[AutoEvent]
-
 # SIGNALS
 
 signal day_updated(new_day)
@@ -32,7 +29,6 @@ signal gold_updated(new_gold)
 signal food_updated(new_food)
 signal common_sentiment_updated(new_sentiment)
 signal noble_sentiment_updated(new_sentiment)
-signal actions_left_updated(new_actions_left)
 
 # Day
 
@@ -124,8 +120,6 @@ func get_actions_left() -> int:
 
 func reduce_actions_left() -> void:
 	actions_left -= 1
-	actions_left_updated.emit(actions_left)
 
 func reset_actions_left() -> void:
 	actions_left = actions_per_day
-	actions_left_updated.emit(actions_left)
