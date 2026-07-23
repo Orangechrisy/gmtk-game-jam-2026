@@ -30,3 +30,4 @@ func on_food_updated(new_food: int) -> void:
 
 func _on_event_choice_button_pressed() -> void:
 	test_option.calculate_success()
+	GameState.reduce_actions_left() # TODO: Don't do this! Tell the Game Manager to do it!
