@@ -36,9 +36,11 @@ fit_content = true
 [node name="SuccessEffect" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=296027316]
 unique_name_in_owner = true
 layout_mode = 2
+bbcode_enabled = true
 fit_content = true
 
 [node name="FailureEffect" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1908653324]
 unique_name_in_owner = true
 layout_mode = 2
+bbcode_enabled = true
 fit_content = true

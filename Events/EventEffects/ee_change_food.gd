@@ -6,3 +6,6 @@ class_name EEChangeFood
 
 func do_effect() -> void:
 	GameState.change_food(food_change)
+
+func get_effect_desc() -> String:
+	return "%+.f Food" % food_change

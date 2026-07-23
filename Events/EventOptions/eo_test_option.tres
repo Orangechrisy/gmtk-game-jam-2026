@@ -3,16 +3,23 @@
 [ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_5w586"]
 [ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_ba27t"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_807sd"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="3_f1m6l"]
 [ext_resource type="Script" uid="uid://bsfdc1pc8iyve" path="res://Events/EventEffects/ee_change_food.gd" id="4_ba27t"]
+
+[sub_resource type="Resource" id="Resource_adssf"]
+script = ExtResource("3_f1m6l")
+gold_change = -4
+metadata/_custom_type_script = "uid://u81kgotj4jti"
 
 [sub_resource type="Resource" id="Resource_f1m6l"]
 script = ExtResource("4_ba27t")
-food_change = 1
+food_change = 2
 metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
 
 [resource]
 script = ExtResource("3_807sd")
 option_name = &"Test Option"
-option_desc = "[p]Here's a few words:[/p][p][color=green]something good!superf good woaowo asog toato atoat[/color][/p][p][color=red]something bad![/color][/p]"
+option_desc = "here is a description"
 success_effects = Array[ExtResource("2_ba27t")]([SubResource("Resource_f1m6l")])
+failure_effects = Array[ExtResource("2_ba27t")]([SubResource("Resource_adssf")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"
