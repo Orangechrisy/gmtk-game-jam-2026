@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cg6eb32fs7qab" path="res://Events/MapEvents/event_scene.gd" id="1_qshbi"]
 [ext_resource type="Texture2D" uid="uid://cd44h1y4ssfat" path="res://icon.svg" id="1_ug82v"]
+[ext_resource type="PackedScene" uid="uid://4yyww0bjv0og" path="res://Events/EventOptions/options_tooltip.tscn" id="3_086s4"]
 
 [node name="EventScene" type="Control" unique_id=1552972099]
 z_index = 5
@@ -99,3 +100,6 @@ layout_mode = 2
 [node name="Options" type="HBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer2/HBoxContainer/VBoxContainer/PanelContainer3" unique_id=1717400536]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="OptionsTooltip" parent="." unique_id=261198937 instance=ExtResource("3_086s4")]
+layout_mode = 1

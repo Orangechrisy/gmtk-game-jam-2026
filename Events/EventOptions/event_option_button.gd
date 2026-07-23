@@ -7,9 +7,11 @@ extends Button
 @export var success_outcome: Array[EventEffect]
 @export var failure_outcome: Array[EventEffect]
 
+var tooltip: Control
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	tooltip = get_node("/root/EventScene/OptionsTooltip")
 
 func set_values(option: EventOption):
 	option_name = option.option_name
@@ -20,11 +22,9 @@ func set_values(option: EventOption):
 	failure_outcome = option.failure_effects
 	option_name = "[b]" + str(success_odds * 100) + "%[/b] " + option_name
 
-
 func _on_mouse_entered() -> void:
-	pass # Replace with function body.
-	
-
+	tooltip.set_values(option_desc, success_outcome, failure_outcome)
+	tooltip.visible = true
 
 func _on_mouse_exited() -> void:
-	pass # Replace with function body.
+	tooltip.visible = false

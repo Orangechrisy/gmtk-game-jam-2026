@@ -11,10 +11,15 @@ func event_selected(event: MapEvent, province: Node2D):
 	%Title.text = event.get_event_name()
 	%Portrait.texture = event.get_portrait()
 	%CharacterName.text = event.get_character_name()
-	%Description.text = event.get_event_dialogue()
+	set_dialogue(event.get_event_dialogue())
 	for option in event.get_options():
 		pass
-		var button = load("res://Events/EventOptions/event_option_button.tscn")
+		var button = load("res://Events/EventOptions/event_option_button.tscn").instantiate()
 		button.set_values(option)
 		%Options.add_child(button)
 	visible = true
+
+func set_dialogue(dialogue_strings: Array[String]):
+	%Description.text = ""
+	for line in dialogue_strings:
+		%Description.text += line + '/n'
