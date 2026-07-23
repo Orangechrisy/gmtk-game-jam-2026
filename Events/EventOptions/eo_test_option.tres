@@ -13,6 +13,6 @@ metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
 [resource]
 script = ExtResource("3_807sd")
 option_name = &"Test Option"
-option_desc = "Test"
+option_desc = "[p]Here's a few words:[/p][p][color=green]something good!superf good woaowo asog toato atoat[/color][/p][p][color=red]something bad![/color][/p]"
 success_effects = Array[ExtResource("2_ba27t")]([SubResource("Resource_f1m6l")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

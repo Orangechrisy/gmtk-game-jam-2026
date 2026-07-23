@@ -4,10 +4,13 @@
 [ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_ycg6t"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="2_unhim"]
 [ext_resource type="Resource" uid="uid://dgoh6t7wpr2iu" path="res://Events/EventOptions/eo_test_option.tres" id="3_pupgl"]
+[ext_resource type="Texture2D" uid="uid://c23kc8756wrkf" path="res://Assets/PORTRAIT_party_guy.png" id="4_pupgl"]
 
 [resource]
 script = ExtResource("2_unhim")
 event_name = &"Test Event"
+portrait = ExtResource("4_pupgl")
+character_name = &"party guy"
 dialogue = Array[String](["this is a test event", "it has, test things"])
 options = Array[ExtResource("1_dqkqt")]([ExtResource("3_pupgl")])
 metadata/_custom_type_script = "uid://cipcjs28d1y2n"

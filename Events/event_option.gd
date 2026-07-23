@@ -3,7 +3,7 @@ class_name EventOption
 
 # Variables
 @export var option_name: StringName = ""
-@export var option_desc: String = ""
+@export_multiline var option_desc: String = ""
 @export var conditions: Array[EventCondition]
 @export var success_odds: float = 1 # TODO: Add way to alter this?
 

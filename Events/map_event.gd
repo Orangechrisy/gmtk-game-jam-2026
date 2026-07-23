@@ -4,6 +4,7 @@ class_name MapEvent
 
 # Variables
 @export var event_name: StringName = ""
+## Dimensions are 368 x 512
 @export var portrait: Texture2D
 @export var character_name: StringName = ""
 @export var dialogue: Array[String] # TODO: Replace with something

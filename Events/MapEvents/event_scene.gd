@@ -22,4 +22,4 @@ func event_selected(event: MapEvent, province: Node2D):
 func set_dialogue(dialogue_strings: Array[String]):
 	%Description.text = ""
 	for line in dialogue_strings:
-		%Description.text += line + '/n'
+		%Description.text += line + '\n'

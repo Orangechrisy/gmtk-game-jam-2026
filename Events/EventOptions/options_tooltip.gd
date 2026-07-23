@@ -1,17 +1,14 @@
 extends Control
 
-@export var texture: Texture2D
-@export var desc: StringName
-@export var success: StringName
-@export var failure: StringName
+@export var OFFSET: Vector2
 
-func set_values(description: StringName, success_outcome: Array[EventEffect], failure_outcome: Array[EventEffect]):
-	desc = description
-	set_outcome_text(success_outcome, failure_outcome)
+func set_values(desc: StringName, success_outcome: Array[EventEffect], failure_outcome: Array[EventEffect]):
+	%OptionDescription.text = desc
+	#set_outcome_text(success_outcome, failure_outcome)
 
 func set_outcome_text(successes: Array[EventEffect], failures: Array[EventEffect]):
-	success = ""
-	failure = ""
+	#%SuccessEffect.text = "succ\n"
+	#%FailureEffect.text = "fail\n"
 	for succ in successes:
 		pass
 		# TODO: set up EventEffect get function to get text nice there
@@ -19,3 +16,7 @@ func set_outcome_text(successes: Array[EventEffect], failures: Array[EventEffect
 	for fail in failures:
 		pass
 		# TODO: same here
+
+func _process(delta: float) -> void:
+	if visible:
+		position = get_global_mouse_position() + OFFSET

@@ -28,3 +28,7 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	tooltip.visible = false
+
+
+func _on_pressed() -> void:
+	print("button pressed!")
