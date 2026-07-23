@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameManager="*uid://ru08p4loo8jb"
 GameState="*uid://cg7f0d3hrsugo"
+TextManager="*uid://cbdwym1ikpuel"
 
 [display]
 
