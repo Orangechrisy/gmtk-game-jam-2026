@@ -1,26 +1,26 @@
 {
   "ADVISOR": {
-    "en": ""
+	"en": ""
   },
   "ADVISOR_EVENT_1_DESC": {
-    "en": "I'm thinking that we should positional our troops in Neverville!"
+	"en": "I'm thinking that we should positional our troops in Neverville!"
   },
   "ADVISOR_EVENT_1_CHOICE_1": {
-    "en": "That's a horrible idea. (Lose Favor in Neverville)"
+	"en": "That's a horrible idea. (Lose Favor in Neverville)"
   },
   "ADVISOR_EVENT_1_CHOICE_2": {
-    "en": "Stupedous! Let's do it (Gain Favor in Neverville)"
+	"en": "Stupedous! Let's do it (Gain Favor in Neverville)"
   },
   "PRIEST": {
-    "en": ""
+	"en": ""
   },
   "PRIEST_EVENT_1_DESC": {
-    "en": "Hi"
+	"en": "Hi"
   },
   "PRIEST_EVENT_1_CHOICE_1": {
-    "en": "Ignore"
+	"en": "Ignore"
   },
   "PRIEST_EVENT_1_CHOICE_2": {
-    "en": "Accept"
+	"en": "Accept"
   }
 }

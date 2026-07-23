@@ -13,6 +13,7 @@ script = ExtResource("1_pnl1e")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=737159659]
 
 [node name="EventPopup" parent="." unique_id=24959100 instance=ExtResource("2_k6co4")]
+visible = false
 custom_minimum_size = Vector2(50, 50)
 anchors_preset = 7
 anchor_left = 0.5

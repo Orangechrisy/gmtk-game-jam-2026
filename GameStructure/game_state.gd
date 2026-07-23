@@ -18,6 +18,9 @@ var common_sentiment: int = 100 # TODO: Maybe make per-character
 var actions_per_day: int = 3
 var actions_left: int = 3
 
+var armies: int = 3
+var armies_left: int = 3
+
 # TODO: Add province tracking
 @export var provinces: Array[Node]
 
@@ -117,6 +120,27 @@ func change_noble_sentiment(val: int) -> void:
 	noble_sentiment += val
 	noble_sentiment_updated.emit(noble_sentiment)
 
+# Armies
+
+# Controls armies available for this turn
+func get_armies_left() -> int:
+	return armies_left
+
+func change_armies_left(val: int) -> void:
+	armies_left += val
+	
+func reset_armies_left() -> void:
+	armies_left = armies
+
+# Controls total army count
+func get_armies() -> int:
+	return armies
+
+func change_armies(val: int) -> void:
+	armies += val
+	if armies < 0:
+		armies = 0
+	
 # Actions
 
 func get_actions_left() -> int:
