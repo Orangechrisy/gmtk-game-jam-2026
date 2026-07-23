@@ -33,3 +33,8 @@ func on_noble_sentiment_updated(new_sentiment: int) -> void:
 	
 func on_actions_left_updated(new_actions_left: int) -> void:
 	$ActionsLeftLabel.text = "ACTIONS LEFT: " + str(new_actions_left)
+
+
+func _on_menu_button_pressed() -> void:
+	$PauseMenu.visible = true
+	# TODO: Pause game?
