@@ -63,12 +63,12 @@ func calculate_food() -> int:
 func calculate_gold() -> int:
 	return gold_yield - gold_consumption
 
-# try to do the event, based on rng and variables of the province or something
+## try to do the event, based on rng and variables of the province or something
 func try_event(event: MapEvent) -> bool:
 	# TODO: determine event odds somehow
 	return true
 
-# gets the possible events, shuffles them, and tries to fire them, if one fires it returns true
+## gets the possible events, shuffles them, and tries to fire them, if one fires it returns true
 func roll_event_odds() -> bool:
 	var possible_events: Array[Resource] = potential_events.filter(func(event): return event.can_appear())
 	possible_events.shuffle()
@@ -78,14 +78,14 @@ func roll_event_odds() -> bool:
 			return true
 	return false
 
-# the province has been clicked on
+## the province has been clicked on
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("province ", province_name, " clicked")
 		if event_present:
 			update_events(event_present, false)
 			GameManager.update_current_province(self)
-			EventScene.event_selected(event_present, self)
+			EventScene.event_selected(event_present)
 		else:
 			roll_event_odds()
 

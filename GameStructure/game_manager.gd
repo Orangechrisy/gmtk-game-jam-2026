@@ -2,9 +2,9 @@ extends Node
 
 # Custom functions
 
-# end_day: Runs all end-of-day functions, like variable updates and rolling new events
-# Variables: NONE (for now)
-# Returns: void
+## end_day: Runs all end-of-day functions, like variable updates and rolling new events
+## Variables: NONE (for now)
+## Returns: void
 func end_day() -> void:
 	GameState.update_day()
 	reduce_days_to_revolution()
@@ -32,29 +32,29 @@ func end_day() -> void:
 	
 	roll_events()
 
-# calculate_food: Calculates new Food total based on output/consumption of each province
+## calculate_food: Calculates new Food total based on output/consumption of each province
 func calculate_food() -> void:
 	for province in GameState.provinces:
 		if province.get_curr_owner() == 0:
 			GameState.change_food(province.calculate_food())
 			
-# calculate_gold: Calculates new Gold total based on output/consumption of each province
+## calculate_gold: Calculates new Gold total based on output/consumption of each province
 func calculate_gold() -> void:
 	for province in GameState.provinces:
 		if province.get_curr_owner() == 0:
 			GameState.change_gold(province.calculate_gold())
 
-# reduce_days_to_revolution: Calculates number of days to lose, then updates
-# Variables: NONE (for now)
-# Returns: void
+## reduce_days_to_revolution: Calculates number of days to lose, then updates
+## Variables: NONE (for now)
+## Returns: void
 func reduce_days_to_revolution() -> void:
 	var days_to_reduce: int = 1
 	# Run some calculations here based on events that happened
 	GameState.reduce_days_to_revolution(days_to_reduce)
 
-# how many events do we want to have happen?
-# from most to least likely (fervor?) roll event odds for each province 
-# if not enough events, roll again
+## how many events do we want to have happen?
+## from most to least likely (fervor?) roll event odds for each province 
+## if not enough events, roll again
 func roll_events() -> void:
 	var owned_provinces: Array[Province] = GameState.provinces.filter(func(province): return province.curr_owner == 0)
 	owned_provinces.sort_custom(func(a, b): return a.fervor > b.fervor)
@@ -66,9 +66,8 @@ func roll_events() -> void:
 				if owned_provinces[i].roll_event_odds():
 					num_events -= 1
 
-# roll_auto_event_chance: Roll an opportunity for an event to happen
-# between days
 # TODO: Finish implementing this!
+## Roll an opportunity for an event to happen between days
 func roll_auto_event_chance() -> void:
 	if randf_range(0, 1) <= GameState.auto_event_odds:
 		GameState.auto_events.shuffle()
@@ -77,6 +76,6 @@ func roll_auto_event_chance() -> void:
 				event.event_fired() # TODO: Handle more cleanly, show popup
 				return
 
-# update the current province in the gamestate, 
+## update the current province in the gamestate, 
 func update_current_province(province: Province):
 	GameState.set_current_province(province)
