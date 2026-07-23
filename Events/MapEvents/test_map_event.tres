@@ -12,5 +12,5 @@ event_name = &"Test Event"
 portrait = ExtResource("4_pupgl")
 character_name = &"party guy"
 dialogue = Array[String](["this is a test event", "it has, test things"])
-options = Array[ExtResource("1_dqkqt")]([ExtResource("3_pupgl")])
+options = Array[ExtResource("1_dqkqt")]([ExtResource("3_pupgl"), ExtResource("3_pupgl"), ExtResource("3_pupgl"), ExtResource("3_pupgl"), ExtResource("3_pupgl")])
 metadata/_custom_type_script = "uid://cipcjs28d1y2n"
