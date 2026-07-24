@@ -31,6 +31,7 @@ class_name Province
 
 var event_present: MapEvent
 var province_tooltip: Control
+var tween: Tween
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -82,13 +83,23 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 			update_events(event_present, false)
 			GameManager.update_current_province(self)
 			EventScene.event_selected(event_present)
-			$ProvinceTooltip.visible = false
+			var tween = get_tree().create_tween()
+			tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
 		else:
 			roll_event_odds()
 
 func _on_area_2d_mouse_entered() -> void:
 	if not GameState.get_current_event():
-		$ProvinceTooltip.visible = true
+		$TooltipTimer.timeout.connect(_on_timer_timeout)
+		$TooltipTimer.start(0.5)
 
 func _on_area_2d_mouse_exited() -> void:
-	$ProvinceTooltip.visible = false
+	$TooltipTimer.stop()
+	if tween: 
+		tween.kill()
+	tween = create_tween()
+	tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
+
+func _on_timer_timeout() -> void:
+	tween = create_tween()
+	tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 1.0), 0.1)
