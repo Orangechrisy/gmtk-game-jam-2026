@@ -23,6 +23,7 @@ var tween: Tween
 
 
 enum Counter {FOODY, FOODC, GOLDY, GOLDC, LOYALTY, FERVOR}
+enum Owner {KING, REBELS}
 
 # Signals
 signal province_owner_changed(province: Province)
@@ -82,9 +83,13 @@ func change_counter(counter: int, change: float) -> void:
 		Counter.LOYALTY:
 			loyalty = max(0, loyalty + change)
 			$ProvinceTooltip.update_values()
+			if fervor > loyalty:
+				set_curr_owner(Owner.REBELS)
 		Counter.FERVOR:
 			fervor = max(0, fervor + change)
 			$ProvinceTooltip.update_values()
+			if fervor > loyalty:
+				set_curr_owner(Owner.REBELS)
 
 ## try to do the event, based on rng and variables of the province or something
 func try_event(event: MapEvent) -> bool:
