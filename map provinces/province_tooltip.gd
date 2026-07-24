@@ -6,7 +6,7 @@ var province: Province
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	province = get_parent()
-
+	update_values()
 
 # tracks the mouse position
 func _process(delta: float) -> void:
