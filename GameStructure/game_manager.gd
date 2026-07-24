@@ -16,7 +16,6 @@ func end_day() -> void:
 		pass # TODO: Implement game over functionality
 	
 	# Update Food/Gold stores
-	# TODO: Implement penalties for running out
 	calculate_food()
 	if GameState.get_food() <= 0:
 		print("Out of Food!")
@@ -38,7 +37,6 @@ func end_day() -> void:
 	
 	reduce_days_to_revolution()
 	
-	# TODO: Handle provinces flipping!
 	handle_loss_effects()
 	
 	flip_provinces()
@@ -77,11 +75,10 @@ func calculate_fervor() -> void:
 			province.fervor += 1
 
 ## calculate_common_favor: Calculate changes to Common Favor based on fervor/loyalty
-# TODO: Determine calculations!
 func calculate_common_favor() -> void:
 	for province in GameState.provinces:
 		var common_sentiment_change = 0
-		if province.curr_owner != 0:
+		if province.curr_owner != province.Owner.KING:
 			common_sentiment_change -= 3
 			GameState.change_noble_sentiment(-1)
 		elif province.fervor * 3 >= province.loyalty * 2:
@@ -94,6 +91,7 @@ func calculate_common_favor() -> void:
 		
 		GameState.change_common_sentiment(common_sentiment_change)
 
+## calculate_noble_favor: Calculate changes to Noble Favor based on gold/control
 func calculate_noble_favor() -> void:
 	for province in GameState.provinces:
 		if province.curr_owner != 0:
@@ -127,15 +125,14 @@ func reduce_days_to_revolution() -> void:
 
 func handle_loss_effects() -> void:
 	for province in GameState.provinces:
-		if province.get_curr_owner() == 1:
+		if province.get_curr_owner() == province.Owner.REBELS:
 			province.do_loss_effects_passive()
 			
 ## flip_provinces: Checks which provinces should flip owners, and flips owners if needed
 func flip_provinces() -> void:
 	for province in GameState.provinces:
-		if province.get_curr_owner() == 0 and province.fervor > province.loyalty:
-			province.set_curr_owner(1)
-			# TODO: Other effects
+		if province.get_curr_owner() == province.Owner.KING and province.fervor > province.loyalty:
+			province.set_curr_owner(province.Owner.REBELS)
 	
 ## how many events do we want to have happen?
 ## from most to least likely (fervor?) roll event odds for each province 
@@ -153,14 +150,13 @@ func roll_events() -> void:
 				if province.roll_event_odds():
 					num_events -= 1
 
-# TODO: Finish implementing this!
 ## Roll an opportunity for an event to happen between days
 func roll_auto_event_chance() -> void:
 	if randf_range(0, 1) <= GameState.auto_event_odds:
 		GameState.auto_events.shuffle()
 		for event in GameState.auto_events:
 			if event.can_appear():
-				event.event_fired() # TODO: Handle more cleanly, show popup
+				event.event_fired()
 				return
 
 ## update the current province in the gamestate, 

@@ -15,25 +15,30 @@ var revolt_accelerated: bool = false
 
 var gold: int
 var food: int
-var noble_sentiment: int = 100 # TODO: Maybe make per-character
-var common_sentiment: int = 100 # TODO: Maybe make per-character
+var noble_sentiment: int = 100 
+var common_sentiment: int = 100
 
 var armies: int = 3
 var armies_left: int = 3
 
-# TODO: Add province tracking
 @export var provinces: Array[Province]
 var current_province: Province
 
 # Characters
 @export var characters: Array[Character]
 
+# Events
 @export var auto_event_odds: float = 1 # TODO: Set to something reasonable
 @export var auto_events: Array[MapEvent]
-
 var current_event: MapEvent
 
+# ENUMS
 enum Ending {REVOLUTION, COMMON_ASSASSIN, NOBLE_ASSASSIN, FLEE_DOCK_FAIL, FLEE_DOCK_SUCCESS, FLEE_MINES_FAIL, FLEE_MINES_SUCCESS, FLEE_OUTSKIRTS_FAIL, FLEE_OUTSKIRTS_SUCCESS, SURRENDER_FAIL, SURRENDER_SUCCESS, ABDICATE_FAIL, ABDICATE_SUCCESS}
+enum Click {BASIC, ARMY_PLACEMENT}
+var MouseMode: int = Click.BASIC:
+	set(val):
+		MouseMode = val
+		mouse_mode_updated.emit(val)
 
 # SIGNALS
 
@@ -45,6 +50,7 @@ signal common_sentiment_updated(new_sentiment)
 signal noble_sentiment_updated(new_sentiment)
 signal armies_left_updated(new_armies_left)
 signal active_events(any_active)
+signal mouse_mode_updated(new_mode)
 
 # Day
 

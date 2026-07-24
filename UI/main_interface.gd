@@ -2,11 +2,9 @@ extends Control
 
 signal pause_game()
 
-# Variables
-var army_placing_mode: bool = false
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GameState.connect("mouse_mode_updated", on_mouse_mode_updated)
 	GameState.connect("day_updated", on_day_updated)
 	GameState.connect("active_events", show_end_day)
 	GameState.connect("days_to_revolution_updated", on_days_to_revolution_updated)
@@ -17,6 +15,12 @@ func _ready() -> void:
 	GameState.connect("armies_left_updated", on_armies_left_updated)
 
 # UI Updates
+
+func on_mouse_mode_updated(new_mode) -> void:
+	if GameState.MouseMode == GameState.Click.BASIC:
+		$PlaceArmyButton.text = "PLACE ARMY"
+	elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+		$PlaceArmyButton.text = "CANCEL"
 
 func on_day_updated(new_day: int) -> void:
 	$DayLabel.text = "DAY " + str(new_day)
@@ -47,15 +51,10 @@ func _on_menu_button_pressed() -> void:
 func _on_place_army_button_pressed() -> void:
 	if GameState.get_armies_left() <= 0: return
 	
-	if not army_placing_mode:
-		$PlaceArmyButton.text = "CANCEL"
-		army_placing_mode = true
-		pass
-	
-	else:
-		$PlaceArmyButton.text = "PLACE ARMY"
-		army_placing_mode = false
-		pass
+	if GameState.MouseMode == GameState.Click.BASIC:
+		GameState.MouseMode = GameState.Click.ARMY_PLACEMENT
+	elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+		GameState.MouseMode = GameState.Click.BASIC
 
 ## adjust end day button visibility (val = true means there is an active event)
 func show_end_day(val: bool) -> void:

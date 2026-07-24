@@ -7,7 +7,7 @@ class_name MapEvent
 ## Dimensions are 368 x 512
 @export var portrait: Texture2D
 @export var character_name: StringName = ""
-@export var dialogue: Array[String] # TODO: Replace with something
+@export var dialogue: Array[String]
 @export var one_time: bool = false
 var has_happened: bool = false
 
@@ -44,7 +44,6 @@ func can_appear() -> bool:
 	return true
 
 # Controls one-time events
-# TODO: Could be done better?
 func event_fired() -> void:
 	EventScene.event_selected(self)
 	if one_time:

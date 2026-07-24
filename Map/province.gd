@@ -32,10 +32,7 @@ enum Owner {KING, REBELS}
 # Signals
 signal province_owner_changed(province: Province)
 
-var has_army: bool:
-	set(val):
-		if val == false or curr_owner == 0: # No placing armies in unowned provinces
-			has_army = val
+var has_army: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -46,10 +43,10 @@ func _ready() -> void:
 	GameState.connect("day_updated", on_day_updated)
 	$ProvinceTooltip.update_values()
 
+# TODO: does the province need to do something on the day update not handled elsewhere?
+# like random slight adjustment to yields/consumptions?
 func on_day_updated(new_day):
-	if fervor > loyalty:
-		curr_owner = 1
-	# change image?
+	has_army = false
 
 # update the event popup and if the province has an event currently
 func update_events(event: MapEvent, unhide: bool):
@@ -66,6 +63,7 @@ func set_curr_owner(new_value: int) -> void:
 		effect.do_effect()
 	for effect in loss_effects_passive:
 		effect.do_effect()
+	# TODO: do other effects through this?
 	province_owner_changed.emit(self)
 
 func do_loss_effects_passive() -> void:
@@ -95,13 +93,9 @@ func change_counter(counter: int, change: float) -> void:
 		Counter.LOYALTY:
 			loyalty = max(0, loyalty + change)
 			$ProvinceTooltip.update_values()
-			if fervor > loyalty:
-				set_curr_owner(Owner.REBELS)
 		Counter.FERVOR:
 			fervor = max(0, fervor + change)
 			$ProvinceTooltip.update_values()
-			if fervor > loyalty:
-				set_curr_owner(Owner.REBELS)
 
 # TODO: more interesting
 ## try to do the event, based on rng and variables of the province or something
@@ -125,16 +119,26 @@ func roll_event_odds() -> bool:
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("province ", province_name, " clicked")
-		if event_present:
-			update_events(event_present, false)
-			GameManager.update_current_province(self)
-			event_present.event_fired()
-			if tween: 
-				tween.kill()
-			tween = create_tween()
-			tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
-		else:
-			roll_event_odds()
+		if GameState.MouseMode == GameState.Click.BASIC:
+			if event_present:
+				update_events(event_present, false)
+				GameManager.update_current_province(self)
+				event_present.event_fired()
+				if tween: 
+					tween.kill()
+				tween = create_tween()
+				tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
+			else: # TODO: remove later
+				roll_event_odds()
+		elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+			# TODO: visual effect of some sort? sound?
+			if curr_owner == Owner.KING and not has_army: # No placing armies in unowned provinces
+				GameState.MouseMode = GameState.Click.BASIC
+				print("Army placed!")
+				has_army = true
+				GameState.change_armies(-1) # for now
+			else: # if we clicked on an invalid province
+				print("Can't place here!")
 
 func _on_area_2d_mouse_entered() -> void:
 	if not GameState.get_current_event():
