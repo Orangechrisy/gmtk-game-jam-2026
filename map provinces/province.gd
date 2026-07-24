@@ -22,7 +22,7 @@ var province_tooltip: Control
 var tween: Tween
 
 
-enum {FOODY, FOODC, GOLDY, GOLDC, LOYALTY, FERVOR}
+enum Counter {FOODY, FOODC, GOLDY, GOLDC, LOYALTY, FERVOR}
 
 # Signals
 signal province_owner_changed(province: Province)
@@ -67,22 +67,22 @@ func calculate_gold() -> int:
 
 func change_counter(counter: int, change: float) -> void:
 	match counter:
-		FOODY:
+		Counter.FOODY:
 			food_yield = max(0, food_yield + change)
 			$ProvinceTooltip.update_values()
-		FOODC:
+		Counter.FOODC:
 			food_consumption = max(0, food_consumption + change)
 			$ProvinceTooltip.update_values()
-		GOLDY:
+		Counter.GOLDY:
 			gold_yield = max(0, gold_yield + change)
 			$ProvinceTooltip.update_values()
-		GOLDC:
+		Counter.GOLDC:
 			gold_consumption = max(0, gold_consumption + change)
 			$ProvinceTooltip.update_values()
-		LOYALTY:
+		Counter.LOYALTY:
 			loyalty = max(0, loyalty + change)
 			$ProvinceTooltip.update_values()
-		FERVOR:
+		Counter.FERVOR:
 			fervor = max(0, fervor + change)
 			$ProvinceTooltip.update_values()
 
