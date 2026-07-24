@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dggvawrkya46m"]
 
-[ext_resource type="Script" uid="uid://cj05e7qvgb3pj" path="res://map provinces/province.gd" id="1_pnl1e"]
+[ext_resource type="Script" uid="uid://cj05e7qvgb3pj" path="res://Map/province.gd" id="1_pnl1e"]
 [ext_resource type="PackedScene" uid="uid://cx0d76cbtbsat" path="res://Events/MapEvents/map_event_popup.tscn" id="2_k6co4"]
-[ext_resource type="PackedScene" uid="uid://c1dmvkr2t32vh" path="res://map provinces/province_tooltip.tscn" id="3_2gmdq"]
+[ext_resource type="PackedScene" uid="uid://c1dmvkr2t32vh" path="res://Map/province_tooltip.tscn" id="3_2gmdq"]
 
 [node name="Province" type="Node2D" unique_id=1886263090]
 script = ExtResource("1_pnl1e")

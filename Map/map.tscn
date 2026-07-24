@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bxunwhqu2ejnj"]
+
+[ext_resource type="PackedScene" uid="uid://dggvawrkya46m" path="res://Map/province.tscn" id="1_5ej7w"]
+[ext_resource type="Texture2D" uid="uid://841rbvhlys17" path="res://Assets/mapish.png" id="1_lymsy"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="2_lymsy"]
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="3_5cbny"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_ptuj4"]
+[ext_resource type="Resource" uid="uid://dgoh6t7wpr2iu" path="res://Events/EventOptions/eo_test_option.tres" id="5_rr5ff"]
+[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="6_a0x20"]
+[ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="7_vhrv6"]
+[ext_resource type="PackedScene" uid="uid://dv1r3qybxrmhh" path="res://UI/MainInterface.tscn" id="8_ry46t"]
+
+[sub_resource type="Resource" id="Resource_btrrw"]
+script = ExtResource("2_lymsy")
+event_name = &"Test Event"
+portrait = ExtResource("6_a0x20")
+character_name = &"spy master"
+dialogue = Array[String](["this is a test event", "it has, test things"])
+options = Array[ExtResource("4_ptuj4")]([ExtResource("5_rr5ff"), ExtResource("5_rr5ff"), ExtResource("5_rr5ff"), ExtResource("5_rr5ff"), ExtResource("5_rr5ff")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"
+
+[node name="Map" type="Node2D" unique_id=932399740]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2025840356]
+modulate = Color(0.4045111, 0.40451115, 0.4045111, 1)
+texture = ExtResource("1_lymsy")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Provinces" type="Node2D" parent="." unique_id=1609533052]
+
+[node name="Capital" parent="Provinces" unique_id=1886263090 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 695, 643, 602, 606)
+province_name = "Capital"
+potential_events = Array[ExtResource("2_lymsy")]([SubResource("Resource_btrrw")])
+event_location = Vector2(670, 520)
+food_yield = 32.0
+food_consumption = 12.0
+gold_yield = 5.0
+gold_consumption = 11.0
+loyalty = 53
+fervor = 17
+
+[node name="Military" parent="Provinces" unique_id=1109736334 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328, 991, 278, 787, 239, 728, 285)
+province_name = "Military"
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("7_vhrv6")])
+event_location = Vector2(900, 380)
+
+[node name="Farm" parent="Provinces" unique_id=1918935467 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(996, 281, 1086, 228, 1164, 328, 1255, 332, 1305, 422, 1248, 433, 1241, 503, 1157, 522, 1127, 638, 1187, 650, 1183, 682, 1022, 614, 1022, 546, 993, 539, 1052, 318)
+province_name = "Farm"
+
+[node name="City1" parent="Provinces" unique_id=305634748 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(735, 285, 621, 445, 604, 597, 503, 589, 539, 527, 532, 373, 419, 385, 501, 335, 527, 189)
+province_name = "City1"
+
+[node name="Villa" parent="Provinces" unique_id=448714367 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(784, 628, 733, 549, 784, 499, 944, 554, 951, 700, 1057, 760, 911, 793, 910, 901, 627, 889, 611, 709, 555, 705, 561, 608, 613, 609, 700, 638)
+province_name = "Villa"
+
+[node name="City2" parent="Provinces" unique_id=203984502 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(1030, 625, 1019, 537, 992, 530, 988, 561, 944, 554, 951, 700, 1057, 760, 964, 782, 987, 818, 1139, 793, 1144, 676)
+province_name = "City2"
+
+[node name="Mine" parent="Provinces" unique_id=1791617832 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(1239, 510, 1160, 527, 1129, 637, 1187, 649, 1184, 680, 1330, 734, 1326, 644, 1264, 614, 1352, 553)
+province_name = "Mine"
+
+[node name="Port" parent="Provinces" unique_id=1295366853 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(1266, 333, 1311, 417, 1242, 427, 1246, 501, 1426, 580, 1517, 496, 1606, 582, 1673, 556, 1623, 510, 1595, 405, 1477, 397, 1491, 295, 1335, 242)
+province_name = "Port"
+
+[node name="Church" parent="Provinces" unique_id=1489639061 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(1446, 716, 1330, 697, 1323, 644, 1268, 611, 1352, 553, 1426, 580, 1517, 496, 1606, 582, 1542, 647, 1518, 757, 1448, 760)
+province_name = "Church"
+
+[node name="Outskirts" parent="Provinces" unique_id=1740394256 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(328, 987, 302, 882, 222, 849, 273, 503, 380, 506, 354, 668, 544, 738, 553, 709, 603, 704, 623, 887, 438, 902, 404, 1023)
+province_name = "Outskirts"
+
+[node name="MainInterface" parent="." unique_id=1175301398 instance=ExtResource("8_ry46t")]

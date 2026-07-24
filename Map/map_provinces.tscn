@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b58jsc3gd18v3"]
 
 [ext_resource type="Texture2D" uid="uid://841rbvhlys17" path="res://Assets/mapish.png" id="1_g16rl"]
-[ext_resource type="PackedScene" uid="uid://dggvawrkya46m" path="res://map provinces/province.tscn" id="2_k0ye7"]
+[ext_resource type="PackedScene" uid="uid://dggvawrkya46m" path="res://Map/province.tscn" id="2_k0ye7"]
 [ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="3_sayt0"]
 [ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="3_vyboi"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_plq5i"]

@@ -2,6 +2,10 @@ extends Node
 
 # Custom functions
 
+## resets everything to default starting game state
+func reset():
+	pass
+
 ## end_day: Runs all end-of-day functions, like variable updates and rolling new events
 ## Variables: NONE (for now)
 ## Returns: void

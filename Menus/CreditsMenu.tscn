@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://kykrpyebwvu2"]
 
-[ext_resource type="Script" uid="uid://bjxmbmu7ftl2l" path="res://MainMenu/credits_menu.gd" id="1_fil7c"]
+[ext_resource type="Script" uid="uid://bjxmbmu7ftl2l" path="res://Menus/credits_menu.gd" id="1_fil7c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
 font_size = 48

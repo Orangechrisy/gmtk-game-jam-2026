@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqnp5ys3qf240"]
 
-[ext_resource type="Script" uid="uid://nq5b2qatca1p" path="res://PauseMenu/pause_menu.gd" id="1_3ke7c"]
-[ext_resource type="PackedScene" uid="uid://dglekacdrwykk" path="res://MainMenu/OptionsMenu.tscn" id="2_7n1tg"]
+[ext_resource type="Script" uid="uid://nq5b2qatca1p" path="res://Menus/pause_menu.gd" id="1_3ke7c"]
+[ext_resource type="PackedScene" uid="uid://dglekacdrwykk" path="res://Menus/OptionsMenu.tscn" id="2_7n1tg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
 font_size = 30

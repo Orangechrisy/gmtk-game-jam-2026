@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1dmvkr2t32vh"]
 
-[ext_resource type="Script" uid="uid://bt8ta7yn2h0aa" path="res://map provinces/province_tooltip.gd" id="1_xjqa8"]
+[ext_resource type="Script" uid="uid://bt8ta7yn2h0aa" path="res://Map/province_tooltip.gd" id="1_xjqa8"]
 [ext_resource type="Texture2D" uid="uid://vnlwl2v8hrfd" path="res://Assets/popuprect.png" id="2_86hd7"]
 
 [node name="ProvinceTooltip" type="Control" unique_id=1231974182]
