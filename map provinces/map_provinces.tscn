@@ -30,6 +30,12 @@ vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 
 province_name = "Capital"
 potential_events = Array[Resource]([SubResource("Resource_btrrw")])
 event_location = Vector2(670, 520)
+food_yield = 32.0
+food_consumption = 12.0
+gold_yield = 5.0
+gold_consumption = 11.0
+loyalty = 53
+fervor = 17
 
 [node name="Military" parent="." unique_id=414529575 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328, 991, 278, 787, 239, 728, 285)

@@ -1,4 +1,3 @@
-@tool
 extends Node2D
 class_name Province
 
@@ -8,30 +7,21 @@ class_name Province
 @export var curr_owner: int = 0 # not sure what this should be, but could be an enum
 @export var potential_events: Array[Resource]
 @export var event_location: Vector2
+@export var TOOLTIP_TIME_DELAY: float = 0.5
 
 @export_group("Counters")
-@export var food_yield: float:
-	set(change):
-		food_yield = max(0, food_yield + change)
-@export var food_consumption: float:
-	set(change):
-		food_consumption = max(0, food_consumption + change)
-@export var gold_yield: float:
-	set(change):
-		gold_yield = max(0, gold_yield + change)
-@export var gold_consumption: float:
-	set(change):
-		food_yield = max(0, food_yield + change)
-@export var loyalty: int:
-	set(change):
-		loyalty = max(0, loyalty + change)
-@export var fervor: int:
-	set(change):
-		fervor = max(0, fervor + change)
+@export var food_yield: float
+@export var food_consumption: float
+@export var gold_yield: float
+@export var gold_consumption: float
+@export var loyalty: int
+@export var fervor: int
 
 var event_present: MapEvent
 var province_tooltip: Control
 var tween: Tween
+
+enum {FOODY, FOODC, GOLDY, GOLDC, LOYALTY, FERVOR}
 
 var has_army: bool:
 	set(val):
@@ -43,7 +33,9 @@ func _ready() -> void:
 	$Area2D/CollisionPolygon2D.polygon = vertices
 	$EventPopup.visible = false
 	$EventPopup.position = event_location
+	$TooltipTimer.timeout.connect(_on_timer_timeout)
 	GameState.connect("day_updated", on_day_updated)
+	$ProvinceTooltip.update_values()
 
 func on_day_updated(new_day):
 	if fervor > loyalty:
@@ -64,6 +56,27 @@ func calculate_food() -> int:
 
 func calculate_gold() -> int:
 	return gold_yield - gold_consumption
+
+func change_counter(counter: int, change: float) -> void:
+	match counter:
+		FOODY:
+			food_yield = max(0, food_yield + change)
+			$ProvinceTooltip.update_values()
+		FOODC:
+			food_consumption = max(0, food_consumption + change)
+			$ProvinceTooltip.update_values()
+		GOLDY:
+			gold_yield = max(0, gold_yield + change)
+			$ProvinceTooltip.update_values()
+		GOLDC:
+			gold_consumption = max(0, gold_consumption + change)
+			$ProvinceTooltip.update_values()
+		LOYALTY:
+			loyalty = max(0, loyalty + change)
+			$ProvinceTooltip.update_values()
+		FERVOR:
+			fervor = max(0, fervor + change)
+			$ProvinceTooltip.update_values()
 
 ## try to do the event, based on rng and variables of the province or something
 func try_event(event: MapEvent) -> bool:
@@ -95,8 +108,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 
 func _on_area_2d_mouse_entered() -> void:
 	if not GameState.get_current_event():
-		$TooltipTimer.timeout.connect(_on_timer_timeout)
-		$TooltipTimer.start(0.5)
+		$TooltipTimer.start(TOOLTIP_TIME_DELAY)
 
 func _on_area_2d_mouse_exited() -> void:
 	$TooltipTimer.stop()
@@ -107,4 +119,4 @@ func _on_area_2d_mouse_exited() -> void:
 
 func _on_timer_timeout() -> void:
 	tween = create_tween()
-	tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 1.0), 0.1)
+	tween.tween_property($ProvinceTooltip, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
