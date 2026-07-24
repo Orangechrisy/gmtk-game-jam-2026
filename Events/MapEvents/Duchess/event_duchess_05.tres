@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://dcvfh3w1xtark" path="res://Events/EventOptions/Duchess/eo_duchess_05_1.tres" id="4_f3pbc"]
 [ext_resource type="Resource" uid="uid://d4kh1cqn6x1ax" path="res://Events/EventOptions/Duchess/eo_duchess_05_2.tres" id="5_mdlt5"]
 [ext_resource type="Texture2D" uid="uid://6nmxmx7ef4pf" path="res://Assets/PORTRAIT_duchess.png" id="7_fffpa"]
-[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="8_ueyt1"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_ueyt1"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_4rfnh")

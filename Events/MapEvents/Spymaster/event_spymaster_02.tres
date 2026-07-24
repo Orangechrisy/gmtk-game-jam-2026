@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://t3d6g756qm5l" path="res://Events/EventOptions/Spymaster/eo_spymaster_02_2.tres" id="5_nuaw5"]
 [ext_resource type="Resource" uid="uid://c3nswnq63u8dv" path="res://Events/EventOptions/Spymaster/eo_spymaster_02_3.tres" id="6_erkow"]
 [ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="7_mt5ur"]
-[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="8_mx4qa"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_mx4qa"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_nuaw5")

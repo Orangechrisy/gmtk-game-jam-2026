@@ -4,7 +4,20 @@ var current_event: MapEvent
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	reset_event_scene()
+
+## resets the event scene to ensure the next event selected can adjust as needed
+func reset_event_scene() -> void:
 	visible = false
+	GameManager.update_current_event(null)
+	for button in %Options.get_children():
+		button.queue_free()
+	for button in %Options2.get_children():
+		button.queue_free()
+	%Close.visible = true
+	%CharacterName.get_parent().visible = true
+	%Portrait.texture = null
+	%Portrait.visible = true
 
 ## shows the current event (either clicked on or auto?)
 func event_selected(event: MapEvent):
@@ -14,18 +27,27 @@ func event_selected(event: MapEvent):
 	%Title.text = event.get_event_name()
 	%Portrait.texture = event.get_portrait()
 	%CharacterName.text = event.get_character_name()
+	if %CharacterName.text == "":
+		set_auto_event()
 	set_dialogue(event.get_event_dialogue())
 	create_buttons(event.get_options())
 	visible = true
 
+## adjusts the event popup to fit with the auto event setup
+func set_auto_event() -> void:
+	%Close.visible = false
+	%CharacterName.get_parent().visible = false
+	if %Portrait.texture != null:
+		%Portrait.visible = false
+
 # TODO: handle dialogue text better than just basically a block with newlines
-func set_dialogue(dialogue_strings: Array[String]):
+func set_dialogue(dialogue_strings: Array[String]) -> void:
 	%Description.text = ""
 	for line in dialogue_strings:
 		%Description.text += line + '\n'
 
 ## dynamically creates up to 6 buttons, if more than 3 then it goes to a new row
-func create_buttons(options: Array[EventOption]):
+func create_buttons(options: Array[EventOption]) -> void:
 	print(%Options.get_children())
 	if options.size() > 3:
 		var halfway = int(ceil(options.size() / 2.0))
@@ -35,7 +57,7 @@ func create_buttons(options: Array[EventOption]):
 		set_button_placements(%Options, options, Vector2i(0, options.size()), options.size())
 
 ## aligns the buttons so they are nicely spaced
-func set_button_placements(container: HBoxContainer, options: Array[EventOption], option_range: Vector2i, num_buttons: int):
+func set_button_placements(container: HBoxContainer, options: Array[EventOption], option_range: Vector2i, num_buttons: int) -> void:
 	for i in option_range:
 		var option = options[i]
 		var button = load("res://Events/EventOptions/event_option_button.tscn").instantiate()
@@ -47,13 +69,8 @@ func set_button_placements(container: HBoxContainer, options: Array[EventOption]
 	container.add_theme_constant_override("separation", int((area_size - (button_size * num_buttons)) / num_buttons) / 2)
 
 ## closes the event scene (hides it), removes the options so its fresh next time
-func close_event(removed: bool):
-	visible = false
-	GameManager.update_current_event(null)
-	for button in %Options.get_children():
-		button.queue_free()
-	for button in %Options2.get_children():
-		button.queue_free()
+func close_event(removed: bool) -> void:
+	reset_event_scene()
 	# for province events
 	if GameState.get_current_province() != null:
 		if removed:

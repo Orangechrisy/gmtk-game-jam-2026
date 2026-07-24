@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://5fpyrkw2dd7f" path="res://Events/EventOptions/General/eo_general_07_1.tres" id="4_6xay7"]
 [ext_resource type="Resource" uid="uid://b26lm7l80dvu" path="res://Events/EventOptions/General/eo_general_07_2.tres" id="5_8wwlu"]
 [ext_resource type="Texture2D" uid="uid://syj5bhkitkck" path="res://Assets/PORTRAIT_general.png" id="7_kucio"]
-[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="8_5h817"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_5h817"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_m24py")

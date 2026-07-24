@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://bw1pht0jashkx" path="res://Events/EventOptions/General/eo_general_03_2.tres" id="5_jj8cx"]
 [ext_resource type="Resource" uid="uid://d25cpxfggq5gv" path="res://Events/EventOptions/General/eo_general_03_3.tres" id="6_fbyoc"]
 [ext_resource type="Texture2D" uid="uid://syj5bhkitkck" path="res://Assets/PORTRAIT_general.png" id="7_e7vwo"]
-[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="8_rqov0"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_rqov0"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_jj8cx")

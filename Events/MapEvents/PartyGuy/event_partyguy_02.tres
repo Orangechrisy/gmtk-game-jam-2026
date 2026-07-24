@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://bukf8ci330m5q" path="res://Events/EventOptions/PartyGuy/eo_partyguy_02_2.tres" id="4_fbxrb"]
 [ext_resource type="Resource" uid="uid://hbh24216n6o5" path="res://Events/EventOptions/PartyGuy/eo_partyguy_02_1.tres" id="5_g3da3"]
 [ext_resource type="Texture2D" uid="uid://c23kc8756wrkf" path="res://Assets/PORTRAIT_party_guy.png" id="7_xpavv"]
-[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="8_i67yj"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_i67yj"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_h5fiy")
