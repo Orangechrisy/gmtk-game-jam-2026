@@ -91,17 +91,12 @@ func change_counter(counter: int, change: float) -> void:
 			if fervor > loyalty:
 				set_curr_owner(Owner.REBELS)
 
-## try to do the event, based on rng and variables of the province or something
-func try_event(event: MapEvent) -> bool:
-	# TODO: determine event odds somehow
-	return true
-
 ## gets the possible events, shuffles them, and tries to fire them, if one fires it returns true
 func roll_event_odds() -> bool:
-	var possible_events: Array[Resource] = potential_events.filter(func(event): return event.can_appear())
+	var possible_events: Array[MapEvent] = potential_events.filter(func(event): return event.can_appear())
 	possible_events.shuffle()
 	for event in possible_events:
-		if try_event(event):
+		if event.can_appear():
 			update_events(event, true)
 			return true
 	return false
@@ -113,7 +108,7 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 		if event_present:
 			update_events(event_present, false)
 			GameManager.update_current_province(self)
-			EventScene.event_selected(event_present)
+			event_present.event_fired()
 			var tween = get_tree().create_tween()
 			tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
 		else:

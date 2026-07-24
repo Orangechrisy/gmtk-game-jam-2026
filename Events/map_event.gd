@@ -46,5 +46,6 @@ func can_appear() -> bool:
 # Controls one-time events
 # TODO: Could be done better?
 func event_fired() -> void:
+	EventScene.event_selected(self)
 	if one_time:
 		has_happened = true

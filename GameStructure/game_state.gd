@@ -29,7 +29,7 @@ var current_province: Province
 @export var characters: Array[Character]
 
 @export var auto_event_odds: float = 1 # TODO: Set to something reasonable
-@export var auto_events: Array[AutoEvent]
+@export var auto_events: Array[MapEvent]
 
 var current_event: MapEvent
 
