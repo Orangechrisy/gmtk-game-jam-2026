@@ -5,31 +5,45 @@
 [ext_resource type="PackedScene" uid="uid://kykrpyebwvu2" path="res://MainMenu/CreditsMenu.tscn" id="3_430ii"]
 [ext_resource type="PackedScene" uid="uid://l485x5bqjkuf" path="res://MainMenu/QuitConfirmMenu.tscn" id="4_3p42x"]
 
-[node name="MainMenu" type="Node2D" unique_id=89832299]
+[node name="MainMenu" type="Control" unique_id=136163537]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_otibh")
 
-[node name="StartGameButton" type="Button" parent="." unique_id=1542554719]
+[node name="MainMainMenu" type="Control" parent="." unique_id=1457501135]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartGameButton" type="Button" parent="MainMainMenu" unique_id=1542554719]
+layout_mode = 0
 offset_left = 407.0
 offset_top = 479.0
 offset_right = 1477.0
 offset_bottom = 537.0
 text = "START GAME"
 
-[node name="OptionsButton" type="Button" parent="." unique_id=2008765758]
+[node name="OptionsButton" type="Button" parent="MainMainMenu" unique_id=2008765758]
+layout_mode = 0
 offset_left = 407.0
 offset_top = 590.0
 offset_right = 1477.0
 offset_bottom = 648.0
 text = "OPTIONS"
 
-[node name="CreditsButton" type="Button" parent="." unique_id=42583149]
+[node name="CreditsButton" type="Button" parent="MainMainMenu" unique_id=42583149]
+layout_mode = 0
 offset_left = 407.0
 offset_top = 697.0
 offset_right = 1477.0
 offset_bottom = 755.0
 text = "CREDITS"
 
-[node name="QuitGameButton" type="Button" parent="." unique_id=1788453671]
+[node name="QuitGameButton" type="Button" parent="MainMainMenu" unique_id=1788453671]
+layout_mode = 0
 offset_left = 407.0
 offset_top = 805.0
 offset_right = 1477.0
@@ -38,14 +52,17 @@ text = "QUIT GAME"
 
 [node name="OptionsMenu" parent="." unique_id=806118121 instance=ExtResource("2_lbqne")]
 visible = false
+layout_mode = 1
 
 [node name="CreditsMenu" parent="." unique_id=719412781 instance=ExtResource("3_430ii")]
 visible = false
+layout_mode = 1
 
 [node name="QuitConfirmMenu" parent="." unique_id=129270634 instance=ExtResource("4_3p42x")]
 visible = false
+layout_mode = 1
 
-[connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
-[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="QuitGameButton" to="." method="_on_quit_game_button_pressed"]
+[connection signal="pressed" from="MainMainMenu/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="MainMainMenu/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MainMainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MainMainMenu/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
