@@ -10,6 +10,9 @@ var day: int = 0
 var base_days_to_revolution: int = 30
 var days_to_revolution: int = 30
 
+var revolt_stalled: bool = false
+var revolt_accelerated: bool = false
+
 var gold: int
 var food: int
 var noble_sentiment: int = 100 # TODO: Maybe make per-character

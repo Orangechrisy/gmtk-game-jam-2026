@@ -33,6 +33,11 @@ class_name Province
 
 var event_present: MapEvent
 
+var has_army: bool:
+	set(val):
+		if val == false or curr_owner == 0: # No placing armies in unowned provinces
+			has_army = val
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Area2D/CollisionPolygon2D.polygon = vertices
