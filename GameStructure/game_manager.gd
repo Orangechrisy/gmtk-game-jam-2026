@@ -34,6 +34,7 @@ func end_day() -> void:
 	calculate_fervor()
 	
 	calculate_common_favor()
+	calculate_noble_favor()
 	
 	reduce_days_to_revolution()
 	
@@ -42,7 +43,7 @@ func end_day() -> void:
 	
 	flip_provinces()
 	
-	# Anything else we want to do
+	check_game_end()
 	
 	roll_events()
 	check_for_events()
@@ -61,6 +62,7 @@ func calculate_food() -> void:
 	for province in GameState.provinces:
 		if province.get_curr_owner() == 0:
 			GameState.change_food(province.calculate_food())
+		
 			
 ## calculate_gold: Calculates new Gold total based on output/consumption of each province
 func calculate_gold() -> void:
@@ -78,14 +80,28 @@ func calculate_fervor() -> void:
 # TODO: Determine calculations!
 func calculate_common_favor() -> void:
 	for province in GameState.provinces:
+		var common_sentiment_change = 0
 		if province.curr_owner != 0:
-			GameState.change_common_sentiment(-3)
+			common_sentiment_change -= 3
 			GameState.change_noble_sentiment(-1)
 		elif province.fervor * 3 >= province.loyalty * 2:
-			GameState.change_common_sentiment(-2)
+			common_sentiment_change -= 2
 		elif province.fervor * 3 >= province.loyalty:
-			GameState.change_common_sentiment(-1)
+			common_sentiment_change -= 1
+		
+		if GameState.get_food() <= 0:
+			common_sentiment_change *= 2
+		
+		GameState.change_common_sentiment(common_sentiment_change)
 
+func calculate_noble_favor() -> void:
+	for province in GameState.provinces:
+		if province.curr_owner != 0:
+			GameState.change_noble_sentiment(-1)
+		
+		if GameState.get_gold() <= 0:
+			GameState.change_noble_sentiment(-1)
+	
 ## reduce_days_to_revolution: Calculates number of days to lose, then updates
 ## Variables: NONE (for now)
 ## Returns: void
@@ -158,3 +174,11 @@ func update_current_event(event: MapEvent):
 ## kill character
 func kill_character(character: Character) -> void:
 	character.is_alive = false
+
+## check whether the player has lost
+func check_game_end() -> void:
+	pass # TODO: Implement checks for game loss
+
+## end the game
+func end_game(ending: int) -> void:
+	pass # TODO: Implement ending
