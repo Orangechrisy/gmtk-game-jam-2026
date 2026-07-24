@@ -8,6 +8,10 @@
 [ext_resource type="Resource" uid="uid://dgoh6t7wpr2iu" path="res://Events/EventOptions/eo_test_option.tres" id="5_pxtiu"]
 [ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="6_io1nl"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="7_44qw3"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="9_pxtiu"]
+[ext_resource type="Script" uid="uid://bciotqfqbxelf" path="res://Events/EventEffects/ee_change_armies.gd" id="10_io1nl"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="11_io1nl"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="12_44qw3"]
 
 [sub_resource type="Resource" id="Resource_btrrw"]
 script = ExtResource("7_44qw3")
@@ -17,6 +21,20 @@ character_name = &"spy master"
 dialogue = Array[String](["this is a test event", "it has, test things"])
 options = Array[ExtResource("4_plq5i")]([ExtResource("5_pxtiu"), ExtResource("5_pxtiu"), ExtResource("5_pxtiu"), ExtResource("5_pxtiu"), ExtResource("5_pxtiu")])
 metadata/_custom_type_script = "uid://cipcjs28d1y2n"
+
+[sub_resource type="Resource" id="Resource_2gmdq"]
+script = ExtResource("10_io1nl")
+armies_change = -10
+metadata/_custom_type_script = "uid://bciotqfqbxelf"
+
+[sub_resource type="Resource" id="Resource_44qw3"]
+script = ExtResource("11_io1nl")
+favor_change = -1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_io1nl"]
+script = ExtResource("12_44qw3")
+metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [node name="Map Provinces" type="Node2D" unique_id=887434233]
 
@@ -28,7 +46,7 @@ metadata/_edit_lock_ = true
 [node name="Capital" parent="." unique_id=1886263090 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 695, 643, 602, 606)
 province_name = "Capital"
-potential_events = Array[Resource]([SubResource("Resource_btrrw")])
+potential_events = Array[ExtResource("7_44qw3")]([SubResource("Resource_btrrw")])
 event_location = Vector2(670, 520)
 food_yield = 32.0
 food_consumption = 12.0
@@ -40,8 +58,9 @@ fervor = 17
 [node name="Military" parent="." unique_id=414529575 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328, 991, 278, 787, 239, 728, 285)
 province_name = "Military"
-potential_events = Array[Resource]([ExtResource("3_vyboi")])
+potential_events = Array[ExtResource("7_44qw3")]([ExtResource("3_vyboi")])
 event_location = Vector2(900, 380)
+loss_effects_instant = Array[ExtResource("9_pxtiu")]([SubResource("Resource_2gmdq")])
 
 [node name="Farm" parent="." unique_id=345608748 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(996, 281, 1086, 228, 1164, 328, 1255, 332, 1305, 422, 1248, 433, 1241, 503, 1157, 522, 1127, 638, 1187, 650, 1183, 682, 1022, 614, 1022, 546, 993, 539, 1052, 318)
@@ -50,10 +69,12 @@ province_name = "Farm"
 [node name="City1" parent="." unique_id=842335567 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(735, 285, 621, 445, 604, 597, 503, 589, 539, 527, 532, 373, 419, 385, 501, 335, 527, 189)
 province_name = "City1"
+loss_effects_passive = Array[ExtResource("9_pxtiu")]([SubResource("Resource_44qw3")])
 
 [node name="Villa" parent="." unique_id=1302876999 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(784, 628, 733, 549, 784, 499, 944, 554, 951, 700, 1057, 760, 911, 793, 910, 901, 627, 889, 611, 709, 555, 705, 561, 608, 613, 609, 700, 638)
 province_name = "Villa"
+loss_effects_passive = Array[ExtResource("9_pxtiu")]([SubResource("Resource_io1nl")])
 
 [node name="City2" parent="." unique_id=861354156 instance=ExtResource("2_k0ye7")]
 vertices = PackedVector2Array(1030, 625, 1019, 537, 992, 530, 988, 561, 944, 554, 951, 700, 1057, 760, 964, 782, 987, 818, 1139, 793, 1144, 676)
