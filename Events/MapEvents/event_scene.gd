@@ -35,8 +35,8 @@ func create_buttons(options: Array[EventOption]):
 		set_button_placements(%Options, options, Vector2i(0, options.size()), options.size())
 
 ## aligns the buttons so they are nicely spaced
-func set_button_placements(container: HBoxContainer, options: Array[EventOption], range: Vector2i, num_buttons: int):
-	for i in range:
+func set_button_placements(container: HBoxContainer, options: Array[EventOption], option_range: Vector2i, num_buttons: int):
+	for i in option_range:
 		var option = options[i]
 		var button = load("res://Events/EventOptions/event_option_button.tscn").instantiate()
 		button.set_values(option)

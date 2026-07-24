@@ -5,7 +5,7 @@ class_name Province
 @export var province_name: String
 @export var province_image: Sprite2D
 @export var curr_owner: int = 0 # not sure what this should be, but could be an enum
-@export var potential_events: Array[Resource]
+@export var potential_events: Array[MapEvent]
 @export var event_location: Vector2
 @export var TOOLTIP_TIME_DELAY: float = 0.5
 
@@ -48,8 +48,8 @@ func on_day_updated(new_day):
 	# change image?
 
 # update the event popup and if the province has an event currently
-func update_events(event: MapEvent, show: bool):
-	$EventPopup.visible = show
+func update_events(event: MapEvent, unhide: bool):
+	$EventPopup.visible = unhide
 	event_present = event
 
 # Helper functions
@@ -60,10 +60,10 @@ func set_curr_owner(new_value: int) -> void:
 	curr_owner = new_value
 	province_owner_changed.emit(self)
 	
-func calculate_food() -> int:
+func calculate_food() -> float:
 	return food_yield - food_consumption
 
-func calculate_gold() -> int:
+func calculate_gold() -> float:
 	return gold_yield - gold_consumption
 
 func change_counter(counter: int, change: float) -> void:
@@ -91,25 +91,34 @@ func change_counter(counter: int, change: float) -> void:
 			if fervor > loyalty:
 				set_curr_owner(Owner.REBELS)
 
+# TODO: more interesting
+## try to do the event, based on rng and variables of the province or something
+func try_event(event: MapEvent) -> bool:
+	if randf_range(0, 100) <= fervor:
+		return true
+	return false
+
 ## gets the possible events, shuffles them, and tries to fire them, if one fires it returns true
 func roll_event_odds() -> bool:
 	var possible_events: Array[MapEvent] = potential_events.filter(func(event): return event.can_appear())
 	possible_events.shuffle()
 	for event in possible_events:
-		if event.can_appear():
+		if try_event(event):
 			update_events(event, true)
 			return true
 	return false
 
 ## the province has been clicked on
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("province ", province_name, " clicked")
 		if event_present:
 			update_events(event_present, false)
 			GameManager.update_current_province(self)
 			event_present.event_fired()
-			var tween = get_tree().create_tween()
+			if tween: 
+				tween.kill()
+			tween = create_tween()
 			tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
 		else:
 			roll_event_odds()

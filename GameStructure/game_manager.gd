@@ -106,7 +106,7 @@ func flip_provinces() -> void:
 ## from most to least likely (fervor?) roll event odds for each province 
 ## if not enough events, roll again
 func roll_events() -> void:
-	var owned_provinces: Array[Province] = GameState.provinces.filter(func(province): return province.curr_owner == 0)
+	var owned_provinces: Array[Province] = GameState.provinces.filter(func(province): return province.curr_owner == Province.Owner.KING)
 	owned_provinces.sort_custom(func(a, b): return a.fervor > b.fervor)
 	print(owned_provinces.size())
 	var num_events: int = min(owned_provinces.size(), randi_range(3, 5))

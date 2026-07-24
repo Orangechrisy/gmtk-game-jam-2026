@@ -20,6 +20,6 @@ func set_outcome_text(successes: Array[EventEffect], failures: Array[EventEffect
 		%FailureEffect.text = "[color=red]" + %FailureEffect.text + "[/color]"
 
 # tracks the mouse position
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if visible:
 		position = get_global_mouse_position() + OFFSET
