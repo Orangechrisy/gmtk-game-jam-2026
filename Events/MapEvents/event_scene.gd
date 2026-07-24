@@ -61,6 +61,8 @@ func close_event(removed: bool):
 		else:
 			GameState.get_current_province().update_events(current_event, true)
 		GameManager.update_current_province(null)
+	# so game manager can figure out if the day can end
+	GameManager.check_for_events()
 
 # button to hide the event without removing it
 func _on_close_pressed() -> void:

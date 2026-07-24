@@ -8,6 +8,7 @@ var army_placing_mode: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameState.connect("day_updated", on_day_updated)
+	GameState.connect("active_events", show_end_day)
 	GameState.connect("days_to_revolution_updated", on_days_to_revolution_updated)
 	GameState.connect("food_updated", on_food_updated)
 	GameState.connect("gold_updated", on_gold_updated)
@@ -55,3 +56,12 @@ func _on_place_army_button_pressed() -> void:
 		$PlaceArmyButton.text = "PLACE ARMY"
 		army_placing_mode = false
 		pass
+
+## adjust end day button visibility (val = true means there is an active event)
+func show_end_day(val: bool) -> void:
+	$EndDay.visible = not val
+
+## ends the day when pressed
+func _on_end_day_pressed() -> void:
+	$EndDay.visible = false
+	GameManager.end_day()

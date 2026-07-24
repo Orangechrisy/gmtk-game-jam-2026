@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccl6ujpq4xiwf"
-path="res://.godot/imported/PORTRAIT_smug_aristocrat.png-bf1840ce347eb6fe51586d775b3738ee.ctex"
+uid="uid://bgp6ck73u2cwg"
+path="res://.godot/imported/PORTRAIT_revolution_moderate.png-656b60fc13563fa411dee76ac6e19354.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_smug_aristocrat.png"
-dest_files=["res://.godot/imported/PORTRAIT_smug_aristocrat.png-bf1840ce347eb6fe51586d775b3738ee.ctex"]
+source_file="res://Assets/PORTRAIT_revolution_moderate.png"
+dest_files=["res://.godot/imported/PORTRAIT_revolution_moderate.png-656b60fc13563fa411dee76ac6e19354.ctex"]
 
 [params]
 

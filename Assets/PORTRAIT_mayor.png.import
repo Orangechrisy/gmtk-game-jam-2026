@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccl6ujpq4xiwf"
-path="res://.godot/imported/PORTRAIT_smug_aristocrat.png-bf1840ce347eb6fe51586d775b3738ee.ctex"
+uid="uid://di4unmyalpmk4"
+path="res://.godot/imported/PORTRAIT_mayor.png-ba20102f9215b0c7e2442443022e24cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_smug_aristocrat.png"
-dest_files=["res://.godot/imported/PORTRAIT_smug_aristocrat.png-bf1840ce347eb6fe51586d775b3738ee.ctex"]
+source_file="res://Assets/PORTRAIT_mayor.png"
+dest_files=["res://.godot/imported/PORTRAIT_mayor.png-ba20102f9215b0c7e2442443022e24cc.ctex"]
 
 [params]
 

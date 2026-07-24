@@ -2,7 +2,7 @@ extends Node
 
 # Custom functions
 
-## resets everything to default starting game state
+## TODO: resets everything to default starting game state
 func reset():
 	pass
 
@@ -14,8 +14,6 @@ func end_day() -> void:
 	
 	if GameState.get_days_to_revolution() <= 0:
 		pass # TODO: Implement game over functionality
-	
-	GameState.reset_actions_left()
 	
 	# Update Food/Gold stores
 	# TODO: Implement penalties for running out
@@ -47,6 +45,16 @@ func end_day() -> void:
 	# Anything else we want to do
 	
 	roll_events()
+	check_for_events()
+
+## checks to see if there are any events currently active in provinces
+## if there arent any, make end day button visible
+func check_for_events() -> void:
+	var event_exists = false
+	for province in GameState.provinces:
+		if province.event_present != null:
+			event_exists = true
+	GameState.any_active_events(event_exists)
 
 ## calculate_food: Calculates new Food total based on output/consumption of each province
 func calculate_food() -> void:
@@ -121,10 +129,12 @@ func roll_events() -> void:
 	owned_provinces.sort_custom(func(a, b): return a.fervor > b.fervor)
 	print(owned_provinces.size())
 	var num_events: int = min(owned_provinces.size(), randi_range(3, 5))
+	print("num events: ", num_events)
+	print(owned_provinces)
 	while num_events > 0:
-		for i in owned_provinces:
+		for province in owned_provinces:
 			if num_events > 0:
-				if owned_provinces[i].roll_event_odds():
+				if province.roll_event_odds():
 					num_events -= 1
 
 # TODO: Finish implementing this!

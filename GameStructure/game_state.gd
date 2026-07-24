@@ -42,6 +42,7 @@ signal food_updated(new_food)
 signal common_sentiment_updated(new_sentiment)
 signal noble_sentiment_updated(new_sentiment)
 signal armies_left_updated(new_armies_left)
+signal active_events(any_active)
 
 # Day
 
@@ -55,6 +56,9 @@ func update_day() -> void:
 func reset_day() -> void:
 	day = 0
 	day_updated.emit(day)
+
+func any_active_events(val: bool) -> void:
+	active_events.emit((val or (current_event != null)))
 
 # Days to Revolution
 

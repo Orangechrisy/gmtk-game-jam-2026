@@ -5,6 +5,8 @@ extends Node2D
 func _ready() -> void:
 	$MainInterface.connect("pause_game", pause_game)
 	$PauseMenu.connect("back_up", unpause_game)
+	for child in $Provinces.get_children():
+		GameState.provinces.append(child)
 
 ## does the necessary actions for pausing the game and opening the pause menu
 func pause_game() -> void:

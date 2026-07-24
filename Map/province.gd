@@ -21,7 +21,7 @@ class_name Province
 @export var loss_effects_instant: Array[EventEffect]
 @export var loss_effects_passive: Array[EventEffect]
 
-var event_present: MapEvent
+var event_present: MapEvent = null
 var province_tooltip: Control
 var tween: Tween
 
