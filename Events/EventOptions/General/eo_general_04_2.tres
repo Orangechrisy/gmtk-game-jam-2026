@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://ct5u0jamnrawd"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_8ogeg"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_ajccv"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_bgwnk"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_qyd60"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_ynllj"]
+[ext_resource type="Script" uid="uid://bciotqfqbxelf" path="res://Events/EventEffects/ee_change_armies.gd" id="5_lq8co"]
+
+[sub_resource type="Resource" id="Resource_jj6c3"]
+script = ExtResource("2_ajccv")
+val = 3
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_sa0rn"]
+script = ExtResource("4_qyd60")
+fervor_change = 1
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_pcp8e"]
+script = ExtResource("5_lq8co")
+armies_change = -1
+metadata/_custom_type_script = "uid://bciotqfqbxelf"
+
+[sub_resource type="Resource" id="Resource_mcds1"]
+script = ExtResource("4_qyd60")
+fervor_change = 1
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[resource]
+script = ExtResource("4_ynllj")
+option_name = &"GENERAL_EVENT_04_OPTION_3_TITLE"
+conditions = Array[ExtResource("1_8ogeg")]([SubResource("Resource_jj6c3")])
+success_odds = 0.5
+success_effects = Array[ExtResource("3_bgwnk")]([SubResource("Resource_mcds1")])
+failure_effects = Array[ExtResource("3_bgwnk")]([SubResource("Resource_sa0rn"), SubResource("Resource_pcp8e")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

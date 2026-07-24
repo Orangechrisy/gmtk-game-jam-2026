@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cxxxdd7ls2gxe"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_k738k"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="3_xhri3"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="4_d0co4"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_k738k"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="6_sj66k"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="7_5m6a6"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="8_rewvi"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="9_p8qdx"]
+
+[sub_resource type="Resource" id="Resource_xjptd"]
+script = ExtResource("3_xhri3")
+val = 1
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_bn2tu"]
+script = ExtResource("5_k738k")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_1du67"]
+script = ExtResource("6_sj66k")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_tmfkm"]
+script = ExtResource("7_5m6a6")
+fervor_change = 2
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_ctj71"]
+script = ExtResource("5_k738k")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_6bquq"]
+script = ExtResource("6_sj66k")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_204jr"]
+script = ExtResource("9_p8qdx")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("8_rewvi")
+option_name = &"GENERAL_EVENT_12_OPTION_2_TITLE"
+conditions = Array[ExtResource("1_k738k")]([SubResource("Resource_xjptd")])
+success_odds = 0.6
+success_effects = Array[ExtResource("4_d0co4")]([SubResource("Resource_ctj71"), SubResource("Resource_6bquq"), SubResource("Resource_204jr")])
+failure_effects = Array[ExtResource("4_d0co4")]([SubResource("Resource_bn2tu"), SubResource("Resource_1du67"), SubResource("Resource_tmfkm")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

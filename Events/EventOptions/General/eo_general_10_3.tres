@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bcxusrkis7afq"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_u3u1k"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_2qmfd"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="3_permw"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_b72mx"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_k7egy"]
+
+[sub_resource type="Resource" id="Resource_e13wh"]
+script = ExtResource("3_permw")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_2qmfd"]
+script = ExtResource("4_k7egy")
+fervor_change = 2
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_k7egy"]
+script = ExtResource("3_permw")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[resource]
+script = ExtResource("4_b72mx")
+option_name = &"GENERAL_EVENT_10_OPTION_3_TITLE"
+success_odds = 0.5
+success_effects = Array[ExtResource("3_2qmfd")]([SubResource("Resource_k7egy")])
+failure_effects = Array[ExtResource("3_2qmfd")]([SubResource("Resource_e13wh"), SubResource("Resource_2qmfd")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

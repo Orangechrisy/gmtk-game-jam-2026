@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cdt3n7pjari67"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_jskqa"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_si762"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_xq17q"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_w3ktm"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_si762"]
+
+[sub_resource type="Resource" id="Resource_1wqol"]
+script = ExtResource("4_w3ktm")
+fervor_change = 3
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_y2n5s"]
+script = ExtResource("5_si762")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("3_xq17q")
+option_name = &"GENERAL_EVENT_02_OPTION_3_TITLE"
+success_odds = 0.5
+success_effects = Array[ExtResource("2_si762")]([SubResource("Resource_y2n5s")])
+failure_effects = Array[ExtResource("2_si762")]([SubResource("Resource_1wqol")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"
