@@ -1,5 +1,7 @@
 extends Control
 
+signal pause_game()
+
 # Variables
 var army_placing_mode: bool = false
 
@@ -38,8 +40,7 @@ func on_armies_left_updated(new_armies_left: int) -> void:
 
 
 func _on_menu_button_pressed() -> void:
-	$PauseMenu.visible = true
-	# TODO: Pause game?
+	pause_game.emit()
 
 ## Handles army placement button
 func _on_place_army_button_pressed() -> void:

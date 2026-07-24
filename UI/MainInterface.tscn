@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dv1r3qybxrmhh"]
 
 [ext_resource type="Script" uid="uid://dnjk2ss4nd552" path="res://UI/main_interface.gd" id="1_51hqq"]
-[ext_resource type="PackedScene" uid="uid://bqnp5ys3qf240" path="res://Menus/PauseMenu.tscn" id="2_itd1i"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
 font_size = 60
@@ -100,10 +99,6 @@ offset_right = 1876.0
 offset_bottom = 1071.0
 value = 100.0
 fill_mode = 2
-
-[node name="PauseMenu" parent="." unique_id=273141382 instance=ExtResource("2_itd1i")]
-visible = false
-layout_mode = 0
 
 [node name="PlaceArmyButton" type="Button" parent="." unique_id=15618272]
 layout_mode = 0

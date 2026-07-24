@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dggvawrkya46m" path="res://Map/province.tscn" id="1_5ej7w"]
 [ext_resource type="Texture2D" uid="uid://841rbvhlys17" path="res://Assets/mapish.png" id="1_lymsy"]
+[ext_resource type="Script" uid="uid://dgiaygg7d0lfy" path="res://Map/map.gd" id="1_ptuj4"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="2_lymsy"]
 [ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="3_5cbny"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_ptuj4"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="6_a0x20"]
 [ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="7_vhrv6"]
 [ext_resource type="PackedScene" uid="uid://dv1r3qybxrmhh" path="res://UI/MainInterface.tscn" id="8_ry46t"]
+[ext_resource type="PackedScene" uid="uid://bqnp5ys3qf240" path="res://Menus/PauseMenu.tscn" id="10_5cbny"]
 
 [sub_resource type="Resource" id="Resource_btrrw"]
 script = ExtResource("2_lymsy")
@@ -20,6 +22,7 @@ options = Array[ExtResource("4_ptuj4")]([ExtResource("5_rr5ff"), ExtResource("5_
 metadata/_custom_type_script = "uid://cipcjs28d1y2n"
 
 [node name="Map" type="Node2D" unique_id=932399740]
+script = ExtResource("1_ptuj4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2025840356]
 modulate = Color(0.4045111, 0.40451115, 0.4045111, 1)
@@ -80,3 +83,6 @@ vertices = PackedVector2Array(328, 987, 302, 882, 222, 849, 273, 503, 380, 506, 
 province_name = "Outskirts"
 
 [node name="MainInterface" parent="." unique_id=1175301398 instance=ExtResource("8_ry46t")]
+
+[node name="PauseMenu" parent="." unique_id=273141382 instance=ExtResource("10_5cbny")]
+visible = false
