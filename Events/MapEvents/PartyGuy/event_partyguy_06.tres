@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://3sx0ydue2ukv"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_bxlon"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_xh6f3"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_v8mpa"]
+[ext_resource type="Resource" uid="uid://cqrbhryc630oq" path="res://Events/EventOptions/PartyGuy/eo_partyguy_06_1.tres" id="4_bxlon"]
+[ext_resource type="Resource" uid="uid://xdqn0756tqsh" path="res://Events/EventOptions/PartyGuy/eo_partyguy_06_2.tres" id="5_xh6f3"]
+[ext_resource type="Texture2D" uid="uid://c23kc8756wrkf" path="res://Assets/PORTRAIT_party_guy.png" id="6_rn8ql"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="7_5hatf"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_xh6f3")
+char_name = &"Party Guy"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[sub_resource type="Resource" id="Resource_hpoa8"]
+script = ExtResource("2_xh6f3")
+char_name = &"Priest"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("7_5hatf")
+event_name = &"PARTYGUY_EVENT_06_TITLE"
+portrait = ExtResource("6_rn8ql")
+character_name = &"Party Guy"
+dialogue = Array[String](["PARTYGUY_EVENT_06_DIALOGUE_1", "PARTYGUY_EVENT_06_DIALOGUE_2"])
+one_time = true
+conditions = Array[ExtResource("1_bxlon")]([SubResource("Resource_2wl4a"), SubResource("Resource_hpoa8")])
+options = Array[ExtResource("3_v8mpa")]([ExtResource("4_bxlon"), ExtResource("5_xh6f3")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

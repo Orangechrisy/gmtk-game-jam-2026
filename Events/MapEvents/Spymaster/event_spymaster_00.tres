@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://bxey83dpu4ajc"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_3ti28"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_j8gbf"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_v8emr"]
+[ext_resource type="Resource" uid="uid://yd3smrrm2vxo" path="res://Events/EventOptions/Spymaster/eo_spymaster_00_1.tres" id="4_5lig3"]
+[ext_resource type="Resource" uid="uid://dr2pwk8g51hcc" path="res://Events/EventOptions/Spymaster/eo_spymaster_00_2.tres" id="5_g6dwg"]
+[ext_resource type="Resource" uid="uid://bcs6540rky4rd" path="res://Events/EventOptions/Spymaster/eo_spymaster_00_3.tres" id="6_2j3vi"]
+[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="6_x67o6"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="7_02syg"]
+[ext_resource type="Resource" uid="uid://cukrinidjmqsn" path="res://Events/EventOptions/Spymaster/eo_spymaster_00_4.tres" id="7_qducd"]
+[ext_resource type="Resource" uid="uid://daq80bht66p2l" path="res://Events/EventOptions/Spymaster/eo_spymaster_00_5.tres" id="8_oqmii"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_j8gbf")
+char_name = &"Spymaster"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("7_02syg")
+event_name = &"SPYMASTER_EVENT_00_TITLE"
+portrait = ExtResource("6_x67o6")
+character_name = &"Spymaster"
+dialogue = Array[String](["SPYMASTER_EVENT_00_DIALOGUE_1", "SPYMASTER_EVENT_00_DIALOGUE_2"])
+conditions = Array[ExtResource("1_3ti28")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_v8emr")]([ExtResource("4_5lig3"), ExtResource("5_g6dwg"), ExtResource("6_2j3vi"), ExtResource("7_qducd"), ExtResource("8_oqmii")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

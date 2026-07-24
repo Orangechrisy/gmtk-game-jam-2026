@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dt04i5jalyojd"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_35sbi"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_ifodq"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_hxms7"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_qap4c"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="5_xl63b"]
+
+[sub_resource type="Resource" id="Resource_x52mm"]
+script = ExtResource("4_qap4c")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_opsqs"]
+script = ExtResource("5_xl63b")
+favor_change = -1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[resource]
+script = ExtResource("3_hxms7")
+option_name = &"SPYMASTER_EVENT_01_OPTION_3_TITLE"
+success_effects = Array[ExtResource("2_ifodq")]([SubResource("Resource_x52mm"), SubResource("Resource_opsqs")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

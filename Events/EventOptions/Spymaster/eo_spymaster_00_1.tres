@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://yd3smrrm2vxo"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_m3vo3"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_arkbk"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_ni0yo"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_3q8rw"]
+[ext_resource type="Script" uid="uid://de4uysua35cqx" path="res://Events/EventEffects/ee_character_dies.gd" id="4_mqdpw"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="6_4m4jo"]
+
+[sub_resource type="Resource" id="Resource_vsmt6"]
+script = ExtResource("2_arkbk")
+char_name = &"Party Guy"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[sub_resource type="Resource" id="Resource_32s20"]
+script = ExtResource("4_mqdpw")
+char_name = &"Party Guy"
+metadata/_custom_type_script = "uid://de4uysua35cqx"
+
+[sub_resource type="Resource" id="Resource_8ftix"]
+script = ExtResource("6_4m4jo")
+favor_change = -5
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_vyy4h"]
+script = ExtResource("4_mqdpw")
+char_name = &"Party Guy"
+metadata/_custom_type_script = "uid://de4uysua35cqx"
+
+[resource]
+script = ExtResource("4_3q8rw")
+option_name = &"SPYMASTER_EVENT_00_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_m3vo3")]([SubResource("Resource_vsmt6")])
+success_odds = 0.5
+success_effects = Array[ExtResource("3_ni0yo")]([SubResource("Resource_vyy4h")])
+failure_effects = Array[ExtResource("3_ni0yo")]([SubResource("Resource_32s20"), SubResource("Resource_8ftix")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

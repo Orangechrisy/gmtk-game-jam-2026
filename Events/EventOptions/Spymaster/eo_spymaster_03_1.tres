@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dhubhaay3utba"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_81ep7"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_4l188"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_havii"]
+[ext_resource type="Script" uid="uid://bciotqfqbxelf" path="res://Events/EventEffects/ee_change_armies.gd" id="3_4l188"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="3_nk0x6"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_4l188"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="4_xvhjy"]
+[ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="7_6swlt"]
+
+[sub_resource type="Resource" id="Resource_x10vb"]
+script = ExtResource("2_4l188")
+val = 1
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_ub24x"]
+script = ExtResource("3_4l188")
+armies_change = -1
+metadata/_custom_type_script = "uid://bciotqfqbxelf"
+
+[sub_resource type="Resource" id="Resource_eehw2"]
+script = ExtResource("4_xvhjy")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_3a0m2"]
+script = ExtResource("3_nk0x6")
+fervor_change = 2
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_6swlt"]
+script = ExtResource("7_6swlt")
+char_name = &"Rebel Radical"
+chance = 1
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_qmqdv"]
+script = ExtResource("4_xvhjy")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[resource]
+script = ExtResource("4_4l188")
+option_name = &"SPYMASTER_EVENT_03_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_81ep7")]([SubResource("Resource_x10vb")])
+success_odds = 0.5
+success_effects = Array[ExtResource("2_havii")]([SubResource("Resource_6swlt"), SubResource("Resource_qmqdv")])
+failure_effects = Array[ExtResource("2_havii")]([SubResource("Resource_ub24x"), SubResource("Resource_eehw2"), SubResource("Resource_3a0m2")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

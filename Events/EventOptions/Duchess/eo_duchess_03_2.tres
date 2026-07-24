@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bnh1m64bmef4p"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_m4ntg"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_8mosy"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_6qous"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_mrlky"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="5_hdfwb"]
+
+[sub_resource type="Resource" id="Resource_f108t"]
+script = ExtResource("4_mrlky")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_wy3qf"]
+script = ExtResource("5_hdfwb")
+gold_change = -2
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[resource]
+script = ExtResource("3_6qous")
+option_name = &"DUCHESS_EVENT_3_OPTION_2_TITLE"
+success_effects = Array[ExtResource("2_8mosy")]([SubResource("Resource_f108t"), SubResource("Resource_wy3qf")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

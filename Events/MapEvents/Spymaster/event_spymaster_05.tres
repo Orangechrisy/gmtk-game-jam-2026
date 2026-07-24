@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://oefimdy7ey2m"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_nagsr"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_7ktqi"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_wog71"]
+[ext_resource type="Resource" uid="uid://c340wa1u858pu" path="res://Events/EventOptions/Spymaster/eo_spymaster_05_1.tres" id="4_nagsr"]
+[ext_resource type="Resource" uid="uid://ejvalig10pre" path="res://Events/EventOptions/Spymaster/eo_spymaster_05_2.tres" id="5_7ktqi"]
+[ext_resource type="Resource" uid="uid://c6vbhr2v82oxg" path="res://Events/EventOptions/Spymaster/eo_spymaster_05_3.tres" id="6_wog71"]
+[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="7_f0wtv"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="8_fjk0w"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_7ktqi")
+char_name = &"Spymaster"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[sub_resource type="Resource" id="Resource_3v4cy"]
+script = ExtResource("2_7ktqi")
+char_name = &"Baron"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_fjk0w")
+event_name = &"SPYMASTER_EVENT_06_TITLE"
+portrait = ExtResource("7_f0wtv")
+character_name = &"Spymaster"
+dialogue = Array[String](["SPYMASTER_EVENT_05_DIALOGUE_1", "SPYMASTER_EVENT_05_DIALOGUE_2"])
+one_time = true
+conditions = Array[ExtResource("1_nagsr")]([SubResource("Resource_2wl4a"), SubResource("Resource_3v4cy")])
+options = Array[ExtResource("3_wog71")]([ExtResource("4_nagsr"), ExtResource("5_7ktqi"), ExtResource("6_wog71")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://daq80bht66p2l"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_0gg5h"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_nj3uc"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="6_tycp1"]
+
+[resource]
+script = ExtResource("6_tycp1")
+option_name = &"SPYMASTER_EVENT_00_OPTION_5_TITLE"
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

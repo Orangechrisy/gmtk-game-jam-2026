@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://xdqn0756tqsh"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_pt258"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_maome"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_c705d"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_p20km"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_ht1r5"]
+
+[sub_resource type="Resource" id="Resource_jm8w4"]
+script = ExtResource("4_p20km")
+favor_change = -2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_04ol2"]
+script = ExtResource("5_ht1r5")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("3_c705d")
+option_name = &"PARTYGUY_EVENT_06_OPTION_2_TITLE"
+success_effects = Array[ExtResource("2_maome")]([SubResource("Resource_jm8w4"), SubResource("Resource_04ol2")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

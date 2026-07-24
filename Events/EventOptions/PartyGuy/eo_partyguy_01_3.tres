@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bj64mqe8lrorf"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_puv1m"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="4_uhn84"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="5_wrjw7"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="6_5i1bl"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="8_2x5v0"]
+
+[sub_resource type="Resource" id="Resource_no0pw"]
+script = ExtResource("6_5i1bl")
+gold_change = -1
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_43ahs"]
+script = ExtResource("8_2x5v0")
+favor_change = -3
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[resource]
+script = ExtResource("5_wrjw7")
+option_name = &"PARTYGUY_EVENT_01_OPTION_3_TITLE"
+success_effects = Array[ExtResource("4_uhn84")]([SubResource("Resource_no0pw"), SubResource("Resource_43ahs")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"
