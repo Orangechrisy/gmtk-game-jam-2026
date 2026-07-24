@@ -17,6 +17,10 @@ class_name Province
 @export var loyalty: int
 @export var fervor: int
 
+@export_group("Loss Effects")
+@export var loss_effects_instant: Array[EventEffect]
+@export var loss_effects_passive: Array[EventEffect]
+
 var event_present: MapEvent
 var province_tooltip: Control
 var tween: Tween
@@ -58,7 +62,15 @@ func get_curr_owner() -> int:
 
 func set_curr_owner(new_value: int) -> void:
 	curr_owner = new_value
+	for effect in loss_effects_instant:
+		effect.do_effect()
+	for effect in loss_effects_passive:
+		effect.do_effect()
 	province_owner_changed.emit(self)
+
+func do_loss_effects_passive() -> void:
+	for effect in loss_effects_passive:
+		effect.do_effect()
 	
 func calculate_food() -> float:
 	return food_yield - food_consumption

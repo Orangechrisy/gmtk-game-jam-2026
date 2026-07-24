@@ -36,6 +36,8 @@ func end_day() -> void:
 	reduce_days_to_revolution()
 	
 	# TODO: Handle provinces flipping!
+	handle_loss_effects()
+	
 	flip_provinces()
 	
 	# Anything else we want to do
@@ -95,6 +97,11 @@ func reduce_days_to_revolution() -> void:
 		
 	GameState.reduce_days_to_revolution(days_to_reduce)
 
+func handle_loss_effects() -> void:
+	for province in GameState.provinces:
+		if province.get_curr_owner() == 1:
+			province.do_loss_effects_passive()
+			
 ## flip_provinces: Checks which provinces should flip owners, and flips owners if needed
 func flip_provinces() -> void:
 	for province in GameState.provinces:
