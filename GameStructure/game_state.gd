@@ -41,6 +41,7 @@ signal gold_updated(new_gold)
 signal food_updated(new_food)
 signal common_sentiment_updated(new_sentiment)
 signal noble_sentiment_updated(new_sentiment)
+signal armies_left_updated(new_armies_left)
 
 # Day
 
@@ -133,9 +134,11 @@ func get_armies_left() -> int:
 
 func change_armies_left(val: int) -> void:
 	armies_left += val
+	armies_left_updated.emit(armies_left)
 	
 func reset_armies_left() -> void:
 	armies_left = armies
+	armies_left_updated.emit(armies_left)
 
 # Controls total army count
 func get_armies() -> int:
@@ -143,6 +146,9 @@ func get_armies() -> int:
 
 func change_armies(val: int) -> void:
 	armies += val
+	if armies_left > armies:
+		armies_left = armies
+		armies_left_updated.emit(armies_left)
 	if armies < 0:
 		armies = 0
 

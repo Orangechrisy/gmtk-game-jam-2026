@@ -12,7 +12,7 @@ font_size = 40
 [sub_resource type="LabelSettings" id="LabelSettings_jmpn7"]
 font_size = 30
 
-[sub_resource type="LabelSettings" id="LabelSettings_cbx75"]
+[sub_resource type="LabelSettings" id="LabelSettings_aaqvd"]
 font_size = 30
 
 [node name="MainInterface" type="Control" unique_id=1175301398]
@@ -101,17 +101,26 @@ offset_bottom = 1071.0
 value = 100.0
 fill_mode = 2
 
-[node name="ActionsLeftLabel" type="Label" parent="." unique_id=646839059]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 93.0
-offset_right = 245.0
-offset_bottom = 135.0
-text = "ACTIONS LEFT: 3"
-label_settings = SubResource("LabelSettings_cbx75")
-
 [node name="PauseMenu" parent="." unique_id=273141382 instance=ExtResource("2_itd1i")]
 visible = false
 layout_mode = 0
 
+[node name="PlaceArmyButton" type="Button" parent="." unique_id=15618272]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 295.0
+offset_right = 219.0
+offset_bottom = 369.0
+text = "PLACE ARMY"
+
+[node name="PlaceArmyLabel" type="Label" parent="." unique_id=1599275818]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 223.0
+offset_right = 234.0
+offset_bottom = 265.0
+text = "ARMIES LEFT: 3"
+label_settings = SubResource("LabelSettings_aaqvd")
+
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="PlaceArmyButton" to="." method="_on_place_army_button_pressed"]

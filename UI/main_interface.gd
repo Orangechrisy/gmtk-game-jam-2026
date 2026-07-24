@@ -1,5 +1,7 @@
 extends Control
 
+# Variables
+var army_placing_mode: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,7 +11,7 @@ func _ready() -> void:
 	GameState.connect("gold_updated", on_gold_updated)
 	GameState.connect("common_sentiment_updated", on_common_sentiment_updated)
 	GameState.connect("noble_sentiment_updated", on_noble_sentiment_updated)
-	#GameState.connect("actions_left_updated", on_actions_left_updated)
+	GameState.connect("armies_left_updated", on_armies_left_updated)
 
 # UI Updates
 
@@ -30,11 +32,25 @@ func on_common_sentiment_updated(new_sentiment: int) -> void:
 
 func on_noble_sentiment_updated(new_sentiment: int) -> void:
 	$NobleFervorBar.value = new_sentiment
-	
-func on_actions_left_updated(new_actions_left: int) -> void:
-	$ActionsLeftLabel.text = "ACTIONS LEFT: " + str(new_actions_left)
+
+func on_armies_left_updated(new_armies_left: int) -> void:
+	$PlaceArmyLabel.text = "ARMIES LEFT: " + str(new_armies_left)
 
 
 func _on_menu_button_pressed() -> void:
 	$PauseMenu.visible = true
 	# TODO: Pause game?
+
+## Handles army placement button
+func _on_place_army_button_pressed() -> void:
+	if GameState.get_armies_left() <= 0: return
+	
+	if not army_placing_mode:
+		$PlaceArmyButton.text = "CANCEL"
+		army_placing_mode = true
+		pass
+	
+	else:
+		$PlaceArmyButton.text = "PLACE ARMY"
+		army_placing_mode = false
+		pass
