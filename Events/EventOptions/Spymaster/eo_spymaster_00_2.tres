@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dr2pwk8g51hcc"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_3o1d3"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_pueeh"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_smd2h"]
+[ext_resource type="Script" uid="uid://de4uysua35cqx" path="res://Events/EventEffects/ee_character_dies.gd" id="4_tblah"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="5_3o1d3"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="6_cno7j"]
+
+[sub_resource type="Resource" id="Resource_vsmt6"]
+script = ExtResource("2_pueeh")
+char_name = &"Rebel Leader"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[sub_resource type="Resource" id="Resource_32s20"]
+script = ExtResource("4_tblah")
+char_name = &"Rebel Leader"
+metadata/_custom_type_script = "uid://de4uysua35cqx"
+
+[sub_resource type="Resource" id="Resource_nb0xe"]
+script = ExtResource("5_3o1d3")
+favor_change = -5
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_vyy4h"]
+script = ExtResource("4_tblah")
+char_name = &"Rebel Leader"
+metadata/_custom_type_script = "uid://de4uysua35cqx"
+
+[resource]
+script = ExtResource("6_cno7j")
+option_name = &"SPYMASTER_EVENT_00_OPTION_2_TITLE"
+conditions = Array[ExtResource("1_3o1d3")]([SubResource("Resource_vsmt6")])
+success_odds = 0.3
+success_effects = Array[ExtResource("3_smd2h")]([SubResource("Resource_vyy4h")])
+failure_effects = Array[ExtResource("3_smd2h")]([SubResource("Resource_32s20"), SubResource("Resource_nb0xe")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

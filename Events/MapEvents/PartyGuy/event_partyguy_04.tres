@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://hl5g2qf2oapi"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_g31du"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_ibiwn"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_fphee"]
+[ext_resource type="Script" uid="uid://c7rindtvo81q7" path="res://Events/EventConditions/ec_has_province.gd" id="3_ibiwn"]
+[ext_resource type="Resource" uid="uid://cimqgq0vwcyni" path="res://Events/EventOptions/PartyGuy/eo_partyguy_04_1.tres" id="5_ibiwn"]
+[ext_resource type="Resource" uid="uid://bn7vgvlk614gq" path="res://Events/EventOptions/PartyGuy/eo_partyguy_04_2.tres" id="6_fphee"]
+[ext_resource type="Texture2D" uid="uid://c23kc8756wrkf" path="res://Assets/PORTRAIT_party_guy.png" id="7_gvqc4"]
+[ext_resource type="Resource" uid="uid://det6h0ymuywjp" path="res://Events/EventOptions/PartyGuy/eo_partyguy_04_3.tres" id="7_knb1q"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="8_yi20b"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_ibiwn")
+char_name = &"Party Guy"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[sub_resource type="Resource" id="Resource_pdv4k"]
+script = ExtResource("3_ibiwn")
+province_name = "Port"
+metadata/_custom_type_script = "uid://c7rindtvo81q7"
+
+[resource]
+script = ExtResource("8_yi20b")
+event_name = &"PARTYGUY_EVENT_04_TITLE"
+portrait = ExtResource("7_gvqc4")
+character_name = &"Party Guy"
+dialogue = Array[String](["PARTYGUY_EVENT_04_DIALOGUE_1", "PARTYGUY_EVENT_04_DIALOGUE_2"])
+one_time = true
+conditions = Array[ExtResource("1_g31du")]([SubResource("Resource_2wl4a"), SubResource("Resource_pdv4k")])
+options = Array[ExtResource("3_fphee")]([ExtResource("5_ibiwn"), ExtResource("6_fphee"), ExtResource("7_knb1q")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

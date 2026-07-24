@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://dwypfs0yp2o40"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_6i2nj"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_0vgmi"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_bj0y6"]
+[ext_resource type="Resource" uid="uid://b6h0lxbyo85ji" path="res://Events/EventOptions/Duchess/eo_duchess_00_1.tres" id="4_steqf"]
+[ext_resource type="Resource" uid="uid://bwu6m6n0rwgcx" path="res://Events/EventOptions/Duchess/eo_duchess_00_2.tres" id="5_6i2nj"]
+[ext_resource type="Texture2D" uid="uid://6nmxmx7ef4pf" path="res://Assets/PORTRAIT_duchess.png" id="7_1o7sq"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="8_b4r0m"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_0vgmi")
+char_name = &"Duchess"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_b4r0m")
+event_name = &"DUCHESS_EVENT_00_TITLE"
+portrait = ExtResource("7_1o7sq")
+character_name = &"Duchess"
+dialogue = Array[String](["DUCHESS_EVENT_00_DIALOGUE_1", "DUCHESS_EVENT_00_DIALOGUE_2"])
+one_time = true
+conditions = Array[ExtResource("1_6i2nj")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_bj0y6")]([ExtResource("4_steqf"), ExtResource("5_6i2nj")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

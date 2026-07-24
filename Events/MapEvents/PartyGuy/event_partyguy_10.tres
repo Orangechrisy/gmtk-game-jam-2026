@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://btiqxbrywe5l7"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_nk67r"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_ga6f0"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_d6t2v"]
+[ext_resource type="Resource" uid="uid://bft8jf3eyqvbo" path="res://Events/EventOptions/PartyGuy/eo_partyguy_10_1.tres" id="4_nk67r"]
+[ext_resource type="Resource" uid="uid://cbs605a50mg58" path="res://Events/EventOptions/PartyGuy/eo_partyguy_10_2.tres" id="5_ga6f0"]
+[ext_resource type="Texture2D" uid="uid://c23kc8756wrkf" path="res://Assets/PORTRAIT_party_guy.png" id="6_twfug"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="7_eh047"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_ga6f0")
+char_name = &"Party Guy"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("7_eh047")
+event_name = &"PARTYGUY_EVENT_10_TITLE"
+portrait = ExtResource("6_twfug")
+character_name = &"Party Guy"
+dialogue = Array[String](["PARTYGUY_EVENT_10_DIALOGUE_1"])
+conditions = Array[ExtResource("1_nk67r")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_d6t2v")]([ExtResource("4_nk67r"), ExtResource("5_ga6f0")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

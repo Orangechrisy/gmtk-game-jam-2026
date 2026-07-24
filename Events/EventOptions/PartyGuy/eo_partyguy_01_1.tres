@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bh6fr6y0dqs1w"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_016f8"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_mv26j"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_c64hi"]
+[ext_resource type="Script" uid="uid://bi67gb5c67xmd" path="res://Events/EventConditions/ec_has_food.gd" id="3_i7lns"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_i7lns"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="5_lomkl"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="6_6v3ue"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="7_ekcla"]
+[ext_resource type="Script" uid="uid://bsfdc1pc8iyve" path="res://Events/EventEffects/ee_change_food.gd" id="7_lomkl"]
+[ext_resource type="Script" uid="uid://s0p1mtxe4utr" path="res://Events/EventEffects/ee_noble_assassin_chance.gd" id="10_6v3ue"]
+
+[sub_resource type="Resource" id="Resource_pf8nj"]
+script = ExtResource("2_mv26j")
+val = 3
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_o5k4o"]
+script = ExtResource("3_i7lns")
+val = 3
+metadata/_custom_type_script = "uid://bi67gb5c67xmd"
+
+[sub_resource type="Resource" id="Resource_no0pw"]
+script = ExtResource("5_lomkl")
+gold_change = -3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_c2qsk"]
+script = ExtResource("7_lomkl")
+food_change = -3
+metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
+
+[sub_resource type="Resource" id="Resource_43ahs"]
+script = ExtResource("6_6v3ue")
+favor_change = 3
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_h3hqs"]
+script = ExtResource("7_ekcla")
+favor_change = -2
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_hvlwt"]
+script = ExtResource("10_6v3ue")
+metadata/_custom_type_script = "uid://s0p1mtxe4utr"
+
+[resource]
+script = ExtResource("4_i7lns")
+option_name = &"PARTYGUY_EVENT_01_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_016f8")]([SubResource("Resource_pf8nj"), SubResource("Resource_o5k4o")])
+success_effects = Array[ExtResource("3_c64hi")]([SubResource("Resource_no0pw"), SubResource("Resource_c2qsk"), SubResource("Resource_43ahs"), SubResource("Resource_h3hqs"), SubResource("Resource_hvlwt")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

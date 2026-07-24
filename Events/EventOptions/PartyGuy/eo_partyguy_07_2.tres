@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dlpj5qw7b8b5w"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_hi2qg"]
+[ext_resource type="Script" uid="uid://bi67gb5c67xmd" path="res://Events/EventConditions/ec_has_food.gd" id="2_7tltn"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="3_gaal6"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="4_jbyix"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="5_vqo1m"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="6_eg1uc"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="7_kxth4"]
+[ext_resource type="Script" uid="uid://bsfdc1pc8iyve" path="res://Events/EventEffects/ee_change_food.gd" id="8_wm13o"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="9_gr6f8"]
+
+[sub_resource type="Resource" id="Resource_y3dtj"]
+script = ExtResource("2_7tltn")
+val = 2
+metadata/_custom_type_script = "uid://bi67gb5c67xmd"
+
+[sub_resource type="Resource" id="Resource_nyhbm"]
+script = ExtResource("3_gaal6")
+val = 3
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_jm8w4"]
+script = ExtResource("6_eg1uc")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_fsxq4"]
+script = ExtResource("7_kxth4")
+gold_change = -3
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[sub_resource type="Resource" id="Resource_bg68e"]
+script = ExtResource("8_wm13o")
+food_change = -2
+metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
+
+[sub_resource type="Resource" id="Resource_ido41"]
+script = ExtResource("9_gr6f8")
+favor_change = -1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[resource]
+script = ExtResource("5_vqo1m")
+option_name = &"PARTYGUY_EVENT_07_OPTION_2_TITLE"
+conditions = Array[ExtResource("1_hi2qg")]([SubResource("Resource_y3dtj"), SubResource("Resource_nyhbm")])
+success_effects = Array[ExtResource("4_jbyix")]([SubResource("Resource_jm8w4"), SubResource("Resource_fsxq4"), SubResource("Resource_bg68e"), SubResource("Resource_ido41")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

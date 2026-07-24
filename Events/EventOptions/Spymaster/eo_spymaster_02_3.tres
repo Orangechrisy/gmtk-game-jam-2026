@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://c3nswnq63u8dv"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_pprcf"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_whmdm"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_6wffs"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="4_6wffs"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_qjul5"]
+[ext_resource type="Script" uid="uid://d2b0vdmevwa6y" path="res://Events/EventEffects/ee_common_assassin_chance.gd" id="6_qxixn"]
+
+[sub_resource type="Resource" id="Resource_qxixn"]
+script = ExtResource("4_6wffs")
+favor_change = 2
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_80pdc"]
+script = ExtResource("5_qjul5")
+favor_change = -2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_anp0w"]
+script = ExtResource("6_qxixn")
+metadata/_custom_type_script = "uid://d2b0vdmevwa6y"
+
+[resource]
+script = ExtResource("3_6wffs")
+option_name = &"SPYMASTER_EVENT_02_OPTION_3_TITLE"
+success_effects = Array[ExtResource("2_whmdm")]([SubResource("Resource_qxixn"), SubResource("Resource_80pdc"), SubResource("Resource_anp0w")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"
