@@ -25,6 +25,8 @@ func end_day() -> void:
 		print("Out of Gold!")
 		GameState.set_gold(0)
 	
+	GameState.reset_armies_left()
+	
 	roll_auto_event_chance()
 	
 	calculate_fervor()
@@ -34,6 +36,7 @@ func end_day() -> void:
 	reduce_days_to_revolution()
 	
 	# TODO: Handle provinces flipping!
+	flip_provinces()
 	
 	# Anything else we want to do
 	
@@ -92,6 +95,13 @@ func reduce_days_to_revolution() -> void:
 		
 	GameState.reduce_days_to_revolution(days_to_reduce)
 
+## flip_provinces: Checks which provinces should flip owners, and flips owners if needed
+func flip_provinces() -> void:
+	for province in GameState.provinces:
+		if province.get_curr_owner() == 0 and province.fervor > province.loyalty:
+			province.set_curr_owner(1)
+			# TODO: Other effects
+	
 ## how many events do we want to have happen?
 ## from most to least likely (fervor?) roll event odds for each province 
 ## if not enough events, roll again

@@ -33,6 +33,9 @@ var event_present: MapEvent
 var province_tooltip: Control
 var tween: Tween
 
+# Signals
+signal province_owner_changed(province: Province)
+
 var has_army: bool:
 	set(val):
 		if val == false or curr_owner == 0: # No placing armies in unowned provinces
@@ -58,6 +61,10 @@ func update_events(event: MapEvent, show: bool):
 # Helper functions
 func get_curr_owner() -> int:
 	return curr_owner
+
+func set_curr_owner(new_value: int) -> void:
+	curr_owner = new_value
+	province_owner_changed.emit(self)
 	
 func calculate_food() -> int:
 	return food_yield - food_consumption
