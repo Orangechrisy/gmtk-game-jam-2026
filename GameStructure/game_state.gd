@@ -10,6 +10,9 @@ var day: int = 0
 var base_days_to_revolution: int = 30
 var days_to_revolution: int = 30
 
+var revolt_stalled: bool = false
+var revolt_accelerated: bool = false
+
 var gold: int
 var food: int
 var noble_sentiment: int = 100 # TODO: Maybe make per-character
@@ -21,6 +24,9 @@ var armies_left: int = 3
 # TODO: Add province tracking
 @export var provinces: Array[Province]
 var current_province: Province
+
+# Characters
+@export var characters: Array[Character]
 
 @export var auto_event_odds: float = 1 # TODO: Set to something reasonable
 @export var auto_events: Array[AutoEvent]
@@ -153,3 +159,26 @@ func get_current_event() -> MapEvent:
 
 func set_current_event(val: MapEvent) -> void:
 	current_event = val
+
+## Gets a province based on its name
+func get_province_by_name(val: String) -> Province:
+	for province in provinces:
+		if province.province_name == val:
+			return province
+	
+	return null
+
+func get_random_province() -> Province:
+	provinces.shuffle()
+	for province in provinces:
+		if province.curr_owner == 0:
+			return province
+	
+	return null # Somehow we don't have provinces
+
+func get_character_by_name(val: StringName) -> Character:
+	for character in characters:
+		if character.char_name == val:
+			return character
+			
+	return null

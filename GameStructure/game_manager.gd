@@ -7,7 +7,6 @@ extends Node
 ## Returns: void
 func end_day() -> void:
 	GameState.update_day()
-	reduce_days_to_revolution()
 	
 	if GameState.get_days_to_revolution() <= 0:
 		pass # TODO: Implement game over functionality
@@ -28,6 +27,14 @@ func end_day() -> void:
 	
 	roll_auto_event_chance()
 	
+	calculate_fervor()
+	
+	calculate_common_favor()
+	
+	reduce_days_to_revolution()
+	
+	# TODO: Handle provinces flipping!
+	
 	# Anything else we want to do
 	
 	roll_events()
@@ -44,12 +51,45 @@ func calculate_gold() -> void:
 		if province.get_curr_owner() == 0:
 			GameState.change_gold(province.calculate_gold())
 
+## calculate_fervor: Calculate fervor updates in all provinces
+func calculate_fervor() -> void:
+	for province in GameState.provinces:
+		if not province.has_army:
+			province.fervor += 1
+
+## calculate_common_favor: Calculate changes to Common Favor based on fervor/loyalty
+# TODO: Determine calculations!
+func calculate_common_favor() -> void:
+	for province in GameState.provinces:
+		if province.curr_owner != 0:
+			GameState.change_common_sentiment(-3)
+			GameState.change_noble_sentiment(-1)
+		elif province.fervor * 3 >= province.loyalty * 2:
+			GameState.change_common_sentiment(-2)
+		elif province.fervor * 3 >= province.loyalty:
+			GameState.change_common_sentiment(-1)
+
 ## reduce_days_to_revolution: Calculates number of days to lose, then updates
 ## Variables: NONE (for now)
 ## Returns: void
+# TODO: Play with the functionality here!
 func reduce_days_to_revolution() -> void:
 	var days_to_reduce: int = 1
 	# Run some calculations here based on events that happened
+	if GameState.get_common_sentiment() <= 50:
+		days_to_reduce += 1
+		
+	if GameState.get_common_sentiment() <= 25:
+		days_to_reduce += 1
+		
+	if GameState.revolt_accelerated:
+		days_to_reduce += 1
+		GameState.revolt_accelerated = false
+	
+	if GameState.revolt_stalled:
+		days_to_reduce = 0
+		GameState.revolt_stalled = false
+		
 	GameState.reduce_days_to_revolution(days_to_reduce)
 
 ## how many events do we want to have happen?
@@ -80,5 +120,10 @@ func roll_auto_event_chance() -> void:
 func update_current_province(province: Province):
 	GameState.set_current_province(province)
 
+## update the current event (to know if an event is open)
 func update_current_event(event: MapEvent):
 	GameState.set_current_event(event)
+
+## kill character
+func kill_character(character: Character) -> void:
+	character.is_alive = false
