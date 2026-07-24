@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://ku4tcjgjayws"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_livla"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="4_ons3g"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="7_5fh8p"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="8_gf5ug"]
+
+[sub_resource type="Resource" id="Resource_meg4b"]
+script = ExtResource("7_5fh8p")
+fervor_change = 2
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[resource]
+script = ExtResource("8_gf5ug")
+option_name = &"GENERAL_EVENT_12_OPTION_3_TITLE"
+success_effects = Array[ExtResource("4_ons3g")]([SubResource("Resource_meg4b")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dm6a2uqjkyfog"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_8q75a"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_3a36t"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="3_3a36t"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_cid7k"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_vdooc"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="6_0wutx"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="6_cid7k"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="7_vdooc"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="9_wpv1v"]
+
+[sub_resource type="Resource" id="Resource_4u4dg"]
+script = ExtResource("2_3a36t")
+val = 1
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_xjptd"]
+script = ExtResource("3_3a36t")
+val = 1
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_r681d"]
+script = ExtResource("6_0wutx")
+gold_change = -1
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_1du67"]
+script = ExtResource("6_cid7k")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_tmfkm"]
+script = ExtResource("7_vdooc")
+fervor_change = 3
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_aekd6"]
+script = ExtResource("6_0wutx")
+gold_change = -1
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_6bquq"]
+script = ExtResource("6_cid7k")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_204jr"]
+script = ExtResource("9_wpv1v")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("4_vdooc")
+option_name = &"GENERAL_EVENT_12_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_8q75a")]([SubResource("Resource_4u4dg"), SubResource("Resource_xjptd")])
+success_odds = 0.5
+success_effects = Array[ExtResource("3_cid7k")]([SubResource("Resource_aekd6"), SubResource("Resource_6bquq"), SubResource("Resource_204jr")])
+failure_effects = Array[ExtResource("3_cid7k")]([SubResource("Resource_r681d"), SubResource("Resource_1du67"), SubResource("Resource_tmfkm")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

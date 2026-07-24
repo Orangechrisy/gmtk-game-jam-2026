@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://c65qkepc54x1m"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_03kgi"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_6hvop"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_cu0ox"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_abioe"]
+[ext_resource type="Script" uid="uid://bciotqfqbxelf" path="res://Events/EventEffects/ee_change_armies.gd" id="5_vlloq"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="6_e3hy4"]
+
+[sub_resource type="Resource" id="Resource_jj6c3"]
+script = ExtResource("2_6hvop")
+val = 3
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_6ek5d"]
+script = ExtResource("6_e3hy4")
+gold_change = -3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_n57rq"]
+script = ExtResource("5_vlloq")
+armies_change = 1
+metadata/_custom_type_script = "uid://bciotqfqbxelf"
+
+[sub_resource type="Resource" id="Resource_bcy0c"]
+script = ExtResource("6_e3hy4")
+gold_change = -3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[resource]
+script = ExtResource("4_abioe")
+option_name = &"GENERAL_EVENT_05_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_03kgi")]([SubResource("Resource_jj6c3")])
+success_odds = 0.5
+success_effects = Array[ExtResource("3_cu0ox")]([SubResource("Resource_n57rq"), SubResource("Resource_bcy0c")])
+failure_effects = Array[ExtResource("3_cu0ox")]([SubResource("Resource_6ek5d")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

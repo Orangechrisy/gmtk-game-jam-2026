@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://ds4ahjdi8cdk7"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_qdh1b"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_uu7vg"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_s468b"]
+[ext_resource type="Resource" uid="uid://c65qkepc54x1m" path="res://Events/EventOptions/General/eo_general_05_1.tres" id="4_qdh1b"]
+[ext_resource type="Resource" uid="uid://bfk4di1nmvu0b" path="res://Events/EventOptions/General/eo_general_05_2.tres" id="5_uu7vg"]
+[ext_resource type="Texture2D" uid="uid://syj5bhkitkck" path="res://Assets/PORTRAIT_general.png" id="6_17m8u"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/map_event.gd" id="7_o4c33"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_uu7vg")
+char_name = &"General"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("7_o4c33")
+event_name = &"GENERAL_EVENT_05_TITLE"
+portrait = ExtResource("6_17m8u")
+character_name = &"General"
+dialogue = Array[String](["GENERAL_EVENT_05_DIALOGUE_1", "GENERAL_EVENT_05_DIALOGUE_2"])
+one_time = true
+conditions = Array[ExtResource("1_qdh1b")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_s468b")]([ExtResource("4_qdh1b"), ExtResource("5_uu7vg")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

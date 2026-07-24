@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://0qaxhl5k7bky"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_7etnl"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_c57sw"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_yv4ao"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_r04q3"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_ioeo4"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="6_6rkah"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="7_7etnl"]
+
+[sub_resource type="Resource" id="Resource_dofwm"]
+script = ExtResource("2_c57sw")
+val = 1
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_sflv2"]
+script = ExtResource("5_ioeo4")
+favor_change = 1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_eb8y8"]
+script = ExtResource("6_6rkah")
+gold_change = -1
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_s1oyc"]
+script = ExtResource("7_7etnl")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("4_r04q3")
+option_name = &"GENERAL_EVENT_08_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_7etnl")]([SubResource("Resource_dofwm")])
+success_effects = Array[ExtResource("3_yv4ao")]([SubResource("Resource_sflv2"), SubResource("Resource_eb8y8"), SubResource("Resource_s1oyc")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"
