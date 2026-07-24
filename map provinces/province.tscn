@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cj05e7qvgb3pj" path="res://map provinces/province.gd" id="1_pnl1e"]
 [ext_resource type="PackedScene" uid="uid://cx0d76cbtbsat" path="res://Events/MapEvents/map_event_popup.tscn" id="2_k6co4"]
+[ext_resource type="PackedScene" uid="uid://c1dmvkr2t32vh" path="res://map provinces/province_tooltip.tscn" id="3_2gmdq"]
 
 [node name="Province" type="Node2D" unique_id=1886263090]
 script = ExtResource("1_pnl1e")
@@ -25,4 +26,9 @@ offset_right = 50.0
 offset_bottom = 50.0
 grow_vertical = 0
 
+[node name="ProvinceTooltip" parent="." unique_id=1231974182 instance=ExtResource("3_2gmdq")]
+visible = false
+
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

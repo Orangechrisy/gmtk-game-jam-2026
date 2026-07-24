@@ -25,6 +25,8 @@ var current_province: Province
 @export var auto_event_odds: float = 1 # TODO: Set to something reasonable
 @export var auto_events: Array[AutoEvent]
 
+var current_event: MapEvent
+
 # SIGNALS
 
 signal day_updated(new_day)
@@ -145,3 +147,9 @@ func get_current_province() -> Province:
 
 func set_current_province(val: Province) -> void:
 	current_province = val
+
+func get_current_event() -> MapEvent:
+	return current_event
+
+func set_current_event(val: MapEvent) -> void:
+	current_event = val

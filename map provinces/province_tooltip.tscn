@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c1dmvkr2t32vh"]
+
+[ext_resource type="Script" uid="uid://bt8ta7yn2h0aa" path="res://map provinces/province_tooltip.gd" id="1_xjqa8"]
+
+[node name="ProvinceTooltip" type="Control" unique_id=1231974182]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xjqa8")
+OFFSET = Vector2(25, 5)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1774989867]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0, 1, 1)

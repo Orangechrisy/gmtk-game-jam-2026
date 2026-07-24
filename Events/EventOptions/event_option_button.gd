@@ -24,10 +24,10 @@ func set_values(option: EventOption):
 
 func _on_mouse_entered() -> void:
 	tooltip.set_values(option_desc, success_outcome, failure_outcome)
-	tooltip.visible = true
+	tooltip.visible = not tooltip.visible
 
 func _on_mouse_exited() -> void:
-	tooltip.visible = false
+	tooltip.visible = not tooltip.visible
 
 
 func _on_pressed() -> void:

@@ -10,8 +10,6 @@ class_name Province
 @export var event_location: Vector2
 
 @export_group("Counters")
-@export var base_food: float
-@export var base_gold: float
 @export var food_yield: float:
 	set(change):
 		food_yield = max(0, food_yield + change)
@@ -32,6 +30,7 @@ class_name Province
 		fervor = max(0, fervor + change)
 
 var event_present: MapEvent
+var province_tooltip: Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -41,8 +40,6 @@ func _ready() -> void:
 	GameState.connect("day_updated", on_day_updated)
 
 func on_day_updated(new_day):
-	#base_food = base_food + food_yield - food_consumption
-	#base_gold = base_gold + gold_yield - gold_consumption
 	if fervor > loyalty:
 		curr_owner = 1
 	# change image?
@@ -51,7 +48,6 @@ func on_day_updated(new_day):
 func update_events(event: MapEvent, show: bool):
 	$EventPopup.visible = show
 	event_present = event
-
 
 # Helper functions
 func get_curr_owner() -> int:
@@ -86,7 +82,13 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 			update_events(event_present, false)
 			GameManager.update_current_province(self)
 			EventScene.event_selected(event_present)
+			$ProvinceTooltip.visible = false
 		else:
 			roll_event_odds()
 
-# TODO: province hover over (to see stats?)
+func _on_area_2d_mouse_entered() -> void:
+	if not GameState.get_current_event():
+		$ProvinceTooltip.visible = true
+
+func _on_area_2d_mouse_exited() -> void:
+	$ProvinceTooltip.visible = false

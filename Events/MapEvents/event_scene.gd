@@ -10,6 +10,7 @@ func _ready() -> void:
 func event_selected(event: MapEvent):
 	print("event selected!")
 	current_event = event
+	GameManager.update_current_event(event)
 	%Title.text = event.get_event_name()
 	%Portrait.texture = event.get_portrait()
 	%CharacterName.text = event.get_character_name()
@@ -48,6 +49,7 @@ func set_button_placements(container: HBoxContainer, options: Array[EventOption]
 ## closes the event scene (hides it), removes the options so its fresh next time
 func close_event(removed: bool):
 	visible = false
+	GameManager.update_current_event(null)
 	for button in %Options.get_children():
 		button.queue_free()
 	for button in %Options2.get_children():
