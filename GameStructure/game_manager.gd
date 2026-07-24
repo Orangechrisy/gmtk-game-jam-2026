@@ -79,3 +79,7 @@ func roll_auto_event_chance() -> void:
 ## update the current province in the gamestate, 
 func update_current_province(province: Province):
 	GameState.set_current_province(province)
+
+## kill character
+func kill_character(character: Character) -> void:
+	character.is_alive = false
