@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://dsy1aa4crxcn8" path="res://Events/EventOptions/PeasantGirl/eo_peasant_girl_00_1.tres" id="4_u0dcj"]
 [ext_resource type="Resource" uid="uid://bsuod1e43j5q1" path="res://Events/EventOptions/PeasantGirl/eo_peasant_girl_00_2.tres" id="5_il4py"]
 [ext_resource type="Resource" uid="uid://nj3elh2kap3q" path="res://Events/EventOptions/PeasantGirl/eo_peasant_girl_00_3.tres" id="6_wiwlk"]
-[ext_resource type="Texture2D" uid="uid://blrhuy4hdkfg0" path="res://Assets/PORTRAIT_miner_girl.png" id="7_n6jvx"]
+[ext_resource type="Texture2D" uid="uid://blrhuy4hdkfg0" path="res://Assets/Portraits/PORTRAIT_miner_girl.png" id="7_n6jvx"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_dmap6"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

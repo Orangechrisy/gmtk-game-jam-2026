@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jhsemvlca4q8"
-path="res://.godot/imported/PORTRAIT_common_lady.png-906ed067d0d89c3ec7bab6f34f500efa.ctex"
+uid="uid://blrhuy4hdkfg0"
+path="res://.godot/imported/PORTRAIT_miner_girl.png-ad57c2ae10403ef289add730157246c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_common_lady.png"
-dest_files=["res://.godot/imported/PORTRAIT_common_lady.png-906ed067d0d89c3ec7bab6f34f500efa.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_miner_girl.png"
+dest_files=["res://.godot/imported/PORTRAIT_miner_girl.png-ad57c2ae10403ef289add730157246c2.ctex"]
 
 [params]
 

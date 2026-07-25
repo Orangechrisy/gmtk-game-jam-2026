@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://dbekd3afa80y8" path="res://Events/EventOptions/Duchess/eo_duchess_04_1.tres" id="4_2ue78"]
 [ext_resource type="Resource" uid="uid://cdc2yl3i0hc0v" path="res://Events/EventOptions/Duchess/eo_duchess_04_2.tres" id="5_6u3ja"]
 [ext_resource type="Resource" uid="uid://dlggmiw3sc2nl" path="res://Events/EventOptions/Duchess/eo_duchess_04_3.tres" id="6_a6jh7"]
-[ext_resource type="Texture2D" uid="uid://6nmxmx7ef4pf" path="res://Assets/PORTRAIT_duchess.png" id="6_vrdxw"]
+[ext_resource type="Texture2D" uid="uid://6nmxmx7ef4pf" path="res://Assets/Portraits/PORTRAIT_duchess.png" id="6_vrdxw"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_i77h8"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

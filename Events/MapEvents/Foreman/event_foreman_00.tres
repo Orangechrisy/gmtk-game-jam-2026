@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://c7rindtvo81q7" path="res://Events/EventConditions/ec_has_province.gd" id="3_ocy88"]
 [ext_resource type="Resource" uid="uid://c8xm72agjwgl1" path="res://Events/EventOptions/Foreman/eo_foreman_00_1.tres" id="4_yte6v"]
 [ext_resource type="Resource" uid="uid://btf8pnnw806xi" path="res://Events/EventOptions/Foreman/eo_foreman_00_2.tres" id="5_ocy88"]
-[ext_resource type="Texture2D" uid="uid://cc7h8ob3wisle" path="res://Assets/PORTRAIT_foreman.png" id="7_ocy88"]
+[ext_resource type="Texture2D" uid="uid://cc7h8ob3wisle" path="res://Assets/Portraits/PORTRAIT_foreman.png" id="7_ocy88"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_f42hi"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

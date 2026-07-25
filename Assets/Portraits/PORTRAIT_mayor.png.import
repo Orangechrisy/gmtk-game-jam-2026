@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgpktw5r068k"
-path="res://.godot/imported/PORTRAIT_radical.png-57a8aae3bcc8b9bb1a1235d03e988756.ctex"
+uid="uid://di4unmyalpmk4"
+path="res://.godot/imported/PORTRAIT_mayor.png-c67a36449b67eaa4e960fe6598535d3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_radical.png"
-dest_files=["res://.godot/imported/PORTRAIT_radical.png-57a8aae3bcc8b9bb1a1235d03e988756.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_mayor.png"
+dest_files=["res://.godot/imported/PORTRAIT_mayor.png-c67a36449b67eaa4e960fe6598535d3b.ctex"]
 
 [params]
 

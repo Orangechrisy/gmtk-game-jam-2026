@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgp6ck73u2cwg"
-path="res://.godot/imported/PORTRAIT_revolution_moderate.png-656b60fc13563fa411dee76ac6e19354.ctex"
+uid="uid://bkxj38r3ngyai"
+path="res://.godot/imported/PORTRAIT_cossack_guy.png-9ecab0a23f9eed5dfa6fbcda136988dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_revolution_moderate.png"
-dest_files=["res://.godot/imported/PORTRAIT_revolution_moderate.png-656b60fc13563fa411dee76ac6e19354.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_cossack_guy.png"
+dest_files=["res://.godot/imported/PORTRAIT_cossack_guy.png-9ecab0a23f9eed5dfa6fbcda136988dc.ctex"]
 
 [params]
 

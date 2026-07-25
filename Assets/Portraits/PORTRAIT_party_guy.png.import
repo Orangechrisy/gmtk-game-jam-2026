@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkxj38r3ngyai"
-path="res://.godot/imported/PORTRAIT_cossack_guy.png-e9b378b49cd157159e370765a4b435c0.ctex"
+uid="uid://c23kc8756wrkf"
+path="res://.godot/imported/PORTRAIT_party_guy.png-005f6de37199d209a9d99f7146b1d4fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_cossack_guy.png"
-dest_files=["res://.godot/imported/PORTRAIT_cossack_guy.png-e9b378b49cd157159e370765a4b435c0.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_party_guy.png"
+dest_files=["res://.godot/imported/PORTRAIT_party_guy.png-005f6de37199d209a9d99f7146b1d4fd.ctex"]
 
 [params]
 

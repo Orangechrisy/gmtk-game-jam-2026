@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="3_5cbny"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_ptuj4"]
 [ext_resource type="Resource" uid="uid://dgoh6t7wpr2iu" path="res://Events/EventOptions/eo_test_option.tres" id="5_rr5ff"]
-[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="6_a0x20"]
+[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/Portraits/PORTRAIT_spymaster.png" id="6_a0x20"]
 [ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="7_vhrv6"]
 [ext_resource type="PackedScene" uid="uid://dv1r3qybxrmhh" path="res://UI/MainInterface.tscn" id="8_ry46t"]
 [ext_resource type="PackedScene" uid="uid://bqnp5ys3qf240" path="res://Menus/PauseMenu.tscn" id="10_5cbny"]

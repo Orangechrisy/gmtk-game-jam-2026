@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_w614v"]
 [ext_resource type="Resource" uid="uid://coi0ho3mr6sod" path="res://Events/EventOptions/RebelLeader/eo_rebel_leader_05_1.tres" id="4_02pwt"]
 [ext_resource type="Resource" uid="uid://cliy8fgmtm3w7" path="res://Events/EventOptions/RebelLeader/eo_rebel_leader_05_2.tres" id="5_y6ek4"]
-[ext_resource type="Texture2D" uid="uid://bygh378rq2pik" path="res://Assets/PORTRAIT_revolution_guy.png" id="6_02pwt"]
+[ext_resource type="Texture2D" uid="uid://bygh378rq2pik" path="res://Assets/Portraits/PORTRAIT_revolution_guy.png" id="6_02pwt"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_71u5w"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

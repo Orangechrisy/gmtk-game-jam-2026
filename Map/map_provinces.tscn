@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="3_vyboi"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_plq5i"]
 [ext_resource type="Resource" uid="uid://dgoh6t7wpr2iu" path="res://Events/EventOptions/eo_test_option.tres" id="5_pxtiu"]
-[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="6_io1nl"]
+[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/Portraits/PORTRAIT_spymaster.png" id="6_io1nl"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_44qw3"]
 [ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="9_pxtiu"]
 [ext_resource type="Script" uid="uid://bciotqfqbxelf" path="res://Events/EventEffects/ee_change_armies.gd" id="10_io1nl"]

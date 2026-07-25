@@ -38,6 +38,8 @@ window/stretch/aspect="expand"
 
 timers/tooltip_delay_sec=0.0
 timers/tooltip_delay_sec.editor_hint=0.2
+theme/default_font_antialiasing=0
+theme/custom_font="uid://l6t7h404y86i"
 
 [physics]
 

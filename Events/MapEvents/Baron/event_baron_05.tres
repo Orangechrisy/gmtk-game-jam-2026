@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://vu13u0rjkj80" path="res://Events/EventOptions/Baron/eo_baron_05_1.tres" id="4_pgst0"]
 [ext_resource type="Resource" uid="uid://d34funp0ihqm0" path="res://Events/EventOptions/Baron/eo_baron_05_2.tres" id="5_b4mma"]
 [ext_resource type="Resource" uid="uid://6ypxbpqv0osu" path="res://Events/EventOptions/Baron/eo_baron_05_3.tres" id="6_3hrv6"]
-[ext_resource type="Texture2D" uid="uid://bkxj38r3ngyai" path="res://Assets/PORTRAIT_cossack_guy.png" id="6_g16g0"]
+[ext_resource type="Texture2D" uid="uid://bkxj38r3ngyai" path="res://Assets/Portraits/PORTRAIT_cossack_guy.png" id="6_g16g0"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_hn2lj"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

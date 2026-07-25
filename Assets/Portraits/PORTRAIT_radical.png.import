@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv5fv8b5lq7qv"
-path="res://.godot/imported/PORTRAIT_babushka.png-fa9edb86d08064e5892e051df2721e05.ctex"
+uid="uid://dgpktw5r068k"
+path="res://.godot/imported/PORTRAIT_radical.png-3a7e1197347ccca507e6165a4415e92e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_babushka.png"
-dest_files=["res://.godot/imported/PORTRAIT_babushka.png-fa9edb86d08064e5892e051df2721e05.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_radical.png"
+dest_files=["res://.godot/imported/PORTRAIT_radical.png-3a7e1197347ccca507e6165a4415e92e.ctex"]
 
 [params]
 

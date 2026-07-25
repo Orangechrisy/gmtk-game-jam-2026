@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://co2kwogvhbq4q"
-path="res://.godot/imported/PORTRAIT_soldier.png-8665fedafaff781754a364488b4a962f.ctex"
+uid="uid://yt64w2msql3y"
+path="res://.godot/imported/PORTRAIT_priest.png-265d5973ddf06d0ff46b3590d8a65d25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_soldier.png"
-dest_files=["res://.godot/imported/PORTRAIT_soldier.png-8665fedafaff781754a364488b4a962f.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_priest.png"
+dest_files=["res://.godot/imported/PORTRAIT_priest.png-265d5973ddf06d0ff46b3590d8a65d25.ctex"]
 
 [params]
 

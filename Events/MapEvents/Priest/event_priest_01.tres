@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://in5yoy5json2" path="res://Events/EventOptions/Priest/eo_priest_01_1.tres" id="4_160cp"]
 [ext_resource type="Resource" uid="uid://bqyw21yepriai" path="res://Events/EventOptions/Priest/eo_priest_01_2.tres" id="5_kb1r7"]
 [ext_resource type="Resource" uid="uid://ehs2vtxajpy4" path="res://Events/EventOptions/Priest/eo_priest_01_3.tres" id="6_gmrl5"]
-[ext_resource type="Texture2D" uid="uid://yt64w2msql3y" path="res://Assets/PORTRAIT_priest.png" id="6_pcfxw"]
+[ext_resource type="Texture2D" uid="uid://yt64w2msql3y" path="res://Assets/Portraits/PORTRAIT_priest.png" id="6_pcfxw"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_5a5ai"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

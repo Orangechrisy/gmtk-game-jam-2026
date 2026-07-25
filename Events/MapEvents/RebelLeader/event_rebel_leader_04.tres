@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://c5bkvgifi2567" path="res://Events/EventOptions/RebelLeader/eo_rebel_leader_04_2.tres" id="5_6hbu2"]
 [ext_resource type="Resource" uid="uid://tfl8ieovumaa" path="res://Events/EventOptions/RebelLeader/eo_rebel_leader_04_3.tres" id="6_4bthj"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_ebt4l"]
-[ext_resource type="Texture2D" uid="uid://bygh378rq2pik" path="res://Assets/PORTRAIT_revolution_guy.png" id="7_k2qad"]
+[ext_resource type="Texture2D" uid="uid://bygh378rq2pik" path="res://Assets/Portraits/PORTRAIT_revolution_guy.png" id="7_k2qad"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_k2qad")

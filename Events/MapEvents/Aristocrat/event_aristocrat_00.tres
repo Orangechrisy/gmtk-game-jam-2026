@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://clfoiyo3in8m4" path="res://Events/EventOptions/Aristocrat/eo_aristocrat_00_1.tres" id="4_fx1qe"]
 [ext_resource type="Resource" uid="uid://pyr24up6ftbs" path="res://Events/EventOptions/Aristocrat/eo_aristocrat_00_2.tres" id="5_mosgq"]
 [ext_resource type="Resource" uid="uid://d4ip5ags2kuqq" path="res://Events/EventOptions/Aristocrat/eo_aristocrat_00_3.tres" id="6_neh7s"]
-[ext_resource type="Texture2D" uid="uid://d8yb1mittr3s" path="res://Assets/PORTRAIT_smug_aristocrat.png" id="7_fx1qe"]
+[ext_resource type="Texture2D" uid="uid://d8yb1mittr3s" path="res://Assets/Portraits/PORTRAIT_smug_aristocrat.png" id="7_fx1qe"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_i8j0v"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

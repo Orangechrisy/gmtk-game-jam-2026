@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hxeh32w5ylp0"
-path="res://.godot/imported/PORTRAIT_dockworker.png-9a533944fd699cbfc96932f1a4b05112.ctex"
+uid="uid://bgp6ck73u2cwg"
+path="res://.godot/imported/PORTRAIT_revolution_moderate.png-0783fd108c06eeb2e4f3aaec8d4a3086.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_dockworker.png"
-dest_files=["res://.godot/imported/PORTRAIT_dockworker.png-9a533944fd699cbfc96932f1a4b05112.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_revolution_moderate.png"
+dest_files=["res://.godot/imported/PORTRAIT_revolution_moderate.png-0783fd108c06eeb2e4f3aaec8d4a3086.ctex"]
 
 [params]
 

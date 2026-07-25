@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1frsvovk5178"
-path="res://.godot/imported/PORTRAIT_envoy.png-6459f6b8ba43107da86231b795602dc1.ctex"
+uid="uid://6nmxmx7ef4pf"
+path="res://.godot/imported/PORTRAIT_duchess.png-a8e67f5ea7dac8c97521359dc8dbd0ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_envoy.png"
-dest_files=["res://.godot/imported/PORTRAIT_envoy.png-6459f6b8ba43107da86231b795602dc1.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_duchess.png"
+dest_files=["res://.godot/imported/PORTRAIT_duchess.png-a8e67f5ea7dac8c97521359dc8dbd0ab.ctex"]
 
 [params]
 

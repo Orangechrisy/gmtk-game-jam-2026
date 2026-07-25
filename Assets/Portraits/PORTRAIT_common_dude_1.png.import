@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di4unmyalpmk4"
-path="res://.godot/imported/PORTRAIT_mayor.png-ba20102f9215b0c7e2442443022e24cc.ctex"
+uid="uid://d0tp7oprp4mbt"
+path="res://.godot/imported/PORTRAIT_common_dude_1.png-04450306643878ca8d5ccc48f17db27b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_mayor.png"
-dest_files=["res://.godot/imported/PORTRAIT_mayor.png-ba20102f9215b0c7e2442443022e24cc.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_common_dude_1.png"
+dest_files=["res://.godot/imported/PORTRAIT_common_dude_1.png-04450306643878ca8d5ccc48f17db27b.ctex"]
 
 [params]
 

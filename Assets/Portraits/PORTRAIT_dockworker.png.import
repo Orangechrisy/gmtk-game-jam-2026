@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxriw6tle5ah5"
-path="res://.godot/imported/PORTRAIT_spymaster.png-02c749f51370cbbe76d25b86a3c9929b.ctex"
+uid="uid://hxeh32w5ylp0"
+path="res://.godot/imported/PORTRAIT_dockworker.png-943be22e07e4b26cc3a3212eb1d1f4e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_spymaster.png"
-dest_files=["res://.godot/imported/PORTRAIT_spymaster.png-02c749f51370cbbe76d25b86a3c9929b.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_dockworker.png"
+dest_files=["res://.godot/imported/PORTRAIT_dockworker.png-943be22e07e4b26cc3a3212eb1d1f4e0.ctex"]
 
 [params]
 

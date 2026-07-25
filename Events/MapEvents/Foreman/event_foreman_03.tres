@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_bdy2c"]
 [ext_resource type="Resource" uid="uid://euwprfav4i0c" path="res://Events/EventOptions/Foreman/eo_foreman_03_1.tres" id="4_0tylf"]
 [ext_resource type="Resource" uid="uid://bb6pfngasmmjf" path="res://Events/EventOptions/Foreman/eo_foreman_03_2.tres" id="5_bdy2c"]
-[ext_resource type="Texture2D" uid="uid://cc7h8ob3wisle" path="res://Assets/PORTRAIT_foreman.png" id="6_e1kf6"]
+[ext_resource type="Texture2D" uid="uid://cc7h8ob3wisle" path="res://Assets/Portraits/PORTRAIT_foreman.png" id="6_e1kf6"]
 [ext_resource type="Resource" uid="uid://bpl2du0eooso5" path="res://Events/EventOptions/Foreman/eo_foreman_03_3.tres" id="6_rv1j6"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_be4sx"]
 

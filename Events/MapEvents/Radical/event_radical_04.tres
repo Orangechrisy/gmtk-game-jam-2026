@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://df8f7erhulli2" path="res://Events/EventOptions/Radical/eo_radical_04_1.tres" id="4_hm675"]
 [ext_resource type="Resource" uid="uid://dsqfbnf7jyx24" path="res://Events/EventOptions/Radical/eo_radical_04_2.tres" id="5_86udt"]
 [ext_resource type="Resource" uid="uid://mkvx2cfo4b5q" path="res://Events/EventOptions/Radical/eo_radical_04_3.tres" id="6_kglek"]
-[ext_resource type="Texture2D" uid="uid://dgpktw5r068k" path="res://Assets/PORTRAIT_radical.png" id="7_5lbr2"]
+[ext_resource type="Texture2D" uid="uid://dgpktw5r068k" path="res://Assets/Portraits/PORTRAIT_radical.png" id="7_5lbr2"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_dpvjk"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

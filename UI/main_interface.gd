@@ -20,34 +20,34 @@ func _ready() -> void:
 func on_mouse_mode_updated(new_mode) -> void:
 	if new_mode == GameState.Click.ARMY_PLACEMENT:
 		set_mouse_behavior_recursive(MOUSE_BEHAVIOR_INHERITED)
-		$PlaceArmyButton.text = "CANCEL"
+		%PlaceArmyButton.text = "CANCEL"
 	else:
-		$PlaceArmyButton.text = "PLACE ARMY"
+		%PlaceArmyButton.text = "PLACE ARMY"
 		if new_mode == GameState.Click.BASIC:
 			set_mouse_behavior_recursive(MOUSE_BEHAVIOR_INHERITED)
 		else:
 			set_mouse_behavior_recursive(MOUSE_BEHAVIOR_DISABLED)
 
 func on_day_updated(new_day: int) -> void:
-	$DayLabel.text = "DAY " + str(new_day)
+	%DayLabel.text = "DAY " + str(new_day)
 
 func on_days_to_revolution_updated(new_days_left: int) -> void:
-	$ToRevolutionLabel.text = "DAYS TO REVOLUTION: " + str(new_days_left)
+	%ToRevolutionLabel.text = "DAYS TO REVOLUTION: " + str(new_days_left)
 
 func on_food_updated(new_food: int) -> void:
-	$FoodLabel.text = "Food: " + str(new_food)
+	%FoodLabel.text = "Food: " + str(new_food)
 
 func on_gold_updated(new_gold: int) -> void:
-	$GoldLabel.text = "Gold: " + str(new_gold)
+	%GoldLabel.text = "Gold: " + str(new_gold)
 
 func on_common_sentiment_updated(new_sentiment: int) -> void:
-	$CommonFervorBar.value = new_sentiment
+	%CommonFervorBar.value = new_sentiment
 
 func on_noble_sentiment_updated(new_sentiment: int) -> void:
-	$NobleFervorBar.value = new_sentiment
+	%NobleFervorBar.value = new_sentiment
 
 func on_armies_left_updated(new_armies_left: int) -> void:
-	$PlaceArmyLabel.text = "ARMIES LEFT: " + str(new_armies_left)
+	%PlaceArmyLabel.text = "ARMIES LEFT: " + str(new_armies_left)
 
 
 func _on_menu_button_pressed() -> void:
@@ -67,9 +67,9 @@ func _on_place_army_button_pressed() -> void:
 
 ## adjust end day button visibility (val = true means there is an active event)
 func show_end_day(val: bool) -> void:
-	$EndDay.visible = not val
+	%EndDay.visible = not val
 
 ## ends the day when pressed
 func _on_end_day_pressed() -> void:
-	$EndDay.visible = false
+	%EndDay.visible = false
 	GameManager.end_day()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c23kc8756wrkf"
-path="res://.godot/imported/PORTRAIT_party_guy.png-a83a6cd21fac606120b0641e43174db5.ctex"
+uid="uid://jhsemvlca4q8"
+path="res://.godot/imported/PORTRAIT_common_lady.png-b009dce6ff02050a97db8f27fe3ae959.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_party_guy.png"
-dest_files=["res://.godot/imported/PORTRAIT_party_guy.png-a83a6cd21fac606120b0641e43174db5.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_common_lady.png"
+dest_files=["res://.godot/imported/PORTRAIT_common_lady.png-b009dce6ff02050a97db8f27fe3ae959.ctex"]
 
 [params]
 

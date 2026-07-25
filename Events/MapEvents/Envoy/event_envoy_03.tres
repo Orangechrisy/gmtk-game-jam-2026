@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://vf66mbhovgvp" path="res://Events/EventOptions/Envoy/eo_envoy_03_1.tres" id="4_occ7p"]
 [ext_resource type="Resource" uid="uid://c6ex1mbdj6eye" path="res://Events/EventOptions/Envoy/eo_envoy_03_2.tres" id="5_sku0k"]
 [ext_resource type="Resource" uid="uid://dqus7sfm8c0r6" path="res://Events/EventOptions/Envoy/eo_envoy_03_3.tres" id="6_igpwc"]
-[ext_resource type="Texture2D" uid="uid://b1frsvovk5178" path="res://Assets/PORTRAIT_envoy.png" id="7_abssv"]
+[ext_resource type="Texture2D" uid="uid://b1frsvovk5178" path="res://Assets/Portraits/PORTRAIT_envoy.png" id="7_abssv"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_h2wg4"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

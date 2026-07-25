@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc7h8ob3wisle"
-path="res://.godot/imported/PORTRAIT_foreman.png-17c56411103bba8bf1c3b190bc2e9c03.ctex"
+uid="uid://d8yb1mittr3s"
+path="res://.godot/imported/PORTRAIT_smug_aristocrat.png-63ebe125fc22d800edc83f5573e13d52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_foreman.png"
-dest_files=["res://.godot/imported/PORTRAIT_foreman.png-17c56411103bba8bf1c3b190bc2e9c03.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_smug_aristocrat.png"
+dest_files=["res://.godot/imported/PORTRAIT_smug_aristocrat.png-63ebe125fc22d800edc83f5573e13d52.ctex"]
 
 [params]
 

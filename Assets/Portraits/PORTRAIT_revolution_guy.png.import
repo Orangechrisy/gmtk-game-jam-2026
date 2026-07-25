@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blrhuy4hdkfg0"
-path="res://.godot/imported/PORTRAIT_miner_girl.png-3d5ef86622ad7589c794e832bfd5ce8b.ctex"
+uid="uid://bygh378rq2pik"
+path="res://.godot/imported/PORTRAIT_revolution_guy.png-b88b96a314f05707f00d1275da4cf009.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PORTRAIT_miner_girl.png"
-dest_files=["res://.godot/imported/PORTRAIT_miner_girl.png-3d5ef86622ad7589c794e832bfd5ce8b.ctex"]
+source_file="res://Assets/Portraits/PORTRAIT_revolution_guy.png"
+dest_files=["res://.godot/imported/PORTRAIT_revolution_guy.png-b88b96a314f05707f00d1275da4cf009.ctex"]
 
 [params]
 
