@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bvlvy3wrovliw"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_vql2j"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_rpb7v"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_3xphv"]
+[ext_resource type="Script" uid="uid://b5c5lw0i7byh" path="res://Events/EventEffects/ee_run_ending.gd" id="4_fmuef"]
+
+[sub_resource type="Resource" id="Resource_vkmf1"]
+script = ExtResource("4_fmuef")
+ending = 12
+metadata/_custom_type_script = "uid://b5c5lw0i7byh"
+
+[resource]
+script = ExtResource("3_3xphv")
+option_name = &"REBEL_LEADER_EVENT_00_OPTION_1_TITLE"
+success_effects = Array[ExtResource("2_rpb7v")]([SubResource("Resource_vkmf1")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

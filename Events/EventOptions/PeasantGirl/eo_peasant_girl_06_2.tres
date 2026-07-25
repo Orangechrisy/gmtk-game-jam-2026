@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bgplx0u6d6sfb"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_jg5sf"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_v0tkl"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_4sa11"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_ei3vu"]
+
+[sub_resource type="Resource" id="Resource_6fra7"]
+script = ExtResource("4_ei3vu")
+fervor_change = 1
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[resource]
+script = ExtResource("4_4sa11")
+option_name = &"PEASANT_GIRL_EVENT_06_OPTION_2_TITLE"
+success_effects = Array[ExtResource("3_v0tkl")]([SubResource("Resource_6fra7")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

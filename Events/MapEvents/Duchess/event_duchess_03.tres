@@ -10,19 +10,19 @@
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_yc3d1")
-char_name = &"Duchess"
+char_name = &"CHAR_DUCHESS"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [sub_resource type="Resource" id="Resource_nnr1o"]
 script = ExtResource("2_yc3d1")
-char_name = &"Envoy"
+char_name = &"CHAR_ENVOY"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [resource]
 script = ExtResource("7_se3pw")
 event_name = &"DUCHESS_EVENT_03_TITLE"
 portrait = ExtResource("6_w8t57")
-character_name = &"Duchess"
+character_name = &"CHAR_DUCHESS"
 dialogue = Array[String](["DUCHESS_EVENT_03_DIALOGUE_1", "DUCHESS_EVENT_03_DIALOGUE_2"])
 one_time = true
 conditions = Array[ExtResource("1_khvrv")]([SubResource("Resource_2wl4a"), SubResource("Resource_nnr1o")])

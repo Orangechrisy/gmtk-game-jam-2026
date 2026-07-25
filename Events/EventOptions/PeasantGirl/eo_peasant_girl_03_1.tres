@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cxn407gs5ufgp"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_vfrgm"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_2q57a"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_caycb"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="4_vfrgm"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="6_dchuo"]
+[ext_resource type="Script" uid="uid://dh5rwkw7h6mlj" path="res://Events/EventEffects/ee_character_quest_continues.gd" id="6_t5a51"]
+
+[sub_resource type="Resource" id="Resource_qpxpn"]
+script = ExtResource("4_vfrgm")
+loyalty_change = 1
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_l8wxr"]
+script = ExtResource("6_t5a51")
+char_name = &"CHAR_PEASANT_GIRL"
+new_quest_level = 2
+metadata/_custom_type_script = "uid://dh5rwkw7h6mlj"
+
+[sub_resource type="Resource" id="Resource_h4le8"]
+script = ExtResource("6_dchuo")
+favor_change = -2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[resource]
+script = ExtResource("4_caycb")
+option_name = &"PEASANT_GIRL_EVENT_03_OPTION_1_TITLE"
+success_effects = Array[ExtResource("3_2q57a")]([SubResource("Resource_qpxpn"), SubResource("Resource_l8wxr"), SubResource("Resource_h4le8")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

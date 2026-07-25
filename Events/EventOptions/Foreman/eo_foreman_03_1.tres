@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://euwprfav4i0c"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_khyxd"]
+[ext_resource type="Script" uid="uid://bi67gb5c67xmd" path="res://Events/EventConditions/ec_has_food.gd" id="2_khyxd"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_okywv"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_h6csg"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_067i0"]
+[ext_resource type="Script" uid="uid://bsfdc1pc8iyve" path="res://Events/EventEffects/ee_change_food.gd" id="6_17wn7"]
+
+[sub_resource type="Resource" id="Resource_u22va"]
+script = ExtResource("2_khyxd")
+val = 2
+metadata/_custom_type_script = "uid://bi67gb5c67xmd"
+
+[sub_resource type="Resource" id="Resource_4jo87"]
+script = ExtResource("5_067i0")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_ngob0"]
+script = ExtResource("6_17wn7")
+food_change = -2
+metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
+
+[resource]
+script = ExtResource("4_h6csg")
+option_name = &"FOREMAN_EVENT_03_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_khyxd")]([SubResource("Resource_u22va")])
+success_effects = Array[ExtResource("3_okywv")]([SubResource("Resource_4jo87"), SubResource("Resource_ngob0")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

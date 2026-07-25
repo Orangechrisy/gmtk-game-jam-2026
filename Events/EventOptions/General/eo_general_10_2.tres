@@ -30,7 +30,7 @@ metadata/_custom_type_script = "uid://bciotqfqbxelf"
 
 [resource]
 script = ExtResource("4_4rm2h")
-option_name = &"GENERAL_EVENT_10_OPTION_2TITLE"
+option_name = &"GENERAL_EVENT_10_OPTION_2_TITLE"
 conditions = Array[ExtResource("1_3ahbn")]([SubResource("Resource_4u4dg")])
 success_effects = Array[ExtResource("3_j362k")]([SubResource("Resource_ynwls"), SubResource("Resource_eqwp8"), SubResource("Resource_0v0ie")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

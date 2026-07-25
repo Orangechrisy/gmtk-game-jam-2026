@@ -11,14 +11,14 @@
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_160cp")
-char_name = &"Priest"
+char_name = &"CHAR_PRIEST"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [resource]
 script = ExtResource("7_5a5ai")
 event_name = &"PRIEST_EVENT_01_TITLE"
 portrait = ExtResource("6_pcfxw")
-character_name = &"Priest"
+character_name = &"CHAR_PRIEST"
 dialogue = Array[String](["PRIEST_EVENT_01_DIALOGUE_1", "PRIEST_EVENT_01_DIALOGUE_2"])
 one_time = true
 conditions = Array[ExtResource("1_jg8ue")]([SubResource("Resource_2wl4a")])

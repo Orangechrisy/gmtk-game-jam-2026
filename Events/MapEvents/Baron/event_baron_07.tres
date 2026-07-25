@@ -11,19 +11,19 @@
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_ir6iq")
-char_name = &"Baron"
+char_name = &"CHAR_BARON"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [sub_resource type="Resource" id="Resource_a0ti1"]
 script = ExtResource("2_ir6iq")
-char_name = &"Rebel Leader"
+char_name = &"CHAR_REBEL_LEADER"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [resource]
 script = ExtResource("9_fl6i2")
 event_name = &"BARON_EVENT_07_TITLE"
 portrait = ExtResource("8_1r245")
-character_name = &"Baron"
+character_name = &"CHAR_BARON"
 dialogue = Array[String](["BARON_EVENT_07_DIALOGUE_1", "BARON_EVENT_07_DIALOGUE_2"])
 conditions = Array[ExtResource("1_4e206")]([SubResource("Resource_2wl4a"), SubResource("Resource_a0ti1")])
 options = Array[ExtResource("4_pdqsd")]([ExtResource("4_hj3d3"), ExtResource("5_4e206"), ExtResource("6_ir6iq")])

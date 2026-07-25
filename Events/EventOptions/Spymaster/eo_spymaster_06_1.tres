@@ -10,7 +10,7 @@
 
 [sub_resource type="Resource" id="Resource_631hd"]
 script = ExtResource("3_21sw1")
-char_name = &"General"
+char_name = &"CHAR_GENERAL"
 chance = 60
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
@@ -31,7 +31,7 @@ metadata/_custom_type_script = "uid://bciotqfqbxelf"
 
 [sub_resource type="Resource" id="Resource_oq1ni"]
 script = ExtResource("3_21sw1")
-char_name = &"General"
+char_name = &"CHAR_GENERAL"
 chance = 30
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 

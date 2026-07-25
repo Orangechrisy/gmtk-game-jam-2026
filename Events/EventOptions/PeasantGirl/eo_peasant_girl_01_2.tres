@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dy5xjky2rdi5x"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_cdiv1"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_af5qt"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_nplw7"]
+[ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="4_p8po0"]
+
+[sub_resource type="Resource" id="Resource_kfa0m"]
+script = ExtResource("4_p8po0")
+char_name = &"CHAR_PEASANT_GIRL"
+chance = 50
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[resource]
+script = ExtResource("4_nplw7")
+option_name = &"PEASANT_GIRL_EVENT_01_OPTION_2_TITLE"
+success_effects = Array[ExtResource("3_af5qt")]([SubResource("Resource_kfa0m")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

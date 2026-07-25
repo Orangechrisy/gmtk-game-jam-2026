@@ -10,19 +10,19 @@
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_wsxaj")
-char_name = &"Aristocrat"
+char_name = &"CHAR_ARISTOCRAT"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [sub_resource type="Resource" id="Resource_xltwx"]
 script = ExtResource("2_wsxaj")
-char_name = &"Baron"
+char_name = &"CHAR_BARON"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [resource]
 script = ExtResource("8_xdodv")
 event_name = &"ARISTOCRAT_EVENT_03_TITLE"
 portrait = ExtResource("7_n5ujq")
-character_name = &"Aristocrat"
+character_name = &"CHAR_ARISTOCRAT"
 dialogue = Array[String](["ARISTOCRAT_EVENT_03_DIALOGUE_1", "ARISTOCRAT_EVENT_03_DIALOGUE_2"])
 one_time = true
 conditions = Array[ExtResource("1_bpl3d")]([SubResource("Resource_2wl4a"), SubResource("Resource_xltwx")])

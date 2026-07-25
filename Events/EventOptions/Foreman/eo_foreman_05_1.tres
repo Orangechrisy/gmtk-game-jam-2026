@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cywxv7v7cj004"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_12tgy"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_n0psl"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_r8m2x"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_r8m2x"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="4_kk1a4"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="5_kk1a4"]
+
+[sub_resource type="Resource" id="Resource_yqfvl"]
+script = ExtResource("2_r8m2x")
+val = 5
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_bjndu"]
+script = ExtResource("5_kk1a4")
+gold_change = -5
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_4fbqf"]
+script = ExtResource("4_kk1a4")
+gold_change = 2
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[resource]
+script = ExtResource("3_r8m2x")
+option_name = &"FOREMAN_EVENT_05_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_12tgy")]([SubResource("Resource_yqfvl")])
+success_effects = Array[ExtResource("2_n0psl")]([SubResource("Resource_bjndu"), SubResource("Resource_4fbqf")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

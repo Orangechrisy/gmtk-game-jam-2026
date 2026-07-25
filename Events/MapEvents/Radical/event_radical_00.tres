@@ -11,14 +11,14 @@
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_yh10h")
-char_name = &"Radical"
+char_name = &"CHAR_RADICAL"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [resource]
 script = ExtResource("8_ncgtc")
 event_name = &"RADICAL_EVENT_00_TITLE"
 portrait = ExtResource("7_noe3q")
-character_name = &"Radical"
+character_name = &"CHAR_RADICAL"
 dialogue = Array[String](["RADICAL_EVENT_00_DIALOGUE_1", "RADICAL_EVENT_00_DIALOGUE_2"])
 conditions = Array[ExtResource("1_y5s88")]([SubResource("Resource_2wl4a")])
 options = Array[ExtResource("3_t4e5u")]([ExtResource("4_y5s88"), ExtResource("5_yh10h"), ExtResource("6_t4e5u")])

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://do7xapacjc5u5"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_ahko3"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_uqwpy"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_k7ynh"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_atb3n"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="5_3kj8f"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_uqwpy"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="6_nfn6w"]
+
+[sub_resource type="Resource" id="Resource_yqfvl"]
+script = ExtResource("2_uqwpy")
+val = 2
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_glr8p"]
+script = ExtResource("5_3kj8f")
+gold_change = -2
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_j8a83"]
+script = ExtResource("5_uqwpy")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_bjndu"]
+script = ExtResource("5_3kj8f")
+gold_change = -2
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_8nk3m"]
+script = ExtResource("5_uqwpy")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_pvr2g"]
+script = ExtResource("6_nfn6w")
+gold_change = 1
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[resource]
+script = ExtResource("4_atb3n")
+option_name = &"FOREMAN_EVENT_06_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_ahko3")]([SubResource("Resource_yqfvl")])
+success_odds = 0.6
+success_effects = Array[ExtResource("3_k7ynh")]([SubResource("Resource_bjndu"), SubResource("Resource_8nk3m"), SubResource("Resource_pvr2g")])
+failure_effects = Array[ExtResource("3_k7ynh")]([SubResource("Resource_glr8p"), SubResource("Resource_j8a83")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

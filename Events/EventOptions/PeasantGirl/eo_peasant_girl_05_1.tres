@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://ce06fnwctdj05"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_c48sx"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_n8hbq"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_2h8yc"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="4_2h8yc"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_8rvg8"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="6_e5rcq"]
+
+[sub_resource type="Resource" id="Resource_e5rcq"]
+script = ExtResource("4_2h8yc")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_rocbm"]
+script = ExtResource("5_8rvg8")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_wb8sm"]
+script = ExtResource("6_e5rcq")
+gold_change = -1
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[resource]
+script = ExtResource("3_2h8yc")
+option_name = &"PEASANT_GIRL_EVENT_05_OPTION_1_TITLE"
+success_effects = Array[ExtResource("2_n8hbq")]([SubResource("Resource_e5rcq"), SubResource("Resource_rocbm"), SubResource("Resource_wb8sm")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

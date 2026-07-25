@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://di10k7e2o1a6"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_qj2i5"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_e52gs"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_jrm2j"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_ek3kk"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="5_vmrva"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="6_omg7y"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="7_bs3pi"]
+
+[sub_resource type="Resource" id="Resource_vmrva"]
+script = ExtResource("2_e52gs")
+val = 2
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_omg7y"]
+script = ExtResource("5_vmrva")
+favor_change = 2
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_bs3pi"]
+script = ExtResource("6_omg7y")
+favor_change = -2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_ur0hs"]
+script = ExtResource("7_bs3pi")
+gold_change = -2
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[resource]
+script = ExtResource("3_ek3kk")
+option_name = &"PEASANT_GIRL_EVENT_06_OPTION_3_TITLE"
+conditions = Array[ExtResource("1_qj2i5")]([SubResource("Resource_vmrva")])
+success_effects = Array[ExtResource("2_jrm2j")]([SubResource("Resource_omg7y"), SubResource("Resource_bs3pi"), SubResource("Resource_ur0hs")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

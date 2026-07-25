@@ -26,13 +26,13 @@ metadata/_custom_type_script = "uid://2k5y8ducn717"
 
 [sub_resource type="Resource" id="Resource_c607i"]
 script = ExtResource("3_8ahol")
-char_name = &"Radical"
+char_name = &"CHAR_RADICAL"
 chance = 20
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
 [sub_resource type="Resource" id="Resource_gh4lc"]
 script = ExtResource("3_8ahol")
-char_name = &"Aristocrat"
+char_name = &"CHAR_ARISTOCRAT"
 chance = 50
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
@@ -53,13 +53,13 @@ metadata/_custom_type_script = "uid://2k5y8ducn717"
 
 [sub_resource type="Resource" id="Resource_8ugik"]
 script = ExtResource("3_8ahol")
-char_name = &"Radical"
+char_name = &"CHAR_RADICAL"
 chance = 50
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
 [sub_resource type="Resource" id="Resource_ilrvi"]
 script = ExtResource("3_8ahol")
-char_name = &"Aristocrat"
+char_name = &"CHAR_ARISTOCRAT"
 chance = 20
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 

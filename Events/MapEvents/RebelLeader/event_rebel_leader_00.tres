@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://d0aer5m68swg3"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_w0126"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_i8vxn"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_hxa6j"]
+[ext_resource type="Resource" uid="uid://bvlvy3wrovliw" path="res://Events/EventOptions/RebelLeader/eo_rebel_leader_00_1.tres" id="4_2af4s"]
+[ext_resource type="Resource" uid="uid://dg7hx5sohcn7x" path="res://Events/EventOptions/RebelLeader/eo_rebel_leader_00_2.tres" id="5_omsp1"]
+[ext_resource type="Resource" uid="uid://0oj2rrt0f7cj" path="res://Events/EventOptions/RebelLeader/eo_rebel_leader_00_3.tres" id="6_i8pkb"]
+[ext_resource type="Texture2D" uid="uid://bygh378rq2pik" path="res://Assets/PORTRAIT_revolution_guy.png" id="7_2af4s"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_frk1b"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_i8vxn")
+char_name = &"CHAR_REBEL_LEADER"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_frk1b")
+event_name = &"REBEL_LEADER_EVENT_00_TITLE"
+portrait = ExtResource("7_2af4s")
+character_name = &"CHAR_REBEL_LEADER"
+dialogue = Array[String](["REBEL_LEADER_EVENT_00_DIALOGUE_1", "REBEL_LEADER_EVENT_00_DIALOGUE_1"])
+conditions = Array[ExtResource("1_w0126")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_hxa6j")]([ExtResource("4_2af4s"), ExtResource("5_omsp1"), ExtResource("6_i8pkb")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

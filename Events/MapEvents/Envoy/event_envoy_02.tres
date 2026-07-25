@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://woj6dmw1acx"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_vxkok"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_64m5t"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_mt0vr"]
+[ext_resource type="Resource" uid="uid://csk6tsdm6xjus" path="res://Events/EventOptions/Envoy/eo_envoy_02_1.tres" id="4_64m5t"]
+[ext_resource type="Resource" uid="uid://dsva32orqj18l" path="res://Events/EventOptions/Envoy/eo_envoy_02_2.tres" id="5_mt0vr"]
+[ext_resource type="Resource" uid="uid://jpksrhabob34" path="res://Events/EventOptions/Envoy/eo_envoy_02_3.tres" id="6_11b3k"]
+[ext_resource type="Texture2D" uid="uid://b1frsvovk5178" path="res://Assets/PORTRAIT_envoy.png" id="6_r02xp"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_3nh7r"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_64m5t")
+char_name = &"CHAR_ENVOY"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("7_3nh7r")
+event_name = &"ENVOY_EVENT_02_TITLE"
+portrait = ExtResource("6_r02xp")
+character_name = &"CHAR_ENVOY"
+dialogue = Array[String](["ENVOY_EVENT_02_DIALOGUE_1", "ENVOY_EVENT_02_DIALOGUE_2"])
+conditions = Array[ExtResource("1_vxkok")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_mt0vr")]([ExtResource("4_64m5t"), ExtResource("5_mt0vr"), ExtResource("6_11b3k")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

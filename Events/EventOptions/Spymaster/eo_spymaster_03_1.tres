@@ -31,7 +31,7 @@ metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
 [sub_resource type="Resource" id="Resource_6swlt"]
 script = ExtResource("7_6swlt")
-char_name = &"Rebel Radical"
+char_name = &"CHAR_RADICAL"
 chance = 1
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 

@@ -10,14 +10,14 @@
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_73wtx")
-char_name = &"Common Dude"
+char_name = &"CHAR_COMMONER"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [resource]
 script = ExtResource("7_tunht")
 event_name = &"COMMONER_EVENT_02_TITLE"
 portrait = ExtResource("6_wuhuv")
-character_name = &"Common Dude"
+character_name = &"CHAR_COMMONER"
 dialogue = Array[String](["COMMONER_EVENT_02_DIALOGUE_1"])
 conditions = Array[ExtResource("1_trkha")]([SubResource("Resource_2wl4a")])
 options = Array[ExtResource("3_pc62h")]([ExtResource("4_trkha"), ExtResource("5_73wtx")])

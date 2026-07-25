@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://yirkklueuvvp"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_s37l7"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_b82ij"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_m3t8i"]
+[ext_resource type="Resource" uid="uid://bv65d5fq8qdn2" path="res://Events/EventOptions/PeasantGirl/eo_peasant_girl_06_1.tres" id="4_s37l7"]
+[ext_resource type="Resource" uid="uid://bgplx0u6d6sfb" path="res://Events/EventOptions/PeasantGirl/eo_peasant_girl_06_2.tres" id="5_b82ij"]
+[ext_resource type="Resource" uid="uid://di10k7e2o1a6" path="res://Events/EventOptions/PeasantGirl/eo_peasant_girl_06_3.tres" id="6_m3t8i"]
+[ext_resource type="Texture2D" uid="uid://blrhuy4hdkfg0" path="res://Assets/PORTRAIT_miner_girl.png" id="7_oc5do"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_qroi2"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_b82ij")
+char_name = &"CHAR_PEASANT_GIRL"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_qroi2")
+event_name = &"PEASANT_GIRL_EVENT_06_TITLE"
+portrait = ExtResource("7_oc5do")
+character_name = &"CHAR_PEASANT_GIRL"
+dialogue = Array[String](["PEASANT_GIRL_EVENT_06_DIALOGUE_1", "PEASANT_GIRL_EVENT_06_DIALOGUE_1"])
+one_time = true
+conditions = Array[ExtResource("1_s37l7")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_m3t8i")]([ExtResource("4_s37l7"), ExtResource("5_b82ij"), ExtResource("6_m3t8i")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

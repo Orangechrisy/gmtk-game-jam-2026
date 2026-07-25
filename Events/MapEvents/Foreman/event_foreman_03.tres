@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://bu51a6fw1i8hu"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_1l26g"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_0tylf"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_bdy2c"]
+[ext_resource type="Resource" uid="uid://euwprfav4i0c" path="res://Events/EventOptions/Foreman/eo_foreman_03_1.tres" id="4_0tylf"]
+[ext_resource type="Resource" uid="uid://bb6pfngasmmjf" path="res://Events/EventOptions/Foreman/eo_foreman_03_2.tres" id="5_bdy2c"]
+[ext_resource type="Texture2D" uid="uid://cc7h8ob3wisle" path="res://Assets/PORTRAIT_foreman.png" id="6_e1kf6"]
+[ext_resource type="Resource" uid="uid://bpl2du0eooso5" path="res://Events/EventOptions/Foreman/eo_foreman_03_3.tres" id="6_rv1j6"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_be4sx"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_0tylf")
+char_name = &"CHAR_FOREMAN"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("7_be4sx")
+event_name = &"FOREMAN_EVENT_03_TITLE"
+portrait = ExtResource("6_e1kf6")
+character_name = &"CHAR_FOREMAN"
+dialogue = Array[String](["FOREMAN_EVENT_03_DIALOGUE_1", "FOREMAN_EVENT_03_DIALOGUE_1"])
+conditions = Array[ExtResource("1_1l26g")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_bdy2c")]([ExtResource("4_0tylf"), ExtResource("5_bdy2c"), ExtResource("6_rv1j6")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

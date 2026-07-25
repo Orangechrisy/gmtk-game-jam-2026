@@ -19,7 +19,7 @@ metadata/_custom_type_script = "uid://cf4bc85w0hnct"
 
 [sub_resource type="Resource" id="Resource_g4gq8"]
 script = ExtResource("6_t4v3k")
-char_name = &"Baron"
+char_name = &"CHAR_BARON"
 metadata/_custom_type_script = "uid://de4uysua35cqx"
 
 [resource]

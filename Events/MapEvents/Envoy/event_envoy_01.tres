@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://bw234pxbocku1"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_7tyhh"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_0m7s6"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_7rgo5"]
+[ext_resource type="Resource" uid="uid://bko51ai0l8ehg" path="res://Events/EventOptions/Envoy/eo_envoy_01_1.tres" id="4_amc84"]
+[ext_resource type="Resource" uid="uid://cda7q21qrrymw" path="res://Events/EventOptions/Envoy/eo_envoy_01_2.tres" id="5_7tyhh"]
+[ext_resource type="Texture2D" uid="uid://b1frsvovk5178" path="res://Assets/PORTRAIT_envoy.png" id="7_dxo34"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_iyc41"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_0m7s6")
+char_name = &"CHAR_ENVOY"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_iyc41")
+event_name = &"ENVOY_EVENT_01_TITLE"
+portrait = ExtResource("7_dxo34")
+character_name = &"CHAR_ENVOY"
+dialogue = Array[String](["ENVOY_EVENT_01_DIALOGUE_1", "ENVOY_EVENT_01_DIALOGUE_2"])
+conditions = Array[ExtResource("1_7tyhh")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_7rgo5")]([ExtResource("4_amc84"), ExtResource("5_7tyhh")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

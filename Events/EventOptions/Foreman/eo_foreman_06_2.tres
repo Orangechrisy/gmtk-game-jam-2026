@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://gkix1q0e3b0k"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_p6imi"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="3_gx4jo"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_v3w14"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="6_kh4uu"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="7_i6nfd"]
+
+[sub_resource type="Resource" id="Resource_xdb34"]
+script = ExtResource("3_gx4jo")
+fervor_change = 2
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_sx4ta"]
+script = ExtResource("7_i6nfd")
+gold_change = -1
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[sub_resource type="Resource" id="Resource_ml8v6"]
+script = ExtResource("3_gx4jo")
+fervor_change = 2
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[resource]
+script = ExtResource("6_kh4uu")
+option_name = &"FOREMAN_EVENT_06_OPTION_2_TITLE"
+success_odds = 0.6
+success_effects = Array[ExtResource("3_v3w14")]([SubResource("Resource_ml8v6")])
+failure_effects = Array[ExtResource("3_v3w14")]([SubResource("Resource_xdb34"), SubResource("Resource_sx4ta")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bcneq0ragd46j"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_jql7q"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_xu01h"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_at561"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="4_08f40"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_trayd"]
+
+[sub_resource type="Resource" id="Resource_b4yde"]
+script = ExtResource("4_08f40")
+favor_change = -2
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_c26uk"]
+script = ExtResource("5_trayd")
+favor_change = 2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[resource]
+script = ExtResource("3_at561")
+option_name = &"REBEL_LEADER_EVENT_03_OPTION_2_TITLE"
+success_effects = Array[ExtResource("2_xu01h")]([SubResource("Resource_b4yde"), SubResource("Resource_c26uk")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -9,12 +9,12 @@
 
 [sub_resource type="Resource" id="Resource_vsmt6"]
 script = ExtResource("2_pueeh")
-char_name = &"Rebel Leader"
+char_name = &"CHAR_REBEL_LEADER"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [sub_resource type="Resource" id="Resource_32s20"]
 script = ExtResource("4_tblah")
-char_name = &"Rebel Leader"
+char_name = &"CHAR_REBEL_LEADER"
 metadata/_custom_type_script = "uid://de4uysua35cqx"
 
 [sub_resource type="Resource" id="Resource_nb0xe"]
@@ -24,7 +24,7 @@ metadata/_custom_type_script = "uid://cixtddcjgh6op"
 
 [sub_resource type="Resource" id="Resource_vyy4h"]
 script = ExtResource("4_tblah")
-char_name = &"Rebel Leader"
+char_name = &"CHAR_REBEL_LEADER"
 metadata/_custom_type_script = "uid://de4uysua35cqx"
 
 [resource]

@@ -11,19 +11,19 @@
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_cias0")
-char_name = &"Spymaster"
+char_name = &"CHAR_SPYMASTER"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [sub_resource type="Resource" id="Resource_q1sqs"]
 script = ExtResource("2_cias0")
-char_name = &"Rebel Radical"
+char_name = &"CHAR_RADICAL"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [resource]
 script = ExtResource("8_hijwp")
 event_name = &"SPYMASTER_EVENT_03_TITLE"
 portrait = ExtResource("7_6bh8u")
-character_name = &"Spymaster"
+character_name = &"CHAR_SPYMASTER"
 dialogue = Array[String](["SPYMASTER_EVENT_03_DIALOGUE_1", "SPYMASTER_EVENT_03_DIALOGUE_2"])
 conditions = Array[ExtResource("1_ej1cu")]([SubResource("Resource_2wl4a"), SubResource("Resource_q1sqs")])
 options = Array[ExtResource("3_c0w1n")]([ExtResource("4_ej1cu"), ExtResource("5_cias0"), ExtResource("6_c0w1n")])

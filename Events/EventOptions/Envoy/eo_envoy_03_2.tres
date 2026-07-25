@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://c6ex1mbdj6eye"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_f7y5x"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_koqkc"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_iovfy"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_3odd8"]
+[ext_resource type="Script" uid="uid://bsfdc1pc8iyve" path="res://Events/EventEffects/ee_change_food.gd" id="5_eldwh"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="6_7wh0w"]
+
+[sub_resource type="Resource" id="Resource_mvsdm"]
+script = ExtResource("4_3odd8")
+favor_change = 1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_np7rj"]
+script = ExtResource("5_eldwh")
+food_change = 3
+metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
+
+[sub_resource type="Resource" id="Resource_vxema"]
+script = ExtResource("6_7wh0w")
+gold_change = 3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[resource]
+script = ExtResource("3_iovfy")
+option_name = &"ENVOY_EVENT_03_OPTION_2_TITLE"
+success_effects = Array[ExtResource("2_koqkc")]([SubResource("Resource_mvsdm"), SubResource("Resource_np7rj"), SubResource("Resource_vxema")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

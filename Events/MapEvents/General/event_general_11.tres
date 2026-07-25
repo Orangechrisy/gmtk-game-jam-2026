@@ -11,19 +11,19 @@
 
 [sub_resource type="Resource" id="Resource_2wl4a"]
 script = ExtResource("2_nlvve")
-char_name = &"General"
+char_name = &"CHAR_GENERAL"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [sub_resource type="Resource" id="Resource_5kldx"]
 script = ExtResource("2_nlvve")
-char_name = &"Noble"
+char_name = &"CHAR_ARISTOCRAT"
 metadata/_custom_type_script = "uid://s7tl0kujlawh"
 
 [resource]
 script = ExtResource("8_mo0co")
 event_name = &"GENERAL_EVENT_11_TITLE"
 portrait = ExtResource("7_oavm1")
-character_name = &"General"
+character_name = &"CHAR_GENERAL"
 dialogue = Array[String](["GENERAL_EVENT_11_DIALOGUE_1", "GENERAL_EVENT_11_DIALOGUE_2"])
 conditions = Array[ExtResource("1_5kldx")]([SubResource("Resource_2wl4a"), SubResource("Resource_5kldx")])
 options = Array[ExtResource("3_3mloa")]([ExtResource("4_5kldx"), ExtResource("5_nlvve"), ExtResource("6_3mloa")])
