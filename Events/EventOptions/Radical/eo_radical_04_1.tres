@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://df8f7erhulli2"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_ncxjd"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_di5cg"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="3_sgs0x"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="5_c17tt"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="6_lc4fu"]
+
+[sub_resource type="Resource" id="Resource_xt5r6"]
+script = ExtResource("3_sgs0x")
+favor_change = 1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_llsoe"]
+script = ExtResource("5_c17tt")
+fervor_change = 2
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[resource]
+script = ExtResource("6_lc4fu")
+option_name = &"RADICAL_EVENT_04_OPTION_1_TITLE"
+success_effects = Array[ExtResource("2_di5cg")]([SubResource("Resource_xt5r6"), SubResource("Resource_llsoe")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

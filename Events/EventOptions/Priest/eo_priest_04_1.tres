@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://b43tq5ke01n1e"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_0v78p"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_lbme0"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_llrwy"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="3_2oi68"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_llrwy"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="6_uwjwp"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="7_temvs"]
+
+[sub_resource type="Resource" id="Resource_uwjwp"]
+script = ExtResource("2_llrwy")
+val = 1
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_cj6xl"]
+script = ExtResource("3_2oi68")
+favor_change = -1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_4fqoa"]
+script = ExtResource("6_uwjwp")
+loyalty_change = 3
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_jetwh"]
+script = ExtResource("7_temvs")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[resource]
+script = ExtResource("4_llrwy")
+option_name = &"PRIEST_EVENT_04_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_0v78p")]([SubResource("Resource_uwjwp")])
+success_effects = Array[ExtResource("2_lbme0")]([SubResource("Resource_cj6xl"), SubResource("Resource_4fqoa"), SubResource("Resource_jetwh")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

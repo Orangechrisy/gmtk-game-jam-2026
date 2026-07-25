@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://ffhaydb2250k"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_3k0n6"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_2dk3g"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_g7ve6"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_k8ahf"]
+
+[sub_resource type="Resource" id="Resource_wft36"]
+script = ExtResource("4_g7ve6")
+favor_change = -3
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[resource]
+script = ExtResource("4_k8ahf")
+option_name = &"ARISTOCRAT_EVENT_01_OPTION_2_TITLE"
+success_effects = Array[ExtResource("2_2dk3g")]([SubResource("Resource_wft36")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

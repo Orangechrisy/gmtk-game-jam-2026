@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://d34funp0ihqm0"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_lced3"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_sw5u4"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_t866x"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_uvh4c"]
+[ext_resource type="Script" uid="uid://cf4bc85w0hnct" path="res://Events/EventEffects/ee_change_province_food.gd" id="5_lced3"]
+
+[sub_resource type="Resource" id="Resource_pxncl"]
+script = ExtResource("4_uvh4c")
+fervor_change = 2
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_ph44w"]
+script = ExtResource("5_lced3")
+food_change = -1
+metadata/_custom_type_script = "uid://cf4bc85w0hnct"
+
+[resource]
+script = ExtResource("4_t866x")
+option_name = &"BARON_EVENT_05_OPTION_2_TITLE"
+success_effects = Array[ExtResource("3_sw5u4")]([SubResource("Resource_pxncl"), SubResource("Resource_ph44w")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

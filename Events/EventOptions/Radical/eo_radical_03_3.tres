@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://oa7yymu4gh36"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_c57si"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_hn3d1"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="4_bjnw2"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_c57si"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="5_qjw04"]
+
+[sub_resource type="Resource" id="Resource_3plgf"]
+script = ExtResource("4_bjnw2")
+favor_change = -2
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_dew4a"]
+script = ExtResource("5_c57si")
+loyalty_change = 1
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("5_qjw04")
+option_name = &"RADICAL_EVENT_03_OPTION_3_TITLE"
+success_odds = 0.5
+success_effects = Array[ExtResource("3_hn3d1")]([SubResource("Resource_3plgf"), SubResource("Resource_dew4a")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

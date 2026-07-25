@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bnc8ehqmkifw8"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_l0qr3"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_87uhk"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_bcl8e"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_mtw7r"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_kwvtc"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="5_87uhk"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="5_s1d7e"]
+[ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="6_ppcaj"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="9_f1lsi"]
+
+[sub_resource type="Resource" id="Resource_s1d7e"]
+script = ExtResource("2_87uhk")
+val = 1
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_ad5fc"]
+script = ExtResource("4_kwvtc")
+favor_change = 1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_10sfm"]
+script = ExtResource("5_s1d7e")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_jdfbd"]
+script = ExtResource("6_ppcaj")
+char_name = &"Radical"
+chance = 50
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_vknba"]
+script = ExtResource("5_87uhk")
+fervor_change = 3
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_xt5r6"]
+script = ExtResource("4_kwvtc")
+favor_change = 1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_ppcaj"]
+script = ExtResource("5_s1d7e")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_f1lsi"]
+script = ExtResource("6_ppcaj")
+char_name = &"Radical"
+chance = 50
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_ups0c"]
+script = ExtResource("9_f1lsi")
+loyalty_change = 1
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("3_mtw7r")
+option_name = &"RADICAL_EVENT_05_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_l0qr3")]([SubResource("Resource_s1d7e")])
+success_odds = 0.5
+success_effects = Array[ExtResource("2_bcl8e")]([SubResource("Resource_xt5r6"), SubResource("Resource_ppcaj"), SubResource("Resource_f1lsi"), SubResource("Resource_ups0c")])
+failure_effects = Array[ExtResource("2_bcl8e")]([SubResource("Resource_ad5fc"), SubResource("Resource_10sfm"), SubResource("Resource_jdfbd"), SubResource("Resource_vknba")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

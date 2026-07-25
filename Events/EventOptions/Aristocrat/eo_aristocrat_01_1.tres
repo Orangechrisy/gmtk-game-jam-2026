@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dj4626xngnvam"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_vw2hj"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_yovmn"]
+[ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="3_vw2hj"]
+[ext_resource type="Script" uid="uid://s0p1mtxe4utr" path="res://Events/EventEffects/ee_noble_assassin_chance.gd" id="4_my80u"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="5_m4l7o"]
+
+[sub_resource type="Resource" id="Resource_my80u"]
+script = ExtResource("3_vw2hj")
+char_name = &"Aristocrat"
+chance = 50
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_17er0"]
+script = ExtResource("4_my80u")
+favor_threshold = 80
+metadata/_custom_type_script = "uid://s0p1mtxe4utr"
+
+[resource]
+script = ExtResource("5_m4l7o")
+option_name = &"ARISTOCRAT_EVENT_01_OPTION_1_TITLE"
+success_odds = 0.5
+success_effects = Array[ExtResource("2_yovmn")]([SubResource("Resource_17er0")])
+failure_effects = Array[ExtResource("2_yovmn")]([SubResource("Resource_my80u")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

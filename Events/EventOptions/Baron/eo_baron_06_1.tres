@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cm80rwsntdf6g"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_i0k0n"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_kyh4u"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_7nnby"]
+[ext_resource type="Script" uid="uid://bi67gb5c67xmd" path="res://Events/EventConditions/ec_has_food.gd" id="3_gl7mq"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_s0xwm"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="4_ulhk4"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="5_gl7mq"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="6_ulhk4"]
+[ext_resource type="Script" uid="uid://bsfdc1pc8iyve" path="res://Events/EventEffects/ee_change_food.gd" id="8_kbg2p"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="9_pm34t"]
+
+[sub_resource type="Resource" id="Resource_lohpp"]
+script = ExtResource("2_kyh4u")
+val = 1
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_kbg2p"]
+script = ExtResource("3_gl7mq")
+val = 1
+metadata/_custom_type_script = "uid://bi67gb5c67xmd"
+
+[sub_resource type="Resource" id="Resource_pm34t"]
+script = ExtResource("4_ulhk4")
+val = 3
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_6wgp8"]
+script = ExtResource("5_gl7mq")
+gold_change = -1
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_tmt58"]
+script = ExtResource("8_kbg2p")
+food_change = -1
+metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
+
+[sub_resource type="Resource" id="Resource_donks"]
+script = ExtResource("9_pm34t")
+armies_change = -3
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_apmv8"]
+script = ExtResource("6_ulhk4")
+loyalty_change = 3
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("4_s0xwm")
+option_name = &"BARON_EVENT_06_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_i0k0n")]([SubResource("Resource_lohpp"), SubResource("Resource_kbg2p"), SubResource("Resource_pm34t")])
+success_effects = Array[ExtResource("3_7nnby")]([SubResource("Resource_6wgp8"), SubResource("Resource_tmt58"), SubResource("Resource_donks"), SubResource("Resource_apmv8")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

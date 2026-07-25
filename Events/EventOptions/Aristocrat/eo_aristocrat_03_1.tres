@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dapdjmj0sxxl4"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_6fuem"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_ununc"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="3_uwf5e"]
+[ext_resource type="Script" uid="uid://de4uysua35cqx" path="res://Events/EventEffects/ee_character_dies.gd" id="4_brlqp"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="6_6fuem"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="8_cq88u"]
+
+[sub_resource type="Resource" id="Resource_nesuj"]
+script = ExtResource("3_uwf5e")
+favor_change = 3
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_o1hvb"]
+script = ExtResource("4_brlqp")
+char_name = &"Baron"
+metadata/_custom_type_script = "uid://de4uysua35cqx"
+
+[sub_resource type="Resource" id="Resource_8rhej"]
+script = ExtResource("6_6fuem")
+gold_change = -1
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[sub_resource type="Resource" id="Resource_8p3hs"]
+script = ExtResource("3_uwf5e")
+favor_change = 3
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_k4g38"]
+script = ExtResource("4_brlqp")
+char_name = &"Baron"
+metadata/_custom_type_script = "uid://de4uysua35cqx"
+
+[resource]
+script = ExtResource("8_cq88u")
+option_name = &"ARISTOCRAT_EVENT_03_OPTION_1_TITLE"
+success_odds = 0.7
+success_effects = Array[ExtResource("3_ununc")]([SubResource("Resource_8p3hs"), SubResource("Resource_k4g38")])
+failure_effects = Array[ExtResource("3_ununc")]([SubResource("Resource_nesuj"), SubResource("Resource_o1hvb"), SubResource("Resource_8rhej")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://w8spdvdjbyi1"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_xnnkb"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_xwnis"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_1l1sy"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="6_we3c3"]
+
+[sub_resource type="Resource" id="Resource_y7lbr"]
+script = ExtResource("6_we3c3")
+fervor_change = 1
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[resource]
+script = ExtResource("4_1l1sy")
+option_name = &"PRIEST_EVENT_03_OPTION_3_TITLE"
+success_effects = Array[ExtResource("3_xwnis")]([SubResource("Resource_y7lbr")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

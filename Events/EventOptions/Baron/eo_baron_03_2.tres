@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://b2w08e1x2w0o1"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_bpsyv"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_c4mjc"]
+[ext_resource type="Script" uid="uid://bi67gb5c67xmd" path="res://Events/EventConditions/ec_has_food.gd" id="3_2p7rm"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="4_0p23g"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="5_usnqy"]
+[ext_resource type="Script" uid="uid://bsfdc1pc8iyve" path="res://Events/EventEffects/ee_change_food.gd" id="6_65d6v"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="7_mav3d"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="8_8dkcy"]
+
+[sub_resource type="Resource" id="Resource_lohpp"]
+script = ExtResource("2_c4mjc")
+val = 1
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_yacsh"]
+script = ExtResource("3_2p7rm")
+val = 1
+metadata/_custom_type_script = "uid://bi67gb5c67xmd"
+
+[sub_resource type="Resource" id="Resource_adiyb"]
+script = ExtResource("6_65d6v")
+food_change = -1
+metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
+
+[sub_resource type="Resource" id="Resource_6wgp8"]
+script = ExtResource("7_mav3d")
+gold_change = -1
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_b2oig"]
+script = ExtResource("8_8dkcy")
+loyalty_change = -2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("5_usnqy")
+option_name = &"BARON_EVENT_03_OPTION_2_TITLE"
+conditions = Array[ExtResource("1_bpsyv")]([SubResource("Resource_lohpp"), SubResource("Resource_yacsh")])
+success_effects = Array[ExtResource("4_0p23g")]([SubResource("Resource_adiyb"), SubResource("Resource_6wgp8"), SubResource("Resource_b2oig")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

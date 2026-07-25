@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://ck0fhukox1b5x"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_llm8f"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_8fylr"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_tycs3"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_uosyt"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_or4up"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="6_mr7fw"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="7_kf4pd"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="8_o47fc"]
+[ext_resource type="Script" uid="uid://s0p1mtxe4utr" path="res://Events/EventEffects/ee_noble_assassin_chance.gd" id="9_hgc3w"]
+
+[sub_resource type="Resource" id="Resource_6vfqb"]
+script = ExtResource("2_tycs3")
+val = 2
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_0hq2u"]
+script = ExtResource("4_or4up")
+favor_change = 1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_tycs3"]
+script = ExtResource("6_mr7fw")
+armies_change = -2
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_mr7fw"]
+script = ExtResource("7_kf4pd")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_kf4pd"]
+script = ExtResource("8_o47fc")
+favor_change = -1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_o47fc"]
+script = ExtResource("9_hgc3w")
+metadata/_custom_type_script = "uid://s0p1mtxe4utr"
+
+[resource]
+script = ExtResource("3_uosyt")
+option_name = &"ARISTOCRAT_EVENT_02_OPTION_3_TITLE"
+conditions = Array[ExtResource("1_llm8f")]([SubResource("Resource_6vfqb")])
+success_effects = Array[ExtResource("2_8fylr")]([SubResource("Resource_0hq2u"), SubResource("Resource_tycs3"), SubResource("Resource_mr7fw"), SubResource("Resource_kf4pd"), SubResource("Resource_o47fc")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

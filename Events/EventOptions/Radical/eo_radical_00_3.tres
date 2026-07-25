@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cc1wgtuhy1svq"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_dkl6i"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_4n6pq"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_jo5uv"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_fxl3m"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_lxlkr"]
+[ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="5_fxl3m"]
+[ext_resource type="Script" uid="uid://d2b0vdmevwa6y" path="res://Events/EventEffects/ee_common_assassin_chance.gd" id="6_lxlkr"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="8_5pf7a"]
+
+[sub_resource type="Resource" id="Resource_boqe5"]
+script = ExtResource("2_jo5uv")
+val = 1
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_tw4no"]
+script = ExtResource("4_lxlkr")
+fervor_change = 3
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_jo5uv"]
+script = ExtResource("5_fxl3m")
+char_name = &"Radical"
+chance = 30
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_5pf7a"]
+script = ExtResource("6_lxlkr")
+favor_threshold = 30
+metadata/_custom_type_script = "uid://d2b0vdmevwa6y"
+
+[sub_resource type="Resource" id="Resource_ta0a1"]
+script = ExtResource("8_5pf7a")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[resource]
+script = ExtResource("3_fxl3m")
+option_name = &"RADICAL_EVENT_00_OPTION_3_TITLE"
+conditions = Array[ExtResource("1_dkl6i")]([SubResource("Resource_boqe5")])
+success_effects = Array[ExtResource("2_4n6pq")]([SubResource("Resource_tw4no"), SubResource("Resource_jo5uv"), SubResource("Resource_5pf7a"), SubResource("Resource_ta0a1")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

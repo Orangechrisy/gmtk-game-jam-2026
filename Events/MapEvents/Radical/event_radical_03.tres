@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://bq3j7r8g6b7ws"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_rt8gp"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_4brrg"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_fpild"]
+[ext_resource type="Resource" uid="uid://criq4ouet6yke" path="res://Events/EventOptions/Radical/eo_radical_03_1.tres" id="4_rt8gp"]
+[ext_resource type="Resource" uid="uid://ddr1jw8os2rql" path="res://Events/EventOptions/Radical/eo_radical_03_2.tres" id="5_4brrg"]
+[ext_resource type="Resource" uid="uid://oa7yymu4gh36" path="res://Events/EventOptions/Radical/eo_radical_03_3.tres" id="6_fpild"]
+[ext_resource type="Texture2D" uid="uid://dgpktw5r068k" path="res://Assets/PORTRAIT_radical.png" id="7_20yql"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_tesm5"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_4brrg")
+char_name = &"Radical"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_tesm5")
+event_name = &"RADICAL_EVENT_03_TITLE"
+portrait = ExtResource("7_20yql")
+character_name = &"Radical"
+dialogue = Array[String](["RADICAL_EVENT_03_DIALOGUE_1", "RADICAL_EVENT_03_DIALOGUE_2"])
+conditions = Array[ExtResource("1_rt8gp")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_fpild")]([ExtResource("4_rt8gp"), ExtResource("5_4brrg"), ExtResource("6_fpild")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

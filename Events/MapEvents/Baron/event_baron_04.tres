@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://c8n7rhmlm4nai"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_gyqbh"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_igtsb"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_362jr"]
+[ext_resource type="Resource" uid="uid://by6vts6ly34kr" path="res://Events/EventOptions/Baron/eo_baron_04_1.tres" id="4_yonjf"]
+[ext_resource type="Resource" uid="uid://dw8q3m8b7jd2r" path="res://Events/EventOptions/Baron/eo_baron_04_2.tres" id="5_gyqbh"]
+[ext_resource type="Texture2D" uid="uid://bkxj38r3ngyai" path="res://Assets/PORTRAIT_cossack_guy.png" id="7_tq52a"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_77y7i"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_igtsb")
+char_name = &"Baron"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_77y7i")
+event_name = &"BARON_EVENT_04_TITLE"
+portrait = ExtResource("7_tq52a")
+character_name = &"Baron"
+dialogue = Array[String](["BARON_EVENT_04_DIALOGUE_1", "BARON_EVENT_04_DIALOGUE_2"])
+conditions = Array[ExtResource("1_gyqbh")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_362jr")]([ExtResource("4_yonjf"), ExtResource("5_gyqbh")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"
