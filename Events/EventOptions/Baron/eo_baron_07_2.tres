@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bhpc525p7o8b6"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_b6dka"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_05ivv"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_4ejup"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="4_7oa6k"]
+
+[sub_resource type="Resource" id="Resource_ssmrg"]
+script = ExtResource("4_7oa6k")
+loyalty_change = -5
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("3_4ejup")
+option_name = &"BARON_EVENT_07_OPTION_2_TITLE"
+success_effects = Array[ExtResource("2_05ivv")]([SubResource("Resource_ssmrg")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://lni0stvyvqp2"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_m1ot8"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_kncmt"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_qh6q6"]
+[ext_resource type="Resource" uid="uid://dj4626xngnvam" path="res://Events/EventOptions/Aristocrat/eo_aristocrat_01_1.tres" id="4_2gbyk"]
+[ext_resource type="Resource" uid="uid://ffhaydb2250k" path="res://Events/EventOptions/Aristocrat/eo_aristocrat_01_2.tres" id="5_m1ot8"]
+[ext_resource type="Texture2D" uid="uid://d8yb1mittr3s" path="res://Assets/PORTRAIT_smug_aristocrat.png" id="7_xyicl"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_ugove"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_kncmt")
+char_name = &"Aristocrat"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_ugove")
+event_name = &"ARISTOCRAT_EVENT_01_TITLE"
+portrait = ExtResource("7_xyicl")
+character_name = &"Aristocrat"
+dialogue = Array[String](["ARISTOCRAT_EVENT_01_DIALOGUE_1"])
+one_time = true
+conditions = Array[ExtResource("1_m1ot8")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_qh6q6")]([ExtResource("4_2gbyk"), ExtResource("5_m1ot8")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

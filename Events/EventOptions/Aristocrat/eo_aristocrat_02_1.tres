@@ -1,0 +1,78 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://d3psdqy2nuro"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_xx372"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_8ahol"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_h6qc4"]
+[ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="3_8ahol"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_27kxq"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="4_q163v"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_8ugik"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="7_27kxq"]
+
+[sub_resource type="Resource" id="Resource_xx372"]
+script = ExtResource("2_8ahol")
+val = 2
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_8ahol"]
+script = ExtResource("4_q163v")
+armies_change = -2
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_q163v"]
+script = ExtResource("5_8ugik")
+loyalty_change = -1
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_c607i"]
+script = ExtResource("3_8ahol")
+char_name = &"Radical"
+chance = 20
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_gh4lc"]
+script = ExtResource("3_8ahol")
+char_name = &"Aristocrat"
+chance = 50
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_ikiyu"]
+script = ExtResource("7_27kxq")
+favor_change = -2
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_h6qc4"]
+script = ExtResource("4_q163v")
+armies_change = -2
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_27kxq"]
+script = ExtResource("5_8ugik")
+loyalty_change = -1
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_8ugik"]
+script = ExtResource("3_8ahol")
+char_name = &"Radical"
+chance = 50
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_ilrvi"]
+script = ExtResource("3_8ahol")
+char_name = &"Aristocrat"
+chance = 20
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_7c5gs"]
+script = ExtResource("7_27kxq")
+favor_change = 1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[resource]
+script = ExtResource("4_27kxq")
+option_name = &"ARISTOCRAT_EVENT_02_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_xx372")]([SubResource("Resource_xx372")])
+success_odds = 0.5
+success_effects = Array[ExtResource("2_h6qc4")]([SubResource("Resource_h6qc4"), SubResource("Resource_27kxq"), SubResource("Resource_8ugik"), SubResource("Resource_ilrvi"), SubResource("Resource_7c5gs")])
+failure_effects = Array[ExtResource("2_h6qc4")]([SubResource("Resource_8ahol"), SubResource("Resource_q163v"), SubResource("Resource_c607i"), SubResource("Resource_gh4lc"), SubResource("Resource_ikiyu")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

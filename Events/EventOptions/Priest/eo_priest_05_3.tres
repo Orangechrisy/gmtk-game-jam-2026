@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://d0veema50emau"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_i18mc"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_utml4"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_k6fxo"]
+[ext_resource type="Script" uid="uid://bciotqfqbxelf" path="res://Events/EventEffects/ee_change_armies.gd" id="4_i18mc"]
+
+[sub_resource type="Resource" id="Resource_ujhct"]
+script = ExtResource("4_i18mc")
+armies_change = 1
+metadata/_custom_type_script = "uid://bciotqfqbxelf"
+
+[resource]
+script = ExtResource("3_k6fxo")
+option_name = &"PRIEST_EVENT_05_OPTION_1_TITLE"
+success_odds = 0.5
+success_effects = Array[ExtResource("2_utml4")]([SubResource("Resource_ujhct")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

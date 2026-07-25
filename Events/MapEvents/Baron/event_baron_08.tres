@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://cs2hhbx160eve"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_kf1lc"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_kefxv"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_1b3ro"]
+[ext_resource type="Script" uid="uid://dhec5uhh634qv" path="res://Events/EventConditions/ec_char_quest_level.gd" id="3_kf1lc"]
+[ext_resource type="Resource" uid="uid://cx8iy8q1jau15" path="res://Events/EventOptions/Baron/eo_baron_08_1.tres" id="5_kefxv"]
+[ext_resource type="Resource" uid="uid://7ke6xt2xqu1b" path="res://Events/EventOptions/Baron/eo_baron_08_2.tres" id="6_1b3ro"]
+[ext_resource type="Texture2D" uid="uid://bkxj38r3ngyai" path="res://Assets/PORTRAIT_cossack_guy.png" id="7_2qojm"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_r7ypm"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_kefxv")
+char_name = &"Baron"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[sub_resource type="Resource" id="Resource_ouhan"]
+script = ExtResource("3_kf1lc")
+char_name = &"Baron"
+quest_level = 2
+metadata/_custom_type_script = "uid://dhec5uhh634qv"
+
+[resource]
+script = ExtResource("8_r7ypm")
+event_name = &"BARON_EVENT_08_TITLE"
+portrait = ExtResource("7_2qojm")
+character_name = &"Baron"
+dialogue = Array[String](["BARON_EVENT_08_DIALOGUE_1", "BARON_EVENT_08_DIALOGUE_2", "BARON_EVENT_08_DIALOGUE_3"])
+conditions = Array[ExtResource("1_kf1lc")]([SubResource("Resource_2wl4a"), SubResource("Resource_ouhan")])
+options = Array[ExtResource("3_1b3ro")]([ExtResource("5_kefxv"), ExtResource("6_1b3ro")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cx8iy8q1jau15"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_sjkwy"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_yo2wu"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_6221j"]
+[ext_resource type="Script" uid="uid://b5c5lw0i7byh" path="res://Events/EventEffects/ee_run_ending.gd" id="4_awi1e"]
+
+[sub_resource type="Resource" id="Resource_0sekv"]
+script = ExtResource("4_awi1e")
+ending = 8
+metadata/_custom_type_script = "uid://b5c5lw0i7byh"
+
+[resource]
+script = ExtResource("3_6221j")
+option_name = &"BARON_EVENT_08_OPTION_1_TITLE"
+success_effects = Array[ExtResource("2_yo2wu")]([SubResource("Resource_0sekv")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bioi58217qs1g"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_wye7o"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_cs65t"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_g8dya"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_32a72"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="5_wye7o"]
+[ext_resource type="Script" uid="uid://6k8dx315ucco" path="res://Events/EventEffects/ee_change_province_food_consumption.gd" id="6_cs65t"]
+
+[sub_resource type="Resource" id="Resource_pknpk"]
+script = ExtResource("2_cs65t")
+val = 1
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_jw2qu"]
+script = ExtResource("5_wye7o")
+gold_change = 1
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[sub_resource type="Resource" id="Resource_cmq8n"]
+script = ExtResource("6_cs65t")
+food_change = 1
+metadata/_custom_type_script = "uid://6k8dx315ucco"
+
+[resource]
+script = ExtResource("4_32a72")
+option_name = &"COMMONER_EVENT_03_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_wye7o")]([SubResource("Resource_pknpk")])
+success_effects = Array[ExtResource("3_g8dya")]([SubResource("Resource_jw2qu"), SubResource("Resource_cmq8n")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

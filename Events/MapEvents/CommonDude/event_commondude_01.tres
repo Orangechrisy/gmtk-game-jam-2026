@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://ck57nxojgvkhk"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_kkqow"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_bg744"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_2288w"]
+[ext_resource type="Resource" uid="uid://c7fns4qv8qeb5" path="res://Events/EventOptions/CommonDude/eo_commondude_01_1.tres" id="4_w1m45"]
+[ext_resource type="Resource" uid="uid://bodls2icuqxat" path="res://Events/EventOptions/CommonDude/eo_commondude_01_2.tres" id="5_kkqow"]
+[ext_resource type="Texture2D" uid="uid://d0tp7oprp4mbt" path="res://Assets/PORTRAIT_common_dude_1.png" id="7_dkg15"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_qu7n5"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_bg744")
+char_name = &"Common Dude"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_qu7n5")
+event_name = &"COMMONER_EVENT_01_TITLE"
+portrait = ExtResource("7_dkg15")
+character_name = &"Common Dude"
+dialogue = Array[String](["COMMONER_EVENT_01_DIALOGUE_1"])
+conditions = Array[ExtResource("1_kkqow")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_2288w")]([ExtResource("4_w1m45"), ExtResource("5_kkqow")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

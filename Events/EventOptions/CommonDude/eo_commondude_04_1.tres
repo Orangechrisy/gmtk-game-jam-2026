@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cilbiaj0xxjg1"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_ucesm"]
+[ext_resource type="Script" uid="uid://bi67gb5c67xmd" path="res://Events/EventConditions/ec_has_food.gd" id="2_4idao"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_40wft"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_cbe34"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_40wft"]
+[ext_resource type="Script" uid="uid://bsfdc1pc8iyve" path="res://Events/EventEffects/ee_change_food.gd" id="6_cbe34"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="7_x6q1e"]
+
+[sub_resource type="Resource" id="Resource_d8iml"]
+script = ExtResource("2_4idao")
+val = 1
+metadata/_custom_type_script = "uid://bi67gb5c67xmd"
+
+[sub_resource type="Resource" id="Resource_rbul4"]
+script = ExtResource("5_40wft")
+loyalty_change = 1
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_rad0o"]
+script = ExtResource("6_cbe34")
+food_change = -1
+metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
+
+[sub_resource type="Resource" id="Resource_k4n7k"]
+script = ExtResource("7_x6q1e")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[resource]
+script = ExtResource("4_cbe34")
+option_name = &"COMMONER_EVENT_04_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_ucesm")]([SubResource("Resource_d8iml")])
+success_effects = Array[ExtResource("3_40wft")]([SubResource("Resource_rbul4"), SubResource("Resource_rad0o"), SubResource("Resource_k4n7k")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

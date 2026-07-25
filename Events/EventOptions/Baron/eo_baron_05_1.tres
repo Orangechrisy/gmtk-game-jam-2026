@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://vu13u0rjkj80"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_gnykd"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_jk24e"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="4_c88oe"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="5_36err"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="7_p7r25"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="8_mxjej"]
+
+[sub_resource type="Resource" id="Resource_lohpp"]
+script = ExtResource("2_jk24e")
+val = 3
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_6wgp8"]
+script = ExtResource("7_p7r25")
+gold_change = -3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_b2oig"]
+script = ExtResource("8_mxjej")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("5_36err")
+option_name = &"BARON_EVENT_05_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_gnykd")]([SubResource("Resource_lohpp")])
+success_effects = Array[ExtResource("4_c88oe")]([SubResource("Resource_6wgp8"), SubResource("Resource_b2oig")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://b50e44klw2bib"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_52jcb"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_g07l8"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_brlrv"]
+[ext_resource type="Resource" uid="uid://b7ed7j6vo5fhx" path="res://Events/EventOptions/Priest/eo_priest_00_1.tres" id="4_52jcb"]
+[ext_resource type="Resource" uid="uid://cih5slwydsog3" path="res://Events/EventOptions/Priest/eo_priest_00_2.tres" id="5_g07l8"]
+[ext_resource type="Texture2D" uid="uid://yt64w2msql3y" path="res://Assets/PORTRAIT_priest.png" id="6_yd6x7"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_0a0r8"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_g07l8")
+char_name = &"Priest"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("7_0a0r8")
+event_name = &"PRIEST_EVENT_00_TITLE"
+portrait = ExtResource("6_yd6x7")
+character_name = &"Priest"
+dialogue = Array[String](["PRIEST_EVENT_00_DIALOGUE_1", "PRIEST_EVENT_00_DIALOGUE_2"])
+conditions = Array[ExtResource("1_52jcb")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_brlrv")]([ExtResource("4_52jcb"), ExtResource("5_g07l8")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

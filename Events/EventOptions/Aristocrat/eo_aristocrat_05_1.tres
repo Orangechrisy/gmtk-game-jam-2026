@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cqrteajpy4acx"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_gocq6"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_oybhe"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="4_o8q2m"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="5_tor12"]
+[ext_resource type="Script" uid="uid://bciotqfqbxelf" path="res://Events/EventEffects/ee_change_armies.gd" id="6_dc8mj"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="8_ax4fe"]
+
+[sub_resource type="Resource" id="Resource_o0ctj"]
+script = ExtResource("2_oybhe")
+val = 1
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_54ujv"]
+script = ExtResource("8_ax4fe")
+favor_change = 2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_m0ssh"]
+script = ExtResource("6_dc8mj")
+armies_change = -1
+metadata/_custom_type_script = "uid://bciotqfqbxelf"
+
+[resource]
+script = ExtResource("5_tor12")
+option_name = &"ARISTOCRAT_EVENT_05_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_gocq6")]([SubResource("Resource_o0ctj")])
+success_effects = Array[ExtResource("4_o8q2m")]([SubResource("Resource_54ujv"), SubResource("Resource_m0ssh")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

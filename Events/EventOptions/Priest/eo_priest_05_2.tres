@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cn0xy6gyfvqsq"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_mljkm"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_165te"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_2ayd5"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="4_mljkm"]
+
+[sub_resource type="Resource" id="Resource_g52gt"]
+script = ExtResource("4_mljkm")
+gold_change = 2
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[resource]
+script = ExtResource("3_2ayd5")
+option_name = &"PRIEST_EVENT_05_OPTION_1_TITLE"
+success_odds = 0.5
+success_effects = Array[ExtResource("2_165te")]([SubResource("Resource_g52gt")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"
