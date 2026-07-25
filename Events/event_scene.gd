@@ -2,6 +2,11 @@ extends Control
 
 var current_event: MapEvent
 
+func _gui_input(event: InputEvent) -> void:
+	if GameState.MouseMode == GameState.Click.EVENT:
+		accept_event()
+		#get_viewport().set_input_as_handled()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	reset_event_scene()
@@ -21,7 +26,6 @@ func reset_event_scene() -> void:
 
 ## shows the current event (either clicked on or auto?)
 func event_selected(event: MapEvent):
-	print("event selected!")
 	current_event = event
 	GameManager.update_current_event(event)
 	%Title.text = event.get_event_name()
@@ -32,6 +36,7 @@ func event_selected(event: MapEvent):
 	set_dialogue(event.get_event_dialogue())
 	create_buttons(event.get_options())
 	visible = true
+	GameState.MouseMode = GameState.Click.EVENT
 
 ## adjusts the event popup to fit with the auto event setup
 func set_auto_event() -> void:
@@ -48,7 +53,6 @@ func set_dialogue(dialogue_strings: Array[String]) -> void:
 
 ## dynamically creates up to 6 buttons, if more than 3 then it goes to a new row
 func create_buttons(options: Array[EventOption]) -> void:
-	print(%Options.get_children())
 	if options.size() > 3:
 		var halfway = int(ceil(options.size() / 2.0))
 		set_button_placements(%Options, options, Vector2i(0, halfway), halfway)
@@ -80,7 +84,9 @@ func close_event(removed: bool) -> void:
 		GameManager.update_current_province(null)
 	# so game manager can figure out if the day can end
 	GameManager.check_for_events()
+	GameState.MouseMode = GameState.Click.BASIC
 
 # button to hide the event without removing it
 func _on_close_pressed() -> void:
-	close_event(false)
+	if GameState.MouseMode == GameState.Click.EVENT:
+		close_event(false)

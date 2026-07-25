@@ -140,10 +140,7 @@ func flip_provinces() -> void:
 func roll_events() -> void:
 	var owned_provinces: Array[Province] = GameState.provinces.filter(func(province): return province.curr_owner == Province.Owner.KING)
 	owned_provinces.sort_custom(func(a, b): return a.fervor > b.fervor)
-	print(owned_provinces.size())
 	var num_events: int = min(owned_provinces.size(), randi_range(3, 5))
-	print("num events: ", num_events)
-	print(owned_provinces)
 	while num_events > 0:
 		for province in owned_provinces:
 			if num_events > 0:

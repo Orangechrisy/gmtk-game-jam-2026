@@ -11,6 +11,7 @@ func _ready() -> void:
 ## does the necessary actions for pausing the game and opening the pause menu
 func pause_game() -> void:
 	$PauseMenu.visible = true
+	GameState.MouseMode = GameState.Click.PAUSE
 
 ## does the necessary actions for unpausing the game and closing the pause menu
 func unpause_game() -> void:

@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://nq5b2qatca1p" path="res://Menus/pause_menu.gd" id="1_3ke7c"]
 [ext_resource type="PackedScene" uid="uid://dglekacdrwykk" path="res://Menus/OptionsMenu.tscn" id="2_7n1tg"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_44tyx"]
-specular_color = Color(0, 0, 0, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
 font_size = 30
 
@@ -13,14 +10,6 @@ font_size = 30
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_3ke7c")
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1336114848]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_right = 1921.0
-offset_bottom = 1081.0
-mouse_filter = 0
-texture = SubResource("CanvasTexture_44tyx")
 
 [node name="PausePauseMenu" type="Control" parent="." unique_id=1101120966]
 anchors_preset = 0

@@ -45,16 +45,18 @@ func on_armies_left_updated(new_armies_left: int) -> void:
 
 
 func _on_menu_button_pressed() -> void:
-	pause_game.emit()
+	if GameState.MouseMode == GameState.Click.BASIC:
+		pause_game.emit()
 
 ## Handles army placement button
 func _on_place_army_button_pressed() -> void:
-	if GameState.get_armies_left() <= 0: return
-	
-	if GameState.MouseMode == GameState.Click.BASIC:
-		GameState.MouseMode = GameState.Click.ARMY_PLACEMENT
-	elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
-		GameState.MouseMode = GameState.Click.BASIC
+	if GameState.MouseMode == GameState.Click.BASIC or GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+		if GameState.get_armies_left() <= 0: return
+		
+		if GameState.MouseMode == GameState.Click.BASIC:
+			GameState.MouseMode = GameState.Click.ARMY_PLACEMENT
+		elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+			GameState.MouseMode = GameState.Click.BASIC
 
 ## adjust end day button visibility (val = true means there is an active event)
 func show_end_day(val: bool) -> void:
@@ -62,5 +64,6 @@ func show_end_day(val: bool) -> void:
 
 ## ends the day when pressed
 func _on_end_day_pressed() -> void:
-	$EndDay.visible = false
-	GameManager.end_day()
+	if GameState.MouseMode == GameState.Click.BASIC:
+		$EndDay.visible = false
+		GameManager.end_day()

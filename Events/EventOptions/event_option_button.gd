@@ -23,19 +23,21 @@ func set_values(option: EventOption):
 	option_name = "[b]" + str(success_odds * 100) + "%[/b] " + option_name
 
 func _on_mouse_entered() -> void:
-	tooltip.set_values(option_desc, success_outcome, failure_outcome)
-	tooltip.visible = not tooltip.visible
+	if GameState.MouseMode == GameState.Click.EVENT:
+		tooltip.set_values(option_desc, success_outcome, failure_outcome)
+		tooltip.visible = not tooltip.visible
 
 func _on_mouse_exited() -> void:
-	tooltip.visible = not tooltip.visible
+	if GameState.MouseMode == GameState.Click.EVENT:
+		tooltip.visible = not tooltip.visible
 
 
 func _on_pressed() -> void:
-	print("button pressed!")
-	if randf_range(0, 1) <= success_odds:
-		for effect in success_outcome:
-			effect.do_effect()
-	else:
-		for effect in failure_outcome:
-			effect.do_effect()
-	get_node("/root/EventScene").close_event(true)
+	if GameState.MouseMode == GameState.Click.EVENT:
+		if randf_range(0, 1) <= success_odds:
+			for effect in success_outcome:
+				effect.do_effect()
+		else:
+			for effect in failure_outcome:
+				effect.do_effect()
+		get_node("/root/EventScene").close_event(true)
