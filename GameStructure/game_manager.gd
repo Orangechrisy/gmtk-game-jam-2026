@@ -1,10 +1,18 @@
 extends Node
 
-# Custom functions
+signal restart
+signal quit_to_main
 
 ## TODO: resets everything to default starting game state
-func reset():
-	pass
+func reset() -> void:
+	GameState.MouseMode = GameState.Click.BASIC
+	restart.emit()
+
+## TODO idk what we might want here
+func quit_to_menu() -> void:
+	GameState.MouseMode = GameState.Click.MAIN
+	quit_to_main.emit()
+	
 
 ## end_day: Runs all end-of-day functions, like variable updates and rolling new events
 ## Variables: NONE (for now)
