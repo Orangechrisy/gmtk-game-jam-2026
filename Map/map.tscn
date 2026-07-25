@@ -94,10 +94,15 @@ vertices = PackedVector2Array(328, 987, 302, 882, 222, 849, 273, 503, 380, 506, 
 province_name = "Outskirts"
 loyalty = 150
 
-[node name="MainInterface" parent="." unique_id=1175301398 instance=ExtResource("8_ry46t")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1264009811]
+
+[node name="MainInterface" parent="CanvasLayer" unique_id=1175301398 instance=ExtResource("8_ry46t")]
+unique_name_in_owner = true
 visible = false
 
-[node name="PauseMenu" parent="." unique_id=273141382 instance=ExtResource("10_5cbny")]
+[node name="PauseMenu" parent="CanvasLayer" unique_id=273141382 instance=ExtResource("10_5cbny")]
+unique_name_in_owner = true
 visible = false
 
-[node name="MainMenu" parent="." unique_id=136163537 instance=ExtResource("12_rr5ff")]
+[node name="MainMenu" parent="CanvasLayer" unique_id=136163537 instance=ExtResource("12_rr5ff")]
+unique_name_in_owner = true

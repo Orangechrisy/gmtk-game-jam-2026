@@ -52,7 +52,6 @@ patch_margin_right = 90
 patch_margin_bottom = 92
 
 [node name="ToRevolutionLabel" type="Label" parent="ToRevPatch" unique_id=1517534400]
-unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
@@ -279,27 +278,14 @@ patch_margin_top = 7
 patch_margin_right = 8
 patch_margin_bottom = 44
 
-[node name="MenuButton" type="Button" parent="." unique_id=583758082]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -230.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = 96.0
-grow_horizontal = 0
-mouse_behavior_recursive = 2
-text = "MENU"
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=342733701]
+[node name="Armies" type="TextureRect" parent="." unique_id=342733701]
 layout_mode = 1
 offset_left = 325.0
 offset_right = 645.0
 offset_bottom = 220.0
 texture = ExtResource("4_t76gb")
 
-[node name="PlaceArmyLabel" type="Label" parent="TextureRect" unique_id=1599275818]
+[node name="PlaceArmyLabel" type="Label" parent="Armies" unique_id=1599275818]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 5
@@ -315,7 +301,7 @@ theme_override_font_sizes/font_size = 46
 text = "Armies Left: 3"
 horizontal_alignment = 1
 
-[node name="PlaceArmyButton" type="Button" parent="TextureRect/PlaceArmyLabel" unique_id=15618272]
+[node name="PlaceArmyButton" type="Button" parent="Armies/PlaceArmyLabel" unique_id=15618272]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 5
@@ -328,7 +314,7 @@ offset_bottom = 148.0
 grow_horizontal = 2
 text = "Place Army"
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1916225851]
+[node name="End" type="TextureRect" parent="." unique_id=1916225851]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -339,7 +325,7 @@ offset_bottom = 220.0
 grow_horizontal = 2
 texture = ExtResource("4_t76gb")
 
-[node name="EndDay" type="Button" parent="TextureRect2" unique_id=1690599600]
+[node name="EndDay" type="Button" parent="End" unique_id=1690599600]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -353,10 +339,23 @@ offset_right = 112.0
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "END DAY"
+text = "End Day"
 
+[node name="MenuButton" type="Button" parent="." unique_id=583758082]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -230.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 96.0
+grow_horizontal = 0
+mouse_behavior_recursive = 2
+text = "MENU"
+
+[connection signal="mouse_entered" from="Armies/PlaceArmyLabel/PlaceArmyButton" to="." method="_on_place_army_button_mouse_entered"]
+[connection signal="mouse_exited" from="Armies/PlaceArmyLabel/PlaceArmyButton" to="." method="_on_place_army_button_mouse_exited"]
+[connection signal="pressed" from="Armies/PlaceArmyLabel/PlaceArmyButton" to="." method="_on_place_army_button_pressed"]
+[connection signal="pressed" from="End/EndDay" to="." method="_on_end_day_pressed"]
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
-[connection signal="mouse_entered" from="TextureRect/PlaceArmyLabel/PlaceArmyButton" to="." method="_on_place_army_button_mouse_entered"]
-[connection signal="mouse_exited" from="TextureRect/PlaceArmyLabel/PlaceArmyButton" to="." method="_on_place_army_button_mouse_exited"]
-[connection signal="pressed" from="TextureRect/PlaceArmyLabel/PlaceArmyButton" to="." method="_on_place_army_button_pressed"]
-[connection signal="pressed" from="TextureRect2/EndDay" to="." method="_on_end_day_pressed"]

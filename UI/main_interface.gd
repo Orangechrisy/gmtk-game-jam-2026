@@ -20,19 +20,19 @@ func _ready() -> void:
 func on_mouse_mode_updated(new_mode) -> void:
 	if new_mode == GameState.Click.ARMY_PLACEMENT:
 		set_mouse_behavior_recursive(MOUSE_BEHAVIOR_INHERITED)
-		%PlaceArmyButton.text = "CANCEL"
+		%PlaceArmyButton.text = "Cancel"
 	else:
-		%PlaceArmyButton.text = "PLACE ARMY"
+		%PlaceArmyButton.text = "Place Army"
 		if new_mode == GameState.Click.BASIC:
 			set_mouse_behavior_recursive(MOUSE_BEHAVIOR_INHERITED)
 		else:
 			set_mouse_behavior_recursive(MOUSE_BEHAVIOR_DISABLED)
 
 func on_day_updated(new_day: int) -> void:
-	%DayLabel.text = "DAY " + str(new_day)
+	%DayLabel.text = "Day " + str(new_day)
 
 func on_days_to_revolution_updated(new_days_left: int) -> void:
-	%ToRevolutionLabel.text = "DAYS TO REVOLUTION: " + str(new_days_left)
+	%DaysUntilRevLabel.text = str(new_days_left)
 
 func on_food_updated(new_food: int) -> void:
 	%FoodLabel.text = "Food: " + str(new_food)
@@ -47,7 +47,7 @@ func on_noble_sentiment_updated(new_sentiment: int) -> void:
 	%NobleFervorBar.value = new_sentiment
 
 func on_armies_left_updated(new_armies_left: int) -> void:
-	%PlaceArmyLabel.text = "ARMIES LEFT: " + str(new_armies_left)
+	%PlaceArmyLabel.text = "Armies Left: " + str(new_armies_left)
 
 
 func _on_menu_button_pressed() -> void:
