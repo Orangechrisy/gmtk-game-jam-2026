@@ -5,6 +5,7 @@ extends Node2D
 func _ready() -> void:
 	$MainInterface.connect("pause_game", pause_game)
 	$PauseMenu.connect("back_up", unpause_game)
+	MusicManager.start_base_track()
 	for child in $Provinces.get_children():
 		GameState.provinces.append(child)
 

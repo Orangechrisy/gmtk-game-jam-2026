@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://cg6eb32fs7qab" path="res://Events/event_scene.gd" id="1_qshbi"]
 [ext_resource type="PackedScene" uid="uid://4yyww0bjv0og" path="res://Events/EventOptions/options_tooltip.tscn" id="3_086s4"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_ptshn"]
+specular_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
 
 [node name="EventScene" type="Control" unique_id=1552972099]
@@ -20,6 +23,14 @@ offset_bottom = 540.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qshbi")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=442736359]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1921.0
+offset_bottom = 1081.0
+mouse_filter = 0
+texture = SubResource("CanvasTexture_ptshn")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1859437871]
 layout_mode = 1

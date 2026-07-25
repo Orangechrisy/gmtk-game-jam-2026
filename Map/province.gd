@@ -29,9 +29,6 @@ var tween: Tween
 enum Counter {FOODY, FOODC, GOLDY, GOLDC, LOYALTY, FERVOR}
 enum Owner {KING, REBELS}
 
-# Signals
-signal province_owner_changed(province: Province)
-
 var has_army: bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -64,7 +61,7 @@ func set_curr_owner(new_value: int) -> void:
 	for effect in loss_effects_passive:
 		effect.do_effect()
 	# TODO: do other effects through this?
-	province_owner_changed.emit(self)
+	GameState.province_owner_changed.emit(self)
 
 func do_loss_effects_passive() -> void:
 	for effect in loss_effects_passive:

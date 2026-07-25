@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://5ndpv4478vvq"]
+
+[ext_resource type="Script" uid="uid://u8cwoyvl347i" path="res://Audio/Music/music_manager.gd" id="1_7at3x"]
+[ext_resource type="AudioStream" uid="uid://cykmkflijh0ye" path="res://Audio/Music/capital theme.wav" id="2_lsojf"]
+[ext_resource type="AudioStream" uid="uid://b53phasuuffey" path="res://Audio/Music/church theme.wav" id="3_npfqx"]
+[ext_resource type="AudioStream" uid="uid://b66np6woe0it4" path="res://Audio/Music/farm theme.wav" id="4_kkx7i"]
+[ext_resource type="AudioStream" uid="uid://bh4778wr50kwe" path="res://Audio/Music/military theme.wav" id="5_xmt1h"]
+[ext_resource type="AudioStream" uid="uid://d0syqj27g3d2r" path="res://Audio/Music/mine theme.wav" id="6_7s7qv"]
+[ext_resource type="AudioStream" uid="uid://bio4jykqbu5bj" path="res://Audio/Music/outskirts theme.wav" id="7_51cxr"]
+[ext_resource type="AudioStream" uid="uid://chgufk7krbmw0" path="res://Audio/Music/port theme.wav" id="8_0fhrq"]
+[ext_resource type="AudioStream" uid="uid://c8ku3tg6sx6fx" path="res://Audio/Music/town theme.wav" id="9_2dnvw"]
+[ext_resource type="AudioStream" uid="uid://cd44ccbatloiq" path="res://Audio/Music/villa theme.wav" id="10_63cj8"]
+
+[node name="MusicManager" type="Node" unique_id=972379771]
+process_mode = 3
+script = ExtResource("1_7at3x")
+
+[node name="Capital (Base)" type="AudioStreamPlayer" parent="." unique_id=1306114728]
+stream = ExtResource("2_lsojf")
+volume_db = -17.0
+bus = &"Music"
+
+[node name="Church" type="AudioStreamPlayer" parent="." unique_id=78551235]
+stream = ExtResource("3_npfqx")
+volume_db = -17.0
+bus = &"Music"
+
+[node name="Farm" type="AudioStreamPlayer" parent="." unique_id=1190168673]
+stream = ExtResource("4_kkx7i")
+volume_db = -17.0
+bus = &"Music"
+
+[node name="Military" type="AudioStreamPlayer" parent="." unique_id=1642529419]
+stream = ExtResource("5_xmt1h")
+volume_db = -17.0
+bus = &"Music"
+
+[node name="Mine" type="AudioStreamPlayer" parent="." unique_id=539704522]
+stream = ExtResource("6_7s7qv")
+volume_db = -17.0
+bus = &"Music"
+
+[node name="Outskirts" type="AudioStreamPlayer" parent="." unique_id=1885190053]
+stream = ExtResource("7_51cxr")
+volume_db = -17.0
+bus = &"Music"
+
+[node name="Port" type="AudioStreamPlayer" parent="." unique_id=2098231620]
+stream = ExtResource("8_0fhrq")
+volume_db = -17.0
+bus = &"Music"
+
+[node name="Town" type="AudioStreamPlayer" parent="." unique_id=511400352]
+stream = ExtResource("9_2dnvw")
+volume_db = -17.0
+bus = &"Music"
+
+[node name="Villa" type="AudioStreamPlayer" parent="." unique_id=711764678]
+stream = ExtResource("10_63cj8")
+volume_db = -17.0
+bus = &"Music"

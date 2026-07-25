@@ -49,38 +49,49 @@ vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328,
 province_name = "Military"
 potential_events = Array[ExtResource("2_lymsy")]([ExtResource("7_vhrv6")])
 event_location = Vector2(900, 380)
+loyalty = 100
 
 [node name="Farm" parent="Provinces" unique_id=1918935467 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(996, 281, 1086, 228, 1164, 328, 1255, 332, 1305, 422, 1248, 433, 1241, 503, 1157, 522, 1127, 638, 1187, 650, 1183, 682, 1022, 614, 1022, 546, 993, 539, 1052, 318)
 province_name = "Farm"
+loyalty = 100
 
-[node name="City1" parent="Provinces" unique_id=305634748 instance=ExtResource("1_5ej7w")]
+[node name="Town" parent="Provinces" unique_id=305634748 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(735, 285, 621, 445, 604, 597, 503, 589, 539, 527, 532, 373, 419, 385, 501, 335, 527, 189)
-province_name = "City1"
+province_name = "Town"
+loyalty = 100
 
 [node name="Villa" parent="Provinces" unique_id=448714367 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(784, 628, 733, 549, 784, 499, 944, 554, 951, 700, 1057, 760, 911, 793, 910, 901, 627, 889, 611, 709, 555, 705, 561, 608, 613, 609, 700, 638)
 province_name = "Villa"
+loyalty = 100
 
-[node name="City2" parent="Provinces" unique_id=203984502 instance=ExtResource("1_5ej7w")]
+[node name="City" parent="Provinces" unique_id=203984502 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(1030, 625, 1019, 537, 992, 530, 988, 561, 944, 554, 951, 700, 1057, 760, 964, 782, 987, 818, 1139, 793, 1144, 676)
-province_name = "City2"
+province_name = "City"
+loyalty = 100
+fervor = 150
 
 [node name="Mine" parent="Provinces" unique_id=1791617832 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(1239, 510, 1160, 527, 1129, 637, 1187, 649, 1184, 680, 1330, 734, 1326, 644, 1264, 614, 1352, 553)
 province_name = "Mine"
+loyalty = 100
+fervor = 150
 
 [node name="Port" parent="Provinces" unique_id=1295366853 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(1266, 333, 1311, 417, 1242, 427, 1246, 501, 1426, 580, 1517, 496, 1606, 582, 1673, 556, 1623, 510, 1595, 405, 1477, 397, 1491, 295, 1335, 242)
 province_name = "Port"
+loyalty = 100
 
 [node name="Church" parent="Provinces" unique_id=1489639061 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(1446, 716, 1330, 697, 1323, 644, 1268, 611, 1352, 553, 1426, 580, 1517, 496, 1606, 582, 1542, 647, 1518, 757, 1448, 760)
 province_name = "Church"
+loyalty = 100
 
 [node name="Outskirts" parent="Provinces" unique_id=1740394256 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(328, 987, 302, 882, 222, 849, 273, 503, 380, 506, 354, 668, 544, 738, 553, 709, 603, 704, 623, 887, 438, 902, 404, 1023)
 province_name = "Outskirts"
+loyalty = 150
 
 [node name="MainInterface" parent="." unique_id=1175301398 instance=ExtResource("8_ry46t")]
 
