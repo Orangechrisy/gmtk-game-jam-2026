@@ -2,14 +2,16 @@ extends Control
 
 var current_event: MapEvent
 
-func _gui_input(event: InputEvent) -> void:
-	if GameState.MouseMode == GameState.Click.EVENT:
-		accept_event()
-		#get_viewport().set_input_as_handled()
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	reset_event_scene()
+	GameState.connect("mouse_mode_updated", on_mouse_mode_updated)
+
+func on_mouse_mode_updated(new_mode) -> void:
+	if new_mode == GameState.Click.EVENT:
+		set_mouse_behavior_recursive(MOUSE_BEHAVIOR_INHERITED)
+	else:
+		set_mouse_behavior_recursive(MOUSE_BEHAVIOR_DISABLED)
 
 ## resets the event scene to ensure the next event selected can adjust as needed
 func reset_event_scene() -> void:

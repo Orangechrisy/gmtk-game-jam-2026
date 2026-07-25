@@ -2,10 +2,6 @@ extends Control
 
 signal back_up()
 
-func _gui_input(event: InputEvent) -> void:
-	if GameState.MouseMode == GameState.Click.PAUSE:
-		accept_event()
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for sub_menu in get_children():
@@ -15,8 +11,6 @@ func _ready() -> void:
 
 func _on_return_to_game_button_pressed() -> void:
 	if GameState.MouseMode == GameState.Click.PAUSE:
-		self.visible = false
-		GameState.MouseMode = GameState.Click.BASIC
 		back_up.emit()
 
 func on_back_up() -> void:

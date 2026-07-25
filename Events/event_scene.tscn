@@ -26,6 +26,7 @@ grow_vertical = 2
 script = ExtResource("1_qshbi")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=442736359]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 1921.0

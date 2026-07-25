@@ -34,11 +34,20 @@ var current_event: MapEvent
 
 # ENUMS
 enum Ending {REVOLUTION, COMMON_ASSASSIN, NOBLE_ASSASSIN, FLEE_DOCK_FAIL, FLEE_DOCK_SUCCESS, FLEE_MINES_FAIL, FLEE_MINES_SUCCESS, FLEE_OUTSKIRTS_FAIL, FLEE_OUTSKIRTS_SUCCESS, SURRENDER_FAIL, SURRENDER_SUCCESS, ABDICATE_FAIL, ABDICATE_SUCCESS}
+
+# MOUSE SHIT
 enum Click {BASIC, ARMY_PLACEMENT, EVENT, PAUSE}
+var prev_mouse_mode: int
 var MouseMode: int = Click.BASIC:
 	set(val):
-		MouseMode = val
-		mouse_mode_updated.emit(val)
+		# if we pause while an event is active, we want to go back to event mouse mode
+		if MouseMode == Click.PAUSE and prev_mouse_mode == Click.EVENT:
+			prev_mouse_mode = MouseMode
+			MouseMode = Click.EVENT
+		else:
+			prev_mouse_mode = MouseMode
+			MouseMode = val
+		mouse_mode_updated.emit(MouseMode)
 
 # SIGNALS
 

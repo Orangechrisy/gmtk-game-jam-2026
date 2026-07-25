@@ -1,6 +1,7 @@
 extends Control
 
 signal pause_game()
+signal unpause_game()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,10 +18,15 @@ func _ready() -> void:
 # UI Updates
 
 func on_mouse_mode_updated(new_mode) -> void:
-	if GameState.MouseMode == GameState.Click.BASIC:
-		$PlaceArmyButton.text = "PLACE ARMY"
-	elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+	if new_mode == GameState.Click.ARMY_PLACEMENT:
+		set_mouse_behavior_recursive(MOUSE_BEHAVIOR_INHERITED)
 		$PlaceArmyButton.text = "CANCEL"
+	else:
+		$PlaceArmyButton.text = "PLACE ARMY"
+		if new_mode == GameState.Click.BASIC:
+			set_mouse_behavior_recursive(MOUSE_BEHAVIOR_INHERITED)
+		else:
+			set_mouse_behavior_recursive(MOUSE_BEHAVIOR_DISABLED)
 
 func on_day_updated(new_day: int) -> void:
 	$DayLabel.text = "DAY " + str(new_day)
@@ -45,18 +51,19 @@ func on_armies_left_updated(new_armies_left: int) -> void:
 
 
 func _on_menu_button_pressed() -> void:
-	if GameState.MouseMode == GameState.Click.BASIC:
+	if GameState.MouseMode == GameState.Click.PAUSE:
+		unpause_game.emit()
+	else:
 		pause_game.emit()
 
 ## Handles army placement button
 func _on_place_army_button_pressed() -> void:
-	if GameState.MouseMode == GameState.Click.BASIC or GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
-		if GameState.get_armies_left() <= 0: return
-		
-		if GameState.MouseMode == GameState.Click.BASIC:
-			GameState.MouseMode = GameState.Click.ARMY_PLACEMENT
-		elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
-			GameState.MouseMode = GameState.Click.BASIC
+	if GameState.get_armies_left() <= 0: return
+	
+	if GameState.MouseMode == GameState.Click.BASIC:
+		GameState.MouseMode = GameState.Click.ARMY_PLACEMENT
+	elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+		GameState.MouseMode = GameState.Click.BASIC
 
 ## adjust end day button visibility (val = true means there is an active event)
 func show_end_day(val: bool) -> void:
@@ -64,6 +71,5 @@ func show_end_day(val: bool) -> void:
 
 ## ends the day when pressed
 func _on_end_day_pressed() -> void:
-	if GameState.MouseMode == GameState.Click.BASIC:
-		$EndDay.visible = false
-		GameManager.end_day()
+	$EndDay.visible = false
+	GameManager.end_day()

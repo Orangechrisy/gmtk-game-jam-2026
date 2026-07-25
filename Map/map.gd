@@ -4,6 +4,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$MainInterface.connect("pause_game", pause_game)
+	$MainInterface.connect("unpause_game", unpause_game)
 	$PauseMenu.connect("back_up", unpause_game)
 	MusicManager.start_base_track()
 	for child in $Provinces.get_children():
@@ -17,3 +18,4 @@ func pause_game() -> void:
 ## does the necessary actions for unpausing the game and closing the pause menu
 func unpause_game() -> void:
 	$PauseMenu.visible = false
+	GameState.MouseMode = GameState.Click.BASIC
