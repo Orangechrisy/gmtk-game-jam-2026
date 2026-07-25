@@ -11,6 +11,7 @@
 [ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="7_vhrv6"]
 [ext_resource type="PackedScene" uid="uid://dv1r3qybxrmhh" path="res://UI/MainInterface.tscn" id="8_ry46t"]
 [ext_resource type="PackedScene" uid="uid://bqnp5ys3qf240" path="res://Menus/PauseMenu.tscn" id="10_5cbny"]
+[ext_resource type="PackedScene" uid="uid://d1xxop0i5b08d" path="res://Menus/MainMenu.tscn" id="12_rr5ff"]
 
 [sub_resource type="Resource" id="Resource_btrrw"]
 script = ExtResource("2_lymsy")
@@ -94,6 +95,9 @@ province_name = "Outskirts"
 loyalty = 150
 
 [node name="MainInterface" parent="." unique_id=1175301398 instance=ExtResource("8_ry46t")]
+visible = false
 
 [node name="PauseMenu" parent="." unique_id=273141382 instance=ExtResource("10_5cbny")]
 visible = false
+
+[node name="MainMenu" parent="." unique_id=136163537 instance=ExtResource("12_rr5ff")]

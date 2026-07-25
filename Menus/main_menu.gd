@@ -13,7 +13,6 @@ func _on_start_game_button_pressed() -> void:
 	# map there the whole time (main menu as child to it) and this just hides the main menu
 	# and emits a signal for the map to show things with a nice transition?
 	# like maybe the map when main menu active blurred? idk
-	get_tree().change_scene_to_file("res://Map/map.tscn")
 
 
 func _on_options_button_pressed() -> void:
