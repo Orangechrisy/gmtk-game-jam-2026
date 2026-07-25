@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cd44ccbatloiq"
+path="res://.godot/imported/villa theme.wav-a6ffab2110b27fd7ac96915f5baf5b6f.sample"
+
+[deps]
+
+source_file="res://Audio/Music/villa theme.wav"
+dest_files=["res://.godot/imported/villa theme.wav-a6ffab2110b27fd7ac96915f5baf5b6f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

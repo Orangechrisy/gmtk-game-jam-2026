@@ -131,7 +131,7 @@ func handle_loss_effects() -> void:
 ## flip_provinces: Checks which provinces should flip owners, and flips owners if needed
 func flip_provinces() -> void:
 	for province in GameState.provinces:
-		if province.get_curr_owner() == province.Owner.KING and province.fervor > province.loyalty:
+		if (province.get_curr_owner() == province.Owner.KING) and (province.fervor > province.loyalty):
 			province.set_curr_owner(province.Owner.REBELS)
 	
 ## how many events do we want to have happen?

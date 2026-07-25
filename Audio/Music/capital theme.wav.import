@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cykmkflijh0ye"
+path="res://.godot/imported/capital theme.wav-8d005543e62d5fbc4d49b61383bf082b.sample"
+
+[deps]
+
+source_file="res://Audio/Music/capital theme.wav"
+dest_files=["res://.godot/imported/capital theme.wav-8d005543e62d5fbc4d49b61383bf082b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
