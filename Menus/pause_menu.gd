@@ -27,4 +27,4 @@ func _on_options_button_pressed() -> void:
 
 # TODO: Improve this! Depending on how we handle the main menu!
 func _on_quit_to_menu_button_pressed() -> void:
-	GameManager.quite_to_main()
+	GameManager.quit_to_main.emit()

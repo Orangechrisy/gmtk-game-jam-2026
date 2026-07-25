@@ -11,7 +11,12 @@ script = ExtResource("1_pnl1e")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=727500454]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=737159659]
+[node name="BorderSprite" type="Sprite2D" parent="." unique_id=737159659]
+z_index = -1
+centered = false
+
+[node name="GraphicSprite" type="Sprite2D" parent="." unique_id=2123215015]
+centered = false
 
 [node name="EventPopup" parent="." unique_id=24959100 instance=ExtResource("2_k6co4")]
 visible = false
