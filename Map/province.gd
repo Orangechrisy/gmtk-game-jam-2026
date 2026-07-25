@@ -3,7 +3,8 @@ class_name Province
 
 @export var vertices: PackedVector2Array
 @export var province_name: String
-@export var province_image: Sprite2D
+@export var province_border_image: Texture2D
+@export var province_graphics_image: Texture2D
 @export var curr_owner: int = 0 # not sure what this should be, but could be an enum
 @export var potential_events: Array[MapEvent]
 @export var event_location: Vector2
@@ -34,6 +35,8 @@ var has_army: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Area2D/CollisionPolygon2D.polygon = vertices
+	$BorderSprite.texture = province_border_image
+	$GraphicSprite.texture = province_graphics_image
 	$EventPopup.visible = false
 	$EventPopup.position = event_location
 	$TooltipTimer.timeout.connect(_on_timer_timeout)
