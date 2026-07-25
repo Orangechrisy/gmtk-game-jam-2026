@@ -37,15 +37,12 @@ enum Ending {REVOLUTION, COMMON_ASSASSIN, NOBLE_ASSASSIN, FLEE_DOCK_FAIL, FLEE_D
 
 # MOUSE SHIT
 enum Click {BASIC, ARMY_PLACEMENT, EVENT, PAUSE}
-var prev_mouse_mode: int
 var MouseMode: int = Click.BASIC:
 	set(val):
 		# if we pause while an event is active, we want to go back to event mouse mode
-		if MouseMode == Click.PAUSE and prev_mouse_mode == Click.EVENT:
-			prev_mouse_mode = MouseMode
+		if MouseMode == Click.PAUSE and current_event != null:
 			MouseMode = Click.EVENT
 		else:
-			prev_mouse_mode = MouseMode
 			MouseMode = val
 		mouse_mode_updated.emit(MouseMode)
 
