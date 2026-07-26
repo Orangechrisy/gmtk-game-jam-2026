@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0gsden55wjor" path="res://Menus/options_menu.gd" id="1_pmot2"]
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="2_wfib0"]
+[ext_resource type="Texture2D" uid="uid://cw16lggs6288t" path="res://Assets/event_paper.png" id="3_ppvv8"]
 
 [node name="OptionsMenu" type="CanvasLayer" unique_id=688729018]
 layer = 2
@@ -17,6 +18,16 @@ theme = ExtResource("2_wfib0")
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=964474499]
 layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/CenterContainer" unique_id=700079599]
+custom_minimum_size = Vector2(600, 960)
+custom_maximum_size = Vector2(600, 960)
+layout_mode = 2
+texture = ExtResource("3_ppvv8")
+patch_margin_left = 237
+patch_margin_top = 237
+patch_margin_right = 238
+patch_margin_bottom = 238
 
 [node name="SettingsMenu" type="VBoxContainer" parent="MarginContainer/CenterContainer" unique_id=1680667852]
 layout_mode = 2
