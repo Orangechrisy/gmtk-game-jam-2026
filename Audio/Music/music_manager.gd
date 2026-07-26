@@ -1,32 +1,42 @@
 extends Node
 
 @onready var playing: bool = false
-@export var default_db: float = -17.0
+@export var default_db: float = -15.0
 
 func _ready() -> void:
 	GameState.connect("province_owner_changed", add_track)
 	
 	_reset()
 
+#stopping music
 func _reset():
-	for track in get_children():
-		#print("track")
-		if track.playing:
-			var tween = create_tween()
-			tween.tween_property(track, "volume_linear", 0.0, 1.0)
-			tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
-			if is_inside_tree(): await tween.finished
-			if is_inside_tree(): await get_tree().create_timer(0.5).timeout
-			track.stop()
-		track.volume_db = default_db
+	var nodes: Array = [$MainTheme, $OtherMusic]
+	for parentnode in nodes:
+		for track in parentnode.get_children():
+			#print("track")
+			if track.playing:
+				var tween = create_tween()
+				tween.tween_property(track, "volume_linear", 0.0, 1.0)
+				tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+				track.stop()
+			track.volume_db = default_db
 
+#Ending Tracks
+enum ENDINGTYPE { BAD, GOOD }
+
+func play_ending_song(ending_type: int = ENDINGTYPE.BAD):
+	_reset()
+	await get_tree().create_timer(1.0,false).timeout
+	$OtherMusic.get_child(ending_type).play()
+
+#Base Track
 func start_base_track():
 	_reset()
 	await get_tree().create_timer(1.0,false).timeout
-	$"Capital (Base)".play()
+	$MainTheme/"Capital (Base)".play()
 
 func get_current_time():
-	return $"Capital (Base)".get_playback_position()
+	return $MainTheme/"Capital (Base)".get_playback_position()
 
 func add_track(province: Province):
 	var province_name = province.province_name
@@ -35,25 +45,25 @@ func add_track(province: Province):
 	var track: AudioStreamPlayer
 	match province_name:
 		"Military":
-			track = $Military
+			track = $MainTheme/Military
 		"Farm":
-			track = $Farm
+			track = $MainTheme/Farm
 		"Town":
-			track = $Town
+			track = $MainTheme/Town
 		"Villa":
-			track = $Villa
+			track = $MainTheme/Villa
 		"City":
-			return
+			track = $MainTheme/City
 		"Port":
-			track = $Port
+			track = $MainTheme/Port
 		"Mine":
-			track = $Mine
+			track = $MainTheme/Mine
 		"Port":
-			track = $Port
+			track = $MainTheme/Port
 		"Church":
-			track = $Church
+			track = $MainTheme/Church
 		"Outskirts":
-			track = $Outskirts
+			track = $MainTheme/Outskirts
 		_:
 			print("Error: cannot add music, unknown Province")
 			return
@@ -63,4 +73,12 @@ func add_track(province: Province):
 	tween.set_parallel()
 	tween.tween_property(track, "volume_linear", db_to_linear(default_db), 1.0)
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
-	await get_tree().create_timer(1.0).timeout
+
+#SFX
+enum SFX {CLICK, CLICKINVALID, MOUSEOVER, POPUP, POSJINGLE, NEGJINGLE, REVOLT}
+
+func play_sfx(SFX_ID: int, change_pitch: bool = true):
+	var Audio = $SFX.get_child(SFX_ID)
+	if change_pitch:
+		Audio.pitch_scale = randf_range(0.8,1.2)
+	Audio.play()

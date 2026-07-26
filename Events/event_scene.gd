@@ -30,15 +30,16 @@ func reset_event_scene() -> void:
 func event_selected(event: MapEvent):
 	current_event = event
 	GameManager.update_current_event(event)
-	%Title.text = event.get_event_name()
+	%Title.text = "[font_size=28]" + TextManager.get_text(event.get_event_name()) + "[/font_size]"
 	%Portrait.texture = event.get_portrait()
-	%CharacterName.text = event.get_character_name()
+	%CharacterName.text = "[font_size=28]" + TextManager.get_text(event.get_character_name()) + "[/font_size]"
 	if %CharacterName.text == "":
 		set_auto_event()
 	set_dialogue(event.get_event_dialogue())
 	create_buttons(event.get_options())
 	visible = true
 	GameState.MouseMode = GameState.Click.EVENT
+	MusicManager.play_sfx(MusicManager.SFX.POPUP)
 
 ## adjusts the event popup to fit with the auto event setup
 func set_auto_event() -> void:
@@ -49,9 +50,10 @@ func set_auto_event() -> void:
 
 # TODO: handle dialogue text better than just basically a block with newlines
 func set_dialogue(dialogue_strings: Array[String]) -> void:
-	%Description.text = ""
+	%Description.text = "[font_size=28]"
 	for line in dialogue_strings:
-		%Description.text += line + '\n'
+		%Description.text += TextManager.get_text(line) + '\n'
+	%Description.text += "[/font_size]"
 
 ## dynamically creates up to 6 buttons, if more than 3 then it goes to a new row
 func create_buttons(options: Array[EventOption]) -> void:
@@ -87,8 +89,13 @@ func close_event(removed: bool) -> void:
 	# so game manager can figure out if the day can end
 	GameManager.check_for_events()
 	GameState.MouseMode = GameState.Click.BASIC
+	GameState.reset_outlines()
 
 # button to hide the event without removing it
 func _on_close_pressed() -> void:
 	if GameState.MouseMode == GameState.Click.EVENT:
 		close_event(false)
+	MusicManager.play_sfx(MusicManager.SFX.CLICK)
+
+func _on_mouse_entered() -> void:
+	MusicManager.play_sfx(MusicManager.SFX.MOUSEOVER)

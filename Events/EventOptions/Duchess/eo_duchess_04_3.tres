@@ -34,7 +34,7 @@ metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [resource]
 script = ExtResource("3_dvva6")
-option_name = &"DUCHESS_EVENT_4_OPTION_3_TITLE"
+option_name = &"DUCHESS_EVENT_04_OPTION_3_TITLE"
 success_odds = 0.6
 success_effects = Array[ExtResource("2_t82cc")]([SubResource("Resource_mcfqr"), SubResource("Resource_7r0cx")])
 failure_effects = Array[ExtResource("2_t82cc")]([SubResource("Resource_4ccvb"), SubResource("Resource_0w8j6"), SubResource("Resource_ydp41")])

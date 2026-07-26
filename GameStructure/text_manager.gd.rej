@@ -1,0 +1,10 @@
+diff a/GameStructure/text_manager.gd b/GameStructure/text_manager.gd	(rejected hunks)
+@@ -4,7 +4,7 @@
+ var lang_name_dict: Dictionary = {}
+ var curr_lang: String = ""
+ 
+-signal translation_changed(old_lang: String)
++# signal translation_changed(old_lang: String)
+ 
+ const ITEM_JSON_DATA = "res://data/Dialogue.json"
+ 

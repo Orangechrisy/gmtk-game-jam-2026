@@ -7,6 +7,10 @@ signal quit_to_main
 func reset() -> void:
 	GameState.MouseMode = GameState.Click.BASIC
 	restart.emit()
+	
+	GameState._reset()
+	for province in GameState.provinces:
+		province._reset()
 
 ## TODO idk what we might want here
 func quit_to_menu() -> void:
@@ -176,6 +180,13 @@ func update_current_event(event: MapEvent):
 ## kill character
 func kill_character(character: Character) -> void:
 	character.is_alive = false
+	
+## results popup
+func event_button_pressed() -> void:
+	GameState.reset_results_label()
+
+func add_to_results_popup(to_add: String) -> void:
+	GameState.add_to_results_popup(to_add)
 
 ## check whether the player has lost
 func check_game_end() -> bool:

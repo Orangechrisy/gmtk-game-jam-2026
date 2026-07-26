@@ -13,8 +13,8 @@ var days_to_revolution: int = 30
 var revolt_stalled: bool = false
 var revolt_accelerated: bool = false
 
-var gold: int
-var food: int
+var gold: int = 50
+var food: int = 50
 var noble_sentiment: int = 100 
 var common_sentiment: int = 100
 
@@ -23,6 +23,41 @@ var armies_left: int = 3
 
 @export var provinces: Array[Province]
 var current_province: Province
+
+#DEFAULTS
+@onready var default_days_to_revolution = days_to_revolution
+
+@onready var default_revolt_stalled = revolt_stalled
+@onready var default_revolt_accelerated = revolt_accelerated
+
+@onready var default_gold = gold
+@onready var default_food = food
+@onready var default_noble_sentiment = noble_sentiment
+@onready var default_common_sentiment = common_sentiment
+
+@onready var default_armies = armies
+
+@onready var default_current_province = current_province
+
+
+func _reset():
+	reset_day()
+	set_days_to_revolution(default_days_to_revolution)
+	revolt_stalled = default_revolt_stalled
+	revolt_accelerated = default_revolt_accelerated
+	set_gold(default_gold)
+	set_food(default_food)
+	set_noble_sentiment(default_noble_sentiment)
+	set_common_sentiment(default_common_sentiment)
+	set_armies(default_armies)
+	reset_armies_left()
+	current_province = default_current_province
+	
+	for character in GameState.characters:
+		character.is_alive = true
+		character.quest_progress = 0
+	
+	MusicManager.start_base_track()
 
 # Characters
 @export var characters: Array[Character]
@@ -61,8 +96,12 @@ signal noble_sentiment_updated(new_sentiment)
 signal armies_left_updated(new_armies_left)
 signal active_events(any_active)
 signal mouse_mode_updated(new_mode)
+@warning_ignore("unused_signal")
 signal province_owner_changed(province: Province)
 signal game_ended(ending: int, ending_name: StringName, ending_text: String)
+# For event results label
+signal show_results_popup()
+signal add_to_label(to_add: String)
 
 # Day
 
@@ -168,6 +207,12 @@ func reset_armies_left() -> void:
 func get_armies() -> int:
 	return armies
 
+func set_armies(val: int) -> void:
+	armies = val
+	if armies_left > armies:
+		armies_left = armies
+		armies_left_updated.emit(armies_left)
+
 func change_armies(val: int) -> void:
 	armies += val
 	if armies_left > armies:
@@ -198,6 +243,10 @@ func get_province_by_name(val: String) -> Province:
 	
 	return null
 
+func reset_outlines():
+	for province in provinces:
+		province.hide_outline()
+
 func get_random_province() -> Province:
 	provinces.shuffle()
 	for province in provinces:
@@ -213,5 +262,12 @@ func get_character_by_name(val: StringName) -> Character:
 			
 	return null
 
+# Results popup
+func reset_results_label() -> void:
+	show_results_popup.emit()
+
+func add_to_results_popup(to_add: String) -> void:
+	add_to_label.emit(to_add)
+	
 func emit_ending(ending: int):
-	game_ended.emit(ending)
+	game_ended.emit(ending, ending_names[ending], ending_texts[ending])

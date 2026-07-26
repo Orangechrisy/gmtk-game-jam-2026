@@ -1,21 +1,29 @@
 [gd_scene format=3 uid="uid://d1xxop0i5b08d"]
 
 [ext_resource type="Script" uid="uid://bsflcq4p15bta" path="res://Menus/main_menu.gd" id="1_otibh"]
+[ext_resource type="Texture2D" uid="uid://tg28iiw24ft2" path="res://Assets/title bg.png" id="2_1txdl"]
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="2_5ncg0"]
 [ext_resource type="PackedScene" uid="uid://dglekacdrwykk" path="res://Menus/OptionsMenu.tscn" id="2_lbqne"]
 [ext_resource type="PackedScene" uid="uid://kykrpyebwvu2" path="res://Menus/CreditsMenu.tscn" id="3_430ii"]
 [ext_resource type="PackedScene" uid="uid://l485x5bqjkuf" path="res://Menus/QuitConfirmMenu.tscn" id="4_3p42x"]
+[ext_resource type="Texture2D" uid="uid://brf066by6ggty" path="res://Assets/title flag.png" id="7_m16r1"]
 
 [node name="MainMenu" type="Control" unique_id=136163537]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_otibh")
 
+[node name="TitleBg" type="Sprite2D" parent="." unique_id=464208359]
+texture = ExtResource("2_1txdl")
+centered = false
+
 [node name="MainMainMenu" type="Control" parent="." unique_id=1457501135]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 106.0
+offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -57,7 +65,6 @@ text = "Quit Game"
 
 [node name="OptionsMenu" parent="." unique_id=806118121 instance=ExtResource("2_lbqne")]
 visible = false
-layout_mode = 1
 
 [node name="CreditsMenu" parent="." unique_id=719412781 instance=ExtResource("3_430ii")]
 visible = false
@@ -67,7 +74,15 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
+[node name="TitleFlag" type="Sprite2D" parent="." unique_id=37630835]
+texture = ExtResource("7_m16r1")
+centered = false
+
+[connection signal="mouse_entered" from="MainMainMenu/StartGameButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MainMainMenu/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="mouse_entered" from="MainMainMenu/OptionsButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MainMainMenu/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="MainMainMenu/CreditsButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MainMainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="mouse_entered" from="MainMainMenu/QuitGameButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MainMainMenu/QuitGameButton" to="." method="_on_quit_game_button_pressed"]

@@ -6,6 +6,7 @@ class_name EEChangeNobleFavor
 
 func do_effect() -> void:
 	GameState.change_noble_sentiment(favor_change)
+	GameManager.add_to_results_popup("%+.f Noble Favor" % favor_change)
 
 func get_effect_desc() -> String:
 	return "%+.f Noble Favor" % favor_change

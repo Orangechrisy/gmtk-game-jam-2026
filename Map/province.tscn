@@ -13,7 +13,7 @@ script = ExtResource("1_pnl1e")
 polygon = PackedVector2Array(0, 0, 0, 0, 0, 0)
 
 [node name="BorderSprite" type="Sprite2D" parent="." unique_id=737159659]
-z_index = -1
+z_index = -2
 centered = false
 
 [node name="GraphicSprite" type="Sprite2D" parent="." unique_id=2123215015]

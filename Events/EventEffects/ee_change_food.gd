@@ -6,6 +6,7 @@ class_name EEChangeFood
 
 func do_effect() -> void:
 	GameState.change_food(food_change)
+	GameManager.add_to_results_popup("%+.f Food" % food_change)
 
 func get_effect_desc() -> String:
 	return "%+.f Food" % food_change

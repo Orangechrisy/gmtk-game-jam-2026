@@ -10,8 +10,9 @@ func do_effect() -> void:
 	if char:
 		if randi_range(1, 100) <= chance:
 			GameManager.kill_character(char)
+			GameManager.add_to_results_popup("%s has died" % TextManager.get_text(char_name))
 	else:
 		print("ERROR: Character name not found!!!")
 
 func get_effect_desc() -> String:
-	return "%s may die" % char_name
+	return "%s may die" % TextManager.get_text(char_name)

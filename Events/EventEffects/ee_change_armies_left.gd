@@ -6,6 +6,7 @@ class_name EEChangeArmiesLeft
 
 func do_effect() -> void:
 	GameState.change_armies_left(armies_change)
+	GameManager.add_to_results_popup("%+.f Armies" % armies_change)
 
 func get_effect_desc() -> String:
 	return "%+.f Armies" % armies_change
