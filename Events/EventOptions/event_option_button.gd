@@ -34,9 +34,11 @@ func _on_mouse_exited() -> void:
 func _on_pressed() -> void:
 	MusicManager.play_sfx(MusicManager.SFX.CLICK)
 	if randf_range(0, 1) <= success_odds:
+		MusicManager.play_sfx(MusicManager.SFX.POSJINGLE)
 		for effect in success_outcome:
 			effect.do_effect()
 	else:
+		MusicManager.play_sfx(MusicManager.SFX.NEGJINGLE)
 		for effect in failure_outcome:
 			effect.do_effect()
 	get_node("/root/EventScene").close_event(true)

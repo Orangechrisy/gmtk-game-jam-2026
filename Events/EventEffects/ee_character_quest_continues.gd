@@ -13,4 +13,4 @@ func do_effect() -> void:
 		print("ERROR: Character name not found!!!")
 
 func get_effect_desc() -> String:
-	return "%s may be happy" % char_name
+	return "%s may be happy" % TextManager.get_text(char_name)

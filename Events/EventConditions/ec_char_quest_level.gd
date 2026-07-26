@@ -11,4 +11,4 @@ func evaluate() -> bool:
 	return false
 
 func get_condition_desc() -> String:
-	return "%s likes you"
+	return "%s likes you" % TextManager.get_text(char_name)

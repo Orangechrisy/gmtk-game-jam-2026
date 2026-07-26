@@ -12,4 +12,4 @@ func do_effect() -> void:
 		print("ERROR: Character name not found!!!")
 
 func get_effect_desc() -> String:
-	return "%s dies" % char_name
+	return "%s dies" % TextManager.get_text(char_name)

@@ -10,4 +10,4 @@ func evaluate() -> bool:
 	return false
 
 func get_condition_desc() -> String:
-	return "%s is alive" % char_name
+	return "%s is alive" % TextManager.get_text(char_name)
