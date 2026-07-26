@@ -4,11 +4,7 @@ var text_dict: Dictionary = {}
 var lang_name_dict: Dictionary = {}
 var curr_lang: String = ""
 
-<<<<<<< HEAD
 # signal translation_changed(old_lang: String)
-=======
-#signal translation_changed(old_lang: String)
->>>>>>> d9313aaebe87f8533a1630ff4e23158df2028e99
 
 const ITEM_JSON_DATA = "res://data/Dialogue.json"
 
@@ -51,13 +47,8 @@ func parse_json(ID: String, json: Dictionary, lang_type: String):
 
 func load_translation(lang_type: String = "en"):
 	if curr_lang==lang_type: return
-<<<<<<< HEAD
 	# var old_lang = curr_lang
-=======
-	#var old_lang = curr_lang
->>>>>>> d9313aaebe87f8533a1630ff4e23158df2028e99
-	curr_lang=lang_type
-	init_json_data(lang_type)
+
 	#if is_inside_tree(): await get_tree().physics_frame
 	#translation_changed.emit(old_lang)
 
