@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	GameState.connect("reset_label", reset_label)
+	GameState.connect("show_results_popup", show_popup)
 	GameState.connect("add_to_label", add_to_label)
 
 
@@ -11,8 +11,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func reset_label() -> void:
+func show_popup() -> void:
 	$AnimationPlayer.play("show_popup")
 
+func reset_label() -> void:
+	$Node2D/Label.text = "Nothing happened..."
+
 func add_to_label(to_add: String) -> void:
-	$Node2D/Label.text += to_add + "\n"
+	if $Node2D/Label.text == "Nothing happened...":
+		$Node2D/Label.text = to_add + "\n"
+	else:
+		$Node2D/Label.text += to_add + "\n"
