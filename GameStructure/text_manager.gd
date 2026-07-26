@@ -48,7 +48,8 @@ func parse_json(ID: String, json: Dictionary, lang_type: String):
 func load_translation(lang_type: String = "en"):
 	if curr_lang==lang_type: return
 	# var old_lang = curr_lang
-
+	curr_lang=lang_type
+	init_json_data(lang_type)
 	#if is_inside_tree(): await get_tree().physics_frame
 	#translation_changed.emit(old_lang)
 
