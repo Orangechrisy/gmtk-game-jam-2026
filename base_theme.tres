@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b2phesvhax72f" path="res://Assets/button_hover.png" id="2_11awm"]
 [ext_resource type="Texture2D" uid="uid://ds6g7o6ocdeux" path="res://Assets/button.png" id="2_hjn8r"]
 [ext_resource type="Texture2D" uid="uid://1xi7fvnhpws3" path="res://Assets/button_press.png" id="4_4luo7"]
+[ext_resource type="Texture2D" uid="uid://ckbn7d6bhpdhw" path="res://Assets/dot.png" id="5_qe7yt"]
 [ext_resource type="Texture2D" uid="uid://bdyifoxmxf3vn" path="res://Assets/bg progress.png" id="5_ugfru"]
 [ext_resource type="Texture2D" uid="uid://hgcyc42a6pge" path="res://Assets/loyalty progress.png" id="6_qe7yt"]
 
@@ -27,6 +28,19 @@ texture_margin_left = 20.0
 texture_margin_top = 22.0
 texture_margin_right = 22.0
 texture_margin_bottom = 20.0
+
+[sub_resource type="Gradient" id="Gradient_1bwxx"]
+offsets = PackedFloat32Array(0.14182693, 0.7235577, 1)
+colors = PackedColorArray(0.75931805, 0.11685104, 0.09988665, 1, 0.827451, 0.49019608, 0.11764706, 1, 1, 0.9098039, 0.57254905, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rohj4"]
+gradient = SubResource("Gradient_1bwxx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1bwxx"]
+texture = SubResource("GradientTexture1D_rohj4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bynpe"]
+texture = SubResource("GradientTexture1D_rohj4")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ju8y4"]
 content_margin_left = 4.0
@@ -70,7 +84,7 @@ expand_margin_left = 2.0
 expand_margin_top = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="Image" id="Image_11awm"]
+[sub_resource type="Image" id="Image_qe7yt"]
 data = {
 "data": PackedByteArray(255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255),
 "format": "RGBA8",
@@ -80,7 +94,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_hjn8r"]
-image = SubResource("Image_11awm")
+image = SubResource("Image_qe7yt")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11awm"]
 content_margin_left = 0.0
@@ -108,6 +122,11 @@ CheckBox/icons/radio_unchecked_disabled = null
 CheckBox/icons/unchecked = null
 CheckBox/icons/unchecked_disabled = null
 CheckBox/styles/hover_pressed = SubResource("StyleBoxTexture_h3p52")
+HSlider/icons/grabber = ExtResource("5_qe7yt")
+HSlider/icons/grabber_disabled = ExtResource("5_qe7yt")
+HSlider/icons/grabber_highlight = ExtResource("5_qe7yt")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_1bwxx")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_bynpe")
 Label/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 0)
