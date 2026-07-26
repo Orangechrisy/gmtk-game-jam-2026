@@ -34,3 +34,6 @@ func exit() -> void:
 	%MainInterface.visible = false
 	%PauseMenu.visible = false
 	%MainMenu.visible = true
+
+func _on_mouse_entered() -> void:
+	MusicManager.play_sfx(MusicManager.SFX.MOUSEOVER)
