@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bq311dn3ooc1b" path="res://Events/EventOptions/options_tooltip.gd" id="1_adssf"]
 [ext_resource type="Texture2D" uid="uid://vnlwl2v8hrfd" path="res://Assets/popuprect.png" id="2_n7cop"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m61pn"]
+
 [node name="OptionsTooltip" type="Control" unique_id=261198937]
 visible = false
 custom_maximum_size = Vector2(400, -1)
@@ -21,18 +23,23 @@ OFFSET = Vector2(25, 5)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_m61pn")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PanelContainer" unique_id=287082170]
+layout_mode = 2
+texture = ExtResource("2_n7cop")
+region_rect = Rect2(0, 0, 30, 30)
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=364648170]
 layout_mode = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="PanelContainer/MarginContainer" unique_id=287082170]
-layout_mode = 2
-texture = ExtResource("2_n7cop")
-region_rect = Rect2(0, 0, 30, 25)
-patch_margin_left = 2
-patch_margin_top = 2
-patch_margin_right = 2
-patch_margin_bottom = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=395643780]
 layout_mode = 2
