@@ -283,12 +283,6 @@ potential_events = Array[ExtResource("2_lymsy")]([ExtResource("10_v03vf"), ExtRe
 loyalty = 100
 fervor = 150
 
-[node name="Area2D" type="Area2D" parent="Provinces" unique_id=1260220497]
-visible = false
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Provinces/Area2D" unique_id=61778569]
-polygon = PackedVector2Array(609, 379, 636, 329, 848, 368, 897, 324, 987, 320, 1047, 285, 1107, 304, 1176, 302, 1184, 331, 1210, 348, 1329, 384, 1324, 411, 1258, 408, 1236, 386, 1179, 397, 1161, 424, 1092, 425, 1080, 463, 1058, 466, 1005, 444, 971, 469, 901, 445, 914, 559, 969, 590, 968, 615, 960, 626, 962, 640, 938, 647, 856, 614, 872, 573, 852, 563, 854, 546, 799, 514, 782, 527, 768, 525, 750, 509, 706, 512, 673, 466, 703, 375)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1264009811]
 
 [node name="MainInterface" parent="CanvasLayer" unique_id=1175301398 instance=ExtResource("8_ry46t")]
