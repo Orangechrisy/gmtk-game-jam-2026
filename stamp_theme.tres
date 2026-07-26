@@ -1,0 +1,24 @@
+[gd_resource type="Theme" format=3 uid="uid://5jx3dfvn00ee"]
+
+[ext_resource type="Texture2D" uid="uid://c31ep7i1al0k7" path="res://Assets/stamp_hover.png" id="1_5n822"]
+[ext_resource type="Texture2D" uid="uid://d1rqc1467wuye" path="res://Assets/stamp.png" id="2_7nki3"]
+[ext_resource type="Texture2D" uid="uid://dp6bod3ol5onh" path="res://Assets/stamp_press.png" id="3_324g2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3gngh"]
+texture = ExtResource("1_5n822")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d0u6y"]
+texture = ExtResource("2_7nki3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fcnqv"]
+texture = ExtResource("3_324g2")
+
+[resource]
+Button/colors/font_color = Color(1, 0.7541897, 0.34212247, 1)
+Button/colors/font_hover_color = Color(0.99999994, 0.8133196, 0.5364086, 1)
+Button/colors/font_pressed_color = Color(1, 0.5411765, 0.34117648, 1)
+Button/constants/outline_size = 12
+Button/font_sizes/font_size = 32
+Button/styles/hover = SubResource("StyleBoxTexture_3gngh")
+Button/styles/normal = SubResource("StyleBoxTexture_d0u6y")
+Button/styles/pressed = SubResource("StyleBoxTexture_fcnqv")

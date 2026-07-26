@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://clc5ipy18t571"]
 
 [ext_resource type="Script" uid="uid://c6r0mmoc25mrb" path="res://Events/EventOptions/event_option_button.gd" id="1_q5vtx"]
+[ext_resource type="Theme" uid="uid://5jx3dfvn00ee" path="res://stamp_theme.tres" id="1_qb1ro"]
 
 [node name="EventOptionButton" type="Button" unique_id=417465851]
-custom_minimum_size = Vector2(0, 70)
-custom_maximum_size = Vector2(200, -1)
+custom_minimum_size = Vector2(160, 160)
+custom_maximum_size = Vector2(160, 160)
 offset_right = 8.0
 offset_bottom = 8.0
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 20
-text = "button"
+theme = ExtResource("1_qb1ro")
+text = "Here we are with something to do"
 autowrap_mode = 2
 script = ExtResource("1_q5vtx")
 
