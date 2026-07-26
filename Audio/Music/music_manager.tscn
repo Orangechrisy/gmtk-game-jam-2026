@@ -10,52 +10,96 @@
 [ext_resource type="AudioStream" uid="uid://chgufk7krbmw0" path="res://Audio/Music/port theme.wav" id="8_0fhrq"]
 [ext_resource type="AudioStream" uid="uid://c8ku3tg6sx6fx" path="res://Audio/Music/town theme.wav" id="9_2dnvw"]
 [ext_resource type="AudioStream" uid="uid://cd44ccbatloiq" path="res://Audio/Music/villa theme.wav" id="10_63cj8"]
+[ext_resource type="AudioStream" uid="uid://ci86x5e45oqri" path="res://Audio/sfx/survived.wav" id="11_2dnvw"]
+[ext_resource type="AudioStream" uid="uid://gook6uq6l63b" path="res://Audio/sfx/death.wav" id="11_eohum"]
+[ext_resource type="AudioStream" uid="uid://2io8hruebxdc" path="res://Audio/sfx/negative_jingle.wav" id="12_63cj8"]
+[ext_resource type="AudioStream" uid="uid://bm2fleqcwt8us" path="res://Audio/sfx/click.wav" id="13_eohum"]
+[ext_resource type="AudioStream" uid="uid://wu11emnlmgaq" path="res://Audio/sfx/shop_cant_buy.wav" id="14_63cj8"]
+[ext_resource type="AudioStream" uid="uid://c1xbdwxwjw2wg" path="res://Audio/sfx/mouseover.wav" id="14_oxawt"]
+[ext_resource type="AudioStream" uid="uid://cjh41f4qspepf" path="res://Audio/sfx/popup.wav" id="15_ruiyx"]
+[ext_resource type="AudioStream" uid="uid://cjwcqpwkrsehg" path="res://Audio/sfx/positive_jingle.wav" id="16_04x8i"]
 
 [node name="MusicManager" type="Node" unique_id=972379771]
 process_mode = 3
 script = ExtResource("1_7at3x")
+default_db = -10.0
 
-[node name="Capital (Base)" type="AudioStreamPlayer" parent="." unique_id=1306114728]
+[node name="MainTheme" type="Node" parent="." unique_id=1988159812]
+
+[node name="Capital (Base)" type="AudioStreamPlayer" parent="MainTheme" unique_id=1306114728]
 stream = ExtResource("2_lsojf")
-volume_db = -17.0
+volume_db = -15.0
 bus = &"Music"
 
-[node name="Church" type="AudioStreamPlayer" parent="." unique_id=78551235]
+[node name="Church" type="AudioStreamPlayer" parent="MainTheme" unique_id=78551235]
 stream = ExtResource("3_npfqx")
-volume_db = -17.0
+volume_db = -15.0
 bus = &"Music"
 
-[node name="Farm" type="AudioStreamPlayer" parent="." unique_id=1190168673]
+[node name="Farm" type="AudioStreamPlayer" parent="MainTheme" unique_id=1190168673]
 stream = ExtResource("4_kkx7i")
-volume_db = -17.0
+volume_db = -15.0
 bus = &"Music"
 
-[node name="Military" type="AudioStreamPlayer" parent="." unique_id=1642529419]
+[node name="Military" type="AudioStreamPlayer" parent="MainTheme" unique_id=1642529419]
 stream = ExtResource("5_xmt1h")
-volume_db = -17.0
+volume_db = -15.0
 bus = &"Music"
 
-[node name="Mine" type="AudioStreamPlayer" parent="." unique_id=539704522]
+[node name="Mine" type="AudioStreamPlayer" parent="MainTheme" unique_id=539704522]
 stream = ExtResource("6_7s7qv")
-volume_db = -17.0
+volume_db = -15.0
 bus = &"Music"
 
-[node name="Outskirts" type="AudioStreamPlayer" parent="." unique_id=1885190053]
+[node name="Outskirts" type="AudioStreamPlayer" parent="MainTheme" unique_id=1885190053]
 stream = ExtResource("7_51cxr")
-volume_db = -17.0
+volume_db = -15.0
 bus = &"Music"
 
-[node name="Port" type="AudioStreamPlayer" parent="." unique_id=2098231620]
+[node name="Port" type="AudioStreamPlayer" parent="MainTheme" unique_id=2098231620]
 stream = ExtResource("8_0fhrq")
-volume_db = -17.0
+volume_db = -15.0
 bus = &"Music"
 
-[node name="Town" type="AudioStreamPlayer" parent="." unique_id=511400352]
+[node name="Town" type="AudioStreamPlayer" parent="MainTheme" unique_id=511400352]
 stream = ExtResource("9_2dnvw")
-volume_db = -17.0
+volume_db = -15.0
 bus = &"Music"
 
-[node name="Villa" type="AudioStreamPlayer" parent="." unique_id=711764678]
+[node name="Villa" type="AudioStreamPlayer" parent="MainTheme" unique_id=711764678]
 stream = ExtResource("10_63cj8")
-volume_db = -17.0
+volume_db = -15.0
 bus = &"Music"
+
+[node name="OtherMusic" type="Node" parent="." unique_id=1814811806]
+
+[node name="BadEnding" type="AudioStreamPlayer" parent="OtherMusic" unique_id=186018772]
+stream = ExtResource("11_eohum")
+volume_db = -15.0
+bus = &"Music"
+
+[node name="GoodEnding" type="AudioStreamPlayer" parent="OtherMusic" unique_id=434166105]
+stream = ExtResource("11_2dnvw")
+volume_db = -15.0
+bus = &"Music"
+
+[node name="SFX" type="Node" parent="." unique_id=1967871921]
+
+[node name="Click" type="AudioStreamPlayer" parent="SFX" unique_id=1644419057]
+stream = ExtResource("13_eohum")
+
+[node name="ClickInvalid" type="AudioStreamPlayer" parent="SFX" unique_id=838130123]
+stream = ExtResource("14_63cj8")
+volume_db = -3.0
+
+[node name="MouseOver" type="AudioStreamPlayer" parent="SFX" unique_id=1786285962]
+stream = ExtResource("14_oxawt")
+
+[node name="PopUp" type="AudioStreamPlayer" parent="SFX" unique_id=398554281]
+stream = ExtResource("15_ruiyx")
+
+[node name="PositiveJingle" type="AudioStreamPlayer" parent="SFX" unique_id=1963551500]
+stream = ExtResource("16_04x8i")
+
+[node name="NegativeJingle" type="AudioStreamPlayer" parent="SFX" unique_id=1496384122]
+stream = ExtResource("12_63cj8")

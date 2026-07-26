@@ -57,6 +57,9 @@ text = "Quit To Main Menu"
 visible = false
 layout_mode = 1
 
+[connection signal="mouse_entered" from="PausePauseMenu/ReturnToGameButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="PausePauseMenu/ReturnToGameButton" to="." method="_on_return_to_game_button_pressed"]
+[connection signal="mouse_entered" from="PausePauseMenu/OptionsButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="PausePauseMenu/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="PausePauseMenu/QuitToMenuButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="PausePauseMenu/QuitToMenuButton" to="." method="_on_quit_to_menu_button_pressed"]

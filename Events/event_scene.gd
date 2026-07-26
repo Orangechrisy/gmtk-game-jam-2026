@@ -39,6 +39,7 @@ func event_selected(event: MapEvent):
 	create_buttons(event.get_options())
 	visible = true
 	GameState.MouseMode = GameState.Click.EVENT
+	MusicManager.play_sfx(MusicManager.SFX.POPUP)
 
 ## adjusts the event popup to fit with the auto event setup
 func set_auto_event() -> void:
@@ -92,3 +93,4 @@ func close_event(removed: bool) -> void:
 func _on_close_pressed() -> void:
 	if GameState.MouseMode == GameState.Click.EVENT:
 		close_event(false)
+	MusicManager.play_sfx(MusicManager.SFX.CLICK)

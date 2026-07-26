@@ -67,7 +67,11 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
+[connection signal="mouse_entered" from="MainMainMenu/StartGameButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MainMainMenu/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="mouse_entered" from="MainMainMenu/OptionsButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MainMainMenu/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="MainMainMenu/CreditsButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MainMainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="mouse_entered" from="MainMainMenu/QuitGameButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MainMainMenu/QuitGameButton" to="." method="_on_quit_game_button_pressed"]

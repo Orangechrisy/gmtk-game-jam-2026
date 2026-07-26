@@ -17,6 +17,7 @@ func on_mouse_mode_updated(new_mode) -> void:
 
 func _on_return_to_game_button_pressed() -> void:
 	back_up.emit()
+	play_click()
 
 func on_back_up() -> void:
 	$PausePauseMenu.visible = true
@@ -24,7 +25,15 @@ func on_back_up() -> void:
 func _on_options_button_pressed() -> void:
 	$PausePauseMenu.visible = false
 	$OptionsMenu.visible = true
+	play_click()
 
 # TODO: Improve this! Depending on how we handle the main menu!
 func _on_quit_to_menu_button_pressed() -> void:
 	GameManager.quit_to_main.emit()
+	play_click()
+
+func play_click():
+	MusicManager.play_sfx(MusicManager.SFX.CLICK)
+
+func _on_mouse_entered() -> void:
+	MusicManager.play_sfx(MusicManager.SFX.MOUSEOVER)

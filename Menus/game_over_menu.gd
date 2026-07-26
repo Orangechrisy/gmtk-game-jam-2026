@@ -14,4 +14,8 @@ func on_game_ended(ending: int, ending_title: StringName, ending_desc: String) -
 
 func _on_to_menu_button_pressed() -> void:
 	$AnimationPlayer.play("RESET")
+	MusicManager.play_sfx(MusicManager.SFX.CLICK)
 	GameManager.quit_to_main.emit()
+
+func _on_mouse_entered() -> void:
+	MusicManager.play_sfx(MusicManager.SFX.MOUSEOVER)

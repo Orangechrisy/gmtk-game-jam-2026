@@ -108,4 +108,5 @@ text = "TO MAIN MENU"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=499453540]
 libraries/ = SubResource("AnimationLibrary_dj34p")
 
+[connection signal="mouse_entered" from="ToMenuButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="ToMenuButton" to="." method="_on_to_menu_button_pressed"]

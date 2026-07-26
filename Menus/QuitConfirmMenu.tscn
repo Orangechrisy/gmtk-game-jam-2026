@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://l485x5bqjkuf"]
 
+[ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="1_dv7al"]
 [ext_resource type="Script" uid="uid://f7tc1mixxnhh" path="res://Menus/quit_confirm_menu.gd" id="1_sbb5r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_dv7al")
 script = ExtResource("1_sbb5r")
 
 [node name="BackButton" type="Button" parent="." unique_id=448864967]
@@ -20,7 +22,7 @@ offset_left = 1067.0
 offset_top = 648.0
 offset_right = 1407.0
 offset_bottom = 743.0
-text = "NO"
+text = "No"
 
 [node name="QuitButton" type="Button" parent="." unique_id=1054275629]
 layout_mode = 0
@@ -28,7 +30,7 @@ offset_left = 526.0
 offset_top = 648.0
 offset_right = 866.0
 offset_bottom = 743.0
-text = "YES"
+text = "Yes"
 
 [node name="Label" type="Label" parent="." unique_id=1511288570]
 layout_mode = 0
@@ -36,9 +38,11 @@ offset_left = 762.0
 offset_top = 246.0
 offset_right = 1173.0
 offset_bottom = 329.0
-text = "REALLY QUIT?"
+text = "Really Quit?"
 label_settings = SubResource("LabelSettings_a6wwx")
 horizontal_alignment = 1
 
+[connection signal="mouse_entered" from="BackButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="QuitButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
