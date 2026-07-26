@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dhphiyfefrdnx"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_232sp"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_ajbi3"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_codmk"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_7bg0k"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="5_wqp0j"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="6_lqa26"]
+
+[sub_resource type="Resource" id="Resource_b5yam"]
+script = ExtResource("2_ajbi3")
+val = 3
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_p5dao"]
+script = ExtResource("5_wqp0j")
+gold_change = -3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_43f46"]
+script = ExtResource("6_lqa26")
+favor_change = 2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[resource]
+script = ExtResource("4_7bg0k")
+option_name = &"MAYOR_EVENT_06_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_232sp")]([SubResource("Resource_b5yam")])
+success_effects = Array[ExtResource("3_codmk")]([SubResource("Resource_p5dao"), SubResource("Resource_43f46")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://cjdb7bvlpnn22"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_3fnfh"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="2_2wyjj"]
+[ext_resource type="Resource" uid="uid://cvagc1mr18puw" path="res://Events/EventOptions/AutoEvents/eo_autoevent_02_1.tres" id="3_3fnfh"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="4_6mdjr"]
+
+[resource]
+script = ExtResource("4_6mdjr")
+event_name = &"AUTO_EVENT_02_TITLE"
+dialogue = Array[String](["AUTO_EVENT_02_DIALOGUE_1"])
+options = Array[ExtResource("2_2wyjj")]([ExtResource("3_3fnfh")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

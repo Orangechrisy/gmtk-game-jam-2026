@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://h0nqpoonyac5"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_copqf"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_esjw8"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_gb1gd"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_copqf"]
+
+[sub_resource type="Resource" id="Resource_jpcet"]
+script = ExtResource("4_copqf")
+fervor_change = 1
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[resource]
+script = ExtResource("3_gb1gd")
+option_name = &"SOLDIER_EVENT_04_OPTION_2_TITLE"
+success_effects = Array[ExtResource("2_esjw8")]([SubResource("Resource_jpcet")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

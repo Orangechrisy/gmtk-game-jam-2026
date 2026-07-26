@@ -7,7 +7,8 @@
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_27kxq"]
 [ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="4_q163v"]
 [ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_8ugik"]
-[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="7_27kxq"]
+[ext_resource type="Script" uid="uid://vkkxn3ufe2qd" path="res://Events/EventEffects/ee_accelerate_revolt.gd" id="7_q163v"]
+[ext_resource type="Script" uid="uid://c1ok7bn8ayury" path="res://Events/EventEffects/ee_stall_revolt.gd" id="9_8ugik"]
 
 [sub_resource type="Resource" id="Resource_xx372"]
 script = ExtResource("2_8ahol")
@@ -36,10 +37,9 @@ char_name = &"CHAR_ARISTOCRAT"
 chance = 50
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
-[sub_resource type="Resource" id="Resource_ikiyu"]
-script = ExtResource("7_27kxq")
-favor_change = -2
-metadata/_custom_type_script = "uid://cixtddcjgh6op"
+[sub_resource type="Resource" id="Resource_c5iqf"]
+script = ExtResource("7_q163v")
+metadata/_custom_type_script = "uid://vkkxn3ufe2qd"
 
 [sub_resource type="Resource" id="Resource_h6qc4"]
 script = ExtResource("4_q163v")
@@ -63,16 +63,15 @@ char_name = &"CHAR_ARISTOCRAT"
 chance = 20
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
-[sub_resource type="Resource" id="Resource_7c5gs"]
-script = ExtResource("7_27kxq")
-favor_change = 1
-metadata/_custom_type_script = "uid://cixtddcjgh6op"
+[sub_resource type="Resource" id="Resource_m2evx"]
+script = ExtResource("9_8ugik")
+metadata/_custom_type_script = "uid://c1ok7bn8ayury"
 
 [resource]
 script = ExtResource("4_27kxq")
 option_name = &"ARISTOCRAT_EVENT_02_OPTION_1_TITLE"
 conditions = Array[ExtResource("1_xx372")]([SubResource("Resource_xx372")])
 success_odds = 0.5
-success_effects = Array[ExtResource("2_h6qc4")]([SubResource("Resource_h6qc4"), SubResource("Resource_27kxq"), SubResource("Resource_8ugik"), SubResource("Resource_ilrvi"), SubResource("Resource_7c5gs")])
-failure_effects = Array[ExtResource("2_h6qc4")]([SubResource("Resource_8ahol"), SubResource("Resource_q163v"), SubResource("Resource_c607i"), SubResource("Resource_gh4lc"), SubResource("Resource_ikiyu")])
+success_effects = Array[ExtResource("2_h6qc4")]([SubResource("Resource_h6qc4"), SubResource("Resource_27kxq"), SubResource("Resource_8ugik"), SubResource("Resource_ilrvi"), SubResource("Resource_m2evx")])
+failure_effects = Array[ExtResource("2_h6qc4")]([SubResource("Resource_8ahol"), SubResource("Resource_q163v"), SubResource("Resource_c607i"), SubResource("Resource_gh4lc"), SubResource("Resource_c5iqf")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

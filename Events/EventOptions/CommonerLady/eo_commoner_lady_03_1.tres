@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://ds3x5n5lvxoyx"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_gy1w4"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_3ntm2"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_oqnkd"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_2tpt1"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="6_ixac8"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="6_w51te"]
+
+[sub_resource type="Resource" id="Resource_nsyyn"]
+script = ExtResource("2_3ntm2")
+val = 1
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_ghver"]
+script = ExtResource("6_w51te")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_15yn0"]
+script = ExtResource("6_ixac8")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[resource]
+script = ExtResource("4_2tpt1")
+option_name = &"COMMONER_LADY_EVENT_03_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_gy1w4")]([SubResource("Resource_nsyyn")])
+success_effects = Array[ExtResource("3_oqnkd")]([SubResource("Resource_ghver"), SubResource("Resource_15yn0")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

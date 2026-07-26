@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="5_s1d7e"]
 [ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="6_ppcaj"]
 [ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="9_f1lsi"]
+[ext_resource type="Script" uid="uid://c1ok7bn8ayury" path="res://Events/EventEffects/ee_stall_revolt.gd" id="10_s1d7e"]
 
 [sub_resource type="Resource" id="Resource_s1d7e"]
 script = ExtResource("2_87uhk")
@@ -57,11 +58,15 @@ script = ExtResource("9_f1lsi")
 loyalty_change = 1
 metadata/_custom_type_script = "uid://2k5y8ducn717"
 
+[sub_resource type="Resource" id="Resource_nouq3"]
+script = ExtResource("10_s1d7e")
+metadata/_custom_type_script = "uid://c1ok7bn8ayury"
+
 [resource]
 script = ExtResource("3_mtw7r")
 option_name = &"RADICAL_EVENT_05_OPTION_1_TITLE"
 conditions = Array[ExtResource("1_l0qr3")]([SubResource("Resource_s1d7e")])
 success_odds = 0.5
-success_effects = Array[ExtResource("2_bcl8e")]([SubResource("Resource_xt5r6"), SubResource("Resource_ppcaj"), SubResource("Resource_f1lsi"), SubResource("Resource_ups0c")])
+success_effects = Array[ExtResource("2_bcl8e")]([SubResource("Resource_xt5r6"), SubResource("Resource_ppcaj"), SubResource("Resource_f1lsi"), SubResource("Resource_ups0c"), SubResource("Resource_nouq3")])
 failure_effects = Array[ExtResource("2_bcl8e")]([SubResource("Resource_ad5fc"), SubResource("Resource_10sfm"), SubResource("Resource_jdfbd"), SubResource("Resource_vknba")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

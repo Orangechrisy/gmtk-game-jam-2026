@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://c7tkfa1ut23pu"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_71ibu"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="3_c7pmb"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_g3347"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_vxoef"]
+[ext_resource type="Script" uid="uid://bciotqfqbxelf" path="res://Events/EventEffects/ee_change_armies.gd" id="6_ufae8"]
+
+[sub_resource type="Resource" id="Resource_c1bjq"]
+script = ExtResource("3_c7pmb")
+fervor_change = 1
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_gqoha"]
+script = ExtResource("6_ufae8")
+armies_change = 1
+metadata/_custom_type_script = "uid://bciotqfqbxelf"
+
+[resource]
+script = ExtResource("4_vxoef")
+option_name = &"SOLDIER_EVENT_05_OPTION_2_TITLE"
+success_odds = 0.5
+success_effects = Array[ExtResource("3_g3347")]([SubResource("Resource_gqoha")])
+failure_effects = Array[ExtResource("3_g3347")]([SubResource("Resource_c1bjq")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

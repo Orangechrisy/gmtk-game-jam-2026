@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://b8ops8ug3cl81"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_6m0iy"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_y1rs6"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_b4nvr"]
+[ext_resource type="Resource" uid="uid://1ebkxilg3bc5" path="res://Events/EventOptions/Farmer/eo_farmer_06_1.tres" id="4_6m0iy"]
+[ext_resource type="Resource" uid="uid://d247w8ll37wxo" path="res://Events/EventOptions/Farmer/eo_farmer_06_2.tres" id="5_y1rs6"]
+[ext_resource type="Texture2D" uid="uid://bv5fv8b5lq7qv" path="res://Assets/PORTRAIT_babushka.png" id="6_xlcbt"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_6w6m6"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_y1rs6")
+char_name = &"CHAR_FARMER"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("7_6w6m6")
+event_name = &"FARMER_EVENT_06_TITLE"
+portrait = ExtResource("6_xlcbt")
+character_name = &"CHAR_FARMER"
+dialogue = Array[String](["FARMER_EVENT_06_DIALOGUE_1"])
+conditions = Array[ExtResource("1_6m0iy")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_b4nvr")]([ExtResource("4_6m0iy"), ExtResource("5_y1rs6")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

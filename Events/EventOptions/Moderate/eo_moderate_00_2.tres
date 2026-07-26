@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://ckait7ceys6pb"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_laysh"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_pql2s"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_dgru4"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="6_0kxd8"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="7_qvqg2"]
+
+[sub_resource type="Resource" id="Resource_dls5w"]
+script = ExtResource("6_0kxd8")
+favor_change = 1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_uimwu"]
+script = ExtResource("7_qvqg2")
+favor_change = -1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[resource]
+script = ExtResource("3_dgru4")
+option_name = &"MODERATE_EVENT_00_OPTION_2_TITLE"
+success_effects = Array[ExtResource("2_pql2s")]([SubResource("Resource_dls5w"), SubResource("Resource_uimwu")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

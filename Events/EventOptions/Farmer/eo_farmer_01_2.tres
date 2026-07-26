@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://yb22bttaj803"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_lqe68"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_uqg7n"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_weocf"]
+[ext_resource type="Script" uid="uid://bsfdc1pc8iyve" path="res://Events/EventEffects/ee_change_food.gd" id="4_qjfun"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_weocf"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="6_qjfun"]
+
+[sub_resource type="Resource" id="Resource_hvv77"]
+script = ExtResource("4_qjfun")
+food_change = 1
+metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
+
+[sub_resource type="Resource" id="Resource_3altg"]
+script = ExtResource("5_weocf")
+favor_change = 2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_i2rea"]
+script = ExtResource("6_qjfun")
+fervor_change = 1
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[resource]
+script = ExtResource("3_weocf")
+option_name = &"FARMER_EVENT_01_OPTION_2_TITLE"
+success_effects = Array[ExtResource("2_uqg7n")]([SubResource("Resource_hvv77"), SubResource("Resource_3altg"), SubResource("Resource_i2rea")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

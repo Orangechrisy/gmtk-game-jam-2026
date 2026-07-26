@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="6_sj66k"]
 [ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="7_5m6a6"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="8_rewvi"]
+[ext_resource type="Script" uid="uid://c1ok7bn8ayury" path="res://Events/EventEffects/ee_stall_revolt.gd" id="9_k738k"]
 [ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="9_p8qdx"]
 
 [sub_resource type="Resource" id="Resource_xjptd"]
@@ -44,11 +45,15 @@ script = ExtResource("9_p8qdx")
 loyalty_change = 2
 metadata/_custom_type_script = "uid://2k5y8ducn717"
 
+[sub_resource type="Resource" id="Resource_wpv1v"]
+script = ExtResource("9_k738k")
+metadata/_custom_type_script = "uid://c1ok7bn8ayury"
+
 [resource]
 script = ExtResource("8_rewvi")
 option_name = &"GENERAL_EVENT_12_OPTION_2_TITLE"
 conditions = Array[ExtResource("1_k738k")]([SubResource("Resource_xjptd")])
 success_odds = 0.6
-success_effects = Array[ExtResource("4_d0co4")]([SubResource("Resource_ctj71"), SubResource("Resource_6bquq"), SubResource("Resource_204jr")])
+success_effects = Array[ExtResource("4_d0co4")]([SubResource("Resource_ctj71"), SubResource("Resource_6bquq"), SubResource("Resource_204jr"), SubResource("Resource_wpv1v")])
 failure_effects = Array[ExtResource("4_d0co4")]([SubResource("Resource_bn2tu"), SubResource("Resource_1du67"), SubResource("Resource_tmfkm")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

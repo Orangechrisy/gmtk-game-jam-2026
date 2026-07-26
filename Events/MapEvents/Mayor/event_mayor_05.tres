@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://c4n8yewjntqik"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_k3a7q"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_xenyk"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_ylk4j"]
+[ext_resource type="Resource" uid="uid://b6v6c30k1o844" path="res://Events/EventOptions/Mayor/eo_mayor_05_1.tres" id="4_gwg71"]
+[ext_resource type="Resource" uid="uid://veo7tjvyrk7l" path="res://Events/EventOptions/Mayor/eo_mayor_05_2.tres" id="5_k3a7q"]
+[ext_resource type="Texture2D" uid="uid://di4unmyalpmk4" path="res://Assets/PORTRAIT_mayor.png" id="7_hwdyl"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_qcq4a"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_xenyk")
+char_name = &"CHAR_MAYOR"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_qcq4a")
+event_name = &"MAYOR_EVENT_05_TITLE"
+portrait = ExtResource("7_hwdyl")
+character_name = &"CHAR_MAYOR"
+dialogue = Array[String](["MAYOR_EVENT_05_DIALOGUE_1"])
+conditions = Array[ExtResource("1_k3a7q")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_ylk4j")]([ExtResource("4_gwg71"), ExtResource("5_k3a7q")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

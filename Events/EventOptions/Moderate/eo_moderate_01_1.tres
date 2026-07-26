@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://2nhnelqi8vu"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_giofy"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_icg8w"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_5ip3a"]
+[ext_resource type="Script" uid="uid://b5c5lw0i7byh" path="res://Events/EventEffects/ee_run_ending.gd" id="4_tkyhj"]
+
+[sub_resource type="Resource" id="Resource_2vr42"]
+script = ExtResource("4_tkyhj")
+ending = 12
+metadata/_custom_type_script = "uid://b5c5lw0i7byh"
+
+[resource]
+script = ExtResource("3_5ip3a")
+option_name = &"MODERATE_EVENT_01_OPTION_1_TITLE"
+success_effects = Array[ExtResource("2_icg8w")]([SubResource("Resource_2vr42")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

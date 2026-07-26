@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://deoymhv7hhg6b"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_oednv"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_dxvm8"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_ushof"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="7_1j4ec"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="8_ymite"]
+
+[sub_resource type="Resource" id="Resource_fgc1p"]
+script = ExtResource("8_ymite")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_s56t4"]
+script = ExtResource("7_1j4ec")
+favor_change = -1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_0dofq"]
+script = ExtResource("8_ymite")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_5ghe4"]
+script = ExtResource("7_1j4ec")
+favor_change = 1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[resource]
+script = ExtResource("3_ushof")
+option_name = &"MODERATE_EVENT_02_OPTION_2_TITLE"
+success_odds = 0.5
+success_effects = Array[ExtResource("2_dxvm8")]([SubResource("Resource_0dofq"), SubResource("Resource_5ghe4")])
+failure_effects = Array[ExtResource("2_dxvm8")]([SubResource("Resource_fgc1p"), SubResource("Resource_s56t4")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cbker6bknuyeb"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_a1842"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_1mr6s"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_0mbee"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="5_tt7o5"]
+
+[sub_resource type="Resource" id="Resource_lavvv"]
+script = ExtResource("5_tt7o5")
+gold_change = 3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[resource]
+script = ExtResource("3_0mbee")
+option_name = &"AUTO_EVENT_CONFIRM_TITLE"
+success_effects = Array[ExtResource("2_1mr6s")]([SubResource("Resource_lavvv")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

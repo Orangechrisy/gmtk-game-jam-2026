@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_m2evx"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_c5iqf"]
 [ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="4_44k3a"]
+[ext_resource type="Script" uid="uid://vkkxn3ufe2qd" path="res://Events/EventEffects/ee_accelerate_revolt.gd" id="4_u3sgl"]
 [ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_ib85k"]
 
 [sub_resource type="Resource" id="Resource_ll02g"]
@@ -11,10 +12,9 @@ script = ExtResource("5_ib85k")
 favor_change = -1
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
-[sub_resource type="Resource" id="Resource_a2bjw"]
-script = ExtResource("4_44k3a")
-favor_change = -2
-metadata/_custom_type_script = "uid://cixtddcjgh6op"
+[sub_resource type="Resource" id="Resource_uk0r2"]
+script = ExtResource("4_u3sgl")
+metadata/_custom_type_script = "uid://vkkxn3ufe2qd"
 
 [sub_resource type="Resource" id="Resource_76d6l"]
 script = ExtResource("5_ib85k")
@@ -31,5 +31,5 @@ script = ExtResource("3_c5iqf")
 option_name = &"ARISTOCRAT_EVENT_00_OPTION_3_TITLE"
 success_odds = 0.5
 success_effects = Array[ExtResource("2_m2evx")]([SubResource("Resource_76d6l"), SubResource("Resource_nlc1t")])
-failure_effects = Array[ExtResource("2_m2evx")]([SubResource("Resource_ll02g"), SubResource("Resource_a2bjw")])
+failure_effects = Array[ExtResource("2_m2evx")]([SubResource("Resource_ll02g"), SubResource("Resource_uk0r2")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -8,7 +8,9 @@
 [ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="6_0wutx"]
 [ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="6_cid7k"]
 [ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="7_vdooc"]
+[ext_resource type="Script" uid="uid://vkkxn3ufe2qd" path="res://Events/EventEffects/ee_accelerate_revolt.gd" id="8_vdooc"]
 [ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="9_wpv1v"]
+[ext_resource type="Script" uid="uid://c1ok7bn8ayury" path="res://Events/EventEffects/ee_stall_revolt.gd" id="10_cid7k"]
 
 [sub_resource type="Resource" id="Resource_4u4dg"]
 script = ExtResource("2_3a36t")
@@ -35,6 +37,10 @@ script = ExtResource("7_vdooc")
 fervor_change = 3
 metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
+[sub_resource type="Resource" id="Resource_vdooc"]
+script = ExtResource("8_vdooc")
+metadata/_custom_type_script = "uid://vkkxn3ufe2qd"
+
 [sub_resource type="Resource" id="Resource_aekd6"]
 script = ExtResource("6_0wutx")
 gold_change = -1
@@ -50,11 +56,15 @@ script = ExtResource("9_wpv1v")
 loyalty_change = 2
 metadata/_custom_type_script = "uid://2k5y8ducn717"
 
+[sub_resource type="Resource" id="Resource_1ka0j"]
+script = ExtResource("10_cid7k")
+metadata/_custom_type_script = "uid://c1ok7bn8ayury"
+
 [resource]
 script = ExtResource("4_vdooc")
 option_name = &"GENERAL_EVENT_12_OPTION_1_TITLE"
 conditions = Array[ExtResource("1_8q75a")]([SubResource("Resource_4u4dg"), SubResource("Resource_xjptd")])
 success_odds = 0.5
-success_effects = Array[ExtResource("3_cid7k")]([SubResource("Resource_aekd6"), SubResource("Resource_6bquq"), SubResource("Resource_204jr")])
-failure_effects = Array[ExtResource("3_cid7k")]([SubResource("Resource_r681d"), SubResource("Resource_1du67"), SubResource("Resource_tmfkm")])
+success_effects = Array[ExtResource("3_cid7k")]([SubResource("Resource_aekd6"), SubResource("Resource_6bquq"), SubResource("Resource_204jr"), SubResource("Resource_1ka0j")])
+failure_effects = Array[ExtResource("3_cid7k")]([SubResource("Resource_r681d"), SubResource("Resource_1du67"), SubResource("Resource_tmfkm"), SubResource("Resource_vdooc")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

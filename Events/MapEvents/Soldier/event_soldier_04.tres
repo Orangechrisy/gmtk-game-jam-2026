@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://dsnelo78pxris"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_tjkre"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_o0gtb"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_qqyhw"]
+[ext_resource type="Resource" uid="uid://bbtwkh7qvwu2e" path="res://Events/EventOptions/Soldier/eo_soldier_04_1.tres" id="4_tjkre"]
+[ext_resource type="Resource" uid="uid://h0nqpoonyac5" path="res://Events/EventOptions/Soldier/eo_soldier_04_2.tres" id="5_o0gtb"]
+[ext_resource type="Texture2D" uid="uid://co2kwogvhbq4q" path="res://Assets/PORTRAIT_soldier.png" id="6_jwdxw"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_aq63t"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_o0gtb")
+char_name = &"CHAR_SOLDIER"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("7_aq63t")
+event_name = &"SOLDIER_EVENT_04_TITLE"
+portrait = ExtResource("6_jwdxw")
+character_name = &"CHAR_SOLDIER"
+dialogue = Array[String](["SOLDIER_EVENT_04_DIALOGUE_1", "SOLDIER_EVENT_04_DIALOGUE_2"])
+conditions = Array[ExtResource("1_tjkre")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_qqyhw")]([ExtResource("4_tjkre"), ExtResource("5_o0gtb")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

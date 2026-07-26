@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bcyqtc0bm25tt"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_crb8s"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_ium7w"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_li1sw"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_ium7w"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="4_uung3"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="5_uung3"]
+[ext_resource type="Script" uid="uid://cf4bc85w0hnct" path="res://Events/EventEffects/ee_change_province_food.gd" id="6_mkov1"]
+
+[sub_resource type="Resource" id="Resource_2bde6"]
+script = ExtResource("2_ium7w")
+val = 3
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_yffac"]
+script = ExtResource("5_uung3")
+gold_change = -3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_3172s"]
+script = ExtResource("6_mkov1")
+food_change = 1
+metadata/_custom_type_script = "uid://cf4bc85w0hnct"
+
+[sub_resource type="Resource" id="Resource_5dnmf"]
+script = ExtResource("4_uung3")
+loyalty_change = 1
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[resource]
+script = ExtResource("3_ium7w")
+option_name = &"FARMER_EVENT_04_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_crb8s")]([SubResource("Resource_2bde6")])
+success_effects = Array[ExtResource("2_li1sw")]([SubResource("Resource_yffac"), SubResource("Resource_3172s"), SubResource("Resource_5dnmf")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

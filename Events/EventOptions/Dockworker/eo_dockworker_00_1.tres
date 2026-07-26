@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://1fbk5tjm5bov"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_s73tg"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_8lwix"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_lv02x"]
+[ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="5_7l3dg"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="6_psmae"]
+
+[sub_resource type="Resource" id="Resource_w5a4j"]
+script = ExtResource("6_psmae")
+favor_change = -1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_f4wrt"]
+script = ExtResource("5_7l3dg")
+char_name = &"CHAR_ENVOY"
+chance = 25
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[resource]
+script = ExtResource("3_lv02x")
+option_name = &"DOCKWORKER_EVENT_00_OPTION_1_TITLE"
+success_effects = Array[ExtResource("2_8lwix")]([SubResource("Resource_w5a4j"), SubResource("Resource_f4wrt")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

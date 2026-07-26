@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bminglsx8upbp"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_w676s"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_c7y4d"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="4_f2jcs"]
+[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_w676s"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="5_2qmmq"]
+
+[sub_resource type="Resource" id="Resource_h4g3a"]
+script = ExtResource("4_w676s")
+fervor_change = 1
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_234bd"]
+script = ExtResource("4_f2jcs")
+gold_change = -1
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[resource]
+script = ExtResource("5_2qmmq")
+option_name = &"DOCKWORKER_EVENT_00_OPTION_2_TITLE"
+success_odds = 0.5
+success_effects = Array[ExtResource("2_c7y4d")]([SubResource("Resource_h4g3a"), SubResource("Resource_234bd")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

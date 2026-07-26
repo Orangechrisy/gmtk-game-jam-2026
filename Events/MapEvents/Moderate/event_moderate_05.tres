@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://bd31i35reh3vq"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_13dj7"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_ibaav"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_dvxtl"]
+[ext_resource type="Resource" uid="uid://n34egj025g18" path="res://Events/EventOptions/Moderate/eo_moderate_05_1.tres" id="4_13dj7"]
+[ext_resource type="Resource" uid="uid://cvttml2phujem" path="res://Events/EventOptions/Moderate/eo_moderate_05_2.tres" id="5_ibaav"]
+[ext_resource type="Resource" uid="uid://c70en4yo7byrn" path="res://Events/EventOptions/Moderate/eo_moderate_05_3.tres" id="6_dvxtl"]
+[ext_resource type="Texture2D" uid="uid://bgp6ck73u2cwg" path="res://Assets/PORTRAIT_revolution_moderate.png" id="7_bp6ml"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_xxa4f"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_ibaav")
+char_name = &"CHAR_MODERATE"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_xxa4f")
+event_name = &"MODERATE_EVENT_05_TITLE"
+portrait = ExtResource("7_bp6ml")
+character_name = &"CHAR_MODERATE"
+dialogue = Array[String](["MODERATE_EVENT_05_DIALOGUE_1", "MODERATE_EVENT_05_DIALOGUE_1"])
+conditions = Array[ExtResource("1_13dj7")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_dvxtl")]([ExtResource("4_13dj7"), ExtResource("5_ibaav"), ExtResource("6_dvxtl")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"

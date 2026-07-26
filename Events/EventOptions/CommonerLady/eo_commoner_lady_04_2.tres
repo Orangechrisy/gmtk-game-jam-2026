@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bfr7be3t5m1wl"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_t7tay"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_7ik5d"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_vwptv"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="4_t7tay"]
+
+[sub_resource type="Resource" id="Resource_mh45x"]
+script = ExtResource("4_t7tay")
+favor_change = 1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[resource]
+script = ExtResource("3_vwptv")
+option_name = &"COMMONER_LADY_EVENT_04_OPTION_2_TITLE"
+success_odds = 0.4
+success_effects = Array[ExtResource("2_7ik5d")]([SubResource("Resource_mh45x")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

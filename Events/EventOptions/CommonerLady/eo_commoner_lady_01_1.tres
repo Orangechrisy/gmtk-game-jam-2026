@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://coxdfmiel7w5u"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_rpuu4"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_uyi7d"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_86py3"]
+[ext_resource type="Script" uid="uid://g7var0ihepy2" path="res://Events/EventEffects/ee_change_province_gold_consumption.gd" id="5_uyi7d"]
+[ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_wyuft"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="6_86py3"]
+
+[sub_resource type="Resource" id="Resource_ebaxg"]
+script = ExtResource("5_wyuft")
+loyalty_change = 2
+metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_u8erh"]
+script = ExtResource("5_uyi7d")
+gold_change = -1
+metadata/_custom_type_script = "uid://g7var0ihepy2"
+
+[sub_resource type="Resource" id="Resource_me0t6"]
+script = ExtResource("6_86py3")
+favor_change = -2
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[resource]
+script = ExtResource("3_86py3")
+option_name = &"COMMONER_LADY_EVENT_01_OPTION_1_TITLE"
+success_effects = Array[ExtResource("2_uyi7d")]([SubResource("Resource_ebaxg"), SubResource("Resource_u8erh"), SubResource("Resource_me0t6")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

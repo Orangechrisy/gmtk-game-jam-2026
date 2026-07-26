@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://f6ax1g75cvvm"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_6lj02"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_f5k45"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_qo4qu"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_6lj02"]
+
+[sub_resource type="Resource" id="Resource_8dawi"]
+script = ExtResource("4_6lj02")
+favor_change = -2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[resource]
+script = ExtResource("3_qo4qu")
+option_name = &"FARMER_EVENT_02_OPTION_1_TITLE"
+success_effects = Array[ExtResource("2_f5k45")]([SubResource("Resource_8dawi")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

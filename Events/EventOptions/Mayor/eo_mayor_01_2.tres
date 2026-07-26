@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://dd5pjcw7yf0ey"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_0ingg"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_hd4a2"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="6_yckv3"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="7_eigpq"]
+
+[sub_resource type="Resource" id="Resource_15keu"]
+script = ExtResource("7_eigpq")
+favor_change = -1
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[resource]
+script = ExtResource("6_yckv3")
+option_name = &"MAYOR_EVENT_01_OPTION_2_TITLE"
+success_odds = 0.4
+success_effects = Array[ExtResource("3_hd4a2")]([SubResource("Resource_15keu")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

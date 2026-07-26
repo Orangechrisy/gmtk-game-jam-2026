@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cvagc1mr18puw"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_pjpxu"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_c25x5"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_tah65"]
+[ext_resource type="Script" uid="uid://ck3e8u2hcfhl1" path="res://Events/EventEffects/ee_change_random_province_loyalty.gd" id="4_pjpxu"]
+
+[sub_resource type="Resource" id="Resource_w7m8e"]
+script = ExtResource("4_pjpxu")
+loyalty_change = 1
+metadata/_custom_type_script = "uid://ck3e8u2hcfhl1"
+
+[resource]
+script = ExtResource("3_tah65")
+option_name = &"AUTO_EVENT_CONFIRM_TITLE"
+success_effects = Array[ExtResource("2_c25x5")]([SubResource("Resource_w7m8e")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

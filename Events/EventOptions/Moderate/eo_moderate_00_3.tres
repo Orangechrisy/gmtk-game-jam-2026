@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://cpnl6a7efghl5"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_aobhe"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_fuvr4"]
+[ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_h48rm"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_xough"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_h48rm"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="5_ii4ev"]
+[ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="7_ii4ev"]
+[ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="8_a1r88"]
+
+[sub_resource type="Resource" id="Resource_a1r88"]
+script = ExtResource("2_h48rm")
+val = 1
+metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_dls5w"]
+script = ExtResource("4_h48rm")
+favor_change = 1
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_uimwu"]
+script = ExtResource("5_ii4ev")
+favor_change = -2
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_yumhk"]
+script = ExtResource("7_ii4ev")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_h4314"]
+script = ExtResource("8_a1r88")
+char_name = &"CHAR_MODERATE"
+chance = 20
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[resource]
+script = ExtResource("3_xough")
+option_name = &"MODERATE_EVENT_00_OPTION_3_TITLE"
+conditions = Array[ExtResource("1_aobhe")]([SubResource("Resource_a1r88")])
+success_effects = Array[ExtResource("2_fuvr4")]([SubResource("Resource_dls5w"), SubResource("Resource_uimwu"), SubResource("Resource_yumhk"), SubResource("Resource_h4314")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -7,11 +7,32 @@
 [ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_v5kx5"]
 [ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="6_v5kx5"]
 [ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="7_kxc5e"]
+[ext_resource type="Script" uid="uid://vkkxn3ufe2qd" path="res://Events/EventEffects/ee_accelerate_revolt.gd" id="7_v5kx5"]
 
 [sub_resource type="Resource" id="Resource_5tlrv"]
 script = ExtResource("2_2aoax")
 val = 1
 metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_kxc5e"]
+script = ExtResource("4_v5kx5")
+fervor_change = 3
+metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_boqe5"]
+script = ExtResource("6_v5kx5")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_ta0a1"]
+script = ExtResource("7_kxc5e")
+char_name = &"CHAR_RADICAL"
+chance = 20
+metadata/_custom_type_script = "uid://bh13srps2stqj"
+
+[sub_resource type="Resource" id="Resource_fbosw"]
+script = ExtResource("7_v5kx5")
+metadata/_custom_type_script = "uid://vkkxn3ufe2qd"
 
 [sub_resource type="Resource" id="Resource_fj1vf"]
 script = ExtResource("4_v5kx5")
@@ -34,4 +55,5 @@ script = ExtResource("3_2aoax")
 option_name = &"RADICAL_EVENT_01_OPTION_2_TITLE"
 conditions = Array[ExtResource("1_45358")]([SubResource("Resource_5tlrv")])
 success_effects = Array[ExtResource("2_jvipp")]([SubResource("Resource_fj1vf"), SubResource("Resource_71s47"), SubResource("Resource_78p5d")])
+failure_effects = Array[ExtResource("2_jvipp")]([SubResource("Resource_kxc5e"), SubResource("Resource_boqe5"), SubResource("Resource_ta0a1"), SubResource("Resource_fbosw")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

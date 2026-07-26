@@ -7,11 +7,28 @@
 [ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="4_ucpru"]
 [ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="6_2r2r4"]
 [ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="7_n4hsh"]
+[ext_resource type="Script" uid="uid://c1ok7bn8ayury" path="res://Events/EventEffects/ee_stall_revolt.gd" id="8_2r2r4"]
 
 [sub_resource type="Resource" id="Resource_0i3a4"]
 script = ExtResource("2_ucpru")
 val = 1
 metadata/_custom_type_script = "uid://cc4k7bh7u82el"
+
+[sub_resource type="Resource" id="Resource_n4hsh"]
+script = ExtResource("4_ucpru")
+favor_change = -3
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_5bvwi"]
+script = ExtResource("6_2r2r4")
+armies_change = -1
+metadata/_custom_type_script = "uid://skdjmxp8agwp"
+
+[sub_resource type="Resource" id="Resource_byc5b"]
+script = ExtResource("7_n4hsh")
+char_name = &"CHAR_REBEL_LEADER"
+chance = 30
+metadata/_custom_type_script = "uid://bh13srps2stqj"
 
 [sub_resource type="Resource" id="Resource_agchg"]
 script = ExtResource("4_ucpru")
@@ -29,9 +46,15 @@ char_name = &"CHAR_REBEL_LEADER"
 chance = 30
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
+[sub_resource type="Resource" id="Resource_52biw"]
+script = ExtResource("8_2r2r4")
+metadata/_custom_type_script = "uid://c1ok7bn8ayury"
+
 [resource]
 script = ExtResource("3_g7yf5")
 option_name = &"REBEL_LEADER_EVENT_01_OPTION_3_TITLE"
 conditions = Array[ExtResource("1_ewqwp")]([SubResource("Resource_0i3a4")])
-success_effects = Array[ExtResource("2_qy8p7")]([SubResource("Resource_agchg"), SubResource("Resource_vtk3t"), SubResource("Resource_xuju6")])
+success_odds = 0.5
+success_effects = Array[ExtResource("2_qy8p7")]([SubResource("Resource_agchg"), SubResource("Resource_vtk3t"), SubResource("Resource_xuju6"), SubResource("Resource_52biw")])
+failure_effects = Array[ExtResource("2_qy8p7")]([SubResource("Resource_n4hsh"), SubResource("Resource_5bvwi"), SubResource("Resource_byc5b")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

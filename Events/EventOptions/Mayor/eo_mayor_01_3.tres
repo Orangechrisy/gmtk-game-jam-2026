@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://ch3xy75maefih"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_0e0as"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_jkyrw"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_ny8ha"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="4_xm0r3"]
+[ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_ifd06"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="6_iqawe"]
+[ext_resource type="Script" uid="uid://de4uysua35cqx" path="res://Events/EventEffects/ee_character_dies.gd" id="6_jkyrw"]
+[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="7_q7c5m"]
+
+[sub_resource type="Resource" id="Resource_eh8da"]
+script = ExtResource("2_jkyrw")
+val = 2
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_5bjua"]
+script = ExtResource("4_xm0r3")
+gold_change = -3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_l0uls"]
+script = ExtResource("5_ifd06")
+favor_change = -2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_xujqn"]
+script = ExtResource("6_jkyrw")
+char_name = &"CHAR_MAYOR"
+metadata/_custom_type_script = "uid://de4uysua35cqx"
+
+[sub_resource type="Resource" id="Resource_djwfm"]
+script = ExtResource("4_xm0r3")
+gold_change = -2
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_0jonr"]
+script = ExtResource("5_ifd06")
+favor_change = -2
+metadata/_custom_type_script = "uid://lb70iqf47cna"
+
+[sub_resource type="Resource" id="Resource_15keu"]
+script = ExtResource("7_q7c5m")
+favor_change = 2
+metadata/_custom_type_script = "uid://cixtddcjgh6op"
+
+[sub_resource type="Resource" id="Resource_83ps2"]
+script = ExtResource("6_jkyrw")
+char_name = &"CHAR_MAYOR"
+metadata/_custom_type_script = "uid://de4uysua35cqx"
+
+[resource]
+script = ExtResource("6_iqawe")
+option_name = &"MAYOR_EVENT_01_OPTION_3_TITLE"
+conditions = Array[ExtResource("1_0e0as")]([SubResource("Resource_eh8da")])
+success_odds = 0.7
+success_effects = Array[ExtResource("3_ny8ha")]([SubResource("Resource_djwfm"), SubResource("Resource_0jonr"), SubResource("Resource_15keu"), SubResource("Resource_83ps2")])
+failure_effects = Array[ExtResource("3_ny8ha")]([SubResource("Resource_5bjua"), SubResource("Resource_l0uls"), SubResource("Resource_xujqn")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

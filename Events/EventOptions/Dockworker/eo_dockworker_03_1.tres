@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="EventOption" format=3 uid="uid://bi17r44mo15py"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_2dbkc"]
+[ext_resource type="Script" uid="uid://rxidys118nij" path="res://Events/EventConditions/ec_has_gold.gd" id="2_a2six"]
+[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_ga4go"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_a2six"]
+[ext_resource type="Script" uid="uid://u81kgotj4jti" path="res://Events/EventEffects/ee_change_gold.gd" id="5_uqpku"]
+[ext_resource type="Script" uid="uid://88ckwkesx5tb" path="res://Events/EventEffects/ee_change_province_gold.gd" id="6_cqpxv"]
+
+[sub_resource type="Resource" id="Resource_xe0xd"]
+script = ExtResource("2_a2six")
+val = 3
+metadata/_custom_type_script = "uid://rxidys118nij"
+
+[sub_resource type="Resource" id="Resource_xo3on"]
+script = ExtResource("5_uqpku")
+gold_change = -3
+metadata/_custom_type_script = "uid://u81kgotj4jti"
+
+[sub_resource type="Resource" id="Resource_bovc8"]
+script = ExtResource("6_cqpxv")
+gold_change = 1
+metadata/_custom_type_script = "uid://88ckwkesx5tb"
+
+[resource]
+script = ExtResource("3_a2six")
+option_name = &"DOCKWORKER_EVENT_03_OPTION_1_TITLE"
+conditions = Array[ExtResource("1_2dbkc")]([SubResource("Resource_xe0xd")])
+success_effects = Array[ExtResource("2_ga4go")]([SubResource("Resource_xo3on"), SubResource("Resource_bovc8")])
+metadata/_custom_type_script = "uid://db3u1h61ikpph"

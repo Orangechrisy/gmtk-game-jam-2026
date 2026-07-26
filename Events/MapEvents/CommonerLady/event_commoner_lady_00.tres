@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="MapEvent" format=3 uid="uid://bvhhvotb6j7vk"]
+
+[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_oloe5"]
+[ext_resource type="Script" uid="uid://s7tl0kujlawh" path="res://Events/EventConditions/ec_char_alive.gd" id="2_lw6al"]
+[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_kmb1l"]
+[ext_resource type="Resource" uid="uid://ofkuogd7404u" path="res://Events/EventOptions/CommonerLady/eo_commoner_lady_00_1.tres" id="4_8exv2"]
+[ext_resource type="Resource" uid="uid://baivaxxkjee7o" path="res://Events/EventOptions/CommonerLady/eo_commoner_lady_00_2.tres" id="5_5iwu0"]
+[ext_resource type="Texture2D" uid="uid://jhsemvlca4q8" path="res://Assets/PORTRAIT_common_lady.png" id="7_5iwu0"]
+[ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_cbkcy"]
+
+[sub_resource type="Resource" id="Resource_2wl4a"]
+script = ExtResource("2_lw6al")
+char_name = &"CHAR_COMMONER_LADY"
+metadata/_custom_type_script = "uid://s7tl0kujlawh"
+
+[resource]
+script = ExtResource("8_cbkcy")
+event_name = &"COMMONER_LADY_EVENT_00_TITLE"
+portrait = ExtResource("7_5iwu0")
+character_name = &"CHAR_COMMONER_LADY"
+dialogue = Array[String](["COMMONER_LADY_EVENT_00_DIALOGUE_1", "COMMONER_LADY_EVENT_00_DIALOGUE_1"])
+conditions = Array[ExtResource("1_oloe5")]([SubResource("Resource_2wl4a")])
+options = Array[ExtResource("3_kmb1l")]([ExtResource("4_8exv2"), ExtResource("5_5iwu0")])
+metadata/_custom_type_script = "uid://cipcjs28d1y2n"
