@@ -70,7 +70,7 @@ func _on_place_army_button_pressed() -> void:
 		GameState.MouseMode = GameState.Click.BASIC
 
 ## adjust end day button visibility (val = true means there is an active event)
-func show_end_day(val: bool) -> void:
+func show_end_day(_val: bool) -> void:
 	var tween = create_tween()
 	tween.tween_property(%End, "offset_transform_position", Vector2(0, -50), 1.2) \
 	.set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)

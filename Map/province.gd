@@ -68,7 +68,7 @@ func _reset():
 
 # TODO: does the province need to do something on the day update not handled elsewhere?
 # like random slight adjustment to yields/consumptions?
-func on_day_updated(new_day):
+func on_day_updated(_new_day):
 	has_army = false
 
 # update the event popup and if the province has an event currently
@@ -127,7 +127,7 @@ func change_counter(counter: int, change: float) -> void:
 
 # TODO: more interesting
 ## try to do the event, based on rng and variables of the province or something
-func try_event(event: MapEvent) -> bool:
+func try_event(_event: MapEvent) -> bool:
 	return true
 	#if randf_range(0, 100) <= fervor:
 		#return true
