@@ -198,6 +198,8 @@ func get_armies_left() -> int:
 
 func change_armies_left(val: int) -> void:
 	armies_left += val
+	if armies_left < 0:
+		armies_left = 0
 	armies_left_updated.emit(armies_left)
 	
 func reset_armies_left() -> void:
@@ -212,13 +214,11 @@ func set_armies(val: int) -> void:
 	armies = val
 	if armies_left > armies:
 		armies_left = armies
-		armies_left_updated.emit(armies_left)
 
 func change_armies(val: int) -> void:
 	armies += val
 	if armies_left > armies:
 		armies_left = armies
-		armies_left_updated.emit(armies_left)
 	if armies < 0:
 		armies = 0
 

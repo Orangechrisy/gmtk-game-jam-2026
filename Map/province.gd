@@ -167,7 +167,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 					GameState.MouseMode = GameState.Click.BASIC
 					print("Army placed!")
 					has_army = true
-					GameState.change_armies(-1) # for now
+					GameState.change_armies_left(-1) # for now
 				else: # if we clicked on an invalid province
 					print("Can't place here!")
 
