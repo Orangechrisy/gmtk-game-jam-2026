@@ -128,10 +128,11 @@ func change_counter(counter: int, change: float) -> void:
 # TODO: more interesting
 ## try to do the event, based on rng and variables of the province or something
 func try_event(_event: MapEvent) -> bool:
-	return true
+	if _event.can_appear():
+		return true
 	#if randf_range(0, 100) <= fervor:
 		#return true
-	#return false
+	return false
 
 ## gets the possible events, shuffles them, and tries to fire them, if one fires it returns true
 func roll_event_odds() -> bool:
