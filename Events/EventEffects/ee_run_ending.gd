@@ -6,7 +6,7 @@ class_name EERunEnding
 @export var new_quest_level: int
 
 func do_effect() -> void:
-	pass # TODO: Implement ending functionality!
+	GameManager.end_game(ending)
 
 func get_effect_desc() -> String:
 	return "Ends your reign"

@@ -11,6 +11,7 @@ func _ready() -> void:
 	MusicManager.start_base_track()
 	for child in $Provinces.get_children():
 		GameState.provinces.append(child)
+	#PopUpManager.popup(PopUpManager.MESSAGE_POP_UP, Vector2(500.0,500.0), "TEST")
 
 ## does the necessary actions for pausing the game and opening the pause menu
 func pause_game() -> void:

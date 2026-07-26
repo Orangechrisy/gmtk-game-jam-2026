@@ -64,6 +64,10 @@ func set_curr_owner(new_value: int) -> void:
 	for effect in loss_effects_passive:
 		effect.do_effect()
 	# TODO: do other effects through this?
+	
+	#Change Color of Province
+	$BorderSprite.texture = load("res://Assets/map/"+province_name.to_lower()+" borders revolt.png")
+	PopUpManager.popup(PopUpManager.REVOLT_POP_UP, event_location)
 	GameState.province_owner_changed.emit(self)
 
 func do_loss_effects_passive() -> void:

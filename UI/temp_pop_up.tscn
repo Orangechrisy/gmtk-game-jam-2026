@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://yvrxublhw8ko"]
+
+[ext_resource type="Script" uid="uid://dhw7u7kpc3i8x" path="res://UI/temp_pop_up.gd" id="1_g70db"]
+
+[sub_resource type="Animation" id="Animation_c77e3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g70db"]
+resource_name = "longpopup"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2, 3, 4, 5, 6, 7, 8, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vlhq4"]
+resource_name = "shortpopup"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 0.53333336, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vlhq4"]
+_data = {
+&"RESET": SubResource("Animation_c77e3"),
+&"longpopup": SubResource("Animation_g70db"),
+&"shortpopup": SubResource("Animation_vlhq4")
+}
+
+[node name="TempPopUp" type="Node2D" unique_id=1977985098]
+script = ExtResource("1_g70db")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1297870958]
+libraries/ = SubResource("AnimationLibrary_vlhq4")

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_js4ak"]
 [ext_resource type="Resource" uid="uid://bg03fkvl17kvw" path="res://Events/EventOptions/Dockworker/eo_dockworker_06_1.tres" id="4_v55mm"]
 [ext_resource type="Resource" uid="uid://bc52hvw7416oo" path="res://Events/EventOptions/Dockworker/eo_dockworker_06_2.tres" id="5_7jgbt"]
-[ext_resource type="Texture2D" uid="uid://hxeh32w5ylp0" path="res://Assets/PORTRAIT_dockworker.png" id="6_cip7m"]
+[ext_resource type="Texture2D" uid="uid://hxeh32w5ylp0" path="res://Assets/Portraits/PORTRAIT_dockworker.png" id="6_cip7m"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_lue1q"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

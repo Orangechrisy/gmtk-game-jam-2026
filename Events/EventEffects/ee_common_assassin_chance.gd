@@ -9,7 +9,7 @@ func do_effect() -> void:
 	if favor <= favor_threshold:
 		var death_odds = 5 + (favor_threshold - favor)
 		if randi_range(1, 100) > death_odds:
-			pass # TODO: KILL
+			GameManager.end_game(GameState.Ending.COMMON_ASSASSIN)
 
 func get_effect_desc() -> String:
 	return "Chance of Assassination if Common Favor is below %f" % favor_threshold

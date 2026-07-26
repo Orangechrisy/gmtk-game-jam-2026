@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" format=3 uid="uid://c36inbarfeyp0"]
+
+[ext_resource type="Script" uid="uid://q6mopch5uf0f" path="res://Characters/character.gd" id="1_y3ypr"]
+
+[resource]
+script = ExtResource("1_y3ypr")
+char_name = &"CHAR_ENVOY"
+has_quest = true
+metadata/_custom_type_script = "uid://q6mopch5uf0f"

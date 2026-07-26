@@ -4,44 +4,178 @@
 [ext_resource type="Script" uid="uid://dgiaygg7d0lfy" path="res://Map/map.gd" id="1_ptuj4"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="2_lymsy"]
 [ext_resource type="Texture2D" uid="uid://rynluodgnnph" path="res://Assets/map/map background.png" id="2_rr5ff"]
-[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="3_5cbny"]
 [ext_resource type="Texture2D" uid="uid://ybnjup5qrbgg" path="res://Assets/map/map no graphics.png" id="3_mxsvv"]
-[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_ptuj4"]
 [ext_resource type="Texture2D" uid="uid://dcxh4g3kklyli" path="res://Assets/map/capital borders.png" id="4_vhrv6"]
-[ext_resource type="Resource" uid="uid://dgoh6t7wpr2iu" path="res://Events/EventOptions/eo_test_option.tres" id="5_rr5ff"]
 [ext_resource type="Texture2D" uid="uid://beecgcyqxftdn" path="res://Assets/map/capital graphics.png" id="5_ry46t"]
 [ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/Portraits/PORTRAIT_spymaster.png" id="6_a0x20"]
 [ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="7_vhrv6"]
+[ext_resource type="Resource" uid="uid://btiqxbrywe5l7" path="res://Events/MapEvents/PartyGuy/event_partyguy_10.tres" id="8_1wgij"]
 [ext_resource type="PackedScene" uid="uid://dv1r3qybxrmhh" path="res://UI/MainInterface.tscn" id="8_ry46t"]
+[ext_resource type="Resource" uid="uid://kn4ap1psmnqy" path="res://Events/MapEvents/Spymaster/event_spymaster_06.tres" id="9_0a72k"]
 [ext_resource type="PackedScene" uid="uid://bqnp5ys3qf240" path="res://Menus/PauseMenu.tscn" id="10_5cbny"]
+[ext_resource type="Resource" uid="uid://cda208rh2p57b" path="res://Events/MapEvents/Duchess/event_duchess_04.tres" id="10_v03vf"]
 [ext_resource type="Texture2D" uid="uid://twboqgmbmwqr" path="res://Assets/map/military borders.png" id="11_2s2l7"]
+[ext_resource type="Resource" uid="uid://dox2fhnjjchwx" path="res://Events/MapEvents/General/event_general_08.tres" id="11_fmnyg"]
+[ext_resource type="Resource" uid="uid://badg7y0ovr0ni" path="res://Events/MapEvents/General/event_general_09.tres" id="12_ghw5y"]
 [ext_resource type="Texture2D" uid="uid://b6b7nch0gbay8" path="res://Assets/map/military graphics.png" id="12_l4t2t"]
 [ext_resource type="PackedScene" uid="uid://d1xxop0i5b08d" path="res://Menus/MainMenu.tscn" id="12_rr5ff"]
+[ext_resource type="Resource" uid="uid://ddmib4w47avif" path="res://Events/MapEvents/General/event_general_10.tres" id="13_yhrl3"]
+[ext_resource type="Resource" uid="uid://c2ttyf61hkn8x" path="res://Events/MapEvents/General/event_general_11.tres" id="14_ff88x"]
 [ext_resource type="Texture2D" uid="uid://d0p2tki0xxbqs" path="res://Assets/map/farm borders.png" id="14_tuo8d"]
+[ext_resource type="Resource" uid="uid://b6aaoy2cgtyp6" path="res://Events/MapEvents/General/event_general_12.tres" id="15_6t7vu"]
 [ext_resource type="Texture2D" uid="uid://b3amc2ljut3qx" path="res://Assets/map/farm graphics.png" id="15_mxsvv"]
+[ext_resource type="Resource" uid="uid://dcwaag8j8j3c4" path="res://Events/MapEvents/Radical/event_radical_05.tres" id="16_h5133"]
 [ext_resource type="Texture2D" uid="uid://crkahhrx7e2n2" path="res://Assets/map/town borders.png" id="16_umtr8"]
+[ext_resource type="Resource" uid="uid://dgiq1ntnabpfy" path="res://Events/MapEvents/Aristocrat/event_aristocrat_05.tres" id="17_a6a5f"]
 [ext_resource type="Texture2D" uid="uid://co6nw1njh0y5l" path="res://Assets/map/town graphics.png" id="17_elfnc"]
 [ext_resource type="Texture2D" uid="uid://cs8tnggqyvlql" path="res://Assets/map/city borders.png" id="18_cflbt"]
+[ext_resource type="Resource" uid="uid://cxrog03mlrucq" path="res://Events/MapEvents/Aristocrat/event_aristocrat_06.tres" id="18_oyesl"]
 [ext_resource type="Texture2D" uid="uid://cjjql43b67euk" path="res://Assets/map/villa borders.png" id="18_tuo8d"]
 [ext_resource type="Texture2D" uid="uid://dp566hv3p70ma" path="res://Assets/map/city graphics.png" id="19_fvyq6"]
 [ext_resource type="Texture2D" uid="uid://clk01wywejdko" path="res://Assets/map/villa graphics.png" id="19_mxsvv"]
+[ext_resource type="Resource" uid="uid://cvwjmqc1s0ysp" path="res://Events/MapEvents/RebelLeader/event_rebel_leader_05.tres" id="19_pg5mm"]
 [ext_resource type="Texture2D" uid="uid://re0caj3mr5yx" path="res://Assets/map/mine borders.png" id="20_2rup5"]
+[ext_resource type="Resource" uid="uid://bpu70b7i4mp43" path="res://Events/MapEvents/RebelLeader/event_rebel_leader_06.tres" id="20_ho264"]
+[ext_resource type="Resource" uid="uid://dw2v4xgikyc1e" path="res://Events/MapEvents/Soldier/event_soldier_05.tres" id="21_17p78"]
 [ext_resource type="Texture2D" uid="uid://dhun5yn43nx6x" path="res://Assets/map/mine graphics.png" id="21_ddnc5"]
+[ext_resource type="Resource" uid="uid://b65ww245pp8bt" path="res://Events/MapEvents/Soldier/event_soldier_06.tres" id="22_fl58w"]
 [ext_resource type="Texture2D" uid="uid://ekcl47rgenij" path="res://Assets/map/port borders.png" id="22_qttqk"]
 [ext_resource type="Texture2D" uid="uid://b15qli5b5hfwy" path="res://Assets/map/port graphics.png" id="23_mo27p"]
+[ext_resource type="Resource" uid="uid://bulv3vrs24xwh" path="res://Events/MapEvents/Soldier/event_soldier_07.tres" id="23_nj24v"]
 [ext_resource type="Texture2D" uid="uid://8wb0ka014uca" path="res://Assets/map/church borders.png" id="24_rtxnd"]
 [ext_resource type="Texture2D" uid="uid://cp0ea18qb7qu5" path="res://Assets/map/church graphics.png" id="25_2fp1f"]
+[ext_resource type="Resource" uid="uid://dwkms5hlqye65" path="res://Events/MapEvents/PartyGuy/event_partyguy_00.tres" id="26_6064m"]
 [ext_resource type="Texture2D" uid="uid://cdnwutuwmfb0h" path="res://Assets/map/outskirts borders.png" id="26_bhx0d"]
 [ext_resource type="Texture2D" uid="uid://c8ivtmjr4c0dy" path="res://Assets/map/outskirts graphics.png" id="27_fo4gr"]
-
-[sub_resource type="Resource" id="Resource_btrrw"]
-script = ExtResource("2_lymsy")
-event_name = &"Test Event"
-portrait = ExtResource("6_a0x20")
-character_name = &"spy master"
-dialogue = Array[String](["this is a test event", "it has, test things"])
-options = Array[ExtResource("4_ptuj4")]([ExtResource("5_rr5ff"), ExtResource("5_rr5ff"), ExtResource("5_rr5ff"), ExtResource("5_rr5ff"), ExtResource("5_rr5ff")])
-metadata/_custom_type_script = "uid://cipcjs28d1y2n"
+[ext_resource type="Resource" uid="uid://bufk54cg3qxbw" path="res://Events/MapEvents/PartyGuy/event_partyguy_01.tres" id="27_hlqxi"]
+[ext_resource type="Resource" uid="uid://bxey83dpu4ajc" path="res://Events/MapEvents/Spymaster/event_spymaster_00.tres" id="28_6ub07"]
+[ext_resource type="Resource" uid="uid://cf112p7ths6td" path="res://Events/MapEvents/Spymaster/event_spymaster_01.tres" id="29_pwrgl"]
+[ext_resource type="Resource" uid="uid://dwypfs0yp2o40" path="res://Events/MapEvents/Duchess/event_duchess_00.tres" id="30_lqbnx"]
+[ext_resource type="Resource" uid="uid://fng4icxelscx" path="res://Events/MapEvents/Duchess/event_duchess_05.tres" id="31_rw81d"]
+[ext_resource type="Resource" uid="uid://qw0l8rrtk4fk" path="res://Events/MapEvents/Priest/event_priest_02.tres" id="32_5baig"]
+[ext_resource type="Resource" uid="uid://ckclukglixcnd" path="res://Events/MapEvents/Radical/event_radical_00.tres" id="33_j22at"]
+[ext_resource type="Resource" uid="uid://ckhxi5cutt6wn" path="res://Events/MapEvents/Aristocrat/event_aristocrat_00.tres" id="34_mobot"]
+[ext_resource type="Resource" uid="uid://lni0stvyvqp2" path="res://Events/MapEvents/Aristocrat/event_aristocrat_01.tres" id="35_msky3"]
+[ext_resource type="Resource" uid="uid://cvb7chyo7esc0" path="res://Events/MapEvents/Baron/event_baron_00.tres" id="36_b7yov"]
+[ext_resource type="Resource" uid="uid://s6cauwugy0es" path="res://Events/MapEvents/Envoy/event_envoy_00.tres" id="37_3q1fr"]
+[ext_resource type="Resource" uid="uid://de61brjey01vp" path="res://Events/MapEvents/PeasantGirl/event_peasant_girl_00.tres" id="38_3ogv5"]
+[ext_resource type="Resource" uid="uid://d0aer5m68swg3" path="res://Events/MapEvents/RebelLeader/event_rebel_leader_00.tres" id="39_l2duj"]
+[ext_resource type="Resource" uid="uid://rqvs7xkse3w5" path="res://Events/MapEvents/RebelLeader/event_rebel_leader_01.tres" id="40_negt4"]
+[ext_resource type="Resource" uid="uid://vlxt0sgrmagn" path="res://Events/MapEvents/RebelLeader/event_rebel_leader_02.tres" id="41_aeo77"]
+[ext_resource type="Resource" uid="uid://wlh8qhck1a8v" path="res://Events/MapEvents/RebelLeader/event_rebel_leader_03.tres" id="42_3cm7n"]
+[ext_resource type="Resource" uid="uid://cxlrpvwxon0ll" path="res://Events/MapEvents/Mayor/event_mayor_00.tres" id="43_d2mbk"]
+[ext_resource type="Resource" uid="uid://bkudwty655nhi" path="res://Events/MapEvents/Moderate/event_moderate_00.tres" id="44_2a72b"]
+[ext_resource type="Resource" uid="uid://b735aa1clr8lj" path="res://Events/MapEvents/Moderate/event_moderate_01.tres" id="45_vs0c2"]
+[ext_resource type="Resource" uid="uid://j6vx0hofqufe" path="res://Events/MapEvents/Moderate/event_moderate_02.tres" id="46_tmu7w"]
+[ext_resource type="Resource" uid="uid://oghfsqre0lr1" path="res://Events/MapEvents/Moderate/event_moderate_07.tres" id="47_lbv4l"]
+[ext_resource type="Resource" uid="uid://bsj11kaaql6qk" path="res://Events/MapEvents/PartyGuy/event_partyguy_03.tres" id="50_27812"]
+[ext_resource type="Resource" uid="uid://l6q38homf72f" path="res://Events/MapEvents/Spymaster/event_spymaster_03.tres" id="51_tpu5o"]
+[ext_resource type="Resource" uid="uid://ytgyxbq6bi8l" path="res://Events/MapEvents/CommonDude/event_commondude_00.tres" id="52_fn86r"]
+[ext_resource type="Resource" uid="uid://ck57nxojgvkhk" path="res://Events/MapEvents/CommonDude/event_commondude_01.tres" id="53_iffoo"]
+[ext_resource type="Resource" uid="uid://g4rmc3nmderm" path="res://Events/MapEvents/CommonDude/event_commondude_02.tres" id="54_whoe0"]
+[ext_resource type="Resource" uid="uid://csdkc0mkes1ha" path="res://Events/MapEvents/CommonDude/event_commondude_03.tres" id="55_7vxwr"]
+[ext_resource type="Resource" uid="uid://dopvxxv5sc4l3" path="res://Events/MapEvents/CommonDude/event_commondude_04.tres" id="56_vq8q3"]
+[ext_resource type="Resource" uid="uid://csc74bynpig1m" path="res://Events/MapEvents/Radical/event_radical_06.tres" id="57_hy57x"]
+[ext_resource type="Resource" uid="uid://yw8inqaxoche" path="res://Events/MapEvents/Aristocrat/event_aristocrat_02.tres" id="58_pb1bc"]
+[ext_resource type="Resource" uid="uid://fsbvs6caxto6" path="res://Events/MapEvents/Foreman/event_foreman_00.tres" id="59_s3g6a"]
+[ext_resource type="Resource" uid="uid://bd31i35reh3vq" path="res://Events/MapEvents/Moderate/event_moderate_05.tres" id="60_2i1ns"]
+[ext_resource type="Resource" uid="uid://cxsayo22wodj8" path="res://Events/MapEvents/CommonerLady/event_commoner_lady_03.tres" id="61_a2yb7"]
+[ext_resource type="Resource" uid="uid://cwjqsr75ouio4" path="res://Events/MapEvents/Soldier/event_soldier_00.tres" id="62_fp5ed"]
+[ext_resource type="Resource" uid="uid://caitvija1j205" path="res://Events/MapEvents/PartyGuy/event_partyguy_07.tres" id="65_yewd3"]
+[ext_resource type="Resource" uid="uid://bkq5cjisl7mbi" path="res://Events/MapEvents/PartyGuy/event_partyguy_08.tres" id="66_p0i85"]
+[ext_resource type="Resource" uid="uid://ccn52ctnwdlwl" path="res://Events/MapEvents/PartyGuy/event_partyguy_09.tres" id="67_07r3t"]
+[ext_resource type="Resource" uid="uid://8n0w4r37s2fr" path="res://Events/MapEvents/General/event_general_06.tres" id="68_mhpjl"]
+[ext_resource type="Resource" uid="uid://ds8k5solrkj6o" path="res://Events/MapEvents/General/event_general_07.tres" id="69_ni16r"]
+[ext_resource type="Resource" uid="uid://cya02rkcd1uih" path="res://Events/MapEvents/Radical/event_radical_04.tres" id="70_awegw"]
+[ext_resource type="Resource" uid="uid://b105i845q7om6" path="res://Events/MapEvents/Aristocrat/event_aristocrat_04.tres" id="71_5oy01"]
+[ext_resource type="Resource" uid="uid://b41yeh7fm4gv4" path="res://Events/MapEvents/Mayor/event_mayor_06.tres" id="72_pn5q2"]
+[ext_resource type="Resource" uid="uid://dsnelo78pxris" path="res://Events/MapEvents/Soldier/event_soldier_04.tres" id="73_4bb6g"]
+[ext_resource type="Resource" uid="uid://cw6ufocii5808" path="res://Events/MapEvents/PartyGuy/event_partyguy_02.tres" id="76_5eeoe"]
+[ext_resource type="Resource" uid="uid://bwgnknxs51dqw" path="res://Events/MapEvents/Spymaster/event_spymaster_02.tres" id="77_hs4xj"]
+[ext_resource type="Resource" uid="uid://dybqm0cvd1yfh" path="res://Events/MapEvents/Duchess/event_duchess_01.tres" id="78_4s7c4"]
+[ext_resource type="Resource" uid="uid://dbi4uugum6gpj" path="res://Events/MapEvents/General/event_general_00.tres" id="79_ab5du"]
+[ext_resource type="Resource" uid="uid://dhotg0pxqh3s7" path="res://Events/MapEvents/General/event_general_01.tres" id="80_b58bq"]
+[ext_resource type="Resource" uid="uid://5g3je18bxt7l" path="res://Events/MapEvents/Radical/event_radical_01.tres" id="81_5ayqr"]
+[ext_resource type="Resource" uid="uid://dx58org8ttgfr" path="res://Events/MapEvents/PeasantGirl/event_peasant_girl_01.tres" id="82_fbii6"]
+[ext_resource type="Resource" uid="uid://c635l3h4430yw" path="res://Events/MapEvents/RebelLeader/event_rebel_leader_04.tres" id="83_vwtlc"]
+[ext_resource type="Resource" uid="uid://bgjayw7oi4mii" path="res://Events/MapEvents/Mayor/event_mayor_01.tres" id="84_lc1h5"]
+[ext_resource type="Resource" uid="uid://jwjclrfdueyy" path="res://Events/MapEvents/Mayor/event_mayor_02.tres" id="85_2e67y"]
+[ext_resource type="Resource" uid="uid://d4dmgm4lju06d" path="res://Events/MapEvents/Mayor/event_mayor_03.tres" id="86_ghqos"]
+[ext_resource type="Resource" uid="uid://dqvv6cwl458qt" path="res://Events/MapEvents/Mayor/event_mayor_04.tres" id="87_8hisj"]
+[ext_resource type="Resource" uid="uid://c4n8yewjntqik" path="res://Events/MapEvents/Mayor/event_mayor_05.tres" id="88_3gavg"]
+[ext_resource type="Resource" uid="uid://5r5huxk8r3ho" path="res://Events/MapEvents/Moderate/event_moderate_03.tres" id="89_0n1o4"]
+[ext_resource type="Resource" uid="uid://7mab1n2pbwf3" path="res://Events/MapEvents/Moderate/event_moderate_04.tres" id="90_6r2uy"]
+[ext_resource type="Resource" uid="uid://bvhhvotb6j7vk" path="res://Events/MapEvents/CommonerLady/event_commoner_lady_00.tres" id="91_vugma"]
+[ext_resource type="Resource" uid="uid://cgaq6ba7b3rb0" path="res://Events/MapEvents/CommonerLady/event_commoner_lady_01.tres" id="92_xrirw"]
+[ext_resource type="Resource" uid="uid://ce4ssxvww16oj" path="res://Events/MapEvents/CommonerLady/event_commoner_lady_02.tres" id="93_6a5e6"]
+[ext_resource type="Resource" uid="uid://bawcgyq1s7qkw" path="res://Events/MapEvents/PartyGuy/event_partyguy_05.tres" id="96_kpt1a"]
+[ext_resource type="Resource" uid="uid://oh78cdevf1ny" path="res://Events/MapEvents/Duchess/event_duchess_02.tres" id="97_v4eay"]
+[ext_resource type="Resource" uid="uid://dl762pqssuagk" path="res://Events/MapEvents/Duchess/event_duchess_03.tres" id="98_umg62"]
+[ext_resource type="Resource" uid="uid://ds4ahjdi8cdk7" path="res://Events/MapEvents/General/event_general_05.tres" id="99_mqwhp"]
+[ext_resource type="Resource" uid="uid://bw234pxbocku1" path="res://Events/MapEvents/Envoy/event_envoy_01.tres" id="100_tccev"]
+[ext_resource type="Resource" uid="uid://woj6dmw1acx" path="res://Events/MapEvents/Envoy/event_envoy_02.tres" id="101_ofbyu"]
+[ext_resource type="Resource" uid="uid://bxdcfopfhqq7r" path="res://Events/MapEvents/Envoy/event_envoy_03.tres" id="102_56it7"]
+[ext_resource type="Resource" uid="uid://bqu3qa6pnbobd" path="res://Events/MapEvents/Envoy/event_envoy_04.tres" id="103_dg43j"]
+[ext_resource type="Resource" uid="uid://dko8eroevleau" path="res://Events/MapEvents/Envoy/event_envoy_05.tres" id="104_a4rdo"]
+[ext_resource type="Resource" uid="uid://cvymuhm1ju8sg" path="res://Events/MapEvents/Envoy/event_envoy_06.tres" id="105_01cmf"]
+[ext_resource type="Resource" uid="uid://c8ldyaf4isevv" path="res://Events/MapEvents/Envoy/event_envoy_07.tres" id="106_aigab"]
+[ext_resource type="Resource" uid="uid://daxq8nxvsbn3q" path="res://Events/MapEvents/Dockworker/event_dockworker_00.tres" id="107_cfbr1"]
+[ext_resource type="Resource" uid="uid://ee4yr1jroy56" path="res://Events/MapEvents/Dockworker/event_dockworker_01.tres" id="108_s0wi0"]
+[ext_resource type="Resource" uid="uid://b50ptcpifkwyd" path="res://Events/MapEvents/Dockworker/event_dockworker_02.tres" id="109_7a0ar"]
+[ext_resource type="Resource" uid="uid://byvlj67s7tbii" path="res://Events/MapEvents/Dockworker/event_dockworker_03.tres" id="110_qrdbc"]
+[ext_resource type="Resource" uid="uid://cgxdwu33kou24" path="res://Events/MapEvents/Dockworker/event_dockworker_04.tres" id="111_qfdts"]
+[ext_resource type="Resource" uid="uid://wgrihhyjhq8t" path="res://Events/MapEvents/Dockworker/event_dockworker_05.tres" id="112_763ck"]
+[ext_resource type="Resource" uid="uid://ro20hytme87g" path="res://Events/MapEvents/Dockworker/event_dockworker_06.tres" id="113_hqbs6"]
+[ext_resource type="Resource" uid="uid://bbgps5uq5jtrm" path="res://Events/MapEvents/Soldier/event_soldier_01.tres" id="114_0qwdc"]
+[ext_resource type="Resource" uid="uid://hl5g2qf2oapi" path="res://Events/MapEvents/PartyGuy/event_partyguy_04.tres" id="117_utumh"]
+[ext_resource type="Resource" uid="uid://mm322iq6mdao" path="res://Events/MapEvents/Spymaster/event_spymaster_04.tres" id="118_vlsua"]
+[ext_resource type="Resource" uid="uid://cdg4ov5pls7po" path="res://Events/MapEvents/General/event_general_02.tres" id="119_yn055"]
+[ext_resource type="Resource" uid="uid://bpyjn3xftwiqy" path="res://Events/MapEvents/CommonDude/event_commondude_05.tres" id="120_mu3uc"]
+[ext_resource type="Resource" uid="uid://bm6nwmeq7iyao" path="res://Events/MapEvents/Radical/event_radical_02.tres" id="121_awsg0"]
+[ext_resource type="Resource" uid="uid://dyh8fowlpodm0" path="res://Events/MapEvents/Farmer/event_farmer_00.tres" id="122_n0rfs"]
+[ext_resource type="Resource" uid="uid://cf088pysprdwh" path="res://Events/MapEvents/Farmer/event_farmer_01.tres" id="123_iw5xg"]
+[ext_resource type="Resource" uid="uid://csdl134bcxbwc" path="res://Events/MapEvents/Farmer/event_farmer_02.tres" id="124_mfn4v"]
+[ext_resource type="Resource" uid="uid://77y07ud7gjnn" path="res://Events/MapEvents/Farmer/event_farmer_03.tres" id="125_qjy3s"]
+[ext_resource type="Resource" uid="uid://ca2opxv3dga6v" path="res://Events/MapEvents/Farmer/event_farmer_04.tres" id="126_ex145"]
+[ext_resource type="Resource" uid="uid://lrp30p8txehi" path="res://Events/MapEvents/Farmer/event_farmer_05.tres" id="127_4mfxr"]
+[ext_resource type="Resource" uid="uid://3sx0ydue2ukv" path="res://Events/MapEvents/PartyGuy/event_partyguy_06.tres" id="130_5bhnp"]
+[ext_resource type="Resource" uid="uid://b50e44klw2bib" path="res://Events/MapEvents/Priest/event_priest_00.tres" id="131_a852n"]
+[ext_resource type="Resource" uid="uid://c3ug7pwu64wp8" path="res://Events/MapEvents/Priest/event_priest_01.tres" id="132_rr735"]
+[ext_resource type="Resource" uid="uid://cq1nxsanevp3s" path="res://Events/MapEvents/Priest/event_priest_03.tres" id="133_1e50w"]
+[ext_resource type="Resource" uid="uid://r3q4x8vvg6lx" path="res://Events/MapEvents/Priest/event_priest_04.tres" id="134_8g1hp"]
+[ext_resource type="Resource" uid="uid://b4psydbphqvsp" path="res://Events/MapEvents/Priest/event_priest_05.tres" id="135_b1jse"]
+[ext_resource type="Resource" uid="uid://bq3j7r8g6b7ws" path="res://Events/MapEvents/Radical/event_radical_03.tres" id="136_1pe55"]
+[ext_resource type="Resource" uid="uid://yirkklueuvvp" path="res://Events/MapEvents/PeasantGirl/event_peasant_girl_06.tres" id="137_uy3h2"]
+[ext_resource type="Resource" uid="uid://bj3mgsc5s48ny" path="res://Events/MapEvents/Moderate/event_moderate_06.tres" id="138_ec37a"]
+[ext_resource type="Resource" uid="uid://6nod0hl2qg8g" path="res://Events/MapEvents/CommonerLady/event_commoner_lady_04.tres" id="139_u5lc2"]
+[ext_resource type="Resource" uid="uid://sv0yvtkru1ws" path="res://Events/MapEvents/Soldier/event_soldier_02.tres" id="140_b8elw"]
+[ext_resource type="Resource" uid="uid://oefimdy7ey2m" path="res://Events/MapEvents/Spymaster/event_spymaster_05.tres" id="143_gtxtm"]
+[ext_resource type="Resource" uid="uid://dwe551e5446vk" path="res://Events/MapEvents/Aristocrat/event_aristocrat_03.tres" id="144_jeto3"]
+[ext_resource type="Resource" uid="uid://b0w18ti3rlg12" path="res://Events/MapEvents/Baron/event_baron_01.tres" id="145_nvotj"]
+[ext_resource type="Resource" uid="uid://dq7q1ulbcsa1x" path="res://Events/MapEvents/Baron/event_baron_02.tres" id="146_4if8u"]
+[ext_resource type="Resource" uid="uid://bwp0t4gb5i02f" path="res://Events/MapEvents/Baron/event_baron_03.tres" id="147_k02us"]
+[ext_resource type="Resource" uid="uid://c8n7rhmlm4nai" path="res://Events/MapEvents/Baron/event_baron_04.tres" id="148_i36a4"]
+[ext_resource type="Resource" uid="uid://7c4gssqoddn0" path="res://Events/MapEvents/Baron/event_baron_05.tres" id="149_a2unw"]
+[ext_resource type="Resource" uid="uid://bivsx4hht5qrw" path="res://Events/MapEvents/Baron/event_baron_06.tres" id="150_kj6b4"]
+[ext_resource type="Resource" uid="uid://bdb8an8c2st6a" path="res://Events/MapEvents/Baron/event_baron_07.tres" id="151_tkm7p"]
+[ext_resource type="Resource" uid="uid://cs2hhbx160eve" path="res://Events/MapEvents/Baron/event_baron_08.tres" id="152_g3jmk"]
+[ext_resource type="Resource" uid="uid://c8qfo38lc7j36" path="res://Events/MapEvents/Baron/event_baron_09.tres" id="153_kktpo"]
+[ext_resource type="Resource" uid="uid://b8ops8ug3cl81" path="res://Events/MapEvents/Farmer/event_farmer_06.tres" id="154_no53y"]
+[ext_resource type="Resource" uid="uid://bgo4f8gj8tak" path="res://Events/MapEvents/Soldier/event_soldier_03.tres" id="155_btoln"]
+[ext_resource type="Resource" uid="uid://d2vap136kibd2" path="res://Events/MapEvents/General/event_general_03.tres" id="158_tif3e"]
+[ext_resource type="Resource" uid="uid://bluvr05362pbc" path="res://Events/MapEvents/General/event_general_04.tres" id="159_5a3q0"]
+[ext_resource type="Resource" uid="uid://cn6gc81jkqfnx" path="res://Events/MapEvents/Envoy/event_envoy_08.tres" id="160_mvfel"]
+[ext_resource type="Resource" uid="uid://ber3a12fslrg" path="res://Events/MapEvents/PeasantGirl/event_peasant_girl_02.tres" id="161_xq04n"]
+[ext_resource type="Resource" uid="uid://xdhbn86tjfy1" path="res://Events/MapEvents/PeasantGirl/event_peasant_girl_03.tres" id="162_t2bvp"]
+[ext_resource type="Resource" uid="uid://babgytchm8uf4" path="res://Events/MapEvents/PeasantGirl/event_peasant_girl_04.tres" id="163_nfeuu"]
+[ext_resource type="Resource" uid="uid://ctr7iievjlqy5" path="res://Events/MapEvents/PeasantGirl/event_peasant_girl_05.tres" id="164_caw4a"]
+[ext_resource type="Resource" uid="uid://b1lithli6vai8" path="res://Events/MapEvents/Foreman/event_foreman_01.tres" id="165_66ifc"]
+[ext_resource type="Resource" uid="uid://40nst1nub8qd" path="res://Events/MapEvents/Foreman/event_foreman_02.tres" id="166_q7wnd"]
+[ext_resource type="Resource" uid="uid://bu51a6fw1i8hu" path="res://Events/MapEvents/Foreman/event_foreman_03.tres" id="167_thq8r"]
+[ext_resource type="Resource" uid="uid://d0j4jdmcjkgib" path="res://Events/MapEvents/Foreman/event_foreman_04.tres" id="168_ly437"]
+[ext_resource type="Resource" uid="uid://b2gvgm85ybc7l" path="res://Events/MapEvents/Foreman/event_foreman_05.tres" id="169_b4jef"]
+[ext_resource type="Resource" uid="uid://b3tr2c35igges" path="res://Events/MapEvents/Foreman/event_foreman_06.tres" id="170_v34en"]
+[ext_resource type="PackedScene" uid="uid://cirml1k3rad5a" path="res://Menus/GameOverMenu.tscn" id="174_0a72k"]
 
 [node name="Map" type="Node2D" unique_id=932399740]
 script = ExtResource("1_ptuj4")
@@ -68,7 +202,7 @@ vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328,
 province_name = "Military"
 province_border_image = ExtResource("11_2s2l7")
 province_graphics_image = ExtResource("12_l4t2t")
-potential_events = Array[ExtResource("2_lymsy")]([ExtResource("7_vhrv6")])
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("8_1wgij"), ExtResource("9_0a72k"), ExtResource("10_v03vf"), ExtResource("11_fmnyg"), ExtResource("12_ghw5y"), ExtResource("13_yhrl3"), ExtResource("14_ff88x"), ExtResource("15_6t7vu"), ExtResource("16_h5133"), ExtResource("17_a6a5f"), ExtResource("18_oyesl"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("21_17p78"), ExtResource("22_fl58w"), ExtResource("23_nj24v")])
 event_location = Vector2(900, 380)
 loyalty = 100
 
@@ -77,7 +211,7 @@ vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 
 province_name = "Capital"
 province_border_image = ExtResource("4_vhrv6")
 province_graphics_image = ExtResource("5_ry46t")
-potential_events = Array[ExtResource("2_lymsy")]([SubResource("Resource_btrrw")])
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("26_6064m"), ExtResource("27_hlqxi"), ExtResource("8_1wgij"), ExtResource("28_6ub07"), ExtResource("29_pwrgl"), ExtResource("30_lqbnx"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("32_5baig"), ExtResource("33_j22at"), ExtResource("34_mobot"), ExtResource("35_msky3"), ExtResource("36_b7yov"), ExtResource("37_3q1fr"), ExtResource("38_3ogv5"), ExtResource("39_l2duj"), ExtResource("40_negt4"), ExtResource("41_aeo77"), ExtResource("42_3cm7n"), ExtResource("43_d2mbk"), ExtResource("44_2a72b"), ExtResource("45_vs0c2"), ExtResource("46_tmu7w"), ExtResource("47_lbv4l")])
 event_location = Vector2(670, 520)
 food_yield = 32.0
 food_consumption = 12.0
@@ -91,6 +225,7 @@ vertices = PackedVector2Array(735, 285, 621, 445, 604, 597, 503, 589, 539, 527, 
 province_name = "Town"
 province_border_image = ExtResource("16_umtr8")
 province_graphics_image = ExtResource("17_elfnc")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("50_27812"), ExtResource("8_1wgij"), ExtResource("51_tpu5o"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("52_fn86r"), ExtResource("53_iffoo"), ExtResource("54_whoe0"), ExtResource("55_7vxwr"), ExtResource("56_vq8q3"), ExtResource("57_hy57x"), ExtResource("58_pb1bc"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("59_s3g6a"), ExtResource("60_2i1ns"), ExtResource("47_lbv4l"), ExtResource("61_a2yb7"), ExtResource("62_fp5ed")])
 loyalty = 100
 
 [node name="Villa" parent="Provinces" unique_id=448714367 instance=ExtResource("1_5ej7w")]
@@ -98,6 +233,7 @@ vertices = PackedVector2Array(784, 628, 733, 549, 784, 499, 944, 554, 951, 700, 
 province_name = "Villa"
 province_border_image = ExtResource("18_tuo8d")
 province_graphics_image = ExtResource("19_mxsvv")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("65_yewd3"), ExtResource("66_p0i85"), ExtResource("67_07r3t"), ExtResource("8_1wgij"), ExtResource("31_rw81d"), ExtResource("68_mhpjl"), ExtResource("69_ni16r"), ExtResource("15_6t7vu"), ExtResource("70_awegw"), ExtResource("71_5oy01"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("72_pn5q2"), ExtResource("47_lbv4l"), ExtResource("73_4bb6g")])
 loyalty = 100
 
 [node name="City" parent="Provinces" unique_id=203984502 instance=ExtResource("1_5ej7w")]
@@ -105,6 +241,7 @@ vertices = PackedVector2Array(1030, 625, 1019, 537, 992, 530, 988, 561, 944, 554
 province_name = "City"
 province_border_image = ExtResource("18_cflbt")
 province_graphics_image = ExtResource("19_fvyq6")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("76_5eeoe"), ExtResource("8_1wgij"), ExtResource("77_hs4xj"), ExtResource("78_4s7c4"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("79_ab5du"), ExtResource("80_b58bq"), ExtResource("15_6t7vu"), ExtResource("81_5ayqr"), ExtResource("57_hy57x"), ExtResource("82_fbii6"), ExtResource("83_vwtlc"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("84_lc1h5"), ExtResource("85_2e67y"), ExtResource("86_ghqos"), ExtResource("87_8hisj"), ExtResource("88_3gavg"), ExtResource("89_0n1o4"), ExtResource("90_6r2uy"), ExtResource("47_lbv4l"), ExtResource("91_vugma"), ExtResource("92_xrirw"), ExtResource("93_6a5e6")])
 loyalty = 100
 fervor = 150
 
@@ -113,6 +250,7 @@ vertices = PackedVector2Array(1266, 333, 1311, 417, 1242, 427, 1246, 501, 1426, 
 province_name = "Port"
 province_border_image = ExtResource("22_qttqk")
 province_graphics_image = ExtResource("23_mo27p")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("96_kpt1a"), ExtResource("8_1wgij"), ExtResource("97_v4eay"), ExtResource("98_umg62"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("99_mqwhp"), ExtResource("15_6t7vu"), ExtResource("57_hy57x"), ExtResource("100_tccev"), ExtResource("101_ofbyu"), ExtResource("102_56it7"), ExtResource("103_dg43j"), ExtResource("104_a4rdo"), ExtResource("105_01cmf"), ExtResource("106_aigab"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("47_lbv4l"), ExtResource("107_cfbr1"), ExtResource("108_s0wi0"), ExtResource("109_7a0ar"), ExtResource("110_qrdbc"), ExtResource("111_qfdts"), ExtResource("112_763ck"), ExtResource("113_hqbs6"), ExtResource("114_0qwdc")])
 loyalty = 100
 
 [node name="Farm" parent="Provinces" unique_id=1918935467 instance=ExtResource("1_5ej7w")]
@@ -120,6 +258,7 @@ vertices = PackedVector2Array(996, 281, 1086, 228, 1164, 328, 1255, 332, 1305, 4
 province_name = "Farm"
 province_border_image = ExtResource("14_tuo8d")
 province_graphics_image = ExtResource("15_mxsvv")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("117_utumh"), ExtResource("118_vlsua"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("119_yn055"), ExtResource("15_6t7vu"), ExtResource("120_mu3uc"), ExtResource("121_awsg0"), ExtResource("57_hy57x"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("47_lbv4l"), ExtResource("122_n0rfs"), ExtResource("123_iw5xg"), ExtResource("124_mfn4v"), ExtResource("125_qjy3s"), ExtResource("126_ex145"), ExtResource("127_4mfxr"), ExtResource("62_fp5ed")])
 loyalty = 100
 
 [node name="Church" parent="Provinces" unique_id=1489639061 instance=ExtResource("1_5ej7w")]
@@ -127,6 +266,7 @@ vertices = PackedVector2Array(1446, 716, 1330, 697, 1323, 644, 1268, 611, 1352, 
 province_name = "Church"
 province_border_image = ExtResource("24_rtxnd")
 province_graphics_image = ExtResource("25_2fp1f")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("130_5bhnp"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("131_a852n"), ExtResource("132_rr735"), ExtResource("32_5baig"), ExtResource("133_1e50w"), ExtResource("134_8g1hp"), ExtResource("135_b1jse"), ExtResource("136_1pe55"), ExtResource("137_uy3h2"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("138_ec37a"), ExtResource("47_lbv4l"), ExtResource("139_u5lc2"), ExtResource("140_b8elw")])
 loyalty = 100
 
 [node name="Outskirts" parent="Provinces" unique_id=1740394256 instance=ExtResource("1_5ej7w")]
@@ -134,6 +274,7 @@ vertices = PackedVector2Array(328, 987, 302, 882, 222, 849, 273, 503, 380, 506, 
 province_name = "Outskirts"
 province_border_image = ExtResource("26_bhx0d")
 province_graphics_image = ExtResource("27_fo4gr")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("8_1wgij"), ExtResource("143_gtxtm"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("57_hy57x"), ExtResource("144_jeto3"), ExtResource("145_nvotj"), ExtResource("146_4if8u"), ExtResource("147_k02us"), ExtResource("148_i36a4"), ExtResource("149_a2unw"), ExtResource("150_kj6b4"), ExtResource("151_tkm7p"), ExtResource("152_g3jmk"), ExtResource("153_kktpo"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("47_lbv4l"), ExtResource("154_no53y"), ExtResource("155_btoln")])
 loyalty = 150
 
 [node name="Mine" parent="Provinces" unique_id=1791617832 instance=ExtResource("1_5ej7w")]
@@ -141,6 +282,7 @@ vertices = PackedVector2Array(1239, 510, 1160, 527, 1129, 637, 1187, 649, 1184, 
 province_name = "Mine"
 province_border_image = ExtResource("20_2rup5")
 province_graphics_image = ExtResource("21_ddnc5")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("158_tif3e"), ExtResource("159_5a3q0"), ExtResource("15_6t7vu"), ExtResource("57_hy57x"), ExtResource("160_mvfel"), ExtResource("161_xq04n"), ExtResource("162_t2bvp"), ExtResource("163_nfeuu"), ExtResource("164_caw4a"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("165_66ifc"), ExtResource("166_q7wnd"), ExtResource("167_thq8r"), ExtResource("168_ly437"), ExtResource("169_b4jef"), ExtResource("170_v34en"), ExtResource("47_lbv4l")])
 loyalty = 100
 fervor = 150
 
@@ -156,3 +298,5 @@ visible = false
 
 [node name="MainMenu" parent="CanvasLayer" unique_id=136163537 instance=ExtResource("12_rr5ff")]
 unique_name_in_owner = true
+
+[node name="GameOverMenu" parent="CanvasLayer" unique_id=1308238179 instance=ExtResource("174_0a72k")]

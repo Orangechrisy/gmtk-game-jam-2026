@@ -27,6 +27,10 @@ var current_province: Province
 # Characters
 @export var characters: Array[Character]
 
+# Endings
+@export var ending_names: Array[StringName]
+@export var ending_texts: Array[String]
+
 # Events
 @export var auto_event_odds: float = 1 # TODO: Set to something reasonable
 @export var auto_events: Array[MapEvent]
@@ -58,6 +62,7 @@ signal armies_left_updated(new_armies_left)
 signal active_events(any_active)
 signal mouse_mode_updated(new_mode)
 signal province_owner_changed(province: Province)
+signal game_ended(ending: int, ending_name: StringName, ending_text: String)
 
 # Day
 
@@ -207,3 +212,6 @@ func get_character_by_name(val: StringName) -> Character:
 			return character
 			
 	return null
+
+func emit_ending(ending: int):
+	game_ended.emit(ending)
