@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://nq5b2qatca1p" path="res://Menus/pause_menu.gd" id="1_3ke7c"]
 [ext_resource type="PackedScene" uid="uid://dglekacdrwykk" path="res://Menus/OptionsMenu.tscn" id="2_7n1tg"]
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="2_hnfxo"]
+[ext_resource type="Texture2D" uid="uid://cxk3n0dbgbcha" path="res://Assets/black_screen.png" id="3_t2718"]
+[ext_resource type="Texture2D" uid="uid://cw16lggs6288t" path="res://Assets/event_paper.png" id="3_wpn1c"]
 
 [node name="PauseMenu" type="Control" unique_id=273141382]
 layout_mode = 3
@@ -14,6 +16,23 @@ script = ExtResource("1_3ke7c")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="PausePauseMenu" unique_id=1102109687]
+modulate = Color(1, 1, 1, 0.4509804)
+position = Vector2(960, 540)
+texture = ExtResource("3_t2718")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PausePauseMenu" unique_id=127009554]
+layout_mode = 0
+offset_left = 707.0
+offset_top = 145.0
+offset_right = 1240.0
+offset_bottom = 941.0
+texture = ExtResource("3_wpn1c")
+patch_margin_left = 237
+patch_margin_top = 237
+patch_margin_right = 238
+patch_margin_bottom = 238
 
 [node name="Label" type="Label" parent="PausePauseMenu" unique_id=167713226]
 top_level = true
