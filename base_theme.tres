@@ -1,14 +1,29 @@
 [gd_resource type="Theme" format=3 uid="uid://cqeqtwae5syvw"]
 
 [ext_resource type="FontFile" uid="uid://l6t7h404y86i" path="res://Assets/BLKCHCRY.TTF" id="1_6qegq"]
+[ext_resource type="Texture2D" uid="uid://b2phesvhax72f" path="res://Assets/button_hover.png" id="2_11awm"]
 [ext_resource type="Texture2D" uid="uid://ds6g7o6ocdeux" path="res://Assets/button.png" id="2_hjn8r"]
+[ext_resource type="Texture2D" uid="uid://1xi7fvnhpws3" path="res://Assets/button_press.png" id="4_4luo7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3p52"]
+texture = ExtResource("2_11awm")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4v7s"]
-content_margin_left = 0.0
 texture = ExtResource("2_hjn8r")
 texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tkv4"]
+texture = ExtResource("4_4luo7")
+texture_margin_left = 20.0
+texture_margin_top = 22.0
+texture_margin_right = 22.0
 texture_margin_bottom = 20.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ju8y4"]
@@ -54,9 +69,13 @@ content_margin_bottom = 0.0
 
 [resource]
 default_font = ExtResource("1_6qegq")
+Button/colors/font_color = Color(0.23921569, 0.03137255, 0.011764706, 1)
+Button/colors/font_hover_color = Color(0.9832905, 0.7267877, 0.6860619, 1)
 Button/font_sizes/font_size = 36
 Button/fonts/font = ExtResource("1_6qegq")
+Button/styles/hover = SubResource("StyleBoxTexture_h3p52")
 Button/styles/normal = SubResource("StyleBoxTexture_g4v7s")
+Button/styles/pressed = SubResource("StyleBoxTexture_0tkv4")
 Label/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 0)

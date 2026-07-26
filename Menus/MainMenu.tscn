@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1xxop0i5b08d"]
 
 [ext_resource type="Script" uid="uid://bsflcq4p15bta" path="res://Menus/main_menu.gd" id="1_otibh"]
+[ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="2_5ncg0"]
 [ext_resource type="PackedScene" uid="uid://dglekacdrwykk" path="res://Menus/OptionsMenu.tscn" id="2_lbqne"]
 [ext_resource type="PackedScene" uid="uid://kykrpyebwvu2" path="res://Menus/CreditsMenu.tscn" id="3_430ii"]
 [ext_resource type="PackedScene" uid="uid://l485x5bqjkuf" path="res://Menus/QuitConfirmMenu.tscn" id="4_3p42x"]
@@ -24,7 +25,8 @@ offset_left = 407.0
 offset_top = 479.0
 offset_right = 1477.0
 offset_bottom = 537.0
-text = "START GAME"
+theme = ExtResource("2_5ncg0")
+text = "Start Game"
 
 [node name="OptionsButton" type="Button" parent="MainMainMenu" unique_id=2008765758]
 layout_mode = 0
@@ -32,7 +34,8 @@ offset_left = 407.0
 offset_top = 590.0
 offset_right = 1477.0
 offset_bottom = 648.0
-text = "OPTIONS"
+theme = ExtResource("2_5ncg0")
+text = "Options"
 
 [node name="CreditsButton" type="Button" parent="MainMainMenu" unique_id=42583149]
 layout_mode = 0
@@ -40,7 +43,8 @@ offset_left = 407.0
 offset_top = 697.0
 offset_right = 1477.0
 offset_bottom = 755.0
-text = "CREDITS"
+theme = ExtResource("2_5ncg0")
+text = "Credits"
 
 [node name="QuitGameButton" type="Button" parent="MainMainMenu" unique_id=1788453671]
 layout_mode = 0
@@ -48,7 +52,8 @@ offset_left = 407.0
 offset_top = 805.0
 offset_right = 1477.0
 offset_bottom = 863.0
-text = "QUIT GAME"
+theme = ExtResource("2_5ncg0")
+text = "Quit Game"
 
 [node name="OptionsMenu" parent="." unique_id=806118121 instance=ExtResource("2_lbqne")]
 visible = false

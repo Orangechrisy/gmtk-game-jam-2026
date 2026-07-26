@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dnjk2ss4nd552" path="res://UI/main_interface.gd" id="1_51hqq"]
 [ext_resource type="Texture2D" uid="uid://b32gv2gcf3vbp" path="res://Assets/border_fancy.png" id="2_itd1i"]
+[ext_resource type="Texture2D" uid="uid://btnbbryglsl5l" path="res://Assets/inner_wood.png" id="3_h3p52"]
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="3_tllhj"]
 [ext_resource type="Texture2D" uid="uid://dv0tu217j8ocx" path="res://Assets/down_paper.png" id="4_t76gb"]
 
@@ -13,10 +14,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme = ExtResource("3_tllhj")
 script = ExtResource("1_51hqq")
 
-[node name="DayPatch" type="NinePatchRect" parent="." unique_id=1339747190]
+[node name="DayTextureRect" type="TextureRect" parent="." unique_id=1746535586]
+layout_mode = 0
+offset_right = 219.0
+offset_bottom = 102.0
+texture = ExtResource("3_h3p52")
+expand_mode = 1
+stretch_mode = 1
+flip_v = true
+
+[node name="DayPatch" type="NinePatchRect" parent="DayTextureRect" unique_id=1339747190]
 layout_mode = 1
 offset_right = 252.0
 offset_bottom = 136.0
@@ -25,7 +36,7 @@ region_rect = Rect2(95, 96, 109, 109)
 patch_margin_right = 94
 patch_margin_bottom = 98
 
-[node name="DayLabel" type="Label" parent="DayPatch" unique_id=2033442182]
+[node name="DayLabel" type="Label" parent="DayTextureRect/DayPatch" unique_id=2033442182]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 15.0
@@ -35,7 +46,20 @@ theme_override_font_sizes/font_size = 64
 text = "Day 30"
 vertical_alignment = 1
 
-[node name="ToRevPatch" type="NinePatchRect" parent="." unique_id=1951793489]
+[node name="ToRevolutionTextureRect" type="TextureRect" parent="." unique_id=220496515]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -217.0
+offset_right = 217.0
+offset_bottom = 71.0
+grow_horizontal = 2
+texture = ExtResource("3_h3p52")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="ToRevPatch" type="NinePatchRect" parent="ToRevolutionTextureRect" unique_id=1951793489]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -51,7 +75,7 @@ patch_margin_top = 7
 patch_margin_right = 90
 patch_margin_bottom = 92
 
-[node name="ToRevolutionLabel" type="Label" parent="ToRevPatch" unique_id=1517534400]
+[node name="ToRevolutionLabel" type="Label" parent="ToRevolutionTextureRect/ToRevPatch" unique_id=1517534400]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
@@ -64,25 +88,35 @@ text = "Days to Revolution"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DaysUntilPatch" type="NinePatchRect" parent="ToRevPatch" unique_id=431869903]
+[node name="TextureRect" type="TextureRect" parent="ToRevolutionTextureRect/ToRevPatch" unique_id=641523270]
+layout_mode = 1
+offset_left = 183.0
+offset_top = 82.0
+offset_right = 317.0
+offset_bottom = 214.0
+texture = ExtResource("3_h3p52")
+expand_mode = 1
+stretch_mode = 1
+flip_v = true
+
+[node name="DaysUntilPatch" type="NinePatchRect" parent="ToRevolutionTextureRect/ToRevPatch" unique_id=431869903]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -100.0
+offset_top = 79.0
 offset_right = 100.0
-offset_bottom = 169.0
+offset_bottom = 248.0
 grow_horizontal = 2
-offset_transform_enabled = true
-offset_transform_position = Vector2(0, 79)
 texture = ExtResource("2_itd1i")
-region_rect = Rect2(0, 31, 204, 174)
+region_rect = Rect2(0, 30, 204, 175)
 patch_margin_left = 90
-patch_margin_top = 59
+patch_margin_top = 60
 patch_margin_right = 90
 patch_margin_bottom = 90
 
-[node name="DaysUntilRevLabel" type="Label" parent="ToRevPatch/DaysUntilPatch" unique_id=617288251]
+[node name="DaysUntilRevLabel" type="Label" parent="ToRevolutionTextureRect/ToRevPatch/DaysUntilPatch" unique_id=617288251]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -104,7 +138,19 @@ text = "30"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CommonerPatch" type="NinePatchRect" parent="." unique_id=1583367913]
+[node name="CommonerTextureRect" type="TextureRect" parent="." unique_id=341963524]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -447.0
+offset_right = 223.0
+grow_vertical = 0
+texture = ExtResource("3_h3p52")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="CommonerPatch" type="NinePatchRect" parent="CommonerTextureRect" unique_id=1583367913]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -117,7 +163,7 @@ region_rect = Rect2(93, 0, 111, 111)
 patch_margin_top = 103
 patch_margin_right = 99
 
-[node name="FoodLabel" type="Label" parent="CommonerPatch" unique_id=1102535232]
+[node name="FoodLabel" type="Label" parent="CommonerTextureRect/CommonerPatch" unique_id=1102535232]
 unique_name_in_owner = true
 layout_mode = 1
 offset_left = 12.0
@@ -127,7 +173,7 @@ offset_bottom = 103.0
 theme_override_font_sizes/font_size = 52
 text = "Food: 50"
 
-[node name="CommonFervor" type="Label" parent="CommonerPatch" unique_id=91270367]
+[node name="CommonFervor" type="Label" parent="CommonerTextureRect/CommonerPatch" unique_id=91270367]
 custom_maximum_size = Vector2(100, 360)
 layout_mode = 1
 anchors_preset = 4
@@ -152,7 +198,7 @@ s"
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="CommonFervorBar" type="ProgressBar" parent="CommonerPatch/CommonFervor" unique_id=1444342403]
+[node name="CommonFervorBar" type="ProgressBar" parent="CommonerTextureRect/CommonerPatch/CommonFervor" unique_id=1444342403]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 4
@@ -166,7 +212,7 @@ grow_vertical = 2
 value = 100.0
 fill_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="CommonerPatch" unique_id=1209328157]
+[node name="NinePatchRect" type="NinePatchRect" parent="CommonerTextureRect/CommonerPatch" unique_id=1209328157]
 layout_mode = 0
 offset_top = 62.0
 offset_right = 226.0
@@ -176,7 +222,7 @@ region_rect = Rect2(96, 115, 78, 64)
 patch_margin_right = 61
 patch_margin_bottom = 51
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="CommonerPatch" unique_id=1895192485]
+[node name="NinePatchRect2" type="NinePatchRect" parent="CommonerTextureRect/CommonerPatch" unique_id=1895192485]
 layout_mode = 0
 offset_top = 113.0
 offset_right = 226.0
@@ -188,7 +234,22 @@ patch_margin_top = 58
 patch_margin_right = 51
 patch_margin_bottom = 4
 
-[node name="NoblePatch" type="NinePatchRect" parent="." unique_id=221247489]
+[node name="NobleTextureRect2" type="TextureRect" parent="." unique_id=88494692]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -223.0
+offset_top = -447.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_h3p52")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="NoblePatch" type="NinePatchRect" parent="NobleTextureRect2" unique_id=221247489]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -206,7 +267,7 @@ patch_margin_top = 97
 patch_margin_right = 4
 patch_margin_bottom = 6
 
-[node name="GoldLabel" type="Label" parent="NoblePatch" unique_id=880146691]
+[node name="GoldLabel" type="Label" parent="NobleTextureRect2/NoblePatch" unique_id=880146691]
 unique_name_in_owner = true
 layout_mode = 1
 offset_left = 55.0
@@ -216,16 +277,19 @@ offset_bottom = 103.0
 theme_override_font_sizes/font_size = 52
 text = "Gold: 50"
 
-[node name="NobleFervor" type="Label" parent="NoblePatch" unique_id=2136776712]
+[node name="NobleFervor" type="Label" parent="NobleTextureRect2/NoblePatch" unique_id=2136776712]
 custom_maximum_size = Vector2(100, 360)
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 47.0
-offset_top = -85.0
-offset_right = 115.0
-offset_bottom = 203.0
+offset_left = -91.0
+offset_top = -90.0
+offset_right = -23.0
+offset_bottom = 198.0
+grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/line_spacing = -24
 theme_override_font_sizes/font_size = 54
@@ -238,21 +302,24 @@ s"
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="NobleFervorBar" type="ProgressBar" parent="NoblePatch/NobleFervor" unique_id=1815256241]
+[node name="NobleFervorBar" type="ProgressBar" parent="NobleTextureRect2/NoblePatch/NobleFervor" unique_id=1815256241]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 4
+anchors_preset = 6
+anchor_left = 1.0
 anchor_top = 0.5
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 81.0
-offset_top = -157.0
-offset_right = 164.0
-offset_bottom = 156.0
+offset_left = -168.0
+offset_top = -152.0
+offset_right = -85.0
+offset_bottom = 161.0
+grow_horizontal = 0
 grow_vertical = 2
 value = 100.0
 fill_mode = 2
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="NoblePatch" unique_id=1582659756]
+[node name="NinePatchRect2" type="NinePatchRect" parent="NobleTextureRect2/NoblePatch" unique_id=1582659756]
 layout_mode = 0
 offset_left = 33.0
 offset_top = 113.0
@@ -265,7 +332,7 @@ patch_margin_top = 45
 patch_margin_right = 5
 patch_margin_bottom = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="NoblePatch" unique_id=1664544397]
+[node name="NinePatchRect" type="NinePatchRect" parent="NobleTextureRect2/NoblePatch" unique_id=1664544397]
 layout_mode = 0
 offset_left = 33.0
 offset_top = 62.0
@@ -281,8 +348,9 @@ patch_margin_bottom = 44
 [node name="Armies" type="TextureRect" parent="." unique_id=342733701]
 layout_mode = 1
 offset_left = 325.0
+offset_top = -50.0
 offset_right = 645.0
-offset_bottom = 220.0
+offset_bottom = 207.0
 texture = ExtResource("4_t76gb")
 
 [node name="PlaceArmyLabel" type="Label" parent="Armies" unique_id=1599275818]
@@ -292,9 +360,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -137.5
-offset_top = 18.0
+offset_top = 68.0
 offset_right = 137.5
-offset_bottom = 71.0
+offset_bottom = 127.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 46
@@ -315,6 +383,7 @@ grow_horizontal = 2
 text = "Place Army"
 
 [node name="End" type="TextureRect" parent="." unique_id=1916225851]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -323,6 +392,9 @@ offset_left = 320.0
 offset_right = 640.0
 offset_bottom = 220.0
 grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -300)
+offset_transform_visual_only = false
 texture = ExtResource("4_t76gb")
 
 [node name="EndDay" type="Button" parent="End" unique_id=1690599600]
@@ -334,9 +406,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -112.0
-offset_top = -30.0
+offset_top = -5.5
 offset_right = 112.0
-offset_bottom = 56.0
+offset_bottom = 80.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "End Day"

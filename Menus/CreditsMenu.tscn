@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://kykrpyebwvu2"]
 
 [ext_resource type="Script" uid="uid://bjxmbmu7ftl2l" path="res://Menus/credits_menu.gd" id="1_fil7c"]
+[ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="2_t86ds"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
 font_size = 48
@@ -20,7 +21,8 @@ offset_left = 806.0
 offset_top = 849.0
 offset_right = 1146.0
 offset_bottom = 944.0
-text = "BACK TO MENU"
+theme = ExtResource("2_t86ds")
+text = "Back"
 
 [node name="Label" type="Label" parent="." unique_id=1511288570]
 layout_mode = 0

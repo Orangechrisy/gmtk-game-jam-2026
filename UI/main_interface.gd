@@ -67,9 +67,15 @@ func _on_place_army_button_pressed() -> void:
 
 ## adjust end day button visibility (val = true means there is an active event)
 func show_end_day(val: bool) -> void:
-	%EndDay.visible = not val
+	var tween = create_tween()
+	tween.tween_property(%End, "offset_transform_position", Vector2(0, -50), 1.2) \
+	.set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	await tween.finished
 
 ## ends the day when pressed
 func _on_end_day_pressed() -> void:
-	%EndDay.visible = false
+	var tween = create_tween()
+	tween.tween_property(%End, "offset_transform_position", Vector2(0, -300), 1.0) \
+	.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	await tween.finished
 	GameManager.end_day()

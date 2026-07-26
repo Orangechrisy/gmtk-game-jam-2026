@@ -10,6 +10,7 @@ script = ExtResource("1_pnl1e")
 [node name="Area2D" type="Area2D" parent="." unique_id=1042257964]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=727500454]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0)
 
 [node name="BorderSprite" type="Sprite2D" parent="." unique_id=737159659]
 z_index = -1

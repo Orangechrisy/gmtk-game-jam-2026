@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dcxh4g3kklyli" path="res://Assets/map/capital borders.png" id="4_vhrv6"]
 [ext_resource type="Resource" uid="uid://dgoh6t7wpr2iu" path="res://Events/EventOptions/eo_test_option.tres" id="5_rr5ff"]
 [ext_resource type="Texture2D" uid="uid://beecgcyqxftdn" path="res://Assets/map/capital graphics.png" id="5_ry46t"]
-[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/PORTRAIT_spymaster.png" id="6_a0x20"]
+[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/Portraits/PORTRAIT_spymaster.png" id="6_a0x20"]
 [ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="7_vhrv6"]
 [ext_resource type="PackedScene" uid="uid://dv1r3qybxrmhh" path="res://UI/MainInterface.tscn" id="8_ry46t"]
 [ext_resource type="PackedScene" uid="uid://bqnp5ys3qf240" path="res://Menus/PauseMenu.tscn" id="10_5cbny"]
@@ -136,10 +136,6 @@ province_border_image = ExtResource("26_bhx0d")
 province_graphics_image = ExtResource("27_fo4gr")
 loyalty = 150
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1264009811]
-[node name="MainInterface" parent="CanvasLayer" unique_id=1175301398 instance=ExtResource("8_ry46t")]
-unique_name_in_owner = true
-
 [node name="Mine" parent="Provinces" unique_id=1791617832 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(1239, 510, 1160, 527, 1129, 637, 1187, 649, 1184, 680, 1330, 734, 1326, 644, 1264, 614, 1352, 553)
 province_name = "Mine"
@@ -147,6 +143,12 @@ province_border_image = ExtResource("20_2rup5")
 province_graphics_image = ExtResource("21_ddnc5")
 loyalty = 100
 fervor = 150
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1264009811]
+
+[node name="MainInterface" parent="CanvasLayer" unique_id=1175301398 instance=ExtResource("8_ry46t")]
+unique_name_in_owner = true
+visible = false
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=273141382 instance=ExtResource("10_5cbny")]
 unique_name_in_owner = true
