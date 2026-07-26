@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://ddwbxpq0d5h2g" path="res://Events/EventOptions/Mayor/eo_mayor_04_1.tres" id="4_mqqtx"]
 [ext_resource type="Resource" uid="uid://sptbbn0j5s2d" path="res://Events/EventOptions/Mayor/eo_mayor_04_2.tres" id="5_gesha"]
 [ext_resource type="Resource" uid="uid://cw6j7a21ey0gt" path="res://Events/EventOptions/Mayor/eo_mayor_04_3.tres" id="6_817o0"]
-[ext_resource type="Texture2D" uid="uid://di4unmyalpmk4" path="res://Assets/PORTRAIT_mayor.png" id="7_qnmc6"]
+[ext_resource type="Texture2D" uid="uid://di4unmyalpmk4" path="res://Assets/Portraits/PORTRAIT_mayor.png" id="7_qnmc6"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_xsxn6"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

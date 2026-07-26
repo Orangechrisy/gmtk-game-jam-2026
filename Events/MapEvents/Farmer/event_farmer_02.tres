@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://f6ax1g75cvvm" path="res://Events/EventOptions/Farmer/eo_farmer_02_1.tres" id="4_nwvil"]
 [ext_resource type="Resource" uid="uid://b6bvhmdbx7jt8" path="res://Events/EventOptions/Farmer/eo_farmer_02_2.tres" id="5_b31c4"]
 [ext_resource type="Resource" uid="uid://cnqlqaep1771s" path="res://Events/EventOptions/Farmer/eo_farmer_02_3.tres" id="6_f6g4y"]
-[ext_resource type="Texture2D" uid="uid://bv5fv8b5lq7qv" path="res://Assets/PORTRAIT_babushka.png" id="7_evujl"]
+[ext_resource type="Texture2D" uid="uid://bv5fv8b5lq7qv" path="res://Assets/Portraits/PORTRAIT_babushka.png" id="7_evujl"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_47t7o"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

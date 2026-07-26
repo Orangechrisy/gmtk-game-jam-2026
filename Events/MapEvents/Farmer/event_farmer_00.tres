@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_27gic"]
 [ext_resource type="Resource" uid="uid://cev5hydxfm8pa" path="res://Events/EventOptions/Farmer/eo_farmer_00_1.tres" id="4_k3uda"]
 [ext_resource type="Resource" uid="uid://dvku4nvgke5dt" path="res://Events/EventOptions/Farmer/eo_farmer_00_2.tres" id="5_r4h2f"]
-[ext_resource type="Texture2D" uid="uid://bv5fv8b5lq7qv" path="res://Assets/PORTRAIT_babushka.png" id="6_k3uda"]
+[ext_resource type="Texture2D" uid="uid://bv5fv8b5lq7qv" path="res://Assets/Portraits/PORTRAIT_babushka.png" id="6_k3uda"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_ubjdh"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

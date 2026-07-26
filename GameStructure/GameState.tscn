@@ -2,23 +2,23 @@
 
 [ext_resource type="Script" uid="uid://dsonnxlyskrb5" path="res://GameStructure/game_state.gd" id="1_gctib"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="2_558v4"]
-[ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="3_66eko"]
-[ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_ycl4m"]
-[ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="5_xerjb"]
-
-[sub_resource type="Resource" id="Resource_rr5ff"]
-script = ExtResource("4_ycl4m")
-option_name = &"you got one"
-option_desc = "lol"
-metadata/_custom_type_script = "uid://db3u1h61ikpph"
-
-[sub_resource type="Resource" id="Resource_ptuj4"]
-script = ExtResource("2_558v4")
-event_name = &"auto event test"
-dialogue = Array[String](["its a fuckin auto event"])
-options = Array[ExtResource("4_ycl4m")]([SubResource("Resource_rr5ff")])
-metadata/_custom_type_script = "uid://cipcjs28d1y2n"
+[ext_resource type="Resource" uid="uid://7c8r16kiso5r" path="res://Events/MapEvents/AutoEvents/autoevent_00.tres" id="3_uc2id"]
+[ext_resource type="Resource" uid="uid://d0mf48ttqjqhw" path="res://Events/MapEvents/AutoEvents/autoevent_01.tres" id="4_h7avh"]
+[ext_resource type="Resource" uid="uid://cjdb7bvlpnn22" path="res://Events/MapEvents/AutoEvents/autoevent_02.tres" id="5_qchgk"]
+[ext_resource type="Resource" uid="uid://dw8rnn44u7i3d" path="res://Events/MapEvents/AutoEvents/autoevent_03.tres" id="6_uxawb"]
+[ext_resource type="Resource" uid="uid://4fgl16cxo0r5" path="res://Events/MapEvents/AutoEvents/autoevent_04.tres" id="7_eymlw"]
+[ext_resource type="Resource" uid="uid://b6p48c54g51mb" path="res://Events/MapEvents/AutoEvents/autoevent_05.tres" id="8_vpy0y"]
+[ext_resource type="Resource" uid="uid://b85o0rappdfde" path="res://Events/MapEvents/AutoEvents/autoevent_06.tres" id="9_02h0b"]
+[ext_resource type="Resource" uid="uid://criste0q5vvbv" path="res://Events/MapEvents/AutoEvents/autoevent_07.tres" id="10_pro6t"]
+[ext_resource type="Resource" uid="uid://bjyj4ivj0o2qd" path="res://Events/MapEvents/AutoEvents/autoevent_08.tres" id="11_jlbmq"]
+[ext_resource type="Resource" uid="uid://ca2fi3ffc0n30" path="res://Events/MapEvents/AutoEvents/autoevent_09.tres" id="12_62wei"]
+[ext_resource type="Resource" uid="uid://b8codx61umqs5" path="res://Events/MapEvents/AutoEvents/autoevent_10.tres" id="13_wy5e7"]
+[ext_resource type="Resource" uid="uid://bm4ok18di0rcb" path="res://Events/MapEvents/AutoEvents/autoevent_11.tres" id="14_8d5ma"]
+[ext_resource type="Resource" uid="uid://cwibmhyede1d0" path="res://Events/MapEvents/AutoEvents/autoevent_12.tres" id="15_3x2wn"]
+[ext_resource type="Resource" uid="uid://dbqtbw85xycfs" path="res://Events/MapEvents/AutoEvents/autoevent_13.tres" id="16_17g0s"]
+[ext_resource type="Resource" uid="uid://cr8qxyce01x0q" path="res://Events/MapEvents/AutoEvents/autoevent_14.tres" id="17_y5pq5"]
+[ext_resource type="Resource" uid="uid://dv2sa5vosjj3d" path="res://Events/MapEvents/AutoEvents/autoevent_15.tres" id="18_ykkta"]
 
 [node name="GameState" type="Node" unique_id=1589165603]
 script = ExtResource("1_gctib")
-auto_events = Array[ExtResource("2_558v4")]([SubResource("Resource_ptuj4")])
+auto_events = Array[ExtResource("2_558v4")]([ExtResource("3_uc2id"), ExtResource("4_h7avh"), ExtResource("5_qchgk"), ExtResource("6_uxawb"), ExtResource("7_eymlw"), ExtResource("8_vpy0y"), ExtResource("9_02h0b"), ExtResource("10_pro6t"), ExtResource("11_jlbmq"), ExtResource("12_62wei"), ExtResource("13_wy5e7"), ExtResource("14_8d5ma"), ExtResource("15_3x2wn"), ExtResource("16_17g0s"), ExtResource("17_y5pq5"), ExtResource("18_ykkta")])
