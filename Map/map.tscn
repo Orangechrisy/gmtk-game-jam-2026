@@ -305,7 +305,7 @@ visible = false
 [node name="MainMenu" parent="CanvasLayer" unique_id=136163537 instance=ExtResource("12_rr5ff")]
 unique_name_in_owner = true
 
-[node name="GameOverMenu" parent="CanvasLayer" unique_id=1308238179 instance=ExtResource("174_0a72k")]
-
 [node name="ResultsPopup" parent="CanvasLayer" unique_id=1138084959 instance=ExtResource("175_v03vf")]
 position = Vector2(964, 559)
+
+[node name="GameOverMenu" parent="CanvasLayer" unique_id=1308238179 instance=ExtResource("174_0a72k")]

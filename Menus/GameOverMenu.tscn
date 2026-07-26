@@ -3,6 +3,16 @@
 [ext_resource type="Script" uid="uid://drvhsft0d4aim" path="res://Menus/game_over_menu.gd" id="1_0p1re"]
 [ext_resource type="Texture2D" uid="uid://cxk3n0dbgbcha" path="res://Assets/black_screen.png" id="2_ufej6"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_5fbc5"]
+font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_2tduk"]
+line_spacing = 5.0
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_0p1re"]
+font_size = 30
+
 [sub_resource type="Animation" id="Animation_0p1re"]
 length = 0.001
 tracks/0/type = "value"
@@ -80,6 +90,7 @@ offset_left = 176.0
 offset_top = 66.0
 offset_right = 1761.0
 offset_bottom = 159.0
+label_settings = SubResource("LabelSettings_5fbc5")
 horizontal_alignment = 1
 
 [node name="EndingBodyLabel" type="Label" parent="." unique_id=646625852]
@@ -89,6 +100,7 @@ offset_left = 174.0
 offset_top = 224.0
 offset_right = 1759.0
 offset_bottom = 908.0
+label_settings = SubResource("LabelSettings_2tduk")
 autowrap_mode = 2
 
 [node name="EndingScoreLabel" type="Label" parent="." unique_id=1913680615]
@@ -97,6 +109,7 @@ offset_left = 176.0
 offset_top = 813.0
 offset_right = 1761.0
 offset_bottom = 906.0
+label_settings = SubResource("LabelSettings_0p1re")
 horizontal_alignment = 1
 
 [node name="ToMenuButton" type="Button" parent="." unique_id=1857041835]

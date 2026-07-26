@@ -3054,9 +3054,15 @@
 	"en": "Results: +2 Loyalty, -1 Gold consumption, -2 Common Favor"
   },
   "COMMONER_LADY_EVENT_01_OPTION_2_TITLE": {
-	"en": "It is out of my control."
+	"en": "I will demand the nobles pay more."
   },
   "COMMONER_LADY_EVENT_01_OPTION_2_DESC": {
+	"en": "Results: +2 Loyalty, -1 Gold consumption, -3 Noble Favor"
+  },
+  "COMMONER_LADY_EVENT_01_OPTION_3_TITLE": {
+	"en": "It is out of my control."
+  },
+  "COMMONER_LADY_EVENT_01_OPTION_3_DESC": {
 	"en": "Results: +2 Fervor"
   },
   "COMMONER_LADY_EVENT_02_TITLE": {

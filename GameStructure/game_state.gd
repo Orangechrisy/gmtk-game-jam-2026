@@ -268,4 +268,4 @@ func add_to_results_popup(to_add: String) -> void:
 	add_to_label.emit(to_add)
 	
 func emit_ending(ending: int):
-	game_ended.emit(ending)
+	game_ended.emit(ending, ending_names[ending], ending_texts[ending])
