@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://cirml1k3rad5a"]
+
+[ext_resource type="Script" uid="uid://drvhsft0d4aim" path="res://Menus/game_over_menu.gd" id="1_0p1re"]
+[ext_resource type="Texture2D" uid="uid://cxk3n0dbgbcha" path="res://Assets/black_screen.png" id="2_ufej6"]
+
+[sub_resource type="Animation" id="Animation_0p1re"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ufej6"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dj34p"]
+_data = {
+&"RESET": SubResource("Animation_0p1re"),
+&"fade_in": SubResource("Animation_ufej6")
+}
+
+[node name="GameOverMenu" type="Control" unique_id=1308238179]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0p1re")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1396383379]
+position = Vector2(960, 540)
+texture = ExtResource("2_ufej6")
+
+[node name="EndingTitleLabel" type="Label" parent="." unique_id=127759412]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 66.0
+offset_right = 1761.0
+offset_bottom = 159.0
+horizontal_alignment = 1
+
+[node name="EndingBodyLabel" type="Label" parent="." unique_id=646625852]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 224.0
+offset_right = 1759.0
+offset_bottom = 908.0
+
+[node name="EndingScoreLabel" type="Label" parent="." unique_id=1913680615]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 813.0
+offset_right = 1761.0
+offset_bottom = 906.0
+horizontal_alignment = 1
+
+[node name="ToMenuButton" type="Button" parent="." unique_id=1857041835]
+layout_mode = 0
+offset_left = 869.0
+offset_top = 957.0
+offset_right = 1130.0
+offset_bottom = 1061.0
+text = "TO MAIN MENU"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=499453540]
+libraries/ = SubResource("AnimationLibrary_dj34p")
+
+[connection signal="pressed" from="ToMenuButton" to="." method="_on_to_menu_button_pressed"]

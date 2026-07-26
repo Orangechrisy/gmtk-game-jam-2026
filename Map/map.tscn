@@ -173,6 +173,7 @@
 [ext_resource type="Resource" uid="uid://d0j4jdmcjkgib" path="res://Events/MapEvents/Foreman/event_foreman_04.tres" id="168_ly437"]
 [ext_resource type="Resource" uid="uid://b2gvgm85ybc7l" path="res://Events/MapEvents/Foreman/event_foreman_05.tres" id="169_b4jef"]
 [ext_resource type="Resource" uid="uid://b3tr2c35igges" path="res://Events/MapEvents/Foreman/event_foreman_06.tres" id="170_v34en"]
+[ext_resource type="PackedScene" uid="uid://cirml1k3rad5a" path="res://Menus/GameOverMenu.tscn" id="174_0a72k"]
 
 [node name="Map" type="Node2D" unique_id=932399740]
 script = ExtResource("1_ptuj4")
@@ -294,3 +295,5 @@ visible = false
 
 [node name="MainMenu" parent="CanvasLayer" unique_id=136163537 instance=ExtResource("12_rr5ff")]
 unique_name_in_owner = true
+
+[node name="GameOverMenu" parent="CanvasLayer" unique_id=1308238179 instance=ExtResource("174_0a72k")]

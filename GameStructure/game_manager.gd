@@ -178,8 +178,83 @@ func kill_character(character: Character) -> void:
 
 ## check whether the player has lost
 func check_game_end() -> void:
+	# Revolution happens
+	if GameState.get_days_to_revolution() <= 0:
+		end_game(GameState.Ending.REVOLUTION)
+	# Noble favor
+	if GameState.get_noble_sentiment() <= 0:
+		end_game(GameState.Ending.NOBLE_ASSASSIN)
+	# Common favor
+	if GameState.get_common_sentiment() <= 0:
+		end_game(GameState.Ending.REVOLUTION)
+	
 	pass # TODO: Implement checks for game loss
 
-## end the game
+## checks whether the player meets the requirements for an ending
+func check_ending_conditions(ending: int) -> int:
+	match ending:
+		GameState.Ending.FLEE_DOCK_SUCCESS:
+			if GameState.get_noble_sentiment() <= 50:
+				return GameState.Ending.FLEE_DOCK_FAIL
+			if GameState.get_character_by_name("CHAR_ARISTOCRAT").is_alive:
+				return GameState.Ending.FLEE_DOCK_FAIL
+			return GameState.Ending.FLEE_DOCK_SUCCESS
+		GameState.Ending.FLEE_MINES_SUCCESS:
+			if GameState.get_common_sentiment() <= 50:
+				return GameState.Ending.FLEE_MINES_FAIL
+			return GameState.Ending.FLEE_MINES_SUCCESS
+		GameState.Ending.FLEE_OUTSKIRTS_SUCCESS:
+			if GameState.get_noble_sentiment() <= 50:
+				return GameState.Ending.FLEE_OUTSKIRTS_FAIL
+			return GameState.Ending.FLEE_OUTSKIRTS_SUCCESS
+		GameState.Ending.SURRENDER_SUCCESS:
+			if GameState.get_common_sentiment() <= 50:
+				return GameState.Ending.SURRENDER_FAIL
+			if GameState.get_character_by_name("CHAR_RADICAL").is_alive:
+				return GameState.Ending.SURRENDER_FAIL
+			return GameState.Ending.SURRENDER_SUCCESS
+		GameState.Ending.ABDICATE_SUCCESS:
+			if GameState.get_common_sentiment() <= 40:
+				return GameState.Ending.SURRENDER_FAIL
+			if GameState.get_character_by_name("CHAR_RADICAL").is_alive:
+				return GameState.Ending.SURRENDER_FAIL
+			return GameState.Ending.SURRENDER_SUCCESS
+	
+	return ending
+	
+## end the game - handles ending determination logic, then runs ending
 func end_game(ending: int) -> void:
-	pass # TODO: Implement ending
+	
+	var final_ending = check_ending_conditions(ending)
+	GameState.emit_ending(final_ending)
+
+func calculate_score(ending: int) -> int:
+	
+	var score = 0
+	score += GameState.get_day()
+	match ending:
+		GameState.Ending.NOBLE_ASSASSIN:
+			score *= 1.2
+		GameState.Ending.ABDICATE_FAIL:
+			score *= 2
+		GameState.Ending.SURRENDER_FAIL:
+			score *= 2
+		GameState.Ending.FLEE_DOCK_FAIL:
+			score *= 3
+		GameState.Ending.FLEE_MINES_FAIL:
+			score *= 3
+		GameState.Ending.FLEE_OUTSKIRTS_FAIL:
+			score *= 3
+		GameState.Ending.ABDICATE_SUCCESS:
+			score *= 4
+		GameState.Ending.SURRENDER_SUCCESS:
+			score *= 4
+		GameState.Ending.FLEE_DOCK_SUCCESS:
+			score *= 5
+		GameState.Ending.FLEE_OUTSKIRTS_SUCCESS:
+			score *= 5
+		GameState.Ending.FLEE_MINES_SUCCESS:
+			score *= 5
+			
+	
+	return score
