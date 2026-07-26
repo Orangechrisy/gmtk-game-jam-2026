@@ -94,11 +94,9 @@ func calculate_common_favor() -> void:
 	for province in GameState.provinces:
 		var common_sentiment_change = 0
 		if province.curr_owner != province.Owner.KING:
-			common_sentiment_change -= 3
-			GameState.change_noble_sentiment(-1)
-		elif province.fervor * 3 >= province.loyalty * 2:
 			common_sentiment_change -= 2
-		elif province.fervor * 3 >= province.loyalty:
+			GameState.change_noble_sentiment(-1)
+		elif province.fervor * 2 >= province.loyalty:
 			common_sentiment_change -= 1
 		
 		if GameState.get_food() <= 0:
