@@ -4,7 +4,7 @@ var text_dict: Dictionary = {}
 var lang_name_dict: Dictionary = {}
 var curr_lang: String = ""
 
-signal translation_changed(old_lang: String)
+# signal translation_changed(old_lang: String)
 
 const ITEM_JSON_DATA = "res://data/Dialogue.json"
 
@@ -47,17 +47,21 @@ func parse_json(ID: String, json: Dictionary, lang_type: String):
 
 func load_translation(lang_type: String = "en"):
 	if curr_lang==lang_type: return
-	var old_lang = curr_lang
+	# var old_lang = curr_lang
 	curr_lang=lang_type
 	init_json_data(lang_type)
 	#if is_inside_tree(): await get_tree().physics_frame
 	#translation_changed.emit(old_lang)
 
 func get_text(TEXT_ID: String, convert_colors: bool = false) -> String:
-	if convert_colors:
-		return convert_text_colors(text_dict[TEXT_ID])
+	if text_dict.has(TEXT_ID):
+		if convert_colors:
+			return convert_text_colors(text_dict[TEXT_ID])
+		else:
+			return text_dict[TEXT_ID]
 	else:
-		return text_dict[TEXT_ID]
+		print("ERROR: text ID " + TEXT_ID + " does not exist!")
+		return TEXT_ID
 
 func convert_text_colors(text: String) -> String:
 	var newtext: String = text
