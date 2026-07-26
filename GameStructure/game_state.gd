@@ -75,7 +75,7 @@ var current_event: MapEvent
 enum Ending {REVOLUTION, COMMON_ASSASSIN, NOBLE_ASSASSIN, FLEE_DOCK_FAIL, FLEE_DOCK_SUCCESS, FLEE_MINES_FAIL, FLEE_MINES_SUCCESS, FLEE_OUTSKIRTS_FAIL, FLEE_OUTSKIRTS_SUCCESS, SURRENDER_FAIL, SURRENDER_SUCCESS, ABDICATE_FAIL, ABDICATE_SUCCESS}
 
 # MOUSE SHIT
-enum Click {BASIC, ARMY_PLACEMENT, EVENT, PAUSE, MAIN}
+enum Click {BASIC, ARMY_PLACEMENT, EVENT, TUTORIAL, PAUSE, MAIN}
 var MouseMode: int = Click.MAIN:
 	set(val):
 		# if we pause while an event is active, we want to go back to event mouse mode
@@ -102,6 +102,7 @@ signal game_ended(ending: int, ending_name: StringName, ending_text: String)
 # For event results label
 signal show_results_popup()
 signal add_to_label(to_add: String)
+signal update_tutorial(show: bool)
 
 # Day
 
@@ -234,6 +235,13 @@ func get_current_event() -> MapEvent:
 
 func set_current_event(val: MapEvent) -> void:
 	current_event = val
+
+func do_show_tutorial(val: bool) -> void:
+	if val:
+		MouseMode = Click.TUTORIAL
+	else:
+		MouseMode = Click.BASIC
+	update_tutorial.emit(val)
 
 ## Gets a province based on its name
 func get_province_by_name(val: String) -> Province:

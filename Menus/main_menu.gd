@@ -10,6 +10,9 @@ func _ready() -> void:
 func _on_start_game_button_pressed() -> void:
 	play_click()
 	GameManager.reset()
+	GameManager.roll_events()
+	GameManager.check_for_events()
+	GameManager.update_tutorial(true)
 	# TODO: more interesting transition.
 	# map there the whole time (main menu as child to it) and this just hides the main menu
 	# and emits a signal for the map to show things with a nice transition?

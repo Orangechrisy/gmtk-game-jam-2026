@@ -47,17 +47,11 @@ func on_common_sentiment_updated(new_sentiment: int) -> void:
 	var fire_height = %CommonFervorBar.material.get_shader_parameter("fire_height")
 	var box_height = %CommonFervorBar.material.get_shader_parameter("box_height")
 	var alt_fire_height = (fire_height * (1.0 - box_height)) + box_height
-	var bar_size = %CommonFervorBar.size.y - ($%CommonFervorBar/Label.size.y * .5)
-	print(alt_fire_height, ", ", bar_size)
-	%CommonFervorBar/Label.position.y = bar_size * alt_fire_height
-	print(bar_size * alt_fire_height)
-	if %CommonFervorBar/Label.position.y > bar_size * 0.85:
-		%CommonFervorBar/Label.visible = false
-	else:
-		%CommonFervorBar/Label.visible = true
 
 func on_noble_sentiment_updated(new_sentiment: int) -> void:
-	%NobleFervorBar.value = new_sentiment
+	#%NobleFervorBar.value = new_sentiment
+	$NobleTextureRect2/NoblePatch/WineBar.set_value(new_sentiment)
+	$NobleTextureRect2/NoblePatch/Label.text = str(new_sentiment)
 
 func on_armies_left_updated(new_armies_left: int) -> void:
 	%PlaceArmyLabel.text = "Armies Left: " + str(new_armies_left)

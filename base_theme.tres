@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b2phesvhax72f" path="res://Assets/button_hover.png" id="2_11awm"]
 [ext_resource type="Texture2D" uid="uid://ds6g7o6ocdeux" path="res://Assets/button.png" id="2_hjn8r"]
 [ext_resource type="Texture2D" uid="uid://1xi7fvnhpws3" path="res://Assets/button_press.png" id="4_4luo7"]
+[ext_resource type="Texture2D" uid="uid://bdyifoxmxf3vn" path="res://Assets/bg progress.png" id="5_ugfru"]
+[ext_resource type="Texture2D" uid="uid://hgcyc42a6pge" path="res://Assets/loyalty progress.png" id="6_qe7yt"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3p52"]
 texture = ExtResource("2_11awm")
@@ -48,6 +50,25 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6qegq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hugk6"]
+texture = ExtResource("5_ugfru")
+texture_margin_left = 18.0
+texture_margin_top = 20.0
+texture_margin_right = 18.0
+texture_margin_bottom = 20.0
+expand_margin_top = 2.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1k4t5"]
+texture = ExtResource("6_qe7yt")
+texture_margin_left = 18.0
+texture_margin_top = 15.0
+texture_margin_right = 18.0
+texture_margin_bottom = 15.0
+expand_margin_left = 2.0
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
 
 [sub_resource type="Image" id="Image_11awm"]
 data = {
@@ -99,6 +120,8 @@ Label/font_sizes/font_size = 48
 Label/fonts/font = ExtResource("1_6qegq")
 Label/styles/focus = SubResource("StyleBoxFlat_ju8y4")
 Label/styles/normal = SubResource("StyleBoxEmpty_6qegq")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_hugk6")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_1k4t5")
 RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 0)

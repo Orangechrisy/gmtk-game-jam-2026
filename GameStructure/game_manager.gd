@@ -66,7 +66,8 @@ func check_for_events() -> void:
 	for province in GameState.provinces:
 		if province.event_present != null:
 			event_exists = true
-	GameState.any_active_events(event_exists)
+	if event_exists == false:
+		GameState.any_active_events(event_exists)
 
 ## calculate_food: Calculates new Food total based on output/consumption of each province
 func calculate_food() -> void:
@@ -275,3 +276,6 @@ func calculate_score(ending: int) -> int:
 			
 	
 	return score
+
+func update_tutorial(val: bool) -> void:
+	GameState.do_show_tutorial(val)
