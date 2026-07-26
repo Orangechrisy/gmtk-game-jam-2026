@@ -177,8 +177,9 @@ func hide_outline():
 	$BorderSprite.z_index = -2
 
 func _on_area_2d_mouse_entered() -> void:
-	if not GameState.get_current_event():
-		$TooltipTimer.start(TOOLTIP_TIME_DELAY)
+	if (GameState.MouseMode == GameState.Click.BASIC) or (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT):
+		if not GameState.get_current_event():
+			$TooltipTimer.start(TOOLTIP_TIME_DELAY)
 
 func _on_area_2d_mouse_exited() -> void:
 	$TooltipTimer.stop()

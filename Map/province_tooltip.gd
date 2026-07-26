@@ -15,10 +15,10 @@ func _process(_delta: float) -> void:
 
 func update_values():
 	if province != null:
-		var format_string = "[color={color}]{0} {yield}[/color] ([color=green]{1} {yield} Yield[/color], [color=red]{2} {yield} Consumption[/color])"
-		var food_string = format_string.format(["%+.f" % province.calculate_food(), "%+.f" % province.food_yield, "-%.f" % province.food_consumption, ["yield", "Food"], ["color", "green" if province.calculate_food() >= 0 else "red"]])
+		var format_string = "[color={color}]{0} {yield}[/color] ([color=#37472a]{1} {yield} Yield[/color], [color=red]{2} {yield} Consumption[/color])"
+		var food_string = format_string.format(["%+.f" % province.calculate_food(), "%+.f" % province.food_yield, "-%.f" % province.food_consumption, ["yield", "Food"], ["color", "#37472a" if province.calculate_food() >= 0 else "red"]])
 		%Food.text = food_string
-		var gold_string = format_string.format(["%+.f" % province.calculate_gold(), "%+.f" % province.gold_yield, "-%.f" % province.gold_consumption, ["yield", "Gold"], ["color", "green" if province.calculate_gold() >= 0 else "red"]])
+		var gold_string = format_string.format(["%+.f" % province.calculate_gold(), "%+.f" % province.gold_yield, "-%.f" % province.gold_consumption, ["yield", "Gold"], ["color", "#37472a" if province.calculate_gold() >= 0 else "red"]])
 		%Gold.text =  gold_string
 		%Loyalty.value = province.loyalty
 		%Fervor.value = province.fervor

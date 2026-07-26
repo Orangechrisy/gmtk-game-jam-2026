@@ -201,6 +201,20 @@ metadata/_edit_lock_ = true
 
 [node name="Provinces" type="Node2D" parent="." unique_id=1609533052]
 
+[node name="Outskirts" parent="Provinces" unique_id=1740394256 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(1020, 268, 987, 292, 892, 292, 845, 336, 629, 296, 578, 385, 486, 374, 447, 455, 541, 488, 543, 498, 559, 502, 564, 545, 516, 544, 534, 598, 534, 627, 599, 648, 599, 674, 570, 697, 525, 667, 446, 670, 427, 647, 430, 584, 346, 577, 337, 531, 266, 527, 245, 444, 119, 428, 53, 370, 128, 363, 173, 322, 320, 307, 438, 226, 583, 246, 806, 238, 836, 218, 917, 223)
+province_name = "Outskirts"
+province_border_image = ExtResource("26_bhx0d")
+province_graphics_image = ExtResource("27_fo4gr")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("8_1wgij"), ExtResource("143_gtxtm"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("57_hy57x"), ExtResource("144_jeto3"), ExtResource("145_nvotj"), ExtResource("146_4if8u"), ExtResource("147_k02us"), ExtResource("148_i36a4"), ExtResource("149_a2unw"), ExtResource("150_kj6b4"), ExtResource("151_tkm7p"), ExtResource("152_g3jmk"), ExtResource("153_kktpo"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("47_lbv4l"), ExtResource("154_no53y"), ExtResource("155_btoln")])
+event_location = Vector2(350, 400)
+food_yield = 4.0
+food_consumption = 4.0
+gold_yield = 2.0
+gold_consumption = 5.0
+loyalty = 40
+fervor = 5
+
 [node name="Military" parent="Provinces" unique_id=1109736334 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(1065, 213, 1217, 220, 1318, 195, 1455, 233, 1555, 187, 1644, 188, 1721, 287, 1719, 377, 1644, 337, 1581, 354, 1588, 407, 1432, 423, 1401, 415, 1352, 416, 1352, 368, 1208, 324, 1190, 276, 1109, 284, 1028, 244)
 province_name = "Military"
@@ -214,33 +228,19 @@ gold_yield = 4.0
 gold_consumption = 7.0
 loyalty = 50
 
-[node name="Capital" parent="Provinces" unique_id=1886263090 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(1381, 461, 1377, 442, 1402, 428, 1426, 437, 1521, 438, 1524, 459, 1553, 477, 1508, 518, 1506, 557, 1483, 616, 1508, 662, 1376, 667, 1308, 649, 1198, 660, 1186, 616, 1207, 606, 1231, 552, 1286, 531, 1312, 481)
-province_name = "Capital"
-province_border_image = ExtResource("4_vhrv6")
-province_graphics_image = ExtResource("5_ry46t")
-potential_events = Array[ExtResource("2_lymsy")]([ExtResource("26_6064m"), ExtResource("27_hlqxi"), ExtResource("8_1wgij"), ExtResource("28_6ub07"), ExtResource("29_pwrgl"), ExtResource("30_lqbnx"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("32_5baig"), ExtResource("33_j22at"), ExtResource("34_mobot"), ExtResource("35_msky3"), ExtResource("36_b7yov"), ExtResource("37_3q1fr"), ExtResource("38_3ogv5"), ExtResource("39_l2duj"), ExtResource("40_negt4"), ExtResource("41_aeo77"), ExtResource("42_3cm7n"), ExtResource("43_d2mbk"), ExtResource("44_2a72b"), ExtResource("45_vs0c2"), ExtResource("46_tmu7w"), ExtResource("47_lbv4l")])
-event_location = Vector2(1290, 580)
-food_yield = 3.0
-food_consumption = 8.0
-gold_yield = 5.0
-gold_consumption = 8.0
-loyalty = 60
-fervor = 17
-
-[node name="Town" parent="Provinces" unique_id=305634748 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(399, 929, 396, 863, 484, 848, 445, 792, 494, 766, 519, 803, 565, 806, 580, 846, 651, 844, 676, 871, 722, 835, 796, 877, 802, 921, 741, 939, 744, 975, 688, 980, 635, 962, 616, 1027, 689, 1060, 687, 1083, 222, 1084, 189, 1017, 323, 1043, 382, 1003, 365, 992, 365, 976, 322, 958, 318, 919)
-province_name = "Town"
-province_border_image = ExtResource("16_umtr8")
-province_graphics_image = ExtResource("17_elfnc")
-potential_events = Array[ExtResource("2_lymsy")]([ExtResource("50_27812"), ExtResource("8_1wgij"), ExtResource("51_tpu5o"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("52_fn86r"), ExtResource("53_iffoo"), ExtResource("54_whoe0"), ExtResource("55_7vxwr"), ExtResource("56_vq8q3"), ExtResource("57_hy57x"), ExtResource("58_pb1bc"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("59_s3g6a"), ExtResource("60_2i1ns"), ExtResource("47_lbv4l"), ExtResource("61_a2yb7"), ExtResource("62_fp5ed")])
-event_location = Vector2(540, 965)
-food_yield = 6.0
-food_consumption = 4.0
-gold_yield = 5.0
+[node name="Mine" parent="Provinces" unique_id=1791617832 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(609, 379, 636, 329, 848, 368, 897, 324, 987, 320, 1047, 285, 1107, 304, 1176, 302, 1184, 331, 1210, 348, 1329, 384, 1324, 411, 1258, 408, 1236, 386, 1179, 397, 1161, 424, 1092, 425, 1080, 463, 1058, 466, 1005, 444, 971, 469, 901, 445, 914, 559, 969, 590, 968, 615, 960, 626, 962, 640, 938, 647, 856, 614, 872, 573, 852, 563, 854, 546, 799, 514, 782, 527, 768, 525, 750, 509, 706, 512, 673, 466, 703, 375)
+province_name = "Mine"
+province_border_image = ExtResource("20_2rup5")
+province_graphics_image = ExtResource("21_ddnc5")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("158_tif3e"), ExtResource("159_5a3q0"), ExtResource("15_6t7vu"), ExtResource("57_hy57x"), ExtResource("160_mvfel"), ExtResource("161_xq04n"), ExtResource("162_t2bvp"), ExtResource("163_nfeuu"), ExtResource("164_caw4a"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("165_66ifc"), ExtResource("166_q7wnd"), ExtResource("167_thq8r"), ExtResource("168_ly437"), ExtResource("169_b4jef"), ExtResource("170_v34en"), ExtResource("47_lbv4l")])
+event_location = Vector2(950, 380)
+food_yield = 4.0
+food_consumption = 5.0
+gold_yield = 10.0
 gold_consumption = 4.0
-loyalty = 45
-fervor = 10
+loyalty = 50
+fervor = 5
 
 [node name="Villa" parent="Provinces" unique_id=448714367 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(1613, 413, 1600, 365, 1645, 350, 1728, 407, 1723, 535, 1744, 634, 1771, 688, 1784, 729, 1707, 820, 1661, 786, 1660, 721, 1711, 706, 1705, 634, 1653, 636, 1647, 601, 1593, 544, 1567, 588, 1514, 593, 1524, 561, 1520, 528, 1596, 465, 1550, 450, 1546, 427)
@@ -254,6 +254,47 @@ food_consumption = 6.0
 gold_yield = 3.0
 gold_consumption = 7.0
 loyalty = 55
+
+[node name="Church" parent="Provinces" unique_id=1489639061 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(965, 815, 1029, 847, 1054, 822, 1056, 726, 1085, 730, 1120, 684, 1151, 700, 1185, 695, 1163, 608, 1195, 585, 1217, 537, 1273, 516, 1290, 490, 1286, 468, 1347, 451, 1347, 437, 1289, 433, 1260, 437, 1229, 411, 1187, 421, 1177, 445, 1110, 449, 1096, 489, 1078, 488, 1073, 496, 1007, 472, 967, 494, 932, 479, 938, 549, 1002, 582, 1000, 609, 994, 633, 1010, 670, 1007, 716, 991, 756, 960, 767)
+province_name = "Church"
+province_border_image = ExtResource("24_rtxnd")
+province_graphics_image = ExtResource("25_2fp1f")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("130_5bhnp"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("131_a852n"), ExtResource("132_rr735"), ExtResource("32_5baig"), ExtResource("133_1e50w"), ExtResource("134_8g1hp"), ExtResource("135_b1jse"), ExtResource("136_1pe55"), ExtResource("137_uy3h2"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("138_ec37a"), ExtResource("47_lbv4l"), ExtResource("139_u5lc2"), ExtResource("140_b8elw")])
+event_location = Vector2(1100, 625)
+food_yield = 4.0
+food_consumption = 2.0
+gold_yield = 3.0
+gold_consumption = 3.0
+loyalty = 50
+
+[node name="Capital" parent="Provinces" unique_id=1886263090 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(1381, 461, 1377, 442, 1402, 428, 1426, 437, 1521, 438, 1524, 459, 1553, 477, 1508, 518, 1506, 557, 1483, 616, 1508, 662, 1376, 667, 1308, 649, 1198, 660, 1186, 616, 1207, 606, 1231, 552, 1286, 531, 1312, 481)
+province_name = "Capital"
+province_border_image = ExtResource("4_vhrv6")
+province_graphics_image = ExtResource("5_ry46t")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("26_6064m"), ExtResource("27_hlqxi"), ExtResource("8_1wgij"), ExtResource("28_6ub07"), ExtResource("29_pwrgl"), ExtResource("30_lqbnx"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("32_5baig"), ExtResource("33_j22at"), ExtResource("34_mobot"), ExtResource("35_msky3"), ExtResource("36_b7yov"), ExtResource("37_3q1fr"), ExtResource("38_3ogv5"), ExtResource("39_l2duj"), ExtResource("40_negt4"), ExtResource("41_aeo77"), ExtResource("42_3cm7n"), ExtResource("43_d2mbk"), ExtResource("44_2a72b"), ExtResource("45_vs0c2"), ExtResource("46_tmu7w"), ExtResource("47_lbv4l")])
+event_location = Vector2(1290, 560)
+food_yield = 3.0
+food_consumption = 8.0
+gold_yield = 5.0
+gold_consumption = 8.0
+loyalty = 60
+fervor = 17
+
+[node name="Farm" parent="Provinces" unique_id=1918935467 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(876, 857, 891, 824, 941, 806, 933, 752, 980, 739, 988, 662, 945, 678, 812, 622, 831, 588, 821, 567, 800, 548, 777, 564, 746, 537, 697, 540, 643, 467, 659, 409, 588, 419, 503, 412, 495, 442, 574, 458, 576, 476, 587, 479, 607, 579, 564, 581, 570, 606, 637, 617, 634, 684, 564, 736, 516, 699, 467, 703, 470, 739, 500, 730, 535, 777, 585, 777, 599, 818, 657, 815, 671, 829, 687, 828, 720, 796, 781, 841, 795, 839, 795, 823)
+province_name = "Farm"
+province_border_image = ExtResource("14_tuo8d")
+province_graphics_image = ExtResource("15_mxsvv")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("117_utumh"), ExtResource("118_vlsua"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("119_yn055"), ExtResource("15_6t7vu"), ExtResource("120_mu3uc"), ExtResource("121_awsg0"), ExtResource("57_hy57x"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("47_lbv4l"), ExtResource("122_n0rfs"), ExtResource("123_iw5xg"), ExtResource("124_mfn4v"), ExtResource("125_qjy3s"), ExtResource("126_ex145"), ExtResource("127_4mfxr"), ExtResource("62_fp5ed")])
+event_location = Vector2(860, 735)
+food_yield = 10.0
+food_consumption = 4.0
+gold_yield = 6.0
+gold_consumption = 3.0
+loyalty = 50
+fervor = 5
 
 [node name="City" parent="Provinces" unique_id=203984502 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(1570, 603, 1599, 576, 1629, 608, 1628, 659, 1688, 659, 1686, 691, 1644, 707, 1639, 788, 1680, 830, 1533, 883, 1487, 857, 1489, 829, 1352, 867, 1315, 855, 1264, 929, 1230, 893, 1172, 930, 1144, 898, 1192, 817, 1176, 802, 1074, 817, 1074, 753, 1103, 754, 1117, 710, 1142, 717, 1206, 715, 1203, 684, 1304, 669, 1373, 686, 1456, 681, 1537, 693, 1510, 616)
@@ -282,60 +323,19 @@ gold_yield = 7.0
 gold_consumption = 4.0
 loyalty = 50
 
-[node name="Farm" parent="Provinces" unique_id=1918935467 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(876, 857, 891, 824, 941, 806, 933, 752, 980, 739, 988, 662, 945, 678, 812, 622, 831, 588, 821, 567, 800, 548, 777, 564, 746, 537, 697, 540, 643, 467, 659, 409, 588, 419, 503, 412, 495, 442, 574, 458, 576, 476, 587, 479, 607, 579, 564, 581, 570, 606, 637, 617, 634, 684, 564, 736, 516, 699, 467, 703, 470, 739, 500, 730, 535, 777, 585, 777, 599, 818, 657, 815, 671, 829, 687, 828, 720, 796, 781, 841, 795, 839, 795, 823)
-province_name = "Farm"
-province_border_image = ExtResource("14_tuo8d")
-province_graphics_image = ExtResource("15_mxsvv")
-potential_events = Array[ExtResource("2_lymsy")]([ExtResource("117_utumh"), ExtResource("118_vlsua"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("119_yn055"), ExtResource("15_6t7vu"), ExtResource("120_mu3uc"), ExtResource("121_awsg0"), ExtResource("57_hy57x"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("47_lbv4l"), ExtResource("122_n0rfs"), ExtResource("123_iw5xg"), ExtResource("124_mfn4v"), ExtResource("125_qjy3s"), ExtResource("126_ex145"), ExtResource("127_4mfxr"), ExtResource("62_fp5ed")])
-event_location = Vector2(860, 735)
-food_yield = 10.0
+[node name="Town" parent="Provinces" unique_id=305634748 instance=ExtResource("1_5ej7w")]
+vertices = PackedVector2Array(399, 929, 396, 863, 484, 848, 445, 792, 494, 766, 519, 803, 565, 806, 580, 846, 651, 844, 676, 871, 722, 835, 796, 877, 802, 921, 741, 939, 744, 975, 688, 980, 635, 962, 616, 1027, 689, 1060, 687, 1083, 222, 1084, 189, 1017, 323, 1043, 382, 1003, 365, 992, 365, 976, 322, 958, 318, 919)
+province_name = "Town"
+province_border_image = ExtResource("16_umtr8")
+province_graphics_image = ExtResource("17_elfnc")
+potential_events = Array[ExtResource("2_lymsy")]([ExtResource("50_27812"), ExtResource("8_1wgij"), ExtResource("51_tpu5o"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("52_fn86r"), ExtResource("53_iffoo"), ExtResource("54_whoe0"), ExtResource("55_7vxwr"), ExtResource("56_vq8q3"), ExtResource("57_hy57x"), ExtResource("58_pb1bc"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("59_s3g6a"), ExtResource("60_2i1ns"), ExtResource("47_lbv4l"), ExtResource("61_a2yb7"), ExtResource("62_fp5ed")])
+event_location = Vector2(540, 965)
+food_yield = 6.0
 food_consumption = 4.0
-gold_yield = 6.0
-gold_consumption = 3.0
-loyalty = 50
-fervor = 5
-
-[node name="Church" parent="Provinces" unique_id=1489639061 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(965, 815, 1029, 847, 1054, 822, 1056, 726, 1085, 730, 1120, 684, 1151, 700, 1185, 695, 1163, 608, 1195, 585, 1217, 537, 1273, 516, 1290, 490, 1286, 468, 1347, 451, 1347, 437, 1289, 433, 1260, 437, 1229, 411, 1187, 421, 1177, 445, 1110, 449, 1096, 489, 1078, 488, 1073, 496, 1007, 472, 967, 494, 932, 479, 938, 549, 1002, 582, 1000, 609, 994, 633, 1010, 670, 1007, 716, 991, 756, 960, 767)
-province_name = "Church"
-province_border_image = ExtResource("24_rtxnd")
-province_graphics_image = ExtResource("25_2fp1f")
-potential_events = Array[ExtResource("2_lymsy")]([ExtResource("130_5bhnp"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("131_a852n"), ExtResource("132_rr735"), ExtResource("32_5baig"), ExtResource("133_1e50w"), ExtResource("134_8g1hp"), ExtResource("135_b1jse"), ExtResource("136_1pe55"), ExtResource("137_uy3h2"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("138_ec37a"), ExtResource("47_lbv4l"), ExtResource("139_u5lc2"), ExtResource("140_b8elw")])
-event_location = Vector2(1100, 625)
-food_yield = 4.0
-food_consumption = 2.0
-gold_yield = 3.0
-gold_consumption = 3.0
-loyalty = 50
-
-[node name="Outskirts" parent="Provinces" unique_id=1740394256 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(1020, 268, 987, 292, 892, 292, 845, 336, 629, 296, 578, 385, 486, 374, 447, 455, 541, 488, 543, 498, 559, 502, 564, 545, 516, 544, 534, 598, 534, 627, 599, 648, 599, 674, 570, 697, 525, 667, 446, 670, 427, 647, 430, 584, 346, 577, 337, 531, 266, 527, 245, 444, 119, 428, 53, 370, 128, 363, 173, 322, 320, 307, 438, 226, 583, 246, 806, 238, 836, 218, 917, 223)
-province_name = "Outskirts"
-province_border_image = ExtResource("26_bhx0d")
-province_graphics_image = ExtResource("27_fo4gr")
-potential_events = Array[ExtResource("2_lymsy")]([ExtResource("8_1wgij"), ExtResource("143_gtxtm"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("15_6t7vu"), ExtResource("57_hy57x"), ExtResource("144_jeto3"), ExtResource("145_nvotj"), ExtResource("146_4if8u"), ExtResource("147_k02us"), ExtResource("148_i36a4"), ExtResource("149_a2unw"), ExtResource("150_kj6b4"), ExtResource("151_tkm7p"), ExtResource("152_g3jmk"), ExtResource("153_kktpo"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("47_lbv4l"), ExtResource("154_no53y"), ExtResource("155_btoln")])
-event_location = Vector2(350, 400)
-food_yield = 4.0
-food_consumption = 4.0
-gold_yield = 2.0
-gold_consumption = 5.0
-loyalty = 40
-fervor = 5
-
-[node name="Mine" parent="Provinces" unique_id=1791617832 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(609, 379, 636, 329, 848, 368, 897, 324, 987, 320, 1047, 285, 1107, 304, 1176, 302, 1184, 331, 1210, 348, 1329, 384, 1324, 411, 1258, 408, 1236, 386, 1179, 397, 1161, 424, 1092, 425, 1080, 463, 1058, 466, 1005, 444, 971, 469, 901, 445, 914, 559, 969, 590, 968, 615, 960, 626, 962, 640, 938, 647, 856, 614, 872, 573, 852, 563, 854, 546, 799, 514, 782, 527, 768, 525, 750, 509, 706, 512, 673, 466, 703, 375)
-province_name = "Mine"
-province_border_image = ExtResource("20_2rup5")
-province_graphics_image = ExtResource("21_ddnc5")
-potential_events = Array[ExtResource("2_lymsy")]([ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("158_tif3e"), ExtResource("159_5a3q0"), ExtResource("15_6t7vu"), ExtResource("57_hy57x"), ExtResource("160_mvfel"), ExtResource("161_xq04n"), ExtResource("162_t2bvp"), ExtResource("163_nfeuu"), ExtResource("164_caw4a"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("165_66ifc"), ExtResource("166_q7wnd"), ExtResource("167_thq8r"), ExtResource("168_ly437"), ExtResource("169_b4jef"), ExtResource("170_v34en"), ExtResource("47_lbv4l")])
-event_location = Vector2(950, 380)
-food_yield = 4.0
-food_consumption = 5.0
-gold_yield = 10.0
+gold_yield = 5.0
 gold_consumption = 4.0
-loyalty = 50
-fervor = 5
+loyalty = 45
+fervor = 10
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1264009811]
 

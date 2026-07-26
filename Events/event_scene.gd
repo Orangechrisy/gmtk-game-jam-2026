@@ -24,7 +24,7 @@ func reset_event_scene() -> void:
 	%Close.visible = true
 	%CharacterName.get_parent().visible = true
 	%Portrait.texture = null
-	%Portrait.visible = true
+	%PortraitBorder.visible = true
 
 ## shows the current event (either clicked on or auto?)
 func event_selected(event: MapEvent):
@@ -46,7 +46,7 @@ func set_auto_event() -> void:
 	%Close.visible = false
 	%CharacterName.get_parent().visible = false
 	if %Portrait.texture != null:
-		%Portrait.visible = false
+		%PortraitBorder.visible = false
 
 # TODO: handle dialogue text better than just basically a block with newlines
 func set_dialogue(dialogue_strings: Array[String]) -> void:

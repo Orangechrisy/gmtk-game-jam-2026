@@ -142,7 +142,8 @@ theme_override_constants/margin_bottom = 50
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/PanelContainer2/MarginContainer" unique_id=1811618000]
 layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="CenterContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=1948149777]
+[node name="PortraitBorder" type="NinePatchRect" parent="CenterContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=1948149777]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(391, 536)
 layout_mode = 2
 texture = ExtResource("3_s1rel")
@@ -151,7 +152,7 @@ patch_margin_top = 72
 patch_margin_right = 72
 patch_margin_bottom = 72
 
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/NinePatchRect" unique_id=988800741]
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/PortraitBorder" unique_id=988800741]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -164,7 +165,7 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="Portrait" type="TextureRect" parent="CenterContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/NinePatchRect/MarginContainer" unique_id=2046719252]
+[node name="Portrait" type="TextureRect" parent="CenterContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/PortraitBorder/MarginContainer" unique_id=2046719252]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(368, 512)
 layout_mode = 2
