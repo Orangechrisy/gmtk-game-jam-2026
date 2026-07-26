@@ -5,6 +5,8 @@
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="3_m61pn"]
 [ext_resource type="Texture2D" uid="uid://cnpcybiart46n" path="res://Assets/fervor progress.png" id="4_7jag6"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bwxx"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b6ne8"]
 texture = ExtResource("4_7jag6")
 texture_margin_left = 18.0
@@ -34,22 +36,23 @@ anchor_bottom = 1.0
 offset_top = -40.0
 offset_right = 40.0
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1bwxx")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="PanelContainer" unique_id=657369021]
 layout_mode = 2
 texture = ExtResource("2_86hd7")
-region_rect = Rect2(0, 0, 30, 25)
-patch_margin_left = 2
-patch_margin_top = 2
-patch_margin_right = 2
-patch_margin_bottom = 2
+region_rect = Rect2(0, 0, 30, 30)
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=940130431]
 layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=689660301]
 layout_mode = 2
