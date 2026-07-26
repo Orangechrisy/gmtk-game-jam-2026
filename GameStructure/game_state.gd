@@ -94,6 +94,7 @@ signal noble_sentiment_updated(new_sentiment)
 signal armies_left_updated(new_armies_left)
 signal active_events(any_active)
 signal mouse_mode_updated(new_mode)
+@warning_ignore("unused_signal")
 signal province_owner_changed(province: Province)
 signal game_ended(ending: int, ending_name: StringName, ending_text: String)
 # For event results label
