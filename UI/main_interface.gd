@@ -41,7 +41,19 @@ func on_gold_updated(new_gold: int) -> void:
 	%GoldLabel.text = "Gold: " + str(new_gold)
 
 func on_common_sentiment_updated(new_sentiment: int) -> void:
-	%CommonFervorBar.value = new_sentiment
+	%CommonFervorBar.material.set_shader_parameter("fire_height", clamp((new_sentiment / 100.0), 0.0, 1.0))
+	%CommonFervorBar/Label.text = str(new_sentiment)
+	var fire_height = %CommonFervorBar.material.get_shader_parameter("fire_height")
+	var box_height = %CommonFervorBar.material.get_shader_parameter("box_height")
+	var alt_fire_height = (fire_height * (1.0 - box_height)) + box_height
+	var bar_size = %CommonFervorBar.size.y - ($%CommonFervorBar/Label.size.y * .5)
+	print(alt_fire_height, ", ", bar_size)
+	%CommonFervorBar/Label.position.y = bar_size * alt_fire_height
+	print(bar_size * alt_fire_height)
+	if %CommonFervorBar/Label.position.y > bar_size * 0.85:
+		%CommonFervorBar/Label.visible = false
+	else:
+		%CommonFervorBar/Label.visible = true
 
 func on_noble_sentiment_updated(new_sentiment: int) -> void:
 	%NobleFervorBar.value = new_sentiment

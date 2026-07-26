@@ -5,6 +5,30 @@
 [ext_resource type="Texture2D" uid="uid://btnbbryglsl5l" path="res://Assets/inner_wood.png" id="3_h3p52"]
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="3_tllhj"]
 [ext_resource type="Texture2D" uid="uid://dv0tu217j8ocx" path="res://Assets/down_paper.png" id="4_t76gb"]
+[ext_resource type="Shader" uid="uid://b8m8hefme75c2" path="res://UI/fervor_shader.gdshader" id="5_bpl6d"]
+[ext_resource type="Texture2D" uid="uid://dc1aecf3gci76" path="res://Assets/white_bar.png" id="6_hugk6"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fcnqv"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3gngh"]
+width = 200
+height = 200
+generate_mipmaps = false
+noise = SubResource("FastNoiseLite_fcnqv")
+seamless = true
+seamless_blend_skirt = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
+shader = ExtResource("5_bpl6d")
+shader_parameter/noise_tex = SubResource("NoiseTexture2D_3gngh")
+shader_parameter/bottom_color = Color(0.8862745, 0.14901961, 0.03529412, 1)
+shader_parameter/middle_color = Color(1, 0.5, 0, 1)
+shader_parameter/top_color = Color(0.9943654, 0.84241134, 0.6665412, 1)
+shader_parameter/fire_speed = Vector2(0, 0.5)
+shader_parameter/fire_aperture = 1.0
+shader_parameter/pixel_amount = 40.0
+shader_parameter/fire_height = 0.999999977648
+shader_parameter/box_height = 0.3
 
 [node name="MainInterface" type="Control" unique_id=1175301398]
 texture_filter = 1
@@ -163,6 +187,28 @@ region_rect = Rect2(93, 0, 111, 111)
 patch_margin_top = 103
 patch_margin_right = 99
 
+[node name="NinePatchRect" type="NinePatchRect" parent="CommonerTextureRect/CommonerPatch" unique_id=1209328157]
+layout_mode = 0
+offset_top = 62.0
+offset_right = 226.0
+offset_bottom = 113.0
+texture = ExtResource("2_itd1i")
+region_rect = Rect2(96, 115, 78, 64)
+patch_margin_right = 61
+patch_margin_bottom = 51
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="CommonerTextureRect/CommonerPatch" unique_id=1895192485]
+layout_mode = 0
+offset_top = 113.0
+offset_right = 226.0
+offset_bottom = 175.0
+texture = ExtResource("2_itd1i")
+region_rect = Rect2(97, 30, 77, 80)
+patch_margin_left = 4
+patch_margin_top = 58
+patch_margin_right = 51
+patch_margin_bottom = 4
+
 [node name="FoodLabel" type="Label" parent="CommonerTextureRect/CommonerPatch" unique_id=1102535232]
 unique_name_in_owner = true
 layout_mode = 1
@@ -198,41 +244,29 @@ s"
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="CommonFervorBar" type="ProgressBar" parent="CommonerTextureRect/CommonerPatch/CommonFervor" unique_id=1444342403]
+[node name="CommonFervorBar" type="TextureRect" parent="CommonerTextureRect/CommonerPatch/CommonFervor" unique_id=742364079]
 unique_name_in_owner = true
+material = SubResource("ShaderMaterial_g4v7s")
+layout_mode = 0
+offset_left = 75.0
+offset_top = -21.0
+offset_right = 155.0
+offset_bottom = 361.0
+texture = ExtResource("6_hugk6")
+
+[node name="Label" type="Label" parent="CommonerTextureRect/CommonerPatch/CommonFervor/CommonFervorBar" unique_id=626886355]
+visible = false
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 81.0
-offset_top = -156.0
-offset_right = 164.0
-offset_bottom = 157.0
-grow_vertical = 2
-value = 100.0
-fill_mode = 2
-
-[node name="NinePatchRect" type="NinePatchRect" parent="CommonerTextureRect/CommonerPatch" unique_id=1209328157]
-layout_mode = 0
-offset_top = 62.0
-offset_right = 226.0
-offset_bottom = 113.0
-texture = ExtResource("2_itd1i")
-region_rect = Rect2(96, 115, 78, 64)
-patch_margin_right = 61
-patch_margin_bottom = 51
-
-[node name="NinePatchRect2" type="NinePatchRect" parent="CommonerTextureRect/CommonerPatch" unique_id=1895192485]
-layout_mode = 0
-offset_top = 113.0
-offset_right = 226.0
-offset_bottom = 175.0
-texture = ExtResource("2_itd1i")
-region_rect = Rect2(97, 30, 77, 80)
-patch_margin_left = 4
-patch_margin_top = 58
-patch_margin_right = 51
-patch_margin_bottom = 4
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_right = 40.0
+offset_bottom = 61.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "100"
+horizontal_alignment = 1
 
 [node name="NobleTextureRect2" type="TextureRect" parent="." unique_id=88494692]
 layout_mode = 1
@@ -266,6 +300,32 @@ patch_margin_left = 96
 patch_margin_top = 97
 patch_margin_right = 4
 patch_margin_bottom = 6
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="NobleTextureRect2/NoblePatch" unique_id=1582659756]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 113.0
+offset_right = 256.0
+offset_bottom = 175.0
+texture = ExtResource("2_itd1i")
+region_rect = Rect2(33, 30, 74, 69)
+patch_margin_left = 47
+patch_margin_top = 45
+patch_margin_right = 5
+patch_margin_bottom = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NobleTextureRect2/NoblePatch" unique_id=1664544397]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 62.0
+offset_right = 256.0
+offset_bottom = 113.0
+texture = ExtResource("2_itd1i")
+region_rect = Rect2(33, 115, 63, 64)
+patch_margin_left = 40
+patch_margin_top = 7
+patch_margin_right = 8
+patch_margin_bottom = 44
 
 [node name="GoldLabel" type="Label" parent="NobleTextureRect2/NoblePatch" unique_id=880146691]
 unique_name_in_owner = true
@@ -302,7 +362,7 @@ s"
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="NobleFervorBar" type="ProgressBar" parent="NobleTextureRect2/NoblePatch/NobleFervor" unique_id=1815256241]
+[node name="NobleFervorBar" type="TextureProgressBar" parent="NobleTextureRect2/NoblePatch/NobleFervor" unique_id=1186775173]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 6
@@ -318,32 +378,6 @@ grow_horizontal = 0
 grow_vertical = 2
 value = 100.0
 fill_mode = 2
-
-[node name="NinePatchRect2" type="NinePatchRect" parent="NobleTextureRect2/NoblePatch" unique_id=1582659756]
-layout_mode = 0
-offset_left = 33.0
-offset_top = 113.0
-offset_right = 256.0
-offset_bottom = 175.0
-texture = ExtResource("2_itd1i")
-region_rect = Rect2(33, 30, 74, 69)
-patch_margin_left = 47
-patch_margin_top = 45
-patch_margin_right = 5
-patch_margin_bottom = 4
-
-[node name="NinePatchRect" type="NinePatchRect" parent="NobleTextureRect2/NoblePatch" unique_id=1664544397]
-layout_mode = 0
-offset_left = 33.0
-offset_top = 62.0
-offset_right = 256.0
-offset_bottom = 113.0
-texture = ExtResource("2_itd1i")
-region_rect = Rect2(33, 115, 63, 64)
-patch_margin_left = 40
-patch_margin_top = 7
-patch_margin_right = 8
-patch_margin_bottom = 44
 
 [node name="Armies" type="TextureRect" parent="." unique_id=342733701]
 layout_mode = 1
