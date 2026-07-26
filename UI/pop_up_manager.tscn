@@ -3,4 +3,5 @@
 [ext_resource type="Script" uid="uid://bk1poj0k7mpiw" path="res://UI/pop_up_manager.gd" id="1_2e8ke"]
 
 [node name="PopUpManager" type="Node2D" unique_id=1096967860]
+z_index = 2
 script = ExtResource("1_2e8ke")

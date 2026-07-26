@@ -145,30 +145,31 @@ func roll_event_odds() -> bool:
 
 ## the province has been clicked on
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		show_outline()
-		
-		print("province ", province_name, " clicked")
-		if GameState.MouseMode == GameState.Click.BASIC:
-			if event_present:
-				update_events(event_present, false)
-				GameManager.update_current_province(self)
-				event_present.event_fired()
-				if tween: 
-					tween.kill()
-				tween = create_tween()
-				tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
-			else: # TODO: remove later
-				roll_event_odds()
-		elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
-			# TODO: visual effect of some sort? sound?
-			if curr_owner == Owner.KING and not has_army: # No placing armies in unowned provinces
-				GameState.MouseMode = GameState.Click.BASIC
-				print("Army placed!")
-				has_army = true
-				GameState.change_armies(-1) # for now
-			else: # if we clicked on an invalid province
-				print("Can't place here!")
+	if (GameState.MouseMode == GameState.Click.BASIC) or (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT):
+		if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+			show_outline()
+			
+			print("province ", province_name, " clicked")
+			if GameState.MouseMode == GameState.Click.BASIC:
+				if event_present:
+					update_events(event_present, false)
+					GameManager.update_current_province(self)
+					event_present.event_fired()
+					if tween: 
+						tween.kill()
+					tween = create_tween()
+					tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
+				else: # TODO: remove later
+					roll_event_odds()
+			elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+				# TODO: visual effect of some sort? sound?
+				if curr_owner == Owner.KING and not has_army: # No placing armies in unowned provinces
+					GameState.MouseMode = GameState.Click.BASIC
+					print("Army placed!")
+					has_army = true
+					GameState.change_armies(-1) # for now
+				else: # if we clicked on an invalid province
+					print("Can't place here!")
 
 func show_outline():
 	GameState.reset_outlines()

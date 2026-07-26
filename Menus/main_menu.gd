@@ -18,23 +18,26 @@ func _on_start_game_button_pressed() -> void:
 
 func _on_options_button_pressed() -> void:
 	play_click()
+	$TitleFlag.visible = false
 	$MainMainMenu.visible = false
 	$OptionsMenu.visible = true
 
 
 func _on_credits_button_pressed() -> void:
-	MusicManager.play_ending_song(MusicManager.ENDINGTYPE.BAD)
 	play_click()
+	$TitleFlag.visible = false
 	$MainMainMenu.visible = false
 	$CreditsMenu.visible = true
 
 
 func _on_quit_game_button_pressed() -> void:
 	play_click()
+	$TitleFlag.visible = false
 	$MainMainMenu.visible = false
 	$QuitConfirmMenu.visible = true
 
 func on_back_up() -> void:
+	$TitleFlag.visible = true
 	$MainMainMenu.visible = true
 
 func play_click():

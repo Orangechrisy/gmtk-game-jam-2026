@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://bjxmbmu7ftl2l" path="res://Menus/credits_menu.gd" id="1_fil7c"]
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="2_t86ds"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
-font_size = 48
-
 [node name="CreditsMenu" type="Control" unique_id=806118121]
 layout_mode = 3
 anchors_preset = 15
@@ -34,13 +31,15 @@ offset_top = 170.0
 offset_right = 1346.0
 offset_bottom = 560.0
 grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 60
 text = "Credits
 
 NopeCopter - Code, Writing
 OrangeChrisy - Code, UI
 SheerAweso - Art, Audio/Music, Code
 Lasqueto - Art"
-label_settings = SubResource("LabelSettings_a6wwx")
 horizontal_alignment = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2029490990]

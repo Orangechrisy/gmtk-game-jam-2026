@@ -4,12 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://dglekacdrwykk" path="res://Menus/OptionsMenu.tscn" id="2_7n1tg"]
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="2_hnfxo"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
-font_size = 30
-
 [node name="PauseMenu" type="Control" unique_id=273141382]
 layout_mode = 3
 anchors_preset = 0
+theme = ExtResource("2_hnfxo")
 script = ExtResource("1_3ke7c")
 
 [node name="PausePauseMenu" type="Control" parent="." unique_id=1101120966]
@@ -19,12 +17,13 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="PausePauseMenu" unique_id=167713226]
 layout_mode = 0
-offset_left = 885.0
-offset_top = 222.0
-offset_right = 1077.0
-offset_bottom = 264.0
+offset_left = 848.0
+offset_top = 227.0
+offset_right = 1094.0
+offset_bottom = 288.0
 text = "Pause Menu"
-label_settings = SubResource("LabelSettings_a6wwx")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ReturnToGameButton" type="Button" parent="PausePauseMenu" unique_id=1303846414]
 layout_mode = 0
@@ -55,7 +54,6 @@ text = "Quit To Main Menu"
 
 [node name="OptionsMenu" parent="." unique_id=806118121 instance=ExtResource("2_7n1tg")]
 visible = false
-layout_mode = 1
 
 [connection signal="mouse_entered" from="PausePauseMenu/ReturnToGameButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="PausePauseMenu/ReturnToGameButton" to="." method="_on_return_to_game_button_pressed"]
