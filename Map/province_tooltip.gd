@@ -21,4 +21,6 @@ func update_values():
 		var gold_string = format_string.format(["%+.f" % province.calculate_gold(), "%+.f" % province.gold_yield, "-%.f" % province.gold_consumption, ["yield", "Gold"], ["color", "#37472a" if province.calculate_gold() >= 0 else "red"]])
 		%Gold.text =  gold_string
 		$PanelContainer/MarginContainer/VBoxContainer/Loyalty/HBoxContainer/Num.text = str(province.loyalty)
+		%Loyalty.value = province.loyalty
 		$PanelContainer/MarginContainer/VBoxContainer/Fervor/HBoxContainer/Num.text = str(province.fervor)
+		%Fervor.value = province.fervor
