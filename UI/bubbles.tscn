@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://tunjitqdflgg"]
+
+[ext_resource type="Script" uid="uid://c0a5bq28qu4mf" path="res://UI/bubbles.gd" id="1_ae6qp"]
+
+[node name="Bubbles" type="Node2D" unique_id=1571613120]
+modulate = Color(0.8627451, 0, 0.37254903, 1)
+z_index = 3
+script = ExtResource("1_ae6qp")
+
+[node name="BubbleTimer" type="Timer" parent="." unique_id=240442120]
+wait_time = 0.4
+autostart = true
+
+[connection signal="timeout" from="BubbleTimer" to="." method="_on_bubble_timer_timeout"]
