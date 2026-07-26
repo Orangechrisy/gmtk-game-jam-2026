@@ -1,26 +1,3737 @@
 {
-  "ADVISOR": {
-	"en": ""
+  "PARTY GUY": {
+    "en": ""
   },
-  "ADVISOR_EVENT_1_DESC": {
-	"en": "I'm thinking that we should positional our troops in Neverville!"
+  "PARTYGUY_EVENT_00_TITLE": {
+    "en": "Beautification"
   },
-  "ADVISOR_EVENT_1_CHOICE_1": {
-	"en": "That's a horrible idea. (Lose Favor in Neverville)"
+  "PARTYGUY_EVENT_00_DIALOGUE_1": {
+    "en": "Why, hello, my esteemed lord! Hmm... this place has gotten rather drab as of late, no?"
   },
-  "ADVISOR_EVENT_1_CHOICE_2": {
-	"en": "Stupedous! Let's do it (Gain Favor in Neverville)"
+  "PARTYGUY_EVENT_00_DIALOGUE_2": {
+    "en": "I was thinking we should construct a new garden by the lake. My evening drinks could use a change of scenery."
+  },
+  "PARTYGUY_EVENT_00_OPTION_1_TITLE": {
+    "en": "A wonderful idea."
+  },
+  "PARTYGUY_EVENT_00_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/color][/p][p][color=red]-3 Gold[/p][p]-2 Common Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_00_OPTION_2_TITLE": {
+    "en": "I'm afraid it simply isn't in the budget."
+  },
+  "PARTYGUY_EVENT_00_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-2 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_01_TITLE": {
+    "en": "The Royal Ball"
+  },
+  "PARTYGUY_EVENT_01_DIALOGUE_1": {
+    "en": "Ah, my lord! It's almost time for the royal ball, is it not?"
+  },
+  "PARTYGUY_EVENT_01_DIALOGUE_2": {
+    "en": "I've arranged for quite the festivities this year. I trust you will be attending? You could use the time to unwind."
+  },
+  "PARTYGUY_EVENT_01_OPTION_1_TITLE": {
+    "en": "But of course!"
+  },
+  "PARTYGUY_EVENT_01_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+3 Noble Favor[/color][/p][p][color=red]-3 Food[/p][p][color=red]-3 Gold[/p][p]-2 Common Favor[/color][p]Chance of Assassination with low Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_01_OPTION_2_TITLE": {
+    "en": "I'm afraid I will be busy."
+  },
+  "PARTYGUY_EVENT_01_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-2 Food[/p][p][color=red]-3 Gold[/p][p]-1 Common Favor[/p][p]-1 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_01_OPTION_3_TITLE": {
+    "en": "Actually, there will be no ball this year."
+  },
+  "PARTYGUY_EVENT_01_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Gold[/p][p]-3 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_02_TITLE": {
+    "en": "Royal Purchase"
+  },
+  "PARTYGUY_EVENT_02_DIALOGUE_1": {
+    "en": "Ah, my lord! I simply adore this winery! I'm thinking of purchasing it for my personal use. What do you think?"
+  },
+  "PARTYGUY_EVENT_02_OPTION_1_TITLE": {
+    "en": "I'm sure the winemaker would be honored."
+  },
+  "PARTYGUY_EVENT_02_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/color][/p][p][color=red]-1 Food[/p][p][color=red]-1 Gold[/p][p]+1 Fervor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_02_OPTION_2_TITLE": {
+    "en": "Surely you can just purchase the wine when you please."
+  },
+  "PARTYGUY_EVENT_02_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_03_TITLE": {
+    "en": "New Mansion"
+  },
+  "PARTYGUY_EVENT_03_DIALOGUE_1": {
+    "en": "My! What a coincidence seeing you here, my lord! Has this view captivated you, as well?"
+  },
+  "PARTYGUY_EVENT_03_DIALOGUE_2": {
+    "en": "I plan to purchase a plot of this land and build myself a new estate here on this hill. What do you think?"
+  },
+  "PARTYGUY_EVENT_03_OPTION_1_TITLE": {
+    "en": "What a lovely idea!"
+  },
+  "PARTYGUY_EVENT_03_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/color][/p][p][color=red]-1 Gold[/p][p]+2 Fervor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_03_OPTION_2_TITLE": {
+    "en": "It's too dangerous with the rebels about."
+  },
+  "PARTYGUY_EVENT_03_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_03_OPTION_3_TITLE": {
+    "en": "I can't let you do that, the commoners need this land."
+  },
+  "PARTYGUY_EVENT_03_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/p][p]-3 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_04_TITLE": {
+    "en": "New Cash Crop"
+  },
+  "PARTYGUY_EVENT_04_DIALOGUE_1": {
+    "en": "My lord! Have you heard? Travelers from afar have brought home a lovely new dye crop!"
+  },
+  "PARTYGUY_EVENT_04_DIALOGUE_2": {
+    "en": "And more importantly, this color is in this season! If we have the farmers grow it, we could strike it rich!"
+  },
+  "PARTYGUY_EVENT_04_OPTION_1_TITLE": {
+    "en": "What a lovely idea!"
+  },
+  "PARTYGUY_EVENT_04_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Noble Favor[/p][p]+3 Gold[/color][/p][p][color=red]-3 Food[/p][p]+2 Fervor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_04_OPTION_2_TITLE": {
+    "en": "There isn't enough room on the fields."
+  },
+  "PARTYGUY_EVENT_04_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_04_OPTION_3_TITLE": {
+    "en": "If anything, we need more food and fewer luxury crops."
+  },
+  "PARTYGUY_EVENT_04_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Loyalty[/p][p]+1 Food[/color][/p][p][color=red]-1 Gold[/p][p]-2 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_05_TITLE": {
+    "en": "Late Shipments"
+  },
+  "PARTYGUY_EVENT_05_DIALOGUE_1": {
+    "en": "Ugh! My lord! Have you heard? The trade ships headed for Afar are late! My sugar, my spices, where are they?"
+  },
+  "PARTYGUY_EVENT_05_DIALOGUE_2": {
+    "en": "My lord, do something about this!"
+  },
+  "PARTYGUY_EVENT_05_OPTION_1_TITLE": {
+    "en": "I will ask the merchants to give up their stores in the meantime."
+  },
+  "PARTYGUY_EVENT_05_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/p][p][color=red]-1 Gold[/p][p]+2 Fervor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_05_OPTION_2_TITLE": {
+    "en": "There is nothing we can do."
+  },
+  "PARTYGUY_EVENT_05_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-2 Gold[/p][p]-2 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_06_TITLE": {
+    "en": "Divorce, of Course"
+  },
+  "PARTYGUY_EVENT_06_DIALOGUE_1": {
+    "en": "My lord, I come to you with a grave issue: my wife has not borne a single son, and I tire of her."
+  },
+  "PARTYGUY_EVENT_06_DIALOGUE_2": {
+    "en": "The priest will not allow me to divorce her, but surely you can override him, yes? Set me free!"
+  },
+  "PARTYGUY_EVENT_06_OPTION_1_TITLE": {
+    "en": "Very well."
+  },
+  "PARTYGUY_EVENT_06_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/p][p][color=red]-1 Common Favor[/p][p]+3 Fervor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_06_OPTION_2_TITLE": {
+    "en": "I do not control the church."
+  },
+  "PARTYGUY_EVENT_06_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/p][p][color=red]-2 Noble Favor[/p][p]May not Station Army here[/color][/p]"
+  },
+  "PARTYGUY_EVENT_07_TITLE": {
+    "en": "A Lovely Party"
+  },
+  "PARTYGUY_EVENT_07_DIALOGUE_1": {
+    "en": "Ah, my lord! Just who I wanted to see. I'm throwing a party at my villa, and I wanted to know if you would attend."
+  },
+  "PARTYGUY_EVENT_07_DIALOGUE_2": {
+    "en": "I have arranged for the finest delicacies and diversions. It would surely do you well to attend!"
+  },
+  "PARTYGUY_EVENT_07_OPTION_1_TITLE": {
+    "en": "I will gladly attend."
+  },
+  "PARTYGUY_EVENT_07_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/p][p][color=red]-2 Common Favor[/p][p]-3 Gold/color][/p]"
+  },
+  "PARTYGUY_EVENT_07_OPTION_2_TITLE": {
+    "en": "I am afraid I will be busy."
+  },
+  "PARTYGUY_EVENT_07_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/p][p]-1 Common Favor[/p][p]-3 Gold[/color][/p]"
+  },
+  "PARTYGUY_EVENT_07_OPTION_3_TITLE": {
+    "en": "I forbid this frivolous spending."
+  },
+  "PARTYGUY_EVENT_07_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Common Favor[/p][p][color=red]-4 Noble Favor[/p]"
+  },
+  "PARTYGUY_EVENT_08_TITLE": {
+    "en": "New Villa"
+  },
+  "PARTYGUY_EVENT_08_DIALOGUE_1": {
+    "en": "My lord, I need your advice. See, I've grown quite tired of my current villa, lovely though it is."
+  },
+  "PARTYGUY_EVENT_08_DIALOGUE_2": {
+    "en": "I was thinking of constructing a new one down by the beach. What are your thoughts?"
+  },
+  "PARTYGUY_EVENT_08_OPTION_1_TITLE": {
+    "en": "It seems like a wise decision."
+  },
+  "PARTYGUY_EVENT_08_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Noble Favor[/p][p][color=red]-1 Common Favor[/p][p]-2 Gold[/color][/p]"
+  },
+  "PARTYGUY_EVENT_08_OPTION_2_TITLE": {
+    "en": "Surely you could just renovate."
+  },
+  "PARTYGUY_EVENT_08_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Common Favor[/p][p]-1 Gold[/color][/p]"
+  },
+  "PARTYGUY_EVENT_08_OPTION_3_TITLE": {
+    "en": "Don't waste your money."
+  },
+  "PARTYGUY_EVENT_08_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/p]"
+  },
+  "PARTYGUY_EVENT_09_TITLE": {
+    "en": "Hunting Trip"
+  },
+  "PARTYGUY_EVENT_09_DIALOGUE_1": {
+    "en": "Ah, my lord! Lovely to see you. I wanted to invite you along on a hunting trip near my villa."
+  },
+  "PARTYGUY_EVENT_09_DIALOGUE_2": {
+    "en": "What do you say? Would you care to go sporting with me?"
+  },
+  "PARTYGUY_EVENT_09_OPTION_1_TITLE": {
+    "en": "I would love to."
+  },
+  "PARTYGUY_EVENT_09_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/p][p][color=red]-2 Common Favor[/p][p]Chance of Assassination with low Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_09_OPTION_2_TITLE": {
+    "en": "I'm afraid I will be busy."
+  },
+  "PARTYGUY_EVENT_09_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/color][/p]"
+  },
+  "PARTYGUY_EVENT_10_TITLE": {
+    "en": "A Pleasant Drink"
+  },
+  "PARTYGUY_EVENT_10_DIALOGUE_1": {
+    "en": "Ah, my lord! What a coincidence! I was just out for a quick drink. Would you care to join me?"
+  },
+  "PARTYGUY_EVENT_10_OPTION_1_TITLE": {
+    "en": "Gladly."
+  },
+  "PARTYGUY_EVENT_10_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Noble Favor[/p][p][color=red]Chance of +1 Fervor[/p][p]-1 Gold[/color][/p]"
+  },
+  "PARTYGUY_EVENT_10_OPTION_2_TITLE": {
+    "en": "Sorry, but I must decline."
+  },
+  "PARTYGUY_EVENT_10_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/color][/p]"
+  },
+  "SPYMASTER": {
+    "en": ""
+  },
+  "SPYMASTER_EVENT_00_TITLE": {
+    "en": "A Killer Deal"
+  },
+  "SPYMASTER_EVENT_00_DIALOGUE_1": {
+    "en": "Greetings, my lord. You've seemed... quite stressed, lately."
+  },
+  "SPYMASTER_EVENT_00_DIALOGUE_2": {
+    "en": "Nowadays, I tend to shy away from this kind of work, but... if you desire, just this once, I would be willing to... take care of a problem for you."
+  },
+  "SPYMASTER_EVENT_00_OPTION_1_TITLE": {
+    "en": "Kill the Party Guy."
+  },
+  "SPYMASTER_EVENT_00_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Party Guy dies[/color][/p][p][color=red]Chance of -5 Noble Favor[/p][p]-2 Common Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_00_OPTION_2_TITLE": {
+    "en": "Kill the Rebel Leader."
+  },
+  "SPYMASTER_EVENT_00_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Rebel Leader dies[/color][/p][p][color=red]Chance of -5 Common Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_00_OPTION_3_TITLE": {
+    "en": "Kill the Aristocrat."
+  },
+  "SPYMASTER_EVENT_00_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Aristocrat dies[/color][/p][p][color=red]Chance of -5 Noble Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_00_OPTION_4_TITLE": {
+    "en": "I will be fine, thank you."
+  },
+  "SPYMASTER_EVENT_00_OPTION_4_DESC": {
+    "en": "[p]Results:[/p][p]None[/p]"
+  },
+  "SPYMASTER_EVENT_01_TITLE": {
+    "en": "Slanderous Rumors"
+  },
+  "SPYMASTER_EVENT_01_DIALOGUE_1": {
+    "en": "My lord, it seems some nobles are spreading... unfavorable rumors about your rule."
+  },
+  "SPYMASTER_EVENT_01_DIALOGUE_2": {
+    "en": "They say you are weak and incompetent. How will you respond?"
+  },
+  "SPYMASTER_EVENT_01_OPTION_1_TITLE": {
+    "en": "How dare they speak of me that way."
+  },
+  "SPYMASTER_EVENT_01_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance of +2 Noble Favor[/color][/p][p][color=red]Chance of -2 Noble Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_01_OPTION_2_TITLE": {
+    "en": "I will have to prove them wrong with action."
+  },
+  "SPYMASTER_EVENT_01_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/color][/p][p][color=red]-2 Common Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_01_OPTION_3_TITLE": {
+    "en": "They can say what they please."
+  },
+  "SPYMASTER_EVENT_01_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/p][p]-1 Common Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_02_TITLE": {
+    "en": "Intellectual Convention"
+  },
+  "SPYMASTER_EVENT_02_DIALOGUE_1": {
+    "en": "My lord, it seems the kingdom's intellectuals are planning on meeting in the city soon."
+  },
+  "SPYMASTER_EVENT_02_DIALOGUE_2": {
+    "en": "They will likely be speaking of the rebellion and other... unwelcome concepts."
+  },
+  "SPYMASTER_EVENT_02_OPTION_1_TITLE": {
+    "en": "This will not stand."
+  },
+  "SPYMASTER_EVENT_02_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance of +2 Loyalty[/color][/p][p][color=red]Chance of +4 Fervor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_02_OPTION_2_TITLE": {
+    "en": "They can discuss as they like."
+  },
+  "SPYMASTER_EVENT_02_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]+2 Fervor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_02_OPTION_3_TITLE": {
+    "en": "Perhaps I will attend, myself."
+  },
+  "SPYMASTER_EVENT_02_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Common Favor[/color][/p][p][color=red]-2 Noble Favor[/p][p]Chance of Assassination with low Common Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_03_TITLE": {
+    "en": "Secret Society"
+  },
+  "SPYMASTER_EVENT_03_DIALOGUE_1": {
+    "en": "My lord, we have uncovered rebel plans to hold a secret meeting in this town tonight."
+  },
+  "SPYMASTER_EVENT_03_DIALOGUE_2": {
+    "en": "If you wish, this may be an opportunity to catch them off-guard."
+  },
+  "SPYMASTER_EVENT_03_OPTION_1_TITLE": {
+    "en": "Let us intrude on their meeting."
+  },
+  "SPYMASTER_EVENT_03_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance to kill Rebel[/color][/p][p][color=red]-2 Gold[/p][p]Chance for +2 Fervor[/p][p]Chance for -1 Army][/color][/p]"
+  },
+  "SPYMASTER_EVENT_03_OPTION_2_TITLE": {
+    "en": "It could be a trap."
+  },
+  "SPYMASTER_EVENT_03_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]+2 Fervor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_03_OPTION_3_TITLE": {
+    "en": "I see no reason not to let them speak."
+  },
+  "SPYMASTER_EVENT_03_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Common Favor[/color][/p][p][color=red]-3 Noble Favor[/p][p]+2 Fervor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_04_TITLE": {
+    "en": "Farmers in Collusion"
+  },
+  "SPYMASTER_EVENT_04_DIALOGUE_1": {
+    "en": "Well, my lord, it seems the rebels have some... sympathizers among the farmers who are supplying them with food."
+  },
+  "SPYMASTER_EVENT_04_DIALOGUE_2": {
+    "en": "Surely this cannot go unhandled?"
+  },
+  "SPYMASTER_EVENT_04_OPTION_1_TITLE": {
+    "en": "The traitors must be dealt with."
+  },
+  "SPYMASTER_EVENT_04_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +2 Loyalty[/color][/p][p][color=red]-2 Food[/p][p]Chance for +3 Fervor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_04_OPTION_2_TITLE": {
+    "en": "Perhaps we can win the farmers back to our side."
+  },
+  "SPYMASTER_EVENT_04_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/p][p][color=red]-2 Gold[/p][p]-2 Noble Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_04_OPTION_3_TITLE": {
+    "en": "We have more pressing matters."
+  },
+  "SPYMASTER_EVENT_04_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Food[/p][p]+2 Fervor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_05_TITLE": {
+    "en": "Baron Colluding With Rebels"
+  },
+  "SPYMASTER_EVENT_05_DIALOGUE_1": {
+    "en": "Unfortunate news, my lord... it seems the Baron of the Outskirts has been seen speaking to the Rebels."
+  },
+  "SPYMASTER_EVENT_05_DIALOGUE_2": {
+    "en": "There are even fears he may be supporting their cause..."
+  },
+  "SPYMASTER_EVENT_05_OPTION_1_TITLE": {
+    "en": "He will be removed at once."
+  },
+  "SPYMASTER_EVENT_05_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Baron dies[/p][p]Chance for +3 Loyalty[/color][/p][p][color=red]-2 Gold[/p][p][color=red]-1 Noble Favor[/p][p]Chance for -1 Common Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_05_OPTION_2_TITLE": {
+    "en": "I will speak with him."
+  },
+  "SPYMASTER_EVENT_05_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Loyalty[/color][/p][p][color=red]Chance for -2 Common Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_05_OPTION_3_TITLE": {
+    "en": "We have more pressing matters."
+  },
+  "SPYMASTER_EVENT_05_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]Chance for +2 Fervor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_06_TITLE": {
+    "en": "Talks of Treason"
+  },
+  "SPYMASTER_EVENT_06_DIALOGUE_1": {
+    "en": "My lord, it seems your \"loyal soldiers\" may not be quite so loyal after all."
+  },
+  "SPYMASTER_EVENT_06_DIALOGUE_2": {
+    "en": "We have uncovered reliable information that some of your officials may be ready to turn against you..."
+  },
+  "SPYMASTER_EVENT_06_OPTION_1_TITLE": {
+    "en": "Let us root out the traitors."
+  },
+  "SPYMASTER_EVENT_06_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance to kill General[/p][p]+3 Loyalty[/color][/p][p][color=red]-1 Army[/p][p][color=red]-1 Common Favor[/p][p]Chance for -1 Army[/color][/p]"
+  },
+  "SPYMASTER_EVENT_06_OPTION_2_TITLE": {
+    "en": "I will have to earn their respect back."
+  },
+  "SPYMASTER_EVENT_06_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Loyalty[/color][/p][p][color=red]-3 Gold[/p][p]-1 Common Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_06_OPTION_3_TITLE": {
+    "en": "We will simply have to trust them."
+  },
+  "SPYMASTER_EVENT_06_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]Chance for +3 Fervor[/p][p]Chance for -1 Army[/color][/p]"
+  },
+  "DUCHESS": {
+    "en": ""
+  },
+  "DUCHESS_EVENT_00_TITLE": {
+    "en": "Diplomatic Marriage"
+  },
+  "DUCHESS_EVENT_00_DIALOGUE_1": {
+    "en": "My lord, I understand you are busy, but you are growing older and your hand is growing weak. The nobility is worried you will die without an heir."
+  },
+  "DUCHESS_EVENT_00_DIALOGUE_2": {
+    "en": "A marriage with the neighboring kingdom's princess would improve their confidence... and secure us valuable support against the rebels."
+  },
+  "DUCHESS_EVENT_00_OPTION_1_TITLE": {
+    "en": "Very well. Let us be married."
+  },
+  "DUCHESS_EVENT_00_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Loyalty in all provinces[/p][p]+3 Noble Favor[/color][/p][p][color=red]-5 Gold[/p][p]-2 Food[/color][/p]"
+  },
+  "DUCHESS_EVENT_00_OPTION_2_TITLE": {
+    "en": "I am strong as ever!"
+  },
+  "DUCHESS_EVENT_00_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-2 Noble Favor[/color][/p]"
+  },
+  "DUCHESS_EVENT_01_TITLE": {
+    "en": "Royal Speech"
+  },
+  "DUCHESS_EVENT_01_DIALOGUE_1": {
+    "en": "The people of the city are growing restless, my lord, and rebel sentiment is growing. You need to reassure them of your strength."
+  },
+  "DUCHESS_EVENT_01_DIALOGUE_2": {
+    "en": "A speech would surely do you well."
+  },
+  "DUCHESS_EVENT_01_OPTION_1_TITLE": {
+    "en": "An excellent idea."
+  },
+  "DUCHESS_EVENT_01_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/p][p][color=red]-1 Gold[/p][p]Chance of Assassination with low Common Favor[/color][/p]"
+  },
+  "DUCHESS_EVENT_01_OPTION_2_TITLE": {
+    "en": "It is too dangerous."
+  },
+  "DUCHESS_EVENT_01_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]+1 Fervor[/color][/p]"
+  },
+  "DUCHESS_EVENT_02_TITLE": {
+    "en": "Traders From Afar"
+  },
+  "DUCHESS_EVENT_02_DIALOGUE_1": {
+    "en": "My lord, a trade ship from Afar has arrived in the port, and they say they would like to speak with you."
+  },
+  "DUCHESS_EVENT_02_DIALOGUE_2": {
+    "en": "It seems they desire to increase trade..."
+  },
+  "DUCHESS_EVENT_02_OPTION_1_TITLE": {
+    "en": "I will meet with them at once."
+  },
+  "DUCHESS_EVENT_02_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/color][/p][p][color=red]-1 Food[/p][p]-2 Gold[/color][/p]"
+  },
+  "DUCHESS_EVENT_02_OPTION_2_TITLE": {
+    "en": "We cannot afford to increase our imports."
+  },
+  "DUCHESS_EVENT_02_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/color][/p]"
+  },
+  "DUCHESS_EVENT_03_TITLE": {
+    "en": "Foreign Sanctions"
+  },
+  "DUCHESS_EVENT_03_DIALOGUE_1": {
+    "en": "Terrible news, my lord. It appears foreign merchants have increased their prices, owing to dangers the rebels pose."
+  },
+  "DUCHESS_EVENT_03_DIALOGUE_2": {
+    "en": "If we let this stand, our finances will suffer."
+  },
+  "DUCHESS_EVENT_03_OPTION_1_TITLE": {
+    "en": "Unacceptable. We will force their prices down."
+  },
+  "DUCHESS_EVENT_03_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/color][/p][p][color=red]Chance to kill Envoy[/p][p]+2 Fervor[/color][/p]"
+  },
+  "DUCHESS_EVENT_03_OPTION_2_TITLE": {
+    "en": "I suppose we must adapt."
+  },
+  "DUCHESS_EVENT_03_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-2 Gold[/p][p]-1 Noble Favor[/color][/p]"
+  },
+  "DUCHESS_EVENT_04_TITLE": {
+    "en": "Spies Uncovered"
+  },
+  "DUCHESS_EVENT_04_DIALOGUE_1": {
+    "en": "My lord, some traitors have been apprehended after attempting to infiltrate our ranks."
+  },
+  "DUCHESS_EVENT_04_DIALOGUE_2": {
+    "en": "How shall we punish them?"
+  },
+  "DUCHESS_EVENT_04_OPTION_1_TITLE": {
+    "en": "They will be executed at dawn."
+  },
+  "DUCHESS_EVENT_04_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/color][/p][p][color=red]+3 Fervor[/color][/p]"
+  },
+  "DUCHESS_EVENT_04_OPTION_2_TITLE": {
+    "en": "They will be thrown into prison."
+  },
+  "DUCHESS_EVENT_04_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Noble Favor[/color][/p][p][color=red]-1 Gold[/p][p]+1 Fervor[/color][/p]"
+  },
+  "DUCHESS_EVENT_04_OPTION_3_TITLE": {
+    "en": "Perhaps we can use them as leverage..."
+  },
+  "DUCHESS_EVENT_04_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Common Favor[/color][/p][p][color=red]Chance of +2 Fervor[/p][p]-2 Noble Favor[/color][/p]"
+  },
+  "DUCHESS_EVENT_05_TITLE": {
+    "en": "Rebel Demands"
+  },
+  "DUCHESS_EVENT_05_DIALOGUE_1": {
+    "en": "My lord, the rebels are protesting, requesting you grant more freedoms for the people."
+  },
+  "DUCHESS_EVENT_05_DIALOGUE_2": {
+    "en": "Surely we cannot allow this...?"
+  },
+  "DUCHESS_EVENT_05_OPTION_1_TITLE": {
+    "en": "How dare they."
+  },
+  "DUCHESS_EVENT_05_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/p][p]Chance for +1 Loyalty[/color][/p][p][color=red]-1 Gold[/p][p]Chance for +3 Fervor[/color][/p]"
+  },
+  "DUCHESS_EVENT_05_OPTION_2_TITLE": {
+    "en": "I suppose we can grant them this."
+  },
+  "DUCHESS_EVENT_05_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Loyalty[/color][/p][p][color=red]-2 Noble Favor[/color][/p]"
+  },
+  "GENERAL": {
+    "en": ""
+  },
+  "GENERAL_EVENT_00_TITLE": {
+    "en": "Riot in the Streets"
+  },
+  "GENERAL_EVENT_00_DIALOGUE_1": {
+    "en": "My lord! The people are rioting! There is chaos in the streets. We must restore order at once!"
+  },
+  "GENERAL_EVENT_00_OPTION_1_TITLE": {
+    "en": "Send in the army!"
+  },
+  "GENERAL_EVENT_00_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +2 Loyalty[/color][/p][p]+1 Noble Favor[/color][/p][p][color=red]-1 Army[/p][p]Chance for +2 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_00_OPTION_2_TITLE": {
+    "en": "I will talk them down myself."
+  },
+  "GENERAL_EVENT_00_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +3 Loyalty[/p][p][color=red]Chance of Assassination with low Common Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_00_OPTION_3_TITLE": {
+    "en": "The police can handle it."
+  },
+  "GENERAL_EVENT_00_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]+1 Fervor[/p][p]-2 Gold[/color][/p]"
+  },
+  "GENERAL_EVENT_01_TITLE": {
+    "en": "Public Execution"
+  },
+  "GENERAL_EVENT_01_DIALOGUE_1": {
+    "en": "My lord! We have captured a rebel leader. They will be executed at dawn. Will you attend?"
+  },
+  "GENERAL_EVENT_01_OPTION_1_TITLE": {
+    "en": "But of course."
+  },
+  "GENERAL_EVENT_01_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +2 Loyalty[/p][p]+1 Noble Favor[/color][/p][p][color=red]Chance for +3 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_01_OPTION_2_TITLE": {
+    "en": "I am afraid I will be busy."
+  },
+  "GENERAL_EVENT_01_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +1 Loyalty[/p][p][color=red]Chance for +2 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_01_OPTION_3_TITLE": {
+    "en": "Wait! Don't do it!"
+  },
+  "GENERAL_EVENT_01_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-2 Noble Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_02_TITLE": {
+    "en": "Marauders"
+  },
+  "GENERAL_EVENT_02_DIALOGUE_1": {
+    "en": "My lord, it appears marauders have begun to pillage the farmlands - no doubt associated with those foul rebels."
+  },
+  "GENERAL_EVENT_02_DIALOGUE_2": {
+    "en": "How shall we handle them?"
+  },
+  "GENERAL_EVENT_02_OPTION_1_TITLE": {
+    "en": "Send in the army!"
+  },
+  "GENERAL_EVENT_02_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/p][p][color=red]-1 Army[/p][p]-2 Gold[/color][/p]"
+  },
+  "GENERAL_EVENT_02_OPTION_2_TITLE": {
+    "en": "They can handle themselves."
+  },
+  "GENERAL_EVENT_02_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]+2 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_02_OPTION_3_TITLE": {
+    "en": "Provide the locals with arms."
+  },
+  "GENERAL_EVENT_02_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +2 Loyalty[/color][/p][p][color=red]Chance for +3 Fervor[/p][p]-1 Gold[/color][/p]"
+  },
+  "GENERAL_EVENT_03_TITLE": {
+    "en": "Mining Strike"
+  },
+  "GENERAL_EVENT_03_DIALOGUE_1": {
+    "en": "My lord, the miners have gone on strike, protesting their working conditions."
+  },
+  "GENERAL_EVENT_03_DIALOGUE_2": {
+    "en": "This cannot be allowed to stand, surely."
+  },
+  "GENERAL_EVENT_03_OPTION_1_TITLE": {
+    "en": "Send in the army!"
+  },
+  "GENERAL_EVENT_03_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance of +2 Loyalty[/color][/p][p][color=red]-1 Army[/p][p]-2 Gold[/p][p]Chance of +3 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_03_OPTION_2_TITLE": {
+    "en": "They will tire themselves out."
+  },
+  "GENERAL_EVENT_03_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Gold[/p][p]+2 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_03_OPTION_3_TITLE": {
+    "en": "Perhaps we can hear them out."
+  },
+  "GENERAL_EVENT_03_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/p][p][color=red]-2 Gold[/p][p]-3 Noble Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_04_TITLE": {
+    "en": "Equipment Upgrade"
+  },
+  "GENERAL_EVENT_04_DIALOGUE_1": {
+    "en": "My lord, it seems our weapons are beginning to show their age."
+  },
+  "GENERAL_EVENT_04_DIALOGUE_2": {
+    "en": "We desperately need new equipment if we wish to continue defending our lands."
+  },
+  "GENERAL_EVENT_04_OPTION_1_TITLE": {
+    "en": "Very well."
+  },
+  "GENERAL_EVENT_04_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Army[/color][/p][p][color=red]-3 Gold[/p][p]+1 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_04_OPTION_2_TITLE": {
+    "en": "You will have to make do without."
+  },
+  "GENERAL_EVENT_04_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]Chance for -1 Army[/p][p]-1 Noble Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_05_TITLE": {
+    "en": "Strange Weaponry"
+  },
+  "GENERAL_EVENT_05_DIALOGUE_1": {
+    "en": "Curious news, my lord! Foreign merchants have brought us strange new weaponry they say is more powerful than anything we've seen."
+  },
+  "GENERAL_EVENT_05_DIALOGUE_2": {
+    "en": "Perhaps this is the secret weapon we need to defeat the rebels...?"
+  },
+  "GENERAL_EVENT_05_OPTION_1_TITLE": {
+    "en": "Let us purchase some immediately."
+  },
+  "GENERAL_EVENT_05_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +1 Army[/color][/p][p][color=red]-3 Gold[/color][/p]"
+  },
+  "GENERAL_EVENT_05_OPTION_2_TITLE": {
+    "en": "It's not in the budget."
+  },
+  "GENERAL_EVENT_05_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_06_TITLE": {
+    "en": "Servant Revolt"
+  },
+  "GENERAL_EVENT_06_DIALOGUE_1": {
+    "en": "My lord, the servants maintaining the villas have taken up arms! We must crush them at once!"
+  },
+  "GENERAL_EVENT_06_OPTION_1_TITLE": {
+    "en": "Show them no mercy."
+  },
+  "GENERAL_EVENT_06_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +2 Loyalty[/p][p]+2 Noble Favor[/color][/p][p][color=red]-1 Army[/p][p]Chance for +3 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_06_OPTION_2_TITLE": {
+    "en": "Go easy on them."
+  },
+  "GENERAL_EVENT_06_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +1 Loyalty[/color][/p][p][color=red]-1 Army[/p][p]-1 Noble Favor[/p][p]Chance for +2 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_06_OPTION_3_TITLE": {
+    "en": "We have more pressing issues."
+  },
+  "GENERAL_EVENT_06_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-2 Noble Favor[/p][p]+2 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_07_TITLE": {
+    "en": "Unwelcome Visitors"
+  },
+  "GENERAL_EVENT_07_DIALOGUE_1": {
+    "en": "My lord, it seems there are squatters making themselves welcome in the empty villas of nobles."
+  },
+  "GENERAL_EVENT_07_DIALOGUE_2": {
+    "en": "How shall we handle them?"
+  },
+  "GENERAL_EVENT_07_OPTION_1_TITLE": {
+    "en": "Clear them out."
+  },
+  "GENERAL_EVENT_07_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/color][/p][p][color=red]-1 Gold[/p][p]+1 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_07_OPTION_2_TITLE": {
+    "en": "The Nobles can handle it."
+  },
+  "GENERAL_EVENT_07_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +1 Loyalty[/color][/p][p][color=red]-2 Noble Favor[/p][p]Chance for +2 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_08_TITLE": {
+    "en": "Military Parade"
+  },
+  "GENERAL_EVENT_08_DIALOGUE_1": {
+    "en": "Well met, my lord! We are organizing a military exercise today, and we would be honored to have your presence."
+  },
+  "GENERAL_EVENT_08_OPTION_1_TITLE": {
+    "en": "I will gladly attend."
+  },
+  "GENERAL_EVENT_08_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/p][p]+1 Noble Favor[/color][/p][p][color=red]-1 Gold[/color][/p]"
+  },
+  "GENERAL_EVENT_08_OPTION_2_TITLE": {
+    "en": "I'm afraid I will be busy."
+  },
+  "GENERAL_EVENT_08_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_09_TITLE": {
+    "en": "Power Struggle"
+  },
+  "GENERAL_EVENT_09_DIALOGUE_1": {
+    "en": "My lord, I require your assistance. It seems some nobles are plotting to have me replaced by an upstart general."
+  },
+  "GENERAL_EVENT_09_DIALOGUE_2": {
+    "en": "You cannot trust them, my lord. For your safety, you must keep me in power!"
+  },
+  "GENERAL_EVENT_09_OPTION_1_TITLE": {
+    "en": "You have my support."
+  },
+  "GENERAL_EVENT_09_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/p][p][color=red]-1 Noble Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_09_OPTION_2_TITLE": {
+    "en": "I'm afraid I cannot guarantee anything."
+  },
+  "GENERAL_EVENT_09_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Noble Favor[/color][/p][p][color=red]+1 Fervor[/p][p]Chance to kill General[/color][/p]"
+  },
+  "GENERAL_EVENT_10_TITLE": {
+    "en": "Rebel Sympathizers"
+  },
+  "GENERAL_EVENT_10_DIALOGUE_1": {
+    "en": "My lord, I have bad news. I fear that the rebels may be gaining popularity among some of the young recruits."
+  },
+  "GENERAL_EVENT_10_DIALOGUE_2": {
+    "en": "We need to root out this insurrectionist sentiment before it is too late!"
+  },
+  "GENERAL_EVENT_10_OPTION_1_TITLE": {
+    "en": "Clear out the traitors."
+  },
+  "GENERAL_EVENT_10_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/p][p][color=red][p]-1 Gold[/p][p]-2 Armies[/color][/p]"
+  },
+  "GENERAL_EVENT_10_OPTION_2_TITLE": {
+    "en": "We must conduct a thorough investigation."
+  },
+  "GENERAL_EVENT_10_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/p][p][color=red]-3 Gold[/p][p]-1 Army[/color][/p]"
+  },
+  "GENERAL_EVENT_10_OPTION_3_TITLE": {
+    "en": "They can believe what they must as long as they fight."
+  },
+  "GENERAL_EVENT_10_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]-1 Noble Favor[/p][p]Chance for +2 Fervor[[/color][/p]"
+  },
+  "GENERAL_EVENT_11_TITLE": {
+    "en": "Backstabbing Noble"
+  },
+  "GENERAL_EVENT_11_DIALOGUE_1": {
+    "en": "My lord, a scheming noble attempted to speak with me late last night about a potential coup!"
+  },
+  "GENERAL_EVENT_11_DIALOGUE_2": {
+    "en": "Of course, I would never betray you, but you must deal with them!"
+  },
+  "GENERAL_EVENT_11_OPTION_1_TITLE": {
+    "en": "They will be executed for their crimes."
+  },
+  "GENERAL_EVENT_11_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Common Favor[/p][p]Noble dies[/p][/color][/p][p][color=red][p]-1 Gold[/p][p]-5 Noble Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_11_OPTION_2_TITLE": {
+    "en": "They will be punished severely."
+  },
+  "GENERAL_EVENT_11_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Gold[/p][p]Chance for +1 Noble Favor[/color][/p][p][color=red]Chance for -2 Noble Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_11_OPTION_3_TITLE": {
+    "en": "How do I know I can trust you?"
+  },
+  "GENERAL_EVENT_11_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +2 Noble Favor[/color][/p][p][color=red]-1 Loyalty[/p][p]Chance for -3 Noble Favor[/color][/p]"
+  },
+  "GENERAL_EVENT_12_TITLE": {
+    "en": "Rebel Clash"
+  },
+  "GENERAL_EVENT_12_DIALOGUE_1": {
+    "en": "My lord, urgent news! The rebels have launched an attack! We must stop them immediately!"
+  },
+  "GENERAL_EVENT_12_OPTION_1_TITLE": {
+    "en": "Show them no mercy!"
+  },
+  "GENERAL_EVENT_12_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +2 Loyalty[/p][/color][/p][p][color=red][p]-1 Gold[/p][p]-1 Army[/p][p]Chance for +3 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_12_OPTION_2_TITLE": {
+    "en": "Show some restraint."
+  },
+  "GENERAL_EVENT_12_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance for +2 Loyalty[/p][/color][/p][p][color=red][p]-1 Noble Favor[/p][p]-1 Army[/p][p]Chance for +2 Fervor[/color][/p]"
+  },
+  "GENERAL_EVENT_12_OPTION_3_TITLE": {
+    "en": "There is nothing we can do."
+  },
+  "GENERAL_EVENT_12_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]+2 Fervor[/color][/p]"
   },
   "PRIEST": {
-	"en": ""
+    "en": ""
   },
-  "PRIEST_EVENT_1_DESC": {
-	"en": "Hi"
+  "PRIEST_EVENT_00_TITLE": {
+    "en": "Renovations Needed"
   },
-  "PRIEST_EVENT_1_CHOICE_1": {
-	"en": "Ignore"
+  "PRIEST_EVENT_00_DIALOGUE_1": {
+    "en": "Greetings, my lord. I come with a request. My church is quite old, you see, and it has certainly... seen better days."
   },
-  "PRIEST_EVENT_1_CHOICE_2": {
-	"en": "Accept"
+  "PRIEST_EVENT_00_DIALOGUE_2": {
+    "en": "I would like to make some renovations, but donations aren't what they used to be. Could you spare some money?"
+  },
+  "PRIEST_EVENT_00_OPTION_1_TITLE": {
+    "en": "But of course."
+  },
+  "PRIEST_EVENT_00_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/color][/p][p][color=red]-2 Gold[/color][/p]"
+  },
+  "PRIEST_EVENT_00_OPTION_2_TITLE": {
+    "en": "I'm afraid it isn't in the budget."
+  },
+  "PRIEST_EVENT_00_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]+1 Fervor[/color][/p]"
+  },
+  "PRIEST_EVENT_01_TITLE": {
+    "en": "Indulgences"
+  },
+  "PRIEST_EVENT_01_DIALOGUE_1": {
+    "en": "My lord, I hate to admit it, but the church is struggling to make ends meet."
+  },
+  "PRIEST_EVENT_01_DIALOGUE_2": {
+    "en": "I understand this is a difficult subject, and so I wanted to ask your opinion on allowing the church to sell indulgences."
+  },
+  "PRIEST_EVENT_01_OPTION_1_TITLE": {
+    "en": "If you must."
+  },
+  "PRIEST_EVENT_01_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Loyalty[/color][/color][/p][p][color=red]-1 Common Favor[/color][/p]"
+  },
+  "PRIEST_EVENT_01_OPTION_2_TITLE": {
+    "en": "Allow me to cover your expenses."
+  },
+  "PRIEST_EVENT_01_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/color][/p][p][color=red]-1 Gold[/color][/p]"
+  },
+  "PRIEST_EVENT_01_OPTION_3_TITLE": {
+    "en": "What do you need that money for, anyway?"
+  },
+  "PRIEST_EVENT_01_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=red]+2 Fervor[/color][/p]"
+  },
+  "PRIEST_EVENT_02_TITLE": {
+    "en": "Heretical Nobles"
+  },
+  "PRIEST_EVENT_02_DIALOGUE_1": {
+    "en": "My lord! The nobles grow more and more debaucherous by the day! Please, save their souls and tell them off!"
+  },
+  "PRIEST_EVENT_02_OPTION_1_TITLE": {
+    "en": "I will rebuke them harshly."
+  },
+  "PRIEST_EVENT_02_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Loyalty[/color][/color][/p][p][color=red]-2 Noble Favor[/color][/p]"
+  },
+  "PRIEST_EVENT_02_OPTION_2_TITLE": {
+    "en": "They can do as they please."
+  },
+  "PRIEST_EVENT_02_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Noble Favor[/color][/color][/p][p][color=red]+1 Fervor[/color][/p]"
+  },
+  "PRIEST_EVENT_03_TITLE": {
+    "en": "A Sign from God"
+  },
+  "PRIEST_EVENT_03_DIALOGUE_1": {
+    "en": "My lord, it appears the rebel leader has claimed to have witnessed an omen assuring his victory."
+  },
+  "PRIEST_EVENT_03_DIALOGUE_2": {
+    "en": "The rebel morale is higher than ever! What shall we do?"
+  },
+  "PRIEST_EVENT_03_OPTION_1_TITLE": {
+    "en": "They saw nothing."
+  },
+  "PRIEST_EVENT_03_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]Chance of +1 Common Favor[/color][/color][/p][p][color=red]Chance of -1 Common Favor[/color][/p]"
+  },
+  "PRIEST_EVENT_03_OPTION_2_TITLE": {
+    "en": "Bah! What good is an omen, anyway?"
+  },
+  "PRIEST_EVENT_03_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=red]+1 Fervor[/color][/p]"
+  },
+  "PRIEST_EVENT_04_TITLE": {
+    "en": "Atheistic Rebels"
+  },
+  "PRIEST_EVENT_04_DIALOGUE_1": {
+    "en": "My lord, terrible news! It seems the rebels are turning away from God and denouncing the Church! What are we to do?"
+  },
+  "PRIEST_EVENT_04_OPTION_1_TITLE": {
+    "en": "Then it is a holy war."
+  },
+  "PRIEST_EVENT_04_OPTION_1_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+3 Loyalty[/color][/color][/p][p][color=red]-1 Common Favor[/p][p]-1 Army[/color][/p]"
+  },
+  "PRIEST_EVENT_04_OPTION_2_TITLE": {
+    "en": "The church must win them back."
+  },
+  "PRIEST_EVENT_04_OPTION_2_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+1 Loyalty[/color][/color][/p][p][color=red]+1 Fervor[/p][p]-1 Gold[/color][/p]"
+  },
+  "PRIEST_EVENT_04_OPTION_3_TITLE": {
+    "en": "Perhaps they have a point..."
+  },
+  "PRIEST_EVENT_04_OPTION_3_DESC": {
+    "en": "[p]Results:[/p][p][color=green]+2 Common Favor[/color][/color][/p][p][color=red]-1 Noble Favor[/p][p]-3 Loyalty[/color][/p]"
+  },
+  "PRIEST_EVENT_05_TITLE": {
+    "en": "A Prayer"
+  },
+  "PRIEST_EVENT_05_DIALOGUE_1": {
+    "en": "Oh! Welcome, my lord! Have you come to pray?"
+  },
+  "PRIEST_EVENT_05_OPTION_1_TITLE": {
+    "en": "I pray for a bountiful harvest."
+  },
+  "PRIEST_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: Chance for +2 Food from this province."
+  },
+  "PRIEST_EVENT_05_OPTION_2_TITLE": {
+    "en": "I pray for prosperity for my kingdom."
+  },
+  "PRIEST_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: Chance for +2 Gold from this province."
+  },
+  "PRIEST_EVENT_05_OPTION_3_TITLE": {
+    "en": "I pray for victory in battle."
+  },
+  "PRIEST_EVENT_05_OPTION_3_DESC": {
+    "en": "Results: Chance for +1 Army."
+  },
+  "COMMONER": {
+    "en": ""
+  },
+  "COMMONER_EVENT_00_TITLE": {
+    "en": "Protection Request"
+  },
+  "COMMONER_EVENT_00_DIALOGUE_1": {
+    "en": "My lord, it's great to see you! Bandits have been lurking around here lately, and we're all afraid to go out at night."
+  },
+  "COMMONER_EVENT_00_DIALOGUE_2": {
+    "en": "Could you post some guards here to keep us safe?"
+  },
+  "COMMONER_EVENT_00_OPTION_1_TITLE": {
+    "en": "I'll see what I can do."
+  },
+  "COMMONER_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty, -1 Army, -1 Gold"
+  },
+  "COMMONER_EVENT_00_OPTION_2_TITLE": {
+    "en": "I'm afraid it isn't in the budget."
+  },
+  "COMMONER_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "COMMONER_EVENT_00_OPTION_3_TITLE": {
+    "en": "We can provide you with weapons."
+  },
+  "COMMONER_EVENT_00_OPTION_3_DESC": {
+    "en": "Results: -1 Gold, chance of +1 Loyalty, chance of +2 Fervor"
+  },
+  "COMMONER_EVENT_01_TITLE": {
+    "en": "Bandits!"
+  },
+  "COMMONER_EVENT_01_DIALOGUE_1": {
+    "en": "My lord, we need your help! Bandits are ransacking the town! Please, save us!"
+  },
+  "COMMONER_EVENT_01_OPTION_1_TITLE": {
+    "en": "The army will come to your defense."
+  },
+  "COMMONER_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -1 Army"
+  },
+  "COMMONER_EVENT_01_OPTION_2_TITLE": {
+    "en": "You're on your own."
+  },
+  "COMMONER_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "COMMONER_EVENT_02_TITLE": {
+    "en": "Fire!"
+  },
+  "COMMONER_EVENT_02_DIALOGUE_1": {
+    "en": "My lord, we need your help! A great fire has devastated our town! We need your help to rebuild!"
+  },
+  "COMMONER_EVENT_02_OPTION_1_TITLE": {
+    "en": "Help is on the way."
+  },
+  "COMMONER_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -3 Gold"
+  },
+  "COMMONER_EVENT_02_OPTION_2_TITLE": {
+    "en": "I'm afraid we have nothing to offer."
+  },
+  "COMMONER_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor, -1 Gold in province"
+  },
+  "COMMONER_EVENT_03_TITLE": {
+    "en": "Expanding the Town"
+  },
+  "COMMONER_EVENT_03_DIALOGUE_1": {
+    "en": "Hello, my lord! The town is doing wonderfully, and in fact, it's growing faster than ever!"
+  },
+  "COMMONER_EVENT_03_DIALOGUE_2": {
+    "en": "May we have permission to construct more homes?"
+  },
+  "COMMONER_EVENT_03_OPTION_1_TITLE": {
+    "en": "But of course."
+  },
+  "COMMONER_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: -1 Gold, +1 Gold in province, -1 Food in province"
+  },
+  "COMMONER_EVENT_03_OPTION_2_TITLE": {
+    "en": "Permission denied."
+  },
+  "COMMONER_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "COMMONER_EVENT_04_TITLE": {
+    "en": "Local Festival"
+  },
+  "COMMONER_EVENT_04_DIALOGUE_1": {
+    "en": "Oh! My lord, it's great to see you! Today is the when we celebrate our Harvest Festival. Would you care to join us?"
+  },
+  "COMMONER_EVENT_04_OPTION_1_TITLE": {
+    "en": "Gladly."
+  },
+  "COMMONER_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty, -1 Food, -1 Noble Favor"
+  },
+  "COMMONER_EVENT_04_OPTION_2_TITLE": {
+    "en": "I'm afraid I'm busy."
+  },
+  "COMMONER_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: None"
+  },
+  "COMMONER_EVENT_05_TITLE": {
+    "en": "New Farm"
+  },
+  "COMMONER_EVENT_05_DIALOGUE_1": {
+    "en": "Hello, my lord! Wonderful to see you. I'm thinking of starting a farm here, but I don't quite have the equipment."
+  },
+  "COMMONER_EVENT_05_DIALOGUE_2": {
+    "en": "If it's not too much to ask, may I take out a small loan? I'll pay it back, honest!"
+  },
+  "COMMONER_EVENT_05_OPTION_1_TITLE": {
+    "en": "I suppose I can spare some wealth."
+  },
+  "COMMONER_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty, +1 Food in province, -1 Gold"
+  },
+  "COMMONER_EVENT_05_OPTION_2_TITLE": {
+    "en": "You'll figure it out."
+  },
+  "COMMONER_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: None"
+  },
+  "REBEL RADICAL": {
+    "en": ""
+  },
+  "RADICAL_EVENT_00_TITLE": {
+    "en": "Surrender Now!"
+  },
+  "RADICAL_EVENT_00_DIALOGUE_1": {
+    "en": "Tyrant, the time has come! The people demand your immediate surrender!"
+  },
+  "RADICAL_EVENT_00_DIALOGUE_2": {
+    "en": "Turn yourself in and face your crimes!"
+  },
+  "RADICAL_EVENT_00_OPTION_1_TITLE": {
+    "en": "I suppose this is the end, then."
+  },
+  "RADICAL_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: Ends the game"
+  },
+  "RADICAL_EVENT_00_OPTION_2_TITLE": {
+    "en": "I refuse!"
+  },
+  "RADICAL_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "RADICAL_EVENT_00_OPTION_3_TITLE": {
+    "en": "Guards!"
+  },
+  "RADICAL_EVENT_00_OPTION_3_DESC": {
+    "en": "Results: +3 Fervor, chance of killing Radical, chance of Assassination if Common Favor is low"
+  },
+  "RADICAL_EVENT_01_TITLE": {
+    "en": "Calls for Overthrow"
+  },
+  "RADICAL_EVENT_01_DIALOGUE_1": {
+    "en": "Tyrant, you are a stain on this land! You oppress the people and hoard the fruits of their labor!"
+  },
+  "RADICAL_EVENT_01_DIALOGUE_2": {
+    "en": "I call upon the people to topple your cruel regime!"
+  },
+  "RADICAL_EVENT_01_OPTION_1_TITLE": {
+    "en": "How dare you speak of me like this."
+  },
+  "RADICAL_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: +2 Fervor, +1 Noble Sentiment"
+  },
+  "RADICAL_EVENT_01_OPTION_2_TITLE": {
+    "en": "You will be punished for your crimes."
+  },
+  "RADICAL_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: +3 Fervor, -1 Army, chance of killing Radical"
+  },
+  "RADICAL_EVENT_01_OPTION_3_TITLE": {
+    "en": "Surely we can discuss this."
+  },
+  "RADICAL_EVENT_01_OPTION_3_DESC": {
+    "en": "Results: +1 Fervor, -2 Noble Sentiment"
+  },
+  "RADICAL_EVENT_02_TITLE": {
+    "en": "Barricades"
+  },
+  "RADICAL_EVENT_02_DIALOGUE_1": {
+    "en": "Tyrant, you will steal the fruits of these people's labor no longer!"
+  },
+  "RADICAL_EVENT_02_DIALOGUE_2": {
+    "en": "The roads have been barricaded and the people armed!"
+  },
+  "RADICAL_EVENT_02_OPTION_1_TITLE": {
+    "en": "We will crush this insurrection."
+  },
+  "RADICAL_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: Chance of +2 Loyalty, Chance of +3 Fervor, -1 Army, +1 Noble Sentiment"
+  },
+  "RADICAL_EVENT_02_OPTION_2_TITLE": {
+    "en": "Perhaps we can talk this out."
+  },
+  "RADICAL_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: Chance of +2 Loyalty, chance of +1 Fervor, -1 Food from province, -1 Noble Sentiment"
+  },
+  "RADICAL_EVENT_02_OPTION_3_TITLE": {
+    "en": "So be it."
+  },
+  "RADICAL_EVENT_02_OPTION_3_DESC": {
+    "en": "Results: +2 Fervor, -3 Food from province"
+  },
+  "RADICAL_EVENT_03_TITLE": {
+    "en": "Holy Calling"
+  },
+  "RADICAL_EVENT_03_DIALOGUE_1": {
+    "en": "Tyrant, how dare you associate with the Church, demon that you are!"
+  },
+  "RADICAL_EVENT_03_DIALOGUE_2": {
+    "en": "Our cause is holy, and God is with us! You will face divine wrath!"
+  },
+  "RADICAL_EVENT_03_OPTION_1_TITLE": {
+    "en": "How dare you."
+  },
+  "RADICAL_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: +1 Noble Favor, -1 Common Favor, chance of +2 Fervor"
+  },
+  "RADICAL_EVENT_03_OPTION_2_TITLE": {
+    "en": "You are a hypocrite, spreading destruction and death."
+  },
+  "RADICAL_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: Chance of +1 Common Favor, chance of -1 Common Favor"
+  },
+  "RADICAL_EVENT_03_OPTION_3_TITLE": {
+    "en": "Say what you will."
+  },
+  "RADICAL_EVENT_03_OPTION_3_DESC": {
+    "en": "Results: +1 Fervor, -2 Common Favor"
+  },
+  "RADICAL_EVENT_04_TITLE": {
+    "en": "Villa Attack"
+  },
+  "RADICAL_EVENT_04_DIALOGUE_1": {
+    "en": "Tyrant, you and your cronies own giant mansions you never use while the common folk starve in the streets!"
+  },
+  "RADICAL_EVENT_04_DIALOGUE_2": {
+    "en": "Your land will be seized and distributed to the people!"
+  },
+  "RADICAL_EVENT_04_OPTION_1_TITLE": {
+    "en": "This land is rightfully mine."
+  },
+  "RADICAL_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: +1 Noble Favor, +2 Fervor"
+  },
+  "RADICAL_EVENT_04_OPTION_2_TITLE": {
+    "en": "You do have a point."
+  },
+  "RADICAL_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: +1 Common Favor, -2 Noble Favor, -1 Gold"
+  },
+  "RADICAL_EVENT_04_OPTION_3_TITLE": {
+    "en": "You will not touch our property."
+  },
+  "RADICAL_EVENT_04_OPTION_3_DESC": {
+    "en": "Results: -1 Army, +2 Noble Favor, chance of +1 Loyalty, chance of +3 Fervor"
+  },
+  "RADICAL_EVENT_05_TITLE": {
+    "en": "Storming the Barracks"
+  },
+  "RADICAL_EVENT_05_DIALOGUE_1": {
+    "en": "Tyrant, we will no longer be crushed under the heel of your army!"
+  },
+  "RADICAL_EVENT_05_DIALOGUE_2": {
+    "en": "Disband your forces, or we will destroy them ourselves!"
+  },
+  "RADICAL_EVENT_05_OPTION_1_TITLE": {
+    "en": "Not if we crush you first."
+  },
+  "RADICAL_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: +1 Noble Favor, -1 Army, chance to kill Rebel Radical, chance of +1 Loyalty, chance of -3 Common Favor"
+  },
+  "RADICAL_EVENT_05_OPTION_2_TITLE": {
+    "en": "Try it if you dare."
+  },
+  "RADICAL_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: Chance for -2 Armies (permanent), +1 Fervor"
+  },
+  "RADICAL_EVENT_05_OPTION_3_TITLE": {
+    "en": "Let's not escalate this too far."
+  },
+  "RADICAL_EVENT_05_OPTION_3_DESC": {
+    "en": "Results: -1 Noble Favor, chance for +1 Common Favor, chance for +1 Fervor"
+  },
+  "RADICAL_EVENT_06_TITLE": {
+    "en": "Arming the Populace"
+  },
+  "RADICAL_EVENT_06_DIALOGUE_1": {
+    "en": "Tyrant, we will no longer cower in fear of your forces! The people will arm themselves and stand against you!"
+  },
+  "RADICAL_EVENT_06_OPTION_1_TITLE": {
+    "en": "We will crush you before you get the chance."
+  },
+  "RADICAL_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: +1 Noble Favor, -1 Army, -1 Gold, chance of +1 Loyalty, chance of -3 Fervor"
+  },
+  "RADICAL_EVENT_06_OPTION_2_TITLE": {
+    "en": "This is of no concern to me."
+  },
+  "RADICAL_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "ARISTOCRAT": {
+    "en": ""
+  },
+  "ARISTOCRAT_EVENT_00_TITLE": {
+    "en": "Public Mockery"
+  },
+  "ARISTOCRAT_EVENT_00_DIALOGUE_1": {
+    "en": "Ahh, my lord! How... wonderful to see you. I was just talking about you! You and your spineless behavior."
+  },
+  "ARISTOCRAT_EVENT_00_DIALOGUE_2": {
+    "en": "I'm surprised you can even show your face here!"
+  },
+  "ARISTOCRAT_EVENT_00_OPTION_1_TITLE": {
+    "en": "How dare you speak of me that way."
+  },
+  "ARISTOCRAT_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: +1 Common Favor, chance of +1 Noble Favor, chance of -2 Noble Favor"
+  },
+  "ARISTOCRAT_EVENT_00_OPTION_2_TITLE": {
+    "en": "Slandering my name is treason, you know."
+  },
+  "ARISTOCRAT_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: Aristocrat dies, -3 Noble Favor, -1 Common Favor"
+  },
+  "ARISTOCRAT_EVENT_00_OPTION_3_TITLE": {
+    "en": "Say what you will."
+  },
+  "ARISTOCRAT_EVENT_00_OPTION_3_DESC": {
+    "en": "Results: -1 Noble Favor, chance of +2 Common Favor, chance of -2 Common Favor"
+  },
+  "ARISTOCRAT_EVENT_01_TITLE": {
+    "en": "Duel!"
+  },
+  "ARISTOCRAT_EVENT_01_DIALOGUE_1": {
+    "en": "My lord, you have gone far enough in disregarding my achievements! I challenge you to a duel for my honor!"
+  },
+  "ARISTOCRAT_EVENT_01_OPTION_1_TITLE": {
+    "en": "Very well."
+  },
+  "ARISTOCRAT_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: Chance to kill Aristocrat, chance of assassination if Noble Favor is low"
+  },
+  "ARISTOCRAT_EVENT_01_OPTION_2_TITLE": {
+    "en": "I refuse."
+  },
+  "ARISTOCRAT_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: -3 Noble Favor"
+  },
+  "ARISTOCRAT_EVENT_02_TITLE": {
+    "en": "Taking the Fight to the Rebels"
+  },
+  "ARISTOCRAT_EVENT_02_DIALOGUE_1": {
+    "en": "My lord, I am tired of your half-hearted attempts to handle these rabble-rousers."
+  },
+  "ARISTOCRAT_EVENT_02_DIALOGUE_2": {
+    "en": "Give me command of the army and I will crush those vermin."
+  },
+  "ARISTOCRAT_EVENT_02_OPTION_1_TITLE": {
+    "en": "Do as you please."
+  },
+  "ARISTOCRAT_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: Chance to kill Rebel Leader, -1 Loyalty, chance for +1 Common Sentiment, chance for -2 Common Sentiment, chance to kill Aristocrat, -2 Armies"
+  },
+  "ARISTOCRAT_EVENT_02_OPTION_2_TITLE": {
+    "en": "I forbid this."
+  },
+  "ARISTOCRAT_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: -2 Noble Favor"
+  },
+  "ARISTOCRAT_EVENT_02_OPTION_3_TITLE": {
+    "en": "Perhaps I should lead an attack, instead."
+  },
+  "ARISTOCRAT_EVENT_02_OPTION_3_DESC": {
+    "en": "Results: +1 Noble Favor, -2 Armies, +2 Loyalty, -1 Common Sentiment, chance of assassination if Noble Favor is low."
+  },
+  "ARISTOCRAT_EVENT_03_TITLE": {
+    "en": "Seeking Promotion"
+  },
+  "ARISTOCRAT_EVENT_03_DIALOGUE_1": {
+    "en": "My lord, I'm sure you agree I am far too skilled to be trapped in a dishonorable position such as this."
+  },
+  "ARISTOCRAT_EVENT_03_DIALOGUE_2": {
+    "en": "I would like to request overlordship of the Outskirts, where I may properly display my prowess."
+  },
+  "ARISTOCRAT_EVENT_03_OPTION_1_TITLE": {
+    "en": "Consider yourself promoted."
+  },
+  "ARISTOCRAT_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: +3 Noble Favor, Baron dies, chance for -1 Gold yield"
+  },
+  "ARISTOCRAT_EVENT_03_OPTION_2_TITLE": {
+    "en": "The Baron is doing a fine job as-is."
+  },
+  "ARISTOCRAT_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: -2 Noble Favor"
+  },
+  "ARISTOCRAT_EVENT_04_TITLE": {
+    "en": "A Glorious Party"
+  },
+  "ARISTOCRAT_EVENT_04_DIALOGUE_1": {
+    "en": "My lord, how great it is to see you! I was planning to organize a party in my villa."
+  },
+  "ARISTOCRAT_EVENT_04_DIALOGUE_2": {
+    "en": "I would be honored if you were to attend."
+  },
+  "ARISTOCRAT_EVENT_04_OPTION_1_TITLE": {
+    "en": "I will be present."
+  },
+  "ARISTOCRAT_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: -3 Food, -3 Gold, +3 Noble Favor, -1 Common Favor, chance of assassination if Noble Favor is low"
+  },
+  "ARISTOCRAT_EVENT_04_OPTION_2_TITLE": {
+    "en": "I'm afraid I will be busy."
+  },
+  "ARISTOCRAT_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: -2 Food, -2 Gold, -1 Noble Favor"
+  },
+  "ARISTOCRAT_EVENT_04_OPTION_3_TITLE": {
+    "en": "I forbid this reckless spending."
+  },
+  "ARISTOCRAT_EVENT_04_OPTION_3_DESC": {
+    "en": "Results: -3 Noble Favor"
+  },
+  "ARISTOCRAT_EVENT_05_TITLE": {
+    "en": "Personal Guard"
+  },
+  "ARISTOCRAT_EVENT_05_DIALOGUE_1": {
+    "en": "My lord, I swear, people are out to get me. It's no longer safe for the likes of me."
+  },
+  "ARISTOCRAT_EVENT_05_DIALOGUE_2": {
+    "en": "I request a personal guard for my protection, posthaste!"
+  },
+  "ARISTOCRAT_EVENT_05_OPTION_1_TITLE": {
+    "en": "I would certainly hate to see you killed."
+  },
+  "ARISTOCRAT_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: +2 Noble Favor, -1 Army (permanent)"
+  },
+  "ARISTOCRAT_EVENT_05_OPTION_2_TITLE": {
+    "en": "You'll be fine."
+  },
+  "ARISTOCRAT_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: -2 Noble Favor"
+  },
+  "ARISTOCRAT_EVENT_06_TITLE": {
+    "en": "An Odd Meeting"
+  },
+  "ARISTOCRAT_EVENT_06_DIALOGUE_1": {
+    "en": "Ah, my lord! What a... strange coincidence it is, seeing you here! Eh-heh. I was just... speaking to the General."
+  },
+  "ARISTOCRAT_EVENT_06_DIALOGUE_2": {
+    "en": "We military geniuses have quite a bit to discuss, after all!"
+  },
+  "ARISTOCRAT_EVENT_06_OPTION_1_TITLE": {
+    "en": "Are you plotting a coup?"
+  },
+  "ARISTOCRAT_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: Aristocrat dies, -3 Noble Favor, chance of +2 Fervor"
+  },
+  "ARISTOCRAT_EVENT_06_OPTION_2_TITLE": {
+    "en": "I have my eye on you."
+  },
+  "ARISTOCRAT_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: -1 Noble Favor, +1 Loyalty"
+  },
+  "ARISTOCRAT_EVENT_06_OPTION_3_TITLE": {
+    "en": "That sounds reasonable."
+  },
+  "ARISTOCRAT_EVENT_06_OPTION_3_DESC": {
+    "en": "Results: Chance of +1 Noble Favor, chance of +4 Fervor, chance of assassination of Noble Favor is low"
+  },
+  "BARON": {
+    "en": ""
+  },
+  "BARON_EVENT_00_TITLE": {
+    "en": "Paying Tribute"
+  },
+  "BARON_EVENT_00_DIALOGUE_1": {
+    "en": "Hello there, my lord! I was just in the area and figured I would stop by to pay my honors to you."
+  },
+  "BARON_EVENT_00_OPTION_1_TITLE": {
+    "en": "Come in, let us catch up!"
+  },
+  "BARON_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: +1 Noble Favor, -1 Food"
+  },
+  "BARON_EVENT_00_OPTION_2_TITLE": {
+    "en": "I'm afraid I'm busy right now."
+  },
+  "BARON_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: -1 Noble Favor"
+  },
+  "BARON_EVENT_01_TITLE": {
+    "en": "Invaders at the Gates"
+  },
+  "BARON_EVENT_01_DIALOGUE_1": {
+    "en": "There you are, my lord! The barbarous neighbors have begun launching raids once again."
+  },
+  "BARON_EVENT_01_DIALOGUE_2": {
+    "en": "I need more support to hold them off, and quickly!"
+  },
+  "BARON_EVENT_01_OPTION_1_TITLE": {
+    "en": "Reinforcements are on the way."
+  },
+  "BARON_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -1 Army"
+  },
+  "BARON_EVENT_01_OPTION_2_TITLE": {
+    "en": "I can only pay for provisions."
+  },
+  "BARON_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: +1 Loyalty, -1 Gold"
+  },
+  "BARON_EVENT_01_OPTION_3_TITLE": {
+    "en": "I'm afraid you're on your own."
+  },
+  "BARON_EVENT_01_OPTION_3_DESC": {
+    "en": "Results: -2 Loyalty"
+  },
+  "BARON_EVENT_02_TITLE": {
+    "en": "A Drink!"
+  },
+  "BARON_EVENT_02_DIALOGUE_1": {
+    "en": "My lord, it is lovely to see you! Come, let us share a drink and make merry!"
+  },
+  "BARON_EVENT_02_OPTION_1_TITLE": {
+    "en": "Gladly, friend!"
+  },
+  "BARON_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -2 Gold, Baron is happy, chance of assassination if Noble sentiment is low"
+  },
+  "BARON_EVENT_02_OPTION_2_TITLE": {
+    "en": "Perhaps another time."
+  },
+  "BARON_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: -2 Loyalty"
+  },
+  "BARON_EVENT_03_TITLE": {
+    "en": "Local Festival"
+  },
+  "BARON_EVENT_03_DIALOGUE_1": {
+    "en": "My lord, come quickly! It is time for our local festival. You won't want to miss it!"
+  },
+  "BARON_EVENT_03_OPTION_1_TITLE": {
+    "en": "I'll be there."
+  },
+  "BARON_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -2 Gold, -2 Food"
+  },
+  "BARON_EVENT_03_OPTION_2_TITLE": {
+    "en": "I'm afraid I will be busy."
+  },
+  "BARON_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: -2 Loyalty, -1 Gold, -1 Food"
+  },
+  "BARON_EVENT_03_OPTION_3_TITLE": {
+    "en": "How dare you celebrate this heretical festival?"
+  },
+  "BARON_EVENT_03_OPTION_3_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "BARON_EVENT_04_TITLE": {
+    "en": "Rebel Rabble"
+  },
+  "BARON_EVENT_04_DIALOGUE_1": {
+    "en": "My lord, what are you doing? The rebels have been causing me no end of trouble lately!"
+  },
+  "BARON_EVENT_04_DIALOGUE_2": {
+    "en": "This is your responsibility, so fix this!"
+  },
+  "BARON_EVENT_04_OPTION_1_TITLE": {
+    "en": "I will send my support."
+  },
+  "BARON_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -1 Gold, -1 Army"
+  },
+  "BARON_EVENT_04_OPTION_2_TITLE": {
+    "en": "You can handle this."
+  },
+  "BARON_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "BARON_EVENT_05_TITLE": {
+    "en": "Disaster Strikes"
+  },
+  "BARON_EVENT_05_DIALOGUE_1": {
+    "en": "My lord... I'm sorry. The invaders were too strong, they overran our defenses and torched our lands."
+  },
+  "BARON_EVENT_05_DIALOGUE_2": {
+    "en": "I humbly request your help in rebuilding. I won't fail you again."
+  },
+  "BARON_EVENT_05_OPTION_1_TITLE": {
+    "en": "Help is on the way."
+  },
+  "BARON_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -3 Gold"
+  },
+  "BARON_EVENT_05_OPTION_2_TITLE": {
+    "en": "I'm afraid I have nothing to spare."
+  },
+  "BARON_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor, -1 Food from province"
+  },
+  "BARON_EVENT_05_OPTION_3_TITLE": {
+    "en": "You have failed me for the last time."
+  },
+  "BARON_EVENT_05_OPTION_3_DESC": {
+    "en": "Results: Baron dies, +1 Fervor, -2 Food from province"
+  },
+  "BARON_EVENT_06_TITLE": {
+    "en": "Deal with the Invaders"
+  },
+  "BARON_EVENT_06_DIALOGUE_1": {
+    "en": "My lord, the barbarians are relentless these days! At this rate our defenses will fail before long."
+  },
+  "BARON_EVENT_06_DIALOGUE_2": {
+    "en": "We must do something!"
+  },
+  "BARON_EVENT_06_OPTION_1_TITLE": {
+    "en": "Let us bring the fight to them."
+  },
+  "BARON_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: +3 Loyalty, -1 Food, -1 Gold, -3 Armies"
+  },
+  "BARON_EVENT_06_OPTION_2_TITLE": {
+    "en": "Perhaps we can negotiate peace."
+  },
+  "BARON_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +1 Loyalty, -3 Gold, -1 Noble Sentiment, Baron is happy"
+  },
+  "BARON_EVENT_06_OPTION_3_TITLE": {
+    "en": "I trust in your abilities."
+  },
+  "BARON_EVENT_06_OPTION_3_DESC": {
+    "en": "Results: Chance of +1 Loyalty, chance of +3 Fervor"
+  },
+  "BARON_EVENT_07_TITLE": {
+    "en": "Striking a Deal"
+  },
+  "BARON_EVENT_07_DIALOGUE_1": {
+    "en": "Well hello, my lord! The strangest thing just happened. The Rebel Leader approached me for a discussion, and made quite the enticing offer!"
+  },
+  "BARON_EVENT_07_DIALOGUE_2": {
+    "en": "Now, I'm sure my glorious ruler would be able to promise me something greater than those measly rebels for me support, hmm?"
+  },
+  "BARON_EVENT_07_OPTION_1_TITLE": {
+    "en": "I suppose I can offer you more pay."
+  },
+  "BARON_EVENT_07_OPTION_1_DESC": {
+    "en": "Results: +3 Loyalty, +2 province Gold consumption"
+  },
+  "BARON_EVENT_07_OPTION_2_TITLE": {
+    "en": "You will not extort me."
+  },
+  "BARON_EVENT_07_OPTION_2_DESC": {
+    "en": "Results: -5 Loyalty"
+  },
+  "BARON_EVENT_07_OPTION_3_TITLE": {
+    "en": "You dare speak of treason?"
+  },
+  "BARON_EVENT_07_OPTION_3_DESC": {
+    "en": "Results: Baron dies, +3 Fervor"
+  },
+  "BARON_EVENT_08_TITLE": {
+    "en": "Offering an Escape"
+  },
+  "BARON_EVENT_08_DIALOGUE_1": {
+    "en": "My lord... I'm sure you're aware your time on the throne is short, and you will not survive the Revolution."
+  },
+  "BARON_EVENT_08_DIALOGUE_2": {
+    "en": "This troubles me. You have been a great friend to me these years, and I would hate to see you die. And so, I have a proposition."
+  },
+  "BARON_EVENT_08_DIALOGUE_3": {
+    "en": "These days, the barbarians are more friendly, thanks to your efforts. It wouldn't be a glamorous life, but I could sneak you into their lands."
+  },
+  "BARON_EVENT_08_OPTION_1_TITLE": {
+    "en": "I can't thank you enough."
+  },
+  "BARON_EVENT_08_OPTION_1_DESC": {
+    "en": "Results: Ends the game immediately."
+  },
+  "BARON_EVENT_08_OPTION_2_TITLE": {
+    "en": "Thank you, but I will not flee."
+  },
+  "BARON_EVENT_08_OPTION_2_DESC": {
+    "en": "Results: +3 Loyalty"
+  },
+  "BARON_EVENT_08_OPTION_3_TITLE": {
+    "en": "You dare speak of treason?"
+  },
+  "BARON_EVENT_08_OPTION_3_DESC": {
+    "en": "Results: Baron dies, +3 Fervor"
+  },
+  "BARON_EVENT_09_TITLE": {
+    "en": "Developing the Outskirts"
+  },
+  "BARON_EVENT_09_DIALOGUE_1": {
+    "en": "My lord, I am tired of my lands being barren and my people afraid."
+  },
+  "BARON_EVENT_09_DIALOGUE_2": {
+    "en": "I would like your assistance in developing this province into one which can flourish."
+  },
+  "BARON_EVENT_09_OPTION_1_TITLE": {
+    "en": "Your lands will be a new breadbasket."
+  },
+  "BARON_EVENT_09_OPTION_1_DESC": {
+    "en": "Results: -2 Gold, +2 Food from province"
+  },
+  "BARON_EVENT_09_OPTION_2_TITLE": {
+    "en": "Luxury crops will grow well here."
+  },
+  "BARON_EVENT_09_OPTION_2_DESC": {
+    "en": "Results: -2 Gold, +2 Gold from province"
+  },
+  "BARON_EVENT_09_OPTION_3_TITLE": {
+    "en": "You will be fine."
+  },
+  "BARON_EVENT_09_OPTION_3_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "ENVOY": {
+    "en": ""
+  },
+  "ENVOY_EVENT_00_TITLE": {
+    "en": "A Friendly Visit"
+  },
+  "ENVOY_EVENT_00_DIALOGUE_1": {
+    "en": "Why, greetings, your highness! My lord has sent me to visit and discuss our circumstances."
+  },
+  "ENVOY_EVENT_00_DIALOGUE_2": {
+    "en": "I trust you have time to speak with me now?"
+  },
+  "ENVOY_EVENT_00_OPTION_1_TITLE": {
+    "en": "Let us celebrate your arrival with a feast!"
+  },
+  "ENVOY_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: +2 Noble Favor, -3 Food, -3 Gold"
+  },
+  "ENVOY_EVENT_00_OPTION_2_TITLE": {
+    "en": "Of course, let us discuss."
+  },
+  "ENVOY_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: +1 Noble Favor, -1 Food"
+  },
+  "ENVOY_EVENT_00_OPTION_3_TITLE": {
+    "en": "I'm afraid I am busy at the moment."
+  },
+  "ENVOY_EVENT_00_OPTION_3_DESC": {
+    "en": "Results: -1 Noble Favor"
+  },
+  "ENVOY_EVENT_01_TITLE": {
+    "en": "Landing on the Shores"
+  },
+  "ENVOY_EVENT_01_DIALOGUE_1": {
+    "en": "Hello there, your highness. I apologize, but I'm in rather a bad mood."
+  },
+  "ENVOY_EVENT_01_DIALOGUE_2": {
+    "en": "I figured I would be receiving more of a welcome upon my arrival, but I suppose not."
+  },
+  "ENVOY_EVENT_01_OPTION_1_TITLE": {
+    "en": "Why, of course you will be receiving a grand welcome!"
+  },
+  "ENVOY_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: +2 Noble Favor, +1 Fervor, -1 Gold"
+  },
+  "ENVOY_EVENT_01_OPTION_2_TITLE": {
+    "en": "I'm afraid all travelers are treated equally on my shores."
+  },
+  "ENVOY_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: +2 Loyalty, -2 Noble Favor"
+  },
+  "ENVOY_EVENT_02_TITLE": {
+    "en": "Gift Request"
+  },
+  "ENVOY_EVENT_02_DIALOGUE_1": {
+    "en": "Your highness, I'm sure my lord would be honored if you could provide him with a gift."
+  },
+  "ENVOY_EVENT_02_DIALOGUE_2": {
+    "en": "Do you have anything to provide?"
+  },
+  "ENVOY_EVENT_02_OPTION_1_TITLE": {
+    "en": "Have some of our local delicacies."
+  },
+  "ENVOY_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: +2 Noble Favor, -2 Food"
+  },
+  "ENVOY_EVENT_02_OPTION_2_TITLE": {
+    "en": "Have some of our fine stones."
+  },
+  "ENVOY_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: +2 Noble Favor, -2 Gold"
+  },
+  "ENVOY_EVENT_02_OPTION_3_TITLE": {
+    "en": "I'm afraid we have nothing to offer."
+  },
+  "ENVOY_EVENT_02_OPTION_3_DESC": {
+    "en": "Results: -2 Noble Favor"
+  },
+  "ENVOY_EVENT_03_TITLE": {
+    "en": "Bearing Gifts"
+  },
+  "ENVOY_EVENT_03_DIALOGUE_1": {
+    "en": "Your highness, my lord sends their regards alongside a lovely gift. We would be honored if you accepted."
+  },
+  "ENVOY_EVENT_03_OPTION_1_TITLE": {
+    "en": "Please, take something in return!"
+  },
+  "ENVOY_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: +2 Noble Favor, +1 Food, +1 Gold"
+  },
+  "ENVOY_EVENT_03_OPTION_2_TITLE": {
+    "en": "I graciously accept."
+  },
+  "ENVOY_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: +1 Noble Favor, +3 Food, +3 Gold"
+  },
+  "ENVOY_EVENT_03_OPTION_3_TITLE": {
+    "en": "I'm afraid I must decline."
+  },
+  "ENVOY_EVENT_03_OPTION_3_DESC": {
+    "en": "Results: -2 Noble Favor, +1 Common Favor"
+  },
+  "ENVOY_EVENT_04_TITLE": {
+    "en": "Request for Aid"
+  },
+  "ENVOY_EVENT_04_DIALOGUE_1": {
+    "en": "Your highness, my lord comes to you in a time of great need. Our people are in famine, and require your food."
+  },
+  "ENVOY_EVENT_04_DIALOGUE_2": {
+    "en": "We are willing to pay, of course. What do you say?"
+  },
+  "ENVOY_EVENT_04_OPTION_1_TITLE": {
+    "en": "I will give you all that I can."
+  },
+  "ENVOY_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: -2 Food in this province, +1 Gold in this province, Envoy is happy"
+  },
+  "ENVOY_EVENT_04_OPTION_2_TITLE": {
+    "en": "I'll see what I can do."
+  },
+  "ENVOY_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: -1 Food in this province, +1 Gold in this province"
+  },
+  "ENVOY_EVENT_04_OPTION_3_TITLE": {
+    "en": "I'm afraid we have nothing to offer."
+  },
+  "ENVOY_EVENT_04_OPTION_3_DESC": {
+    "en": "Results: -1 Noble Favor"
+  },
+  "ENVOY_EVENT_05_TITLE": {
+    "en": "Striking a Deal"
+  },
+  "ENVOY_EVENT_05_DIALOGUE_1": {
+    "en": "Your highness, my lord wishes to propose a trade deal to bring our nations together. Are you interested?"
+  },
+  "ENVOY_EVENT_05_OPTION_1_TITLE": {
+    "en": "Let us exchange our Food for your Gold."
+  },
+  "ENVOY_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: -2 Food in this province, +2 Gold in this province"
+  },
+  "ENVOY_EVENT_05_OPTION_2_TITLE": {
+    "en": "Let us exchange our Gold for your Food."
+  },
+  "ENVOY_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: -2 Gold in this province, +2 Food in this province"
+  },
+  "ENVOY_EVENT_05_OPTION_3_TITLE": {
+    "en": "We will be fine on our own."
+  },
+  "ENVOY_EVENT_05_OPTION_3_DESC": {
+    "en": "Results: None"
+  },
+  "ENVOY_EVENT_06_TITLE": {
+    "en": "Declaration of Friendship"
+  },
+  "ENVOY_EVENT_06_DIALOGUE_1": {
+    "en": "Greetings, your highness! My lord thanks you for your support."
+  },
+  "ENVOY_EVENT_06_DIALOGUE_2": {
+    "en": "What do you say we bring our kingdoms closer together with a public declaration of friendship?"
+  },
+  "ENVOY_EVENT_06_OPTION_1_TITLE": {
+    "en": "Let us prosper together!"
+  },
+  "ENVOY_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: +2 Noble Favor, -2 Common Favor, Envoy will be happy"
+  },
+  "ENVOY_EVENT_06_OPTION_2_TITLE": {
+    "en": "Sorry, we prefer to go it alone."
+  },
+  "ENVOY_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +2 Common Favor, -2 Noble Favor"
+  },
+  "ENVOY_EVENT_07_TITLE": {
+    "en": "Escape Across the Sea"
+  },
+  "ENVOY_EVENT_07_DIALOGUE_1": {
+    "en": "Well, hello, your highness. I see you are... quite troubled. My lord fears for your safety."
+  },
+  "ENVOY_EVENT_07_DIALOGUE_2": {
+    "en": "I understand you have your pride, but if you wish, I have been tasked with smuggling you out of this kingdom to safety."
+  },
+  "ENVOY_EVENT_07_DIALOGUE_3": {
+    "en": "I assure you, you will be welcomed as fellow royalty in our court and given safety."
+  },
+  "ENVOY_EVENT_07_OPTION_1_TITLE": {
+    "en": "Very well, let us go."
+  },
+  "ENVOY_EVENT_07_OPTION_1_DESC": {
+    "en": "Results: Ends the game immediately"
+  },
+  "ENVOY_EVENT_07_OPTION_2_TITLE": {
+    "en": "Thank you, but I will stand my ground."
+  },
+  "ENVOY_EVENT_07_OPTION_2_DESC": {
+    "en": "Results: +3 Loyalty"
+  },
+  "ENVOY_EVENT_08_TITLE": {
+    "en": "Mineral Rights"
+  },
+  "ENVOY_EVENT_08_DIALOGUE_1": {
+    "en": "Greetings, your highness. My lord is in need of minerals, and I know the stones of your lands are quite blessed."
+  },
+  "ENVOY_EVENT_08_DIALOGUE_2": {
+    "en": "We would like to purchase the rights to some of the mines in your lands. You will be paid handsomely, I assure you."
+  },
+  "ENVOY_EVENT_08_OPTION_1_TITLE": {
+    "en": "It's a deal!"
+  },
+  "ENVOY_EVENT_08_OPTION_1_DESC": {
+    "en": "Results: +8 Gold, -2 Gold in province, +2 Fervor"
+  },
+  "ENVOY_EVENT_08_OPTION_2_TITLE": {
+    "en": "Our lands are our own, thank you very much."
+  },
+  "ENVOY_EVENT_08_OPTION_2_DESC": {
+    "en": "Results: -2 Noble Favor"
+  },
+  "PEASANT GIRL": {
+    "en": ""
+  },
+  "PEASANT_GIRL_EVENT_00_TITLE": {
+    "en": "Get Your Act Together!"
+  },
+  "PEASANT_GIRL_EVENT_00_DIALOGUE_1": {
+    "en": "Your highness, with all respect, what are you doing? People are dying in the streets!"
+  },
+  "PEASANT_GIRL_EVENT_00_DIALOGUE_2": {
+    "en": "You say the rebels are wrong, but if they are, then prove it! Prove you can do good!"
+  },
+  "PEASANT_GIRL_EVENT_00_OPTION_1_TITLE": {
+    "en": "I am doing what I can."
+  },
+  "PEASANT_GIRL_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "PEASANT_GIRL_EVENT_00_OPTION_2_TITLE": {
+    "en": "You're right. Let me see what I can do."
+  },
+  "PEASANT_GIRL_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: +2 Common Favor, -1 Food, -1 Gold, -2 Noble Favor"
+  },
+  "PEASANT_GIRL_EVENT_00_OPTION_3_TITLE": {
+    "en": "How dare you speak to me this way?"
+  },
+  "PEASANT_GIRL_EVENT_00_OPTION_3_DESC": {
+    "en": "Results: +2 Fervor, Peasant Girl dies"
+  },
+  "PEASANT_GIRL_EVENT_01_TITLE": {
+    "en": "Request for Food"
+  },
+  "PEASANT_GIRL_EVENT_01_DIALOGUE_1": {
+    "en": "Your highness, I hate to bother you, but my family and I are starving with my father dead."
+  },
+  "PEASANT_GIRL_EVENT_01_DIALOGUE_2": {
+    "en": "I just need a small bit of Gold, and I'm sure I can scrounge up some wealth next week..."
+  },
+  "PEASANT_GIRL_EVENT_01_OPTION_1_TITLE": {
+    "en": "Very well."
+  },
+  "PEASANT_GIRL_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: -1 Gold"
+  },
+  "PEASANT_GIRL_EVENT_01_OPTION_2_TITLE": {
+    "en": "I am not a charity."
+  },
+  "PEASANT_GIRL_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: Chance for Peasant Girl to die"
+  },
+  "PEASANT_GIRL_EVENT_02_TITLE": {
+    "en": "A Desperate Plea"
+  },
+  "PEASANT_GIRL_EVENT_02_DIALOGUE_1": {
+    "en": "Your highness, I understand you are busy, but please! I need your help!"
+  },
+  "PEASANT_GIRL_EVENT_02_DIALOGUE_2": {
+    "en": "My mother has fallen deathly ill. My father died in the mines, and without her, my brothers and sisters will starve..."
+  },
+  "PEASANT_GIRL_EVENT_02_OPTION_1_TITLE": {
+    "en": "I will send a doctor."
+  },
+  "PEASANT_GIRL_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: -2 Gold, Peasant Girl will be happy"
+  },
+  "PEASANT_GIRL_EVENT_02_OPTION_2_TITLE": {
+    "en": "Take things up with somebody else."
+  },
+  "PEASANT_GIRL_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: Peasant Girl dies"
+  },
+  "PEASANT_GIRL_EVENT_03_TITLE": {
+    "en": "Dinner Invitation"
+  },
+  "PEASANT_GIRL_EVENT_03_DIALOGUE_1": {
+    "en": "Your highness, thank you so much for helping my mother. She's feeling much better now."
+  },
+  "PEASANT_GIRL_EVENT_03_DIALOGUE_2": {
+    "en": "We wanted to invite you to a dinner at our home. We don't have much to offer, but if you have the time..."
+  },
+  "PEASANT_GIRL_EVENT_03_OPTION_1_TITLE": {
+    "en": "I will be present."
+  },
+  "PEASANT_GIRL_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty, -2 Noble Sentiment, Peasant Girl will be happy"
+  },
+  "PEASANT_GIRL_EVENT_03_OPTION_2_TITLE": {
+    "en": "I'm afraid I will be busy."
+  },
+  "PEASANT_GIRL_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: None"
+  },
+  "PEASANT_GIRL_EVENT_04_TITLE": {
+    "en": "Escape Plans"
+  },
+  "PEASANT_GIRL_EVENT_04_DIALOGUE_1": {
+    "en": "Your highness, I hear what the people are saying on the street. They hate you. They want to kill you."
+  },
+  "PEASANT_GIRL_EVENT_04_DIALOGUE_2": {
+    "en": "But I know the truth. I know you're not all bad. I'm sure you've done many bad things, but you don't deserve to die."
+  },
+  "PEASANT_GIRL_EVENT_04_DIALOGUE_3": {
+    "en": "I know of a secret passage deep in the mines which leads into the wilds. I can sneak you there, and then you can flee north to another kingdom."
+  },
+  "PEASANT_GIRL_EVENT_04_OPTION_1_TITLE": {
+    "en": "I cannot thank you enough."
+  },
+  "PEASANT_GIRL_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: Game ends immediately."
+  },
+  "PEASANT_GIRL_EVENT_04_OPTION_2_TITLE": {
+    "en": "Thank you, but I can handle myself."
+  },
+  "PEASANT_GIRL_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: +3 Loyalty"
+  },
+  "PEASANT_GIRL_EVENT_05_TITLE": {
+    "en": "Miner's Rights"
+  },
+  "PEASANT_GIRL_EVENT_05_DIALOGUE_1": {
+    "en": "Your highness, I'm sure you are hard at work, but the miners need better working conditions."
+  },
+  "PEASANT_GIRL_EVENT_05_DIALOGUE_2": {
+    "en": "Too many have died in the mines. If you can't improve conditions, the people will surely turn against you."
+  },
+  "PEASANT_GIRL_EVENT_05_OPTION_1_TITLE": {
+    "en": "I will see what I can do."
+  },
+  "PEASANT_GIRL_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -1 Noble Favor, -1 Gold in province"
+  },
+  "PEASANT_GIRL_EVENT_05_OPTION_2_TITLE": {
+    "en": "I'm afraid we cannot afford that."
+  },
+  "PEASANT_GIRL_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor, chance of -1 Gold in province"
+  },
+  "PEASANT_GIRL_EVENT_05_OPTION_3_TITLE": {
+    "en": "You dare speak to me that way?"
+  },
+  "PEASANT_GIRL_EVENT_05_OPTION_3_DESC": {
+    "en": "Results: +2 Fervor, +2 Noble Favor, Peasant Girl dies, chance of -1 Gold in province"
+  },
+  "PEASANT_GIRL_EVENT_06_TITLE": {
+    "en": "Praying for the Lost"
+  },
+  "PEASANT_GIRL_EVENT_06_DIALOGUE_1": {
+    "en": "...Oh! Your highness! Hello. I'm here to pray for my father."
+  },
+  "PEASANT_GIRL_EVENT_06_DIALOGUE_2": {
+    "en": "I'm sure you're busy, but would you care to join me?"
+  },
+  "PEASANT_GIRL_EVENT_06_OPTION_1_TITLE": {
+    "en": "Of course."
+  },
+  "PEASANT_GIRL_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty, -1 Gold"
+  },
+  "PEASANT_GIRL_EVENT_06_OPTION_2_TITLE": {
+    "en": "I'm afraid I am busy."
+  },
+  "PEASANT_GIRL_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "PEASANT_GIRL_EVENT_06_OPTION_3_TITLE": {
+    "en": "Praying is not enough. I must act."
+  },
+  "PEASANT_GIRL_EVENT_06_OPTION_3_DESC": {
+    "en": "Results: +2 Common Favor, -2 Noble Favor, -2 Gold"
+  },
+  "REBEL LEADER": {
+    "en": ""
+  },
+  "REBEL_LEADER_EVENT_00_TITLE": {
+    "en": "Abdication Demand"
+  },
+  "REBEL_LEADER_EVENT_00_DIALOGUE_1": {
+    "en": "Tyrant, your time has come. The people demand an end to your tyranny."
+  },
+  "REBEL_LEADER_EVENT_00_DIALOGUE_2": {
+    "en": "Put an end to the monarchy and hand the power over to the people, or we will take control by force."
+  },
+  "REBEL_LEADER_EVENT_00_OPTION_1_TITLE": {
+    "en": "Very well. I know when I am beaten."
+  },
+  "REBEL_LEADER_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: Game ends immediately"
+  },
+  "REBEL_LEADER_EVENT_00_OPTION_2_TITLE": {
+    "en": "I will not bow to traitors."
+  },
+  "REBEL_LEADER_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: -2 Common Favor"
+  },
+  "REBEL_LEADER_EVENT_00_OPTION_3_TITLE": {
+    "en": "Guards!"
+  },
+  "REBEL_LEADER_EVENT_00_OPTION_3_DESC": {
+    "en": "Results: -3 Common Favor, -1 Army, chance for Rebel Leader to die"
+  },
+  "REBEL_LEADER_EVENT_01_TITLE": {
+    "en": "Surrender Demand"
+  },
+  "REBEL_LEADER_EVENT_01_DIALOGUE_1": {
+    "en": "Tyrant, the time has come to atone for your crimes."
+  },
+  "REBEL_LEADER_EVENT_01_DIALOGUE_2": {
+    "en": "The people demand you surrender yourself and face justice."
+  },
+  "REBEL_LEADER_EVENT_01_OPTION_1_TITLE": {
+    "en": "Very well. I know when I am beaten."
+  },
+  "REBEL_LEADER_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: Game ends immediately"
+  },
+  "REBEL_LEADER_EVENT_01_OPTION_2_TITLE": {
+    "en": "I am not yet defeated."
+  },
+  "REBEL_LEADER_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: -1 Common Favor"
+  },
+  "REBEL_LEADER_EVENT_01_OPTION_3_TITLE": {
+    "en": "Guards!"
+  },
+  "REBEL_LEADER_EVENT_01_OPTION_3_DESC": {
+    "en": "Results: -3 Common Favor, -1 Army, chance for Rebel Leader to die"
+  },
+  "REBEL_LEADER_EVENT_02_TITLE": {
+    "en": "Rebel Discussion"
+  },
+  "REBEL_LEADER_EVENT_02_DIALOGUE_1": {
+    "en": "Hello, tyrant. I am here today not to fight, but to talk."
+  },
+  "REBEL_LEADER_EVENT_02_DIALOGUE_2": {
+    "en": "The people suffer under you, but perhaps you have some humanity. Our movement demands reform, and I would like to discuss them with you."
+  },
+  "REBEL_LEADER_EVENT_02_OPTION_1_TITLE": {
+    "en": "Let us discuss."
+  },
+  "REBEL_LEADER_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: -3 Noble Favor, +3 Common Favor, -1 Food from province, -1 Gold from province"
+  },
+  "REBEL_LEADER_EVENT_02_OPTION_2_TITLE": {
+    "en": "I will not negotiate with traitors."
+  },
+  "REBEL_LEADER_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: -2 Common Favor"
+  },
+  "REBEL_LEADER_EVENT_02_OPTION_3_TITLE": {
+    "en": "You made a grave mistake coming here. Guards!"
+  },
+  "REBEL_LEADER_EVENT_02_OPTION_3_DESC": {
+    "en": "Results: -5 Common Favor, Rebel Leader dies"
+  },
+  "REBEL_LEADER_EVENT_03_TITLE": {
+    "en": "Noble Accountability"
+  },
+  "REBEL_LEADER_EVENT_03_DIALOGUE_1": {
+    "en": "Tyrant, your nobles abuse and extort the people with no recourse. This is unacceptable."
+  },
+  "REBEL_LEADER_EVENT_03_DIALOGUE_2": {
+    "en": "Do not shield them from justice. Make them pay for their crimes."
+  },
+  "REBEL_LEADER_EVENT_03_OPTION_1_TITLE": {
+    "en": "I agree, their actions are unacceptable."
+  },
+  "REBEL_LEADER_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: -3 Noble Favor, +2 Common Favor, chance for Aristocrat to die, chance for Party Guy to die"
+  },
+  "REBEL_LEADER_EVENT_03_OPTION_2_TITLE": {
+    "en": "They have done nothing wrong."
+  },
+  "REBEL_LEADER_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: +2 Noble Favor, -2 Common Favor"
+  },
+  "REBEL_LEADER_EVENT_04_TITLE": {
+    "en": "Impassioned Speech"
+  },
+  "REBEL_LEADER_EVENT_04_DIALOGUE_1": {
+    "en": "Tyrant, the age of your oppression is over! The will of the people has been ignited, and now the flames of revolution arise!"
+  },
+  "REBEL_LEADER_EVENT_04_DIALOGUE_2": {
+    "en": "We can rise up, and free ourselves from our shackles!"
+  },
+  "REBEL_LEADER_EVENT_04_OPTION_1_TITLE": {
+    "en": "How dare you speak this way."
+  },
+  "REBEL_LEADER_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: +1 Noble Favor, chance for +1 Loyalty, chance for +3 Fervor"
+  },
+  "REBEL_LEADER_EVENT_04_OPTION_2_TITLE": {
+    "en": "Empty words mean nothing to me."
+  },
+  "REBEL_LEADER_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "REBEL_LEADER_EVENT_04_OPTION_3_TITLE": {
+    "en": "I will ensure you never speak such treason again."
+  },
+  "REBEL_LEADER_EVENT_04_OPTION_3_DESC": {
+    "en": "Results: +4 Fervor, -1 Army, chance for Rebel Leader to die"
+  },
+  "REBEL_LEADER_EVENT_05_TITLE": {
+    "en": "Rebel Speech"
+  },
+  "REBEL_LEADER_EVENT_05_DIALOGUE_1": {
+    "en": "Tyrant, the people tire of your rule! Through my speeches, I am giving the people hope and power."
+  },
+  "REBEL_LEADER_EVENT_05_OPTION_1_TITLE": {
+    "en": "Not if you aren't allowed to speak."
+  },
+  "REBEL_LEADER_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: -1 Army, chance for +1 Loyalty, chance for +3 Fervor"
+  },
+  "REBEL_LEADER_EVENT_05_OPTION_2_TITLE": {
+    "en": "Say what you will."
+  },
+  "REBEL_LEADER_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "REBEL_LEADER_EVENT_06_TITLE": {
+    "en": "Meeting With Commoners"
+  },
+  "REBEL_LEADER_EVENT_06_DIALOGUE_1": {
+    "en": "Tyrant, while you hide away in your palace, I am meeting with the people to understand their needs and give them hope. What say you?"
+  },
+  "REBEL_LEADER_EVENT_06_OPTION_1_TITLE": {
+    "en": "This treason cannot go unpunished."
+  },
+  "REBEL_LEADER_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: -1 Army, chance for +2 Loyalty, chance for +3 Fervor"
+  },
+  "REBEL_LEADER_EVENT_06_OPTION_2_TITLE": {
+    "en": "Say what you will."
+  },
+  "REBEL_LEADER_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "REBEL_LEADER_EVENT_06_OPTION_3_TITLE": {
+    "en": "Perhaps I should meet with them, myself."
+  },
+  "REBEL_LEADER_EVENT_06_OPTION_3_DESC": {
+    "en": "Results: +1 Loyalty, -2 Noble Favor"
+  },
+  "": {
+    "en": ""
+  },
+  "FOREMAN": {
+    "en": ""
+  },
+  "FOREMAN_EVENT_00_TITLE": {
+    "en": "Fix Up the Town"
+  },
+  "FOREMAN_EVENT_00_DIALOGUE_1": {
+    "en": "Oh... hello, your highness. I'm visiting here for work, but... this place looks like a disaster."
+  },
+  "FOREMAN_EVENT_00_DIALOGUE_2": {
+    "en": "The buildings are basically falling apart... I'd suggest investing in some renovations right away."
+  },
+  "FOREMAN_EVENT_00_OPTION_1_TITLE": {
+    "en": "Excellent decision."
+  },
+  "FOREMAN_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: -3 Gold, +1 Gold from province, +2 Loyalty"
+  },
+  "FOREMAN_EVENT_00_OPTION_2_TITLE": {
+    "en": "I'm afraid it's not in the budget."
+  },
+  "FOREMAN_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: Chance for -1 Gold from province"
+  },
+  "FOREMAN_EVENT_01_TITLE": {
+    "en": "Feed the Miners"
+  },
+  "FOREMAN_EVENT_01_DIALOGUE_1": {
+    "en": "Hello, your highness... my miners are complaining about hunger. Mining is back-breaking work."
+  },
+  "FOREMAN_EVENT_01_DIALOGUE_2": {
+    "en": "Please send us more food, or we'll have problems."
+  },
+  "FOREMAN_EVENT_01_OPTION_1_TITLE": {
+    "en": "I understand."
+  },
+  "FOREMAN_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: -1 Food from province, +1 Gold from province"
+  },
+  "FOREMAN_EVENT_01_OPTION_2_TITLE": {
+    "en": "We're low on food as it is."
+  },
+  "FOREMAN_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: -1 Gold from province"
+  },
+  "FOREMAN_EVENT_02_TITLE": {
+    "en": "Cave-In"
+  },
+  "FOREMAN_EVENT_02_DIALOGUE_1": {
+    "en": "Your highness, we need help. A cave-in has trapped several miners... they may not have much time..."
+  },
+  "FOREMAN_EVENT_02_DIALOGUE_2": {
+    "en": "Please send your support."
+  },
+  "FOREMAN_EVENT_02_OPTION_1_TITLE": {
+    "en": "Help is on the way."
+  },
+  "FOREMAN_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -2 Gold"
+  },
+  "FOREMAN_EVENT_02_OPTION_2_TITLE": {
+    "en": "I'm afraid I have nothing to offer."
+  },
+  "FOREMAN_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor, -1 Gold from province"
+  },
+  "FOREMAN_EVENT_03_TITLE": {
+    "en": "Sickness in the Mines"
+  },
+  "FOREMAN_EVENT_03_DIALOGUE_1": {
+    "en": "Your highness, an illness is spreading among the miners... we're in dire need of support."
+  },
+  "FOREMAN_EVENT_03_DIALOGUE_2": {
+    "en": "Please send provisions so they can get back to work."
+  },
+  "FOREMAN_EVENT_03_OPTION_1_TITLE": {
+    "en": "I will send what I can."
+  },
+  "FOREMAN_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -2 Food"
+  },
+  "FOREMAN_EVENT_03_OPTION_2_TITLE": {
+    "en": "They will have to recover alone."
+  },
+  "FOREMAN_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor, -2 Gold"
+  },
+  "FOREMAN_EVENT_03_OPTION_3_TITLE": {
+    "en": "If they're alive, they can keep working."
+  },
+  "FOREMAN_EVENT_03_OPTION_3_DESC": {
+    "en": "Results: +3 Fervor, +1 Gold, chance for -1 Gold from province"
+  },
+  "FOREMAN_EVENT_04_TITLE": {
+    "en": "Low Manpower"
+  },
+  "FOREMAN_EVENT_04_DIALOGUE_1": {
+    "en": "Your highness, the rebellion is spreading among the miners... desertion is at an all-time high."
+  },
+  "FOREMAN_EVENT_04_DIALOGUE_2": {
+    "en": "I'm sorry, but we simply can't maintain our current output."
+  },
+  "FOREMAN_EVENT_04_OPTION_1_TITLE": {
+    "en": "I understand."
+  },
+  "FOREMAN_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: -1 Gold from province"
+  },
+  "FOREMAN_EVENT_04_OPTION_2_TITLE": {
+    "en": "Perhaps I can provide incentives for them to return."
+  },
+  "FOREMAN_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: +2 Loyalty, -4 Gold"
+  },
+  "FOREMAN_EVENT_04_OPTION_3_TITLE": {
+    "en": "Have the remaining miners work extra hard to compensate."
+  },
+  "FOREMAN_EVENT_04_OPTION_3_DESC": {
+    "en": "Results: +3 Fervor"
+  },
+  "FOREMAN_EVENT_05_TITLE": {
+    "en": "New Mine"
+  },
+  "FOREMAN_EVENT_05_DIALOGUE_1": {
+    "en": "Your highness, it seems we've struck a new deposit... I'd suggest we open a new mine on the site."
+  },
+  "FOREMAN_EVENT_05_OPTION_1_TITLE": {
+    "en": "Let us get to work."
+  },
+  "FOREMAN_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: -5 Gold, +2 Gold from province"
+  },
+  "FOREMAN_EVENT_05_OPTION_2_TITLE": {
+    "en": "I'm afraid we don't have the resources."
+  },
+  "FOREMAN_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: Nothing"
+  },
+  "FOREMAN_EVENT_06_TITLE": {
+    "en": "Equipment Upgrades"
+  },
+  "FOREMAN_EVENT_06_DIALOGUE_1": {
+    "en": "Your highness, my miners' equipment is beginning to fail... the conditions are getting too dangerous."
+  },
+  "FOREMAN_EVENT_06_DIALOGUE_2": {
+    "en": "We need new equipment, quickly."
+  },
+  "FOREMAN_EVENT_06_OPTION_1_TITLE": {
+    "en": "I will send the goods."
+  },
+  "FOREMAN_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: -2 Gold, +2 Loyalty, chance for +1 Gold from province"
+  },
+  "FOREMAN_EVENT_06_OPTION_2_TITLE": {
+    "en": "I'm afraid we don't have the resources."
+  },
+  "FOREMAN_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor, chance for -1 Gold from province"
+  },
+  "MAYOR": {
+    "en": ""
+  },
+  "MAYOR_EVENT_00_TITLE": {
+    "en": "A Small Gift"
+  },
+  "MAYOR_EVENT_00_DIALOGUE_1": {
+    "en": "Why, hello, your highness! How lovely to see you. I was just feeling oh-so-generous today, and I wanted to make a donation."
+  },
+  "MAYOR_EVENT_00_DIALOGUE_2": {
+    "en": "You know, since I always need so much money to run the city, and you always take such good care of me..."
+  },
+  "MAYOR_EVENT_00_OPTION_1_TITLE": {
+    "en": "Thank you kindly."
+  },
+  "MAYOR_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: +4 Gold, -1 Gold in province, +2 Noble Favor, -1 Common Favor"
+  },
+  "MAYOR_EVENT_00_OPTION_2_TITLE": {
+    "en": "I do not accept bribes."
+  },
+  "MAYOR_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: -1 Noble Favor, +1 Common Favor"
+  },
+  "MAYOR_EVENT_01_TITLE": {
+    "en": "Buying a Bridge"
+  },
+  "MAYOR_EVENT_01_DIALOGUE_1": {
+    "en": "Why, hello, your highness! I just wanted to say that the bridge you wanted to construct is taking longer than expected."
+  },
+  "MAYOR_EVENT_01_DIALOGUE_2": {
+    "en": "I know it's been quite expensive already, but could you perhaps spare a bit more Gold to see it complete...?"
+  },
+  "MAYOR_EVENT_01_OPTION_1_TITLE": {
+    "en": "I suppose I must."
+  },
+  "MAYOR_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: -3 Gold, +1 Noble Favor, chance for +1 Common Favor"
+  },
+  "MAYOR_EVENT_01_OPTION_2_TITLE": {
+    "en": "This is too expensive to continue."
+  },
+  "MAYOR_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: -1 Common Favor"
+  },
+  "MAYOR_EVENT_01_OPTION_3_TITLE": {
+    "en": "Perhaps I should put somebody else in charge."
+  },
+  "MAYOR_EVENT_01_OPTION_3_DESC": {
+    "en": "Results: -2 Noble Favor, -2 Gold, chance for +2 Common Favor, Mayor dies"
+  },
+  "MAYOR_EVENT_02_TITLE": {
+    "en": "A Statue for You!"
+  },
+  "MAYOR_EVENT_02_DIALOGUE_1": {
+    "en": "Ah, your highness! Just who I wanted to see! I wanted to erect a statue in your honor in my city."
+  },
+  "MAYOR_EVENT_02_DIALOGUE_2": {
+    "en": "The people would love it, surely!"
+  },
+  "MAYOR_EVENT_02_OPTION_1_TITLE": {
+    "en": "A wonderful idea!"
+  },
+  "MAYOR_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: -4 Gold, +1 Noble Favor, chance for +2 Loyalty, chance for +2 Fervor"
+  },
+  "MAYOR_EVENT_02_OPTION_2_TITLE": {
+    "en": "A waste of time."
+  },
+  "MAYOR_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: -1 Noble Favor"
+  },
+  "MAYOR_EVENT_03_TITLE": {
+    "en": "Clearing Out the Rabble"
+  },
+  "MAYOR_EVENT_03_DIALOGUE_1": {
+    "en": "Ugh, your highness! The unwashed poor have become more and more  of a nuisance lately!"
+  },
+  "MAYOR_EVENT_03_DIALOGUE_2": {
+    "en": "They keep causing problems, and they're so unsightly! Do something about them!"
+  },
+  "MAYOR_EVENT_03_OPTION_1_TITLE": {
+    "en": "I will move them by force."
+  },
+  "MAYOR_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: -1 Army, +2 Noble Favor, +3 Fervor"
+  },
+  "MAYOR_EVENT_03_OPTION_2_TITLE": {
+    "en": "Perhaps we need more housing."
+  },
+  "MAYOR_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: -1 Noble Favor, -2 Gold, chance for +2 Loyalty"
+  },
+  "MAYOR_EVENT_03_OPTION_3_TITLE": {
+    "en": "We have bigger issues."
+  },
+  "MAYOR_EVENT_03_OPTION_3_DESC": {
+    "en": "Results: -2 Noble Favor, chance for +1 Fervor"
+  },
+  "MAYOR_EVENT_04_TITLE": {
+    "en": "Demonstrations"
+  },
+  "MAYOR_EVENT_04_DIALOGUE_1": {
+    "en": "Ugh, your highness! The common rabble are causing no end of disturbances, rioting in the streets and yelling into the night!"
+  },
+  "MAYOR_EVENT_04_DIALOGUE_2": {
+    "en": "It makes it impossible to relax! Do something!"
+  },
+  "MAYOR_EVENT_04_OPTION_1_TITLE": {
+    "en": "I will restore order."
+  },
+  "MAYOR_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: -1 Army, +2 Noble Favor, chance for +1 Loyalty, chance for +2 Fervor"
+  },
+  "MAYOR_EVENT_04_OPTION_2_TITLE": {
+    "en": "A simple protest is no issue."
+  },
+  "MAYOR_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: -2 Noble Favor, +1 Common Favor, chance for +2 Fervor"
+  },
+  "MAYOR_EVENT_04_OPTION_3_TITLE": {
+    "en": "Perhaps the rioters have a point."
+  },
+  "MAYOR_EVENT_04_OPTION_3_DESC": {
+    "en": "Results: -3 Noble Favor, +2 Common Favor, Mayor dies"
+  },
+  "MAYOR_EVENT_05_TITLE": {
+    "en": "A Drink with the Mayor"
+  },
+  "MAYOR_EVENT_05_DIALOGUE_1": {
+    "en": "Ah, your highness! I'm just looking over my lovely city. Would you care to join me for a drink?"
+  },
+  "MAYOR_EVENT_05_OPTION_1_TITLE": {
+    "en": "I would love to."
+  },
+  "MAYOR_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: -2 Gold, +1 Noble Favor"
+  },
+  "MAYOR_EVENT_05_OPTION_2_TITLE": {
+    "en": "I'm afraid I am busy."
+  },
+  "MAYOR_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: -1 Noble Favor"
+  },
+  "MAYOR_EVENT_06_TITLE": {
+    "en": "The Mayor's Villa"
+  },
+  "MAYOR_EVENT_06_DIALOGUE_1": {
+    "en": "Ah, your highness! I've been thinking... I love running my city, but sometimes the stress of it all gets to me."
+  },
+  "MAYOR_EVENT_06_DIALOGUE_2": {
+    "en": "I'd love to purchase a villa, but it's a bit outside my budget... Old friend, could you perhaps spare me some money?"
+  },
+  "MAYOR_EVENT_06_OPTION_1_TITLE": {
+    "en": "Very well."
+  },
+  "MAYOR_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: -3 Gold, +2 Noble Favor"
+  },
+  "MAYOR_EVENT_06_OPTION_2_TITLE": {
+    "en": "You can purchase it yourself."
+  },
+  "MAYOR_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: -1 Noble Favor"
+  },
+  "MODERATE": {
+    "en": ""
+  },
+  "MODERATE_EVENT_00_TITLE": {
+    "en": "Picketing"
+  },
+  "MODERATE_EVENT_00_DIALOGUE_1": {
+    "en": "Tyrant, the people demand reform! We refuse to stand around and do nothing any longer!"
+  },
+  "MODERATE_EVENT_00_DIALOGUE_2": {
+    "en": "Please, listen to our demands!"
+  },
+  "MODERATE_EVENT_00_OPTION_1_TITLE": {
+    "en": "Very well."
+  },
+  "MODERATE_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: +2 Common Favor, -1 Gold in province, -1 Food in province, -3 Noble Favor"
+  },
+  "MODERATE_EVENT_00_OPTION_2_TITLE": {
+    "en": "I refuse to negotiate."
+  },
+  "MODERATE_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: +1 Noble Favor, -1 Common Favor"
+  },
+  "MODERATE_EVENT_00_OPTION_3_TITLE": {
+    "en": "Guards!"
+  },
+  "MODERATE_EVENT_00_OPTION_3_DESC": {
+    "en": "Results: -2 Common Favor, +1 Noble Favor, -1 Army, chance for Moderate to die"
+  },
+  "MODERATE_EVENT_01_TITLE": {
+    "en": "Abdication Demand"
+  },
+  "MODERATE_EVENT_01_DIALOGUE_1": {
+    "en": "Tyrant, your time is up! The people demand an end to the monarchy!"
+  },
+  "MODERATE_EVENT_01_DIALOGUE_2": {
+    "en": "Surrender your crown and give your power to a democratic body, for the good of all people!"
+  },
+  "MODERATE_EVENT_01_OPTION_1_TITLE": {
+    "en": "Very well. I know when I have lost."
+  },
+  "MODERATE_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: Ends the game immediately"
+  },
+  "MODERATE_EVENT_01_OPTION_2_TITLE": {
+    "en": "My rule is just."
+  },
+  "MODERATE_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: +1 Noble Favor, -2 Common Favor"
+  },
+  "MODERATE_EVENT_01_OPTION_3_TITLE": {
+    "en": "Guards!"
+  },
+  "MODERATE_EVENT_01_OPTION_3_DESC": {
+    "en": "Results: -3 Common Favor, +1 Noble Favor, -1 Army, chance for Moderate to die"
+  },
+  "MODERATE_EVENT_02_TITLE": {
+    "en": "Demands for Reform"
+  },
+  "MODERATE_EVENT_02_DIALOGUE_1": {
+    "en": "Tyrant, the revolution has created a list of demands for governmental reform."
+  },
+  "MODERATE_EVENT_02_DIALOGUE_2": {
+    "en": "We request that you implement them, and make this nation better for all of us!"
+  },
+  "MODERATE_EVENT_02_OPTION_1_TITLE": {
+    "en": "I suppose I can accept this."
+  },
+  "MODERATE_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: -1 Food from this province, -1 Gold from this province, -1 Army, +3 Common Favor, -3 Noble Favor, chance for assassination if Noble Favor is low"
+  },
+  "MODERATE_EVENT_02_OPTION_2_TITLE": {
+    "en": "I'll think about it. (No I won't.)"
+  },
+  "MODERATE_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: -1 Noble Favor, chance for +1 Common Favor, chance for -1 Common Favor"
+  },
+  "MODERATE_EVENT_02_OPTION_3_TITLE": {
+    "en": "I will never bow to your demands."
+  },
+  "MODERATE_EVENT_02_OPTION_3_DESC": {
+    "en": "Results: -2 Common Favor, +2 Noble Favor"
+  },
+  "MODERATE_EVENT_03_TITLE": {
+    "en": "Debate"
+  },
+  "MODERATE_EVENT_03_DIALOGUE_1": {
+    "en": "Tyrant, I would like to speak with you publicly about your authoritarian actions in front of an audience."
+  },
+  "MODERATE_EVENT_03_DIALOGUE_2": {
+    "en": "If you believe your cause is just, defend yourself in the court of public opinion!"
+  },
+  "MODERATE_EVENT_03_OPTION_1_TITLE": {
+    "en": "Gladly."
+  },
+  "MODERATE_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: Chance for +2 Loyalty, chance for +2 Fervor, chance of assassination if Common Favor is low"
+  },
+  "MODERATE_EVENT_03_OPTION_2_TITLE": {
+    "en": "I have no need to defend myself to the likes of you."
+  },
+  "MODERATE_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "MODERATE_EVENT_04_TITLE": {
+    "en": "Publishing a Book"
+  },
+  "MODERATE_EVENT_04_DIALOGUE_1": {
+    "en": "Tyrant, the people deserve to know their human rights and the nature of your oppression."
+  },
+  "MODERATE_EVENT_04_DIALOGUE_2": {
+    "en": "To that end, I have published a book outlining our ideology! No longer can you suppress our knowledge!"
+  },
+  "MODERATE_EVENT_04_OPTION_1_TITLE": {
+    "en": "Your book will be outlawed."
+  },
+  "MODERATE_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: -1 Gold, chance for +1 Fervor"
+  },
+  "MODERATE_EVENT_04_OPTION_2_TITLE": {
+    "en": "Perhaps I should pick up a copy."
+  },
+  "MODERATE_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: -2 Noble Favor, +1 Common Favor, +1 Fervor"
+  },
+  "MODERATE_EVENT_04_OPTION_3_TITLE": {
+    "en": "Hah! Peasants can't read!"
+  },
+  "MODERATE_EVENT_04_OPTION_3_DESC": {
+    "en": "Results: Chance for +2 Fervor"
+  },
+  "MODERATE_EVENT_05_TITLE": {
+    "en": "Town Meeting"
+  },
+  "MODERATE_EVENT_05_DIALOGUE_1": {
+    "en": "Ah! Hello, tyrant. We, the people, are gathering for a town meeting to discuss the local festival."
+  },
+  "MODERATE_EVENT_05_DIALOGUE_2": {
+    "en": "The revolution is important, but so is common sentiment."
+  },
+  "MODERATE_EVENT_05_OPTION_1_TITLE": {
+    "en": "Suspicious. This will not do."
+  },
+  "MODERATE_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: -1 Army, +2 Fervor, chance to kill Rebel Moderate"
+  },
+  "MODERATE_EVENT_05_OPTION_2_TITLE": {
+    "en": "Carry on."
+  },
+  "MODERATE_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: Chance for +1 Loyalty, chance for +2 Fervor"
+  },
+  "MODERATE_EVENT_05_OPTION_3_TITLE": {
+    "en": "May I attend?"
+  },
+  "MODERATE_EVENT_05_OPTION_3_DESC": {
+    "en": "Results: Chance for +2 Loyalty, -1 Noble Favor"
+  },
+  "MODERATE_EVENT_06_TITLE": {
+    "en": "Denouncing the Church"
+  },
+  "MODERATE_EVENT_06_DIALOGUE_1": {
+    "en": "Tyrant, the Church has become a tool of oppression, used to control people's souls."
+  },
+  "MODERATE_EVENT_06_DIALOGUE_2": {
+    "en": "You should cut your ties with it immediately!"
+  },
+  "MODERATE_EVENT_06_OPTION_1_TITLE": {
+    "en": "You are a heretic."
+  },
+  "MODERATE_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -1 Common Favor"
+  },
+  "MODERATE_EVENT_06_OPTION_2_TITLE": {
+    "en": "Perhaps you are right."
+  },
+  "MODERATE_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +1 Common Favor, -2 Loyalty"
+  },
+  "MODERATE_EVENT_07_TITLE": {
+    "en": "Speaking with Locals"
+  },
+  "MODERATE_EVENT_07_DIALOGUE_1": {
+    "en": "Tyrant, the people deserve to know about your misdeeds, and they will learn!"
+  },
+  "MODERATE_EVENT_07_OPTION_1_TITLE": {
+    "en": "You will not get the chance to speak."
+  },
+  "MODERATE_EVENT_07_OPTION_1_DESC": {
+    "en": "Results: -1 Army, chance for +1 Loyalty, chance for +1 Fervor"
+  },
+  "MODERATE_EVENT_07_OPTION_2_TITLE": {
+    "en": "Try what you will."
+  },
+  "MODERATE_EVENT_07_OPTION_2_DESC": {
+    "en": "Results: Chance for +2 Fervor"
+  },
+  "DOCKWORKER": {
+    "en": ""
+  },
+  "DOCKWORKER_EVENT_00_TITLE": {
+    "en": "Price Gouging"
+  },
+  "DOCKWORKER_EVENT_00_DIALOGUE_1": {
+    "en": "My lord, there's chaos at the docks. The merchants are raising their prices dramatically, and nothing is being unloaded."
+  },
+  "DOCKWORKER_EVENT_00_DIALOGUE_2": {
+    "en": "Can you do something about this?"
+  },
+  "DOCKWORKER_EVENT_00_OPTION_1_TITLE": {
+    "en": "They will accept our prices whether they like it or not."
+  },
+  "DOCKWORKER_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: -1 Noble Favor, chance for Envoy to die"
+  },
+  "DOCKWORKER_EVENT_00_OPTION_2_TITLE": {
+    "en": "I will handle the negotiations."
+  },
+  "DOCKWORKER_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: +1 Loyalty, chance for -1 Gold from this province"
+  },
+  "DOCKWORKER_EVENT_00_OPTION_3_TITLE": {
+    "en": "I suppose we must accept their demands."
+  },
+  "DOCKWORKER_EVENT_00_OPTION_3_DESC": {
+    "en": "Results: +1 Fervor, -1 Gold from this province"
+  },
+  "DOCKWORKER_EVENT_01_TITLE": {
+    "en": "The Storm"
+  },
+  "DOCKWORKER_EVENT_01_DIALOGUE_1": {
+    "en": "My lord, the weather is foul and a storm is brewing. I suggest you close the docks to prevent disaster."
+  },
+  "DOCKWORKER_EVENT_01_OPTION_1_TITLE": {
+    "en": "Very well."
+  },
+  "DOCKWORKER_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: -1 Noble Favor, +1 Loyalty, -1 Gold"
+  },
+  "DOCKWORKER_EVENT_01_OPTION_2_TITLE": {
+    "en": "Things will be fine."
+  },
+  "DOCKWORKER_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor, chance for -2 Gold, chance for Envoy to die"
+  },
+  "DOCKWORKER_EVENT_02_TITLE": {
+    "en": "Infested Shipments"
+  },
+  "DOCKWORKER_EVENT_02_DIALOGUE_1": {
+    "en": "My lord, our latest shipment of luxury goods has been infested with rats."
+  },
+  "DOCKWORKER_EVENT_02_DIALOGUE_2": {
+    "en": "It will take some time to clear the ship before we can unload."
+  },
+  "DOCKWORKER_EVENT_02_OPTION_1_TITLE": {
+    "en": "So be it."
+  },
+  "DOCKWORKER_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: -1 Noble Favor, -1 Gold"
+  },
+  "DOCKWORKER_EVENT_02_OPTION_2_TITLE": {
+    "en": "We cannot afford to wait."
+  },
+  "DOCKWORKER_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: +1 Noble Favor, -1 Food from province"
+  },
+  "DOCKWORKER_EVENT_03_TITLE": {
+    "en": "New Road to Port"
+  },
+  "DOCKWORKER_EVENT_03_DIALOGUE_1": {
+    "en": "My lord, people have begun to complain about slow shipments from the docks to the city."
+  },
+  "DOCKWORKER_EVENT_03_DIALOGUE_2": {
+    "en": "Might I suggest a road connecting the two?"
+  },
+  "DOCKWORKER_EVENT_03_OPTION_1_TITLE": {
+    "en": "A wonderful idea."
+  },
+  "DOCKWORKER_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: -3 Gold, +1 Gold from province"
+  },
+  "DOCKWORKER_EVENT_03_OPTION_2_TITLE": {
+    "en": "I'm afraid it isn't in the budget."
+  },
+  "DOCKWORKER_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "DOCKWORKER_EVENT_04_TITLE": {
+    "en": "Shipment Protection"
+  },
+  "DOCKWORKER_EVENT_04_DIALOGUE_1": {
+    "en": "My lord, carrying goods from the docks to the city has become more dangerous than ever with bandits and rebels afoot."
+  },
+  "DOCKWORKER_EVENT_04_DIALOGUE_2": {
+    "en": "Could you post guards along our shipping routes?"
+  },
+  "DOCKWORKER_EVENT_04_OPTION_1_TITLE": {
+    "en": "A wonderful idea."
+  },
+  "DOCKWORKER_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: -1 Army, +1 Loyalty"
+  },
+  "DOCKWORKER_EVENT_04_OPTION_2_TITLE": {
+    "en": "We don't have forces to spare."
+  },
+  "DOCKWORKER_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor, chance for -2 Gold"
+  },
+  "DOCKWORKER_EVENT_05_TITLE": {
+    "en": "New Crops"
+  },
+  "DOCKWORKER_EVENT_05_DIALOGUE_1": {
+    "en": "My lord, merchants from Afar have brought foods from a distant land which would grow well here."
+  },
+  "DOCKWORKER_EVENT_05_DIALOGUE_2": {
+    "en": "Growing some would surely keep the dockworkers healthier."
+  },
+  "DOCKWORKER_EVENT_05_OPTION_1_TITLE": {
+    "en": "Let us plant some."
+  },
+  "DOCKWORKER_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: -1 Gold, +1 Food in province"
+  },
+  "DOCKWORKER_EVENT_05_OPTION_2_TITLE": {
+    "en": "We cannot afford that right now."
+  },
+  "DOCKWORKER_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: Nothing"
+  },
+  "DOCKWORKER_EVENT_06_TITLE": {
+    "en": "Overwork"
+  },
+  "DOCKWORKER_EVENT_06_DIALOGUE_1": {
+    "en": "My lord, the dock workers are exhausted from the non-stop back-breaking labor."
+  },
+  "DOCKWORKER_EVENT_06_DIALOGUE_2": {
+    "en": "Please, improve our working hours."
+  },
+  "DOCKWORKER_EVENT_06_OPTION_1_TITLE": {
+    "en": "Perhaps your conditions are too harsh."
+  },
+  "DOCKWORKER_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -1 Noble Favor, -1 Gold in province"
+  },
+  "DOCKWORKER_EVENT_06_OPTION_2_TITLE": {
+    "en": "You will survive."
+  },
+  "DOCKWORKER_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "COMMONER LADY": {
+    "en": ""
+  },
+  "COMMONER_LADY_EVENT_00_TITLE": {
+    "en": "Police Crackdowns"
+  },
+  "COMMONER_LADY_EVENT_00_DIALOGUE_1": {
+    "en": "My lord, the police have grown more and more violent as of late, arresting people seemingly at random. We are all afraid to even speak."
+  },
+  "COMMONER_LADY_EVENT_00_DIALOGUE_2": {
+    "en": "I understand the danger the rebels pose, but surely this is too far...?"
+  },
+  "COMMONER_LADY_EVENT_00_OPTION_1_TITLE": {
+    "en": "I will rein them in."
+  },
+  "COMMONER_LADY_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: -1 Noble Favor, +1 Loyalty"
+  },
+  "COMMONER_LADY_EVENT_00_OPTION_2_TITLE": {
+    "en": "This is the price of peace."
+  },
+  "COMMONER_LADY_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: Chance for +1 Loyalty, chance for +2 Fervor"
+  },
+  "COMMONER_LADY_EVENT_01_TITLE": {
+    "en": "Cost of Living"
+  },
+  "COMMONER_LADY_EVENT_01_DIALOGUE_1": {
+    "en": "My lord, everything has become far too expensive as of late. I can barely afford food at times."
+  },
+  "COMMONER_LADY_EVENT_01_DIALOGUE_2": {
+    "en": "Please, do something! Surely you don't want us to starve?"
+  },
+  "COMMONER_LADY_EVENT_01_OPTION_1_TITLE": {
+    "en": "I will demand more from the workers."
+  },
+  "COMMONER_LADY_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, -1 Gold consumption, -2 Common Favor"
+  },
+  "COMMONER_LADY_EVENT_01_OPTION_2_TITLE": {
+    "en": "It is out of my control."
+  },
+  "COMMONER_LADY_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "COMMONER_LADY_EVENT_02_TITLE": {
+    "en": "Corrupt Mayor"
+  },
+  "COMMONER_LADY_EVENT_02_DIALOGUE_1": {
+    "en": "My lord, you must do something about our mayor! He steals our wealth and provides us with nothing in return."
+  },
+  "COMMONER_LADY_EVENT_02_DIALOGUE_2": {
+    "en": "Our city is suffering under his hand!"
+  },
+  "COMMONER_LADY_EVENT_02_OPTION_1_TITLE": {
+    "en": "I will have him replaced."
+  },
+  "COMMONER_LADY_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: Mayor dies, +2 Loyalty, -2 Noble Favor, -1 Gold"
+  },
+  "COMMONER_LADY_EVENT_02_OPTION_2_TITLE": {
+    "en": "He is doing just fine."
+  },
+  "COMMONER_LADY_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor, +1 Noble Favor"
+  },
+  "COMMONER_LADY_EVENT_03_TITLE": {
+    "en": "Protecting the Roads"
+  },
+  "COMMONER_LADY_EVENT_03_DIALOGUE_1": {
+    "en": "My lord, traveling these days is almost impossible! With the bandits about, I'm fearing for my life!"
+  },
+  "COMMONER_LADY_EVENT_03_DIALOGUE_2": {
+    "en": "Please, increase the security of the roads!"
+  },
+  "COMMONER_LADY_EVENT_03_OPTION_1_TITLE": {
+    "en": "You will have nothing to fear."
+  },
+  "COMMONER_LADY_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty, -1 Army"
+  },
+  "COMMONER_LADY_EVENT_03_OPTION_2_TITLE": {
+    "en": "Simply do not travel."
+  },
+  "COMMONER_LADY_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "COMMONER_LADY_EVENT_04_TITLE": {
+    "en": "Praying for Peace"
+  },
+  "COMMONER_LADY_EVENT_04_DIALOGUE_1": {
+    "en": "Ah... my lord, I didn't expect to see you. I've been quite on edge lately, and I figured praying might help."
+  },
+  "COMMONER_LADY_EVENT_04_DIALOGUE_2": {
+    "en": "My lord... do you think that this all can be resolved peacefully?"
+  },
+  "COMMONER_LADY_EVENT_04_OPTION_1_TITLE": {
+    "en": "I am sure of it."
+  },
+  "COMMONER_LADY_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty"
+  },
+  "COMMONER_LADY_EVENT_04_OPTION_2_TITLE": {
+    "en": "Sometimes I worry about that, myself."
+  },
+  "COMMONER_LADY_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: Chance for +1 Common Favor"
+  },
+  "FARMER": {
+    "en": ""
+  },
+  "FARMER_EVENT_00_TITLE": {
+    "en": "Rabbit Infestation"
+  },
+  "FARMER_EVENT_00_DIALOGUE_1": {
+    "en": "My lord, the rabbits are out in full force right now! They're eating all of our crops!"
+  },
+  "FARMER_EVENT_00_DIALOGUE_2": {
+    "en": "Send help, or your people will starve!"
+  },
+  "FARMER_EVENT_00_OPTION_1_TITLE": {
+    "en": "Help is on the way."
+  },
+  "FARMER_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: -2 Gold, +1 Loyalty"
+  },
+  "FARMER_EVENT_00_OPTION_2_TITLE": {
+    "en": "Handle it yourself."
+  },
+  "FARMER_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor, -2 Food from province"
+  },
+  "FARMER_EVENT_01_TITLE": {
+    "en": "Bountiful Harvest"
+  },
+  "FARMER_EVENT_01_DIALOGUE_1": {
+    "en": "My lord, our crops have grown more than expected! We have extra food!"
+  },
+  "FARMER_EVENT_01_DIALOGUE_2": {
+    "en": "What should we do with it?"
+  },
+  "FARMER_EVENT_01_OPTION_1_TITLE": {
+    "en": "We will save it for later."
+  },
+  "FARMER_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: +3 Food"
+  },
+  "FARMER_EVENT_01_OPTION_2_TITLE": {
+    "en": "We will throw a great feast!"
+  },
+  "FARMER_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor, +2 Noble Favor, +1 Food"
+  },
+  "FARMER_EVENT_01_OPTION_3_TITLE": {
+    "en": "We will replant it."
+  },
+  "FARMER_EVENT_01_OPTION_3_DESC": {
+    "en": "Results: +1 Food from province"
+  },
+  "FARMER_EVENT_02_TITLE": {
+    "en": "Famine"
+  },
+  "FARMER_EVENT_02_DIALOGUE_1": {
+    "en": "My lord, our crops have failed. We will not have enough food unless you do something."
+  },
+  "FARMER_EVENT_02_OPTION_1_TITLE": {
+    "en": "We will pull from our stores."
+  },
+  "FARMER_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: -2 Noble Favor"
+  },
+  "FARMER_EVENT_02_OPTION_2_TITLE": {
+    "en": "We will import food from abroad."
+  },
+  "FARMER_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: -3 Gold"
+  },
+  "FARMER_EVENT_02_OPTION_3_TITLE": {
+    "en": "We will simply have to bear with it."
+  },
+  "FARMER_EVENT_02_OPTION_3_DESC": {
+    "en": "Results: -1 Common Favor, +1 Fervor"
+  },
+  "FARMER_EVENT_03_TITLE": {
+    "en": "Demands for Pay"
+  },
+  "FARMER_EVENT_03_DIALOGUE_1": {
+    "en": "My lord, we work until our backs break for very little pay. No longer. We demand fair wages."
+  },
+  "FARMER_EVENT_03_OPTION_1_TITLE": {
+    "en": "Very well."
+  },
+  "FARMER_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty, -1 Noble Favor, +1 Gold consumption"
+  },
+  "FARMER_EVENT_03_OPTION_2_TITLE": {
+    "en": "You will be grateful for what you receive."
+  },
+  "FARMER_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "FARMER_EVENT_04_TITLE": {
+    "en": "New Equipment"
+  },
+  "FARMER_EVENT_04_DIALOGUE_1": {
+    "en": "My lord, I hear there are amazing new types of farm equipment being made these days."
+  },
+  "FARMER_EVENT_04_DIALOGUE_2": {
+    "en": "If we had some, we could greatly improve our yields."
+  },
+  "FARMER_EVENT_04_OPTION_1_TITLE": {
+    "en": "Let us purchase some at once."
+  },
+  "FARMER_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: -3 Gold, +1 Food in province, +1 Loyalty"
+  },
+  "FARMER_EVENT_04_OPTION_2_TITLE": {
+    "en": "I'm afraid it's not in the budget."
+  },
+  "FARMER_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "FARMER_EVENT_05_TITLE": {
+    "en": "Gluttonous Nobles"
+  },
+  "FARMER_EVENT_05_DIALOGUE_1": {
+    "en": "My lord, the people here are starving while the nobles feast endlessly."
+  },
+  "FARMER_EVENT_05_DIALOGUE_2": {
+    "en": "Our crops are not doing well as of late. Tell them to waste less food!"
+  },
+  "FARMER_EVENT_05_OPTION_1_TITLE": {
+    "en": "I will keep them under control."
+  },
+  "FARMER_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: +1 Food, -2 Noble Favor, +1 Loyalty"
+  },
+  "FARMER_EVENT_05_OPTION_2_TITLE": {
+    "en": "They can do as they please."
+  },
+  "FARMER_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: +2 Fervor"
+  },
+  "FARMER_EVENT_06_TITLE": {
+    "en": "Starvation in the Outskirts"
+  },
+  "FARMER_EVENT_06_DIALOGUE_1": {
+    "en": "My lord, the people in these lands are starving! Food should surely be grown here!"
+  },
+  "FARMER_EVENT_06_OPTION_1_TITLE": {
+    "en": "I will send them supplies."
+  },
+  "FARMER_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: -2 Gold, +1 Loyalty, +1 Food in province"
+  },
+  "FARMER_EVENT_06_OPTION_2_TITLE": {
+    "en": "They will have to handle it themselves."
+  },
+  "FARMER_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "SOLDIER": {
+    "en": ""
+  },
+  "SOLDIER_EVENT_00_TITLE": {
+    "en": "Help With the Rebels"
+  },
+  "SOLDIER_EVENT_00_DIALOGUE_1": {
+    "en": "My lord, the rebels are growing more and more violent! We cannot defend this town on our own!"
+  },
+  "SOLDIER_EVENT_00_DIALOGUE_2": {
+    "en": "Please, send reinforcements!"
+  },
+  "SOLDIER_EVENT_00_OPTION_1_TITLE": {
+    "en": "Help is on the way."
+  },
+  "SOLDIER_EVENT_00_OPTION_1_DESC": {
+    "en": "Results: -1 Army, +2 Loyalty"
+  },
+  "SOLDIER_EVENT_00_OPTION_2_TITLE": {
+    "en": "We are stretched thin as it is."
+  },
+  "SOLDIER_EVENT_00_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor, chance for +2 Fervor"
+  },
+  "SOLDIER_EVENT_01_TITLE": {
+    "en": "Looking Out to Sea"
+  },
+  "SOLDIER_EVENT_01_DIALOGUE_1": {
+    "en": "...Ah. My lord. Don't mind me. It's just..."
+  },
+  "SOLDIER_EVENT_01_DIALOGUE_2": {
+    "en": "All this violence, all this death, all this despair... what is it all for? I've wondered why we even fight, lately."
+  },
+  "SOLDIER_EVENT_01_OPTION_1_TITLE": {
+    "en": "I understand."
+  },
+  "SOLDIER_EVENT_01_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty, -1 Noble Favor"
+  },
+  "SOLDIER_EVENT_01_OPTION_2_TITLE": {
+    "en": "Take some time to rest."
+  },
+  "SOLDIER_EVENT_01_OPTION_2_DESC": {
+    "en": "Results: +1 Common Favor, -1 Army"
+  },
+  "SOLDIER_EVENT_01_OPTION_3_TITLE": {
+    "en": "You aren't paid to think."
+  },
+  "SOLDIER_EVENT_01_OPTION_3_DESC": {
+    "en": "Results: +1 Fervor, chance for Soldier to die"
+  },
+  "SOLDIER_EVENT_02_TITLE": {
+    "en": "Praying for the Fallen"
+  },
+  "SOLDIER_EVENT_02_DIALOGUE_1": {
+    "en": "...Ah, my lord. My apologies, I didn't see you there. I am simply praying."
+  },
+  "SOLDIER_EVENT_02_DIALOGUE_2": {
+    "en": "So many of my brothers have fallen lately, fighting against the rebels, the barbarians... they didn't deserve this."
+  },
+  "SOLDIER_EVENT_02_OPTION_1_TITLE": {
+    "en": "I will join you."
+  },
+  "SOLDIER_EVENT_02_OPTION_1_DESC": {
+    "en": "Results: +1 Loyalty, -1 Gold"
+  },
+  "SOLDIER_EVENT_02_OPTION_2_TITLE": {
+    "en": "I'm afraid it must be this way."
+  },
+  "SOLDIER_EVENT_02_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "SOLDIER_EVENT_03_TITLE": {
+    "en": "Reinforcements Request"
+  },
+  "SOLDIER_EVENT_03_DIALOGUE_1": {
+    "en": "My lord! The barbarian front has picked up dramatically as of late! They've routed our forces!"
+  },
+  "SOLDIER_EVENT_03_DIALOGUE_2": {
+    "en": "Please, send reinforcements!"
+  },
+  "SOLDIER_EVENT_03_OPTION_1_TITLE": {
+    "en": "Help is on the way."
+  },
+  "SOLDIER_EVENT_03_OPTION_1_DESC": {
+    "en": "Results: -1 Army, -1 Gold, +1 Loyalty"
+  },
+  "SOLDIER_EVENT_03_OPTION_2_TITLE": {
+    "en": "You will have to make do."
+  },
+  "SOLDIER_EVENT_03_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor, chance for +3 Fervor"
+  },
+  "SOLDIER_EVENT_04_TITLE": {
+    "en": "Boring Station"
+  },
+  "SOLDIER_EVENT_04_DIALOGUE_1": {
+    "en": "...Ah, hello, my lord. No, I wasn't sleeping... this station is just... quite boring."
+  },
+  "SOLDIER_EVENT_04_DIALOGUE_2": {
+    "en": "Nothing ever happens here, it's just watching over rich folks' bi, empty houses..."
+  },
+  "SOLDIER_EVENT_04_OPTION_1_TITLE": {
+    "en": "Perhaps I can help get you transfered."
+  },
+  "SOLDIER_EVENT_04_OPTION_1_DESC": {
+    "en": "Results: -1 Noble Favor +1 Common Favor"
+  },
+  "SOLDIER_EVENT_04_OPTION_2_TITLE": {
+    "en": "Don't complain."
+  },
+  "SOLDIER_EVENT_04_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor"
+  },
+  "SOLDIER_EVENT_05_TITLE": {
+    "en": "New Recruits"
+  },
+  "SOLDIER_EVENT_05_DIALOGUE_1": {
+    "en": "Hello, my lord. Here to see the new recruits? I'm afraid they're not much to look at."
+  },
+  "SOLDIER_EVENT_05_DIALOGUE_2": {
+    "en": "They haven't received nealy enough training. They won't be much help as they are."
+  },
+  "SOLDIER_EVENT_05_OPTION_1_TITLE": {
+    "en": "We can afford to give them more training."
+  },
+  "SOLDIER_EVENT_05_OPTION_1_DESC": {
+    "en": "Results: -1 Gold, +1 Army (permanent)"
+  },
+  "SOLDIER_EVENT_05_OPTION_2_TITLE": {
+    "en": "We will just have to make do."
+  },
+  "SOLDIER_EVENT_05_OPTION_2_DESC": {
+    "en": "Results: Chance for +1 Army (permanent), chance for +1 Fervor"
+  },
+  "SOLDIER_EVENT_06_TITLE": {
+    "en": "Overwork"
+  },
+  "SOLDIER_EVENT_06_DIALOGUE_1": {
+    "en": "My lord, we are tired. We are paid less than dirt to work ourselves to the bone and throw our lives away."
+  },
+  "SOLDIER_EVENT_06_DIALOGUE_2": {
+    "en": "We demand better pay for our service."
+  },
+  "SOLDIER_EVENT_06_OPTION_1_TITLE": {
+    "en": "I will see what I can do."
+  },
+  "SOLDIER_EVENT_06_OPTION_1_DESC": {
+    "en": "Results: +2 Loyalty, +1 Gold consumption, -1 Noble Favor"
+  },
+  "SOLDIER_EVENT_06_OPTION_2_TITLE": {
+    "en": "Be grateful for what you have."
+  },
+  "SOLDIER_EVENT_06_OPTION_2_DESC": {
+    "en": "Results: +1 Fervor, chance for -1 Army (permanent)"
+  },
+  "SOLDIER_EVENT_07_TITLE": {
+    "en": "Personal Guard"
+  },
+  "SOLDIER_EVENT_07_DIALOGUE_1": {
+    "en": "My lord, I understand you are under constant threat. Perhaps you would like a personal guard?"
+  },
+  "SOLDIER_EVENT_07_OPTION_1_TITLE": {
+    "en": "That would be much appreciated."
+  },
+  "SOLDIER_EVENT_07_OPTION_1_DESC": {
+    "en": "Results: +1 Army, chance for assassination if Common Favor is low"
+  },
+  "SOLDIER_EVENT_07_OPTION_2_TITLE": {
+    "en": "Thank you, but I am fine."
+  },
+  "SOLDIER_EVENT_07_OPTION_2_DESC": {
+    "en": "Results: Nothing"
+  },
+  "AUTO EVENTS": {
+    "en": ""
+  },
+  "AUTO_EVENT_CONFIRM_TITLE": {
+    "en": "Very well."
+  },
+  "AUTO_EVENT_00_TITLE": {
+    "en": "Rebel Speech"
+  },
+  "AUTO_EVENT_00_DIALOGUE_1": {
+    "en": "The rebels have given a rousing speech, rousing the local populace to action."
+  },
+  "AUTO_EVENT_00_DESC": {
+    "en": "Results: +1 Fervor in random province"
+  },
+  "AUTO_EVENT_01_TITLE": {
+    "en": "Rebel Victory"
+  },
+  "AUTO_EVENT_01_DIALOGUE_1": {
+    "en": "The rebels have won a battle against the local armed forces!"
+  },
+  "AUTO_EVENT_01_DESC": {
+    "en": "Results: +2 Fervor in random province"
+  },
+  "AUTO_EVENT_02_TITLE": {
+    "en": "Military Victory"
+  },
+  "AUTO_EVENT_02_DIALOGUE_1": {
+    "en": "The local armed forces have defeated the rebels in a battle!"
+  },
+  "AUTO_EVENT_02_DESC": {
+    "en": "Results: +1 Loyalty in random province"
+  },
+  "AUTO_EVENT_03_TITLE": {
+    "en": "Bandit Attack"
+  },
+  "AUTO_EVENT_03_DIALOGUE_1": {
+    "en": "Bandits have ransacked a province, necessitating repairs."
+  },
+  "AUTO_EVENT_03_DESC": {
+    "en": "Results: -2 Gold"
+  },
+  "AUTO_EVENT_04_TITLE": {
+    "en": "Rebel Raid"
+  },
+  "AUTO_EVENT_04_DIALOGUE_1": {
+    "en": "The rebels have raided a local storehouse, stealing provisions."
+  },
+  "AUTO_EVENT_04_DESC": {
+    "en": "Results: -2 Food"
+  },
+  "AUTO_EVENT_05_TITLE": {
+    "en": "Assassination Attempt"
+  },
+  "AUTO_EVENT_05_DIALOGUE_1": {
+    "en": "A string of assassination attempts has just taken place against the nobility!"
+  },
+  "AUTO_EVENT_05_DESC": {
+    "en": "Results: Chance for Duchess to die, chance for Party Guy to die, chance for Aristocrat to die"
+  },
+  "AUTO_EVENT_06_TITLE": {
+    "en": "Rebels Captured"
+  },
+  "AUTO_EVENT_06_DIALOGUE_1": {
+    "en": "A rebel hideout has been discovered, leading to several leaders being apprehended!"
+  },
+  "AUTO_EVENT_06_DESC": {
+    "en": "Results: Chance for Radical to die, chance for Moderate to die"
+  },
+  "AUTO_EVENT_07_TITLE": {
+    "en": "Noble Party"
+  },
+  "AUTO_EVENT_07_DIALOGUE_1": {
+    "en": "The nobility have thrown a massive party, irritating the populace."
+  },
+  "AUTO_EVENT_07_DESC": {
+    "en": "Results: -1 Food, -1 Gold, -1 Common Favor"
+  },
+  "AUTO_EVENT_08_TITLE": {
+    "en": "Noble Gaffe"
+  },
+  "AUTO_EVENT_08_DIALOGUE_1": {
+    "en": "A member of the nobility was caught saying inflammatory remarks, angering the populace."
+  },
+  "AUTO_EVENT_08_DESC": {
+    "en": "Results: -1 Common Favor"
+  },
+  "AUTO_EVENT_09_TITLE": {
+    "en": "Celebration"
+  },
+  "AUTO_EVENT_09_DIALOGUE_1": {
+    "en": "It is the day of an important celebration! The people are pleased."
+  },
+  "AUTO_EVENT_09_DESC": {
+    "en": "Results: +1 Common Favor"
+  },
+  "AUTO_EVENT_10_TITLE": {
+    "en": "Mutiny!"
+  },
+  "AUTO_EVENT_10_DIALOGUE_1": {
+    "en": "The army in a key province has mutinied!"
+  },
+  "AUTO_EVENT_10_DESC": {
+    "en": "Results: -1 Army (permanent), +2 Fervor in random province"
+  },
+  "AUTO_EVENT_11_TITLE": {
+    "en": "Rebel Infighting"
+  },
+  "AUTO_EVENT_11_DIALOGUE_1": {
+    "en": "Disagreements in the rebellion have spiraled into infighting!"
+  },
+  "AUTO_EVENT_11_DESC": {
+    "en": "Results: +1 Common Favor, chance for Rebel Moderate to die, chance for Rebel Radical to die"
+  },
+  "AUTO_EVENT_12_TITLE": {
+    "en": "Propaganda"
+  },
+  "AUTO_EVENT_12_DIALOGUE_1": {
+    "en": "Rebel propaganda is making its way throughout the provinces!"
+  },
+  "AUTO_EVENT_12_DESC": {
+    "en": "Results: -1 Common Favor"
+  },
+  "AUTO_EVENT_13_TITLE": {
+    "en": "Foreign Aid"
+  },
+  "AUTO_EVENT_13_DIALOGUE_1": {
+    "en": "Foreign governments worried about the rebellion are providing support!"
+  },
+  "AUTO_EVENT_13_DESC": {
+    "en": "Results: +3 Food, +3 Gold"
+  },
+  "AUTO_EVENT_14_TITLE": {
+    "en": "Luxury Boom"
+  },
+  "AUTO_EVENT_14_DIALOGUE_1": {
+    "en": "Your precious stones are the hot new commodity abroad!"
+  },
+  "AUTO_EVENT_14_DESC": {
+    "en": "Results: +3 Gold"
+  },
+  "AUTO_EVENT_15_TITLE": {
+    "en": "Slanderous Rumors"
+  },
+  "AUTO_EVENT_15_DIALOGUE_1": {
+    "en": "Rumors of your incompetence are spreading amongst the nobility!"
+  },
+  "AUTO_EVENT_15_DESC": {
+    "en": "Results: -1 Noble Favor"
+  },
+  "CHARACTER NAMES": {
+    "en": ""
+  },
+  "CHAR_PARTYGUY": {
+    "en": "The Party Noble"
+  },
+  "CHAR_SPYMASTER": {
+    "en": "The Spymaster"
+  },
+  "CHAR_DUCHESS": {
+    "en": "The Duchess"
+  },
+  "CHAR_GENERAL": {
+    "en": "The General"
+  },
+  "CHAR_PRIEST": {
+    "en": "The Priest"
+  },
+  "CHAR_COMMONER": {
+    "en": "The Townsfolk"
+  },
+  "CHAR_RADICAL": {
+    "en": "The Rebel Radical"
+  },
+  "CHAR_ARISTOCRAT": {
+    "en": "The Aristocrat"
+  },
+  "CHAR_BARON": {
+    "en": "The Baron"
+  },
+  "CHAR_ENVOY": {
+    "en": "The Envoy"
+  },
+  "CHAR_PEASANT_GIRL": {
+    "en": "The Peasant Girl"
+  },
+  "CHAR_REBEL_LEADER": {
+    "en": "The Rebel Leader"
+  },
+  "CHAR_FOREMAN": {
+    "en": "The Foreman"
+  },
+  "CHAR_MAYOR": {
+    "en": "The Mayor"
+  },
+  "CHAR_MODERATE": {
+    "en": "The Rebel Moderate"
+  },
+  "CHAR_DOCKWORKER": {
+    "en": "The Dockworker"
+  },
+  "CHAR_COMMONER_LADY": {
+    "en": "The Citydweller"
+  },
+  "CHAR_FARMER": {
+    "en": "The Farmer"
+  },
+  "CHAR_SOLDIER": {
+    "en": "The Soldier"
+  },
+  "ENDINGS": {
+    "en": ""
+  },
+  "END_REVOLUTION_TITLE": {
+    "en": "ENDING 01: REVOLUTION"
+  },
+  "END_REVOLUTION_DESC": {
+    "en": "Despite your efforts, the day of the Revolution came faster than anybody had anticipated. A battalion of armed commoners stormed the gates of the capital, catching the nobles by surprise. Most of the army turned a blind eye - the rest could hardly stand against a force with nothing to lose. A lucky few nobles managed to flee in the commotion, but the rest were dragged out into the streets and slain as the mob approached your palace. There was nothing you could do, nobody you could turn to. The revolutionaries broke down your door, poured into your estate, and finally, cornered you in your room. You barely had the chance to utter a word before you were struck down. As you fell to the floor, you chanced a look outside your balcony window and saw the flag of the revolt rising in the smoky morning sky. The reign of the monarchy had come to an end."
+  },
+  "END_COMMON_ASSASSIN_TITLE": {
+    "en": "ENDING 02: ASSASSINATION"
+  },
+  "END_COMMON_ASSASSIN_DESC": {
+    "en": "While you weren't looking, from the crowd, a shot rang out. An instant later, you felt the pain in your chest. Evidently, you had angered the commoners enough that somebody had dared to lay down their life to kill you. The gunman was tackled to the floor, but it was too late. Screams echoed around you as panic ensued. Or perhaps they were cheers...? You couldn't say. You were rushed to the hospital, but it was far too late. Without your rule, your kingdom would descend into chaos. If you were lucky, perhaps the nobles or revolutionaries could restore order. If not... well, it wasn't your problem anymore, at least. Regardless, your reign had come to an end."
+  },
+  "END_NOBLE_ASSASSIN_TITLE": {
+    "en": "ENDING 03: BACKSTABBING"
+  },
+  "END_NOBLE_ASSASSIN_DESC": {
+    "en": "Late at night, as you returned to your chambers, you thought you saw a shadowy figure dart out of sight in the corner of your eye. You turned to look, but you could see nothing... until, suddenly, a flash of light. A shot rang out, and a sharp pain flooded your body. Instantly you crumpled to the floor. As you writhed in agony, you heard cold, even footsteps approaching you. You mustered up the courage to meet the eyes of your assassin, only to see a familiar face: one of your own nobles, face twisted into a wicked grin. They raised the still-smoking gun up toward your head, and before you could even dare to ask why, they fired a second shot to finish the job. Your death would no doubt be written off as a tragic accident, or perhaps the work of the rebels. No matter how much power you believed you had, in the end, disappointing your nobles had proved to be your undoing."
+  },
+  "END_FLEE_DOCK_FAIL_TITLE": {
+    "en": "ENDING 04: DOCK ESCAPE (FAIL)"
+  },
+  "END_FLEE_DOCK_FAIL_DESC": {
+    "en": "Under cover of the night, you approached the misty coastline, ragged cloak covering your face. You carefully made your way down the shore, glancing to and fro in hopes of spotting your vessel. Unfortunately, somebody else spotted you first. A deafening shot caught your ear, and the bullet struck your leg, causing you to fall to the ground. As you attempted to crawl away, the gunman approached, flanked by none other than a fellow noble. A trap. It appeared that your \"loyal followers\" weren't exactly keen on letting you simply run away after all the problems you had caused them. Before you could beg for your life, a second bullet struck you, and you were tossed into the sea, never to be seen again."
+  },
+  "END_FLEE_DOCK_SUCCESS_TITLE": {
+    "en": "ENDING 5: DOCK ESCAPE (SUCCESS)"
+  },
+  "END_FLEE_DOCK_SUCCESS_DESC": {
+    "en": "Under cover of the night, you fled your palace and made your way down to the misty coastline, with nothing but a few of your most precious belongings in tow. There, after a few moments of frantic searching, you spotted him: a lone sailor standing next to a small vessel, beckoning you toward him. You clambered aboard the vessel, and in a flash, the ship departed. It was a quiet journey, the sailor not daring to speak anything beyond a mumbled \"I'm sorry\" somewhere along the way. As the boat made its way into the port, you handed the sailor a generous stack of coins and made your way toward a waiting carriage, ready to bring you to the Winstonian palace where you would meet with your former equal. Here, you would not be a ruler, but you would surely be an esteemed guest of honor. Your nobles, while betrayed, didn't care enough to hunt you down before their inevitable demise at the hands of the rebels. The newly-democratic government of your old lands were willing to let you live so long as you never returned, which of course you didn't. You lived out the rest of your days in Winstone, spending your days quietly and peacefully... although murmurs from the Winstonian commoners speaking of democracy kept your hairs standing on end all the while."
+  },
+  "END_FLEE_MINES_FAIL_TITLE": {
+    "en": "ENDING 6: MINES ESCAPE (FAIL)"
+  },
+  "END_FLEE_MINES_FAIL_DESC": {
+    "en": "Following the instructions given to you by the kindly Peasant Girl, you made your way in the dark of the night toward the mines, taking care not to lose your footing on the uneven terrain. As you climbed the hilly path and came into view of the supposed secret tunnel, however, you found it blocked by a mob of angry peasants. At first, you thought you had been betrayed - however, you then saw the Peasant Girl toward the head of the crowd, bound and gagged, struggling to warn you of the ambush. Somehow the miners had found out about your plot to escape, and they were none too pleased with you avoiding the consequences of your actions. You attempted to turn and run as they spotted you, but you slipped on the loose soil and fell to the ground. In an instant, you were surrounded by the rabble, and a cacophony of angry shouts erupted. It seemed they were unsure of what to do with you, but before you could even begin to beg for your life, some sort of sharp instrument dug itself into your side. The crowd began to dissolve into infighting, but those who wanted you dead were sure to deliver the killing blow before cooler heads could prevail. In the end, your body was buried deep inside the tunnel, and while your killers were eventually tried and executed by the nobility, your body would never be found."
+  },
+  "END_FLEE_MINES_SUCCESS_TITLE": {
+    "en": "ENDING 7: MINES ESCAPE (SUCCESS)"
+  },
+  "END_FLEE_MINES_SUCCESS_DESC": {
+    "en": "Carrying little more than a few of your most valuable possessions and a few provisions given to you by the kind peasant family you had saved, you hurriedly made your way through the mines under cover of the night. As you made your way up the loose, barely-defined path of a nondescript hill, your destination finally came into view: a small cave entrance, hidden by tall grass. You carefully stepped inside to find that it was, indeed, a tunnel, and after what felt like hours of carefully making your way through the tight corridors, you finally saw the dim moonlight peek through the exit. You stepped outside to find yourself in the wilderness, but wilderness in lands far from your own. You rushed onward, following the stars, until you found what the Peasant Girl said should be your final destination: a foreign village, mostly farmers and other such humble folk. You laid low for a time, disguising yourself as a simple traveler and merchant, and the locals treated you well. The coins you had smuggled along certainly did you well. After a time, you planned to make your way to a larger city, but before you could, the news made its way to the village that the revolution had taken control of your old kingdom. Realizing the dangers of being recognized if you tried to meet with a fellow ruler, you decided to stay put, and eventually settled into your new humble life. It was far from glamorous, but you lived out the rest of your days in relative peace, making out a modest existence and making merry with people you would have once never paid a second thought to - all because you bothered to save the lives of one family."
+  },
+  "END_FLEE_OUTSKIRTS_FAIL_TITLE": {
+    "en": "ENDING 8: OUTSKIRTS ESCAPE (FAIL)"
+  },
+  "END_FLEE_OUTSKIRTS_FAIL_DESC": {
+    "en": "On a cloudy, moonless night, laying in the back of a wagon carried along by a single horse and silent rider, you made your way along a dusty road. The Baron had given you some basic provisions and one last firm handshake before he sent you on your way, organizing a ride that would take you to a secret mountain pass. However, as you stared at the dark sky above, your wagon made a sudden halt, and your horse's rider let out a gasp. You raised your head to see what the fuss was about, only to find yourself suddenly surrounded by armed soldiers, their faces barely visible. You tried to ask what they were doing, only to be instantly struck town by the blade of a bayonet. As your horseman screamed in terror, you head a familiar voice congratulating your assailants on their efforts. It was one of your very own nobles. Evidently, someone had learned of your ambush, and wasn't exactly keen on letting you escape after you had wronged them. Had the Baron sold you out? Or was he to be killed, next? You would never know. Your body was tossed to the wolves, and you were never found."
+  },
+  "END_FLEE_OUTSKIRTS_SUCCESS_TITLE": {
+    "en": "ENDING 9: OUTSKIRTS ESCAPE (SUCCESS)"
+  },
+  "END_FLEE_OUTSKIRTS_SUCCESS_DESC": {
+    "en": "On a cloudy, moonless night, you made your way along a dusty road, laying in the back of a wagon carried along by a single horse and silent rider. The Baron had arranged the ride for you, sending you off with a bag of provisions and one last firm handshake toward a secret mountain pass. The wheels creaked and your surroundings shook as you gazed into the dark sky, until finally, the wagon came to a stop at the edge of a small valley. You paid your rider handsomely before stepping out and beginning the long trek toward your destination. By the time you made your way through the pass, the sun had already begun to rise, and it was fully in the sky by the time you were approached by a pair of Bandalburger riders. They were suspicious at first, speaking in a language you only partly knew and pointing swords at your throat before you presented them with a letter from the Baron and a small stack of coins. Their faces lit up. You rode with them for several days, across fields and hills, until finally you came into sight of the Bandalburger capital. There, you were given an audience with the king. Hearing of your plight, and because of the peace you had negotiated, he agreed to shelter you as a guest of honor from any furious nobles or rebels. Before long, news arrived that the rebellion had taken control of your kingdom, but by then you had become close friends with the king, and ultimately you were allowed to stay. Slowly but surely you integrated into Bandalburger society, and while your life was never nearly as luxurious as it was back in your palace, your knowledge of your kingdom's forces kept your new home safe when war eventually erupted again. You never again were able to speak to the Baron, or if he even still lived, but you lived the rest of your life thanking him."
+  },
+  "END_SURRENDER_FAIL_TITLE": {
+    "en": "ENDING 10: EXECUTION"
+  },
+  "END_SURRENDER_FAIL_DESC": {
+    "en": "Seeing the writing on the wall and faced with a crowd of furious rebels, you decided to hand yourself over to your opponents, becoming their prisoner. You were promised your life if you came quietly, but as you spent your months in your dry, solemn prison cell, the murmurs and passing conversations you heard made it clear that the rebellion would not keep their word. One morning, two stern-looking armed guards stepped into your cell, demanding you come with them. They draped a cloth over your head and led you along for what felt like an eternity, the voices of a crowd growing louder and louder until your march was suddenly stopped. The veil over your head was lifted to reveal that you were now standing in front of a seemingly endless mob, as if you were giving a speech just like the olden days. But the wooden frame which surrounded you made clear that this was not the case. This was a gallows. You could barely hear the righteous raving of the rebel leader next to you as you tried to process what was going on, your head and hands being placed into a tight holder by your captors. As the blade above you was raised, the leader asked you to speak your last words. You couldn't choke up a single thought before the rope holding the blade was cut and your life came to a swift end. The revolution had won, but you had to wonder: how many more would be slain just like you?"
+  },
+  "END_SURRENDER_SUCCESS_TITLE": {
+    "en": "ENDING 11: SURRENDER"
+  },
+  "END_SURRENDER_SUCCESS_DESC": {
+    "en": "Seeing the writing on the wall and faced with a crowd of furious rebels, you decided to hand yourself over to your opponents, becoming their prisoner. Being led to the very prison which had once held key rebel figures, you were promised you would be allowed to live, although you weren't quite so sure. Indeed, as you listened to the heated discussions echoing through the prison walls, it seemed as though there was quite a lot of disagreement about what to do with you. In the end, though, cooler heads prevailed, and the moderates who had come to head the new government decided that you did not deserve death. Your freedom, however, was another story. You spent the rest of your life inside the prison walls, slowly wasting away as time mached on. From your window, you saw great strife, celebrations, and periods of national mourning, but most of all, you saw slow and steady progress. You couldn't help but wonder to yourself whether that progress was because you were gone, and whether you truly had made the world worse with your mere existence, through endless, sleepless nights. But at least you were alive."
+  },
+  "END_ABDICATE_FAIL_TITLE": {
+    "en": "ENDING 12: APPREHENSION"
+  },
+  "END_ABDICATE_FAIL_DESC": {
+    "en": "Faced with an overwhelming, angry crowd of rebels, you knew in an instant that your time as ruler had come to an end. But perhaps this end wouldn't have to come with strife. Gracefully, you stepped down, and after being allowed to speak with the leaders of the rebellion, you decreed a formal end to the monarchy. While many in the rebel ranks were furious at the idea of allowing you to live after what you had done, it was ultimately agreed that you would be allowed to live a quiet, peaceful life on a small estate far from your center of power, albeit with a watchful eye always kept over you. After the toll the rebellion had taken on you, though, this kind of quiet life was exactly what you wanted. Unfortunately, however, your retirement would be cut short. In the middle of the night, as you laid peacefully in your bed, you were startled awake by the sound of angry yelling and banging on the door. As you rose to your feet, you heard the door get smashed in, and then a stomping up the stairs. You shied into a corner as a pair of scowling gunmen made their way into the bedroom. You were quickly spotted and surrounded, and before you could even beg for your life, several shots rang out. You would never know whether the attack had come from a furious spurned noble or a radical faction of the rebellion taking justice into their own hands, and indeed, nobody else would, either. The debate over who killed you spilled over into the eact kind of violence you had hoped to avoid with your abdication, throwing your kingdom into years of turmoil you would never get to see."
+  },
+  "END_ABDICATE_SUCCESS_TITLE": {
+    "en": "ENDING 13: ABDICATION"
+  },
+  "END_ABDICATE_SUCCESS_DESC": {
+    "en": "Faced with an overwhelming, angry crowd of rebels, you knew in an instant that your time as ruler had come to an end. But perhaps this end wouldn't have to come with strife. Gracefully, you stepped down, and after speaking with the leaders of the rebellion, you decreed a formal end to the monarchy. In exchange, you were promised the ability to live out the rest of your life in peace in a modest estate on the outskirts of your former kingdom, albeit under constant surveillance. While some in the rebellion were unhappy with allowing you to live so freely, ultimately the government decided that clemency was the best solution, and the disagreements quieted down. Your nobles, too, were furious, but seeing as you had treated them so well, none ever bothered to seek revenge - a few were tried for their crimes and jailed, others fled, but quite a few made the transition into ordinary citizens. With some members of the elite still in power, the new rebel government struggled with corruption and power struggles, but none of this ever bothered you. After all the chaos you had endured, you were more than happy to live out the rest of your life in peace, away from whatever the future would bring to your people, good or bad."
   }
 }
