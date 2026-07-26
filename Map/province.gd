@@ -66,8 +66,7 @@ func _reset():
 	
 	$BorderSprite.texture = load("res://Assets/map/"+province_name.to_lower()+" borders.png")
 
-# TODO: does the province need to do something on the day update not handled elsewhere?
-# like random slight adjustment to yields/consumptions?
+
 func on_day_updated(_new_day):
 	has_army = false
 
@@ -128,10 +127,9 @@ func change_counter(counter: int, change: float) -> void:
 # TODO: more interesting
 ## try to do the event, based on rng and variables of the province or something
 func try_event(_event: MapEvent) -> bool:
-	return true
-	#if randf_range(0, 100) <= fervor:
-		#return true
-	#return false
+	if randf_range(0, 100) <= fervor:
+		return true
+	return false
 
 ## gets the possible events, shuffles them, and tries to fire them, if one fires it returns true
 func roll_event_odds() -> bool:
@@ -159,8 +157,6 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 						tween.kill()
 					tween = create_tween()
 					tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
-				else: # TODO: remove later
-					roll_event_odds()
 			elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
 				# TODO: visual effect of some sort? sound?
 				if curr_owner == Owner.KING and not has_army: # No placing armies in unowned provinces
