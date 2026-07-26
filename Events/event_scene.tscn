@@ -135,4 +135,5 @@ layout_mode = 1
 offset_left = -1.0
 offset_right = -1.0
 
+[connection signal="mouse_entered" from="CenterContainer/VBoxContainer/MarginContainer/Close" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/MarginContainer/Close" to="." method="_on_close_pressed"]

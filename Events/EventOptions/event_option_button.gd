@@ -25,12 +25,14 @@ func set_values(option: EventOption):
 func _on_mouse_entered() -> void:
 	tooltip.set_values(option_desc, success_outcome, failure_outcome)
 	tooltip.visible = not tooltip.visible
+	MusicManager.play_sfx(MusicManager.SFX.MOUSEOVER)
 
 func _on_mouse_exited() -> void:
 	tooltip.visible = not tooltip.visible
 
 
 func _on_pressed() -> void:
+	MusicManager.play_sfx(MusicManager.SFX.CLICK)
 	if randf_range(0, 1) <= success_odds:
 		for effect in success_outcome:
 			effect.do_effect()

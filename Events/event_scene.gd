@@ -94,3 +94,6 @@ func _on_close_pressed() -> void:
 	if GameState.MouseMode == GameState.Click.EVENT:
 		close_event(false)
 	MusicManager.play_sfx(MusicManager.SFX.CLICK)
+
+func _on_mouse_entered() -> void:
+	MusicManager.play_sfx(MusicManager.SFX.MOUSEOVER)
