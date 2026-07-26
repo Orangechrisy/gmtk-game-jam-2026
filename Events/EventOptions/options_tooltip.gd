@@ -11,8 +11,11 @@ func set_values(desc: StringName, success_outcome: Array[EventEffect], failure_o
 func set_outcome_text(successes: Array[EventEffect], failures: Array[EventEffect]):
 	%SuccessEffect.text = ""
 	%FailureEffect.text = ""
+	
 	for succ in successes:
 		%SuccessEffect.text += succ.get_effect_desc() + '\n'
+	if successes.size() == 0:
+		%SuccessEffect.text += "Nothing happens"
 	for fail in failures:
 		%FailureEffect.text += fail.get_effect_desc() + '\n'
 	if failures.size() > 0:
