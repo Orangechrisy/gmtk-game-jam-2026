@@ -88,22 +88,29 @@ bus = &"Music"
 
 [node name="Click" type="AudioStreamPlayer" parent="SFX" unique_id=1644419057]
 stream = ExtResource("13_eohum")
+bus = &"SFX"
 
 [node name="ClickInvalid" type="AudioStreamPlayer" parent="SFX" unique_id=838130123]
 stream = ExtResource("14_63cj8")
 volume_db = -3.0
+bus = &"SFX"
 
 [node name="MouseOver" type="AudioStreamPlayer" parent="SFX" unique_id=1786285962]
 stream = ExtResource("14_oxawt")
+bus = &"SFX"
 
 [node name="PopUp" type="AudioStreamPlayer" parent="SFX" unique_id=398554281]
 stream = ExtResource("15_ruiyx")
+bus = &"SFX"
 
 [node name="PositiveJingle" type="AudioStreamPlayer" parent="SFX" unique_id=1963551500]
 stream = ExtResource("16_04x8i")
+bus = &"SFX"
 
 [node name="NegativeJingle" type="AudioStreamPlayer" parent="SFX" unique_id=1496384122]
 stream = ExtResource("12_63cj8")
+bus = &"SFX"
 
 [node name="Revolt" type="AudioStreamPlayer" parent="SFX" unique_id=1561162754]
 stream = ExtResource("19_oxawt")
+bus = &"SFX"
