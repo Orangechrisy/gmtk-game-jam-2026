@@ -77,7 +77,8 @@ func add_track(province: Province):
 #SFX
 enum SFX {CLICK, CLICKINVALID, MOUSEOVER, POPUP, POSJINGLE, NEGJINGLE, REVOLT}
 
-func play_sfx(SFX_ID: int):
+func play_sfx(SFX_ID: int, change_pitch: bool = true):
 	var Audio = $SFX.get_child(SFX_ID)
-	Audio.pitch_scale = randf_range(0.8,1.2)
+	if change_pitch:
+		Audio.pitch_scale = randf_range(0.8,1.2)
 	Audio.play()
