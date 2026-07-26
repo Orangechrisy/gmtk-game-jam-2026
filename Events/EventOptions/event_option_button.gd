@@ -20,6 +20,7 @@ func set_values(option: EventOption):
 	success_odds = option.success_odds
 	success_outcome = option.success_effects
 	failure_outcome = option.failure_effects
+	text = TextManager.get_text(option_name)
 	option_name = "[b]" + str(success_odds * 100) + "%[/b] " + option_name
 
 func _on_mouse_entered() -> void:

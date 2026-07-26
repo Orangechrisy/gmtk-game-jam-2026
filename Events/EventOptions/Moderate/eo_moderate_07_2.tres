@@ -12,7 +12,7 @@ metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
 [resource]
 script = ExtResource("6_neuqu")
-option_name = &"MODERATE_EVENT_07_OPTION_1_TITLE"
+option_name = &"MODERATE_EVENT_07_OPTION_2_TITLE"
 success_odds = 0.7
 failure_effects = Array[ExtResource("3_y1u8m")]([SubResource("Resource_amwxm")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

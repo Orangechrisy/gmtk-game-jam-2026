@@ -8,7 +8,9 @@ custom_maximum_size = Vector2(200, -1)
 offset_right = 8.0
 offset_bottom = 8.0
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
 text = "button"
+autowrap_mode = 2
 script = ExtResource("1_q5vtx")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

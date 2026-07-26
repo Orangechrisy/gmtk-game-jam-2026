@@ -4,6 +4,8 @@
 
 [node name="OptionsTooltip" type="Control" unique_id=261198937]
 visible = false
+custom_maximum_size = Vector2(400, -1)
+propagate_maximum_size = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

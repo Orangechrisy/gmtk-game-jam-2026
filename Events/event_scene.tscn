@@ -45,13 +45,15 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_right = 20
 
 [node name="PanelContainer" type="PanelContainer" parent="CenterContainer/VBoxContainer/MarginContainer" unique_id=1608724105]
-custom_maximum_size = Vector2(150, 50)
+custom_minimum_size = Vector2(300, 0)
+custom_maximum_size = Vector2(500, 50)
 layout_mode = 2
 size_flags_horizontal = 6
 
 [node name="Title" type="RichTextLabel" parent="CenterContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=1373493493]
 unique_name_in_owner = true
 layout_mode = 2
+bbcode_enabled = true
 text = "Event Title"
 fit_content = true
 autowrap_mode = 2
@@ -96,6 +98,7 @@ layout_mode = 2
 [node name="CharacterName" type="RichTextLabel" parent="CenterContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/VBoxContainer/PanelContainer" unique_id=2136102427]
 unique_name_in_owner = true
 layout_mode = 2
+bbcode_enabled = true
 text = "Name"
 fit_content = true
 vertical_alignment = 1
@@ -108,6 +111,7 @@ size_flags_vertical = 3
 [node name="Description" type="RichTextLabel" parent="CenterContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer/VBoxContainer/PanelContainer2" unique_id=1101498113]
 unique_name_in_owner = true
 layout_mode = 2
+bbcode_enabled = true
 text = "Description"
 fit_content = true
 
