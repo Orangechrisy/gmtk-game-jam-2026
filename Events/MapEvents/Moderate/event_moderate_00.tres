@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_r5wn6"]
 [ext_resource type="Resource" uid="uid://rvcc88aqlwsx" path="res://Events/EventOptions/Moderate/eo_moderate_00_1.tres" id="4_bf2u8"]
 [ext_resource type="Resource" uid="uid://ckait7ceys6pb" path="res://Events/EventOptions/Moderate/eo_moderate_00_2.tres" id="5_r5wn6"]
-[ext_resource type="Texture2D" uid="uid://bgp6ck73u2cwg" path="res://Assets/PORTRAIT_revolution_moderate.png" id="6_jy2ow"]
+[ext_resource type="Texture2D" uid="uid://bgp6ck73u2cwg" path="res://Assets/Portraits/PORTRAIT_revolution_moderate.png" id="6_jy2ow"]
 [ext_resource type="Resource" uid="uid://cpnl6a7efghl5" path="res://Events/EventOptions/Moderate/eo_moderate_00_3.tres" id="6_uv1sw"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_ufejr"]
 

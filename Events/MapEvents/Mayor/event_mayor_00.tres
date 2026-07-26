@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_65ti1"]
 [ext_resource type="Resource" uid="uid://nuv1k3180eui" path="res://Events/EventOptions/Mayor/eo_mayor_00_1.tres" id="4_ey8s6"]
 [ext_resource type="Resource" uid="uid://bg740l8jfx0a7" path="res://Events/EventOptions/Mayor/eo_mayor_00_2.tres" id="5_vlnek"]
-[ext_resource type="Texture2D" uid="uid://di4unmyalpmk4" path="res://Assets/PORTRAIT_mayor.png" id="6_ey8s6"]
+[ext_resource type="Texture2D" uid="uid://di4unmyalpmk4" path="res://Assets/Portraits/PORTRAIT_mayor.png" id="6_ey8s6"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="8_l7bnw"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

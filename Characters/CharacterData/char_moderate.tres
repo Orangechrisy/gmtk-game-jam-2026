@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Character" format=3 uid="uid://bmih4r0crq8x5"]
+
+[ext_resource type="Script" uid="uid://q6mopch5uf0f" path="res://Characters/character.gd" id="1_q0sig"]
+
+[resource]
+script = ExtResource("1_q0sig")
+char_name = &"CHAR_MODERATE"
+metadata/_custom_type_script = "uid://q6mopch5uf0f"

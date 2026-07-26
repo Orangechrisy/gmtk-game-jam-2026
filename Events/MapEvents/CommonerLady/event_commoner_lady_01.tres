@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://coxdfmiel7w5u" path="res://Events/EventOptions/CommonerLady/eo_commoner_lady_01_1.tres" id="4_sp8t4"]
 [ext_resource type="Resource" uid="uid://du568m3s0lbme" path="res://Events/EventOptions/CommonerLady/eo_commoner_lady_01_2.tres" id="5_uj28s"]
 [ext_resource type="Resource" uid="uid://ph8eckgvx2t3" path="res://Events/EventOptions/CommonerLady/eo_commoner_lady_01_3.tres" id="6_1njk8"]
-[ext_resource type="Texture2D" uid="uid://jhsemvlca4q8" path="res://Assets/PORTRAIT_common_lady.png" id="6_uvbj2"]
+[ext_resource type="Texture2D" uid="uid://jhsemvlca4q8" path="res://Assets/Portraits/PORTRAIT_common_lady.png" id="6_uvbj2"]
 [ext_resource type="Script" uid="uid://cipcjs28d1y2n" path="res://Events/MapEvents/map_event.gd" id="7_fxpms"]
 
 [sub_resource type="Resource" id="Resource_2wl4a"]

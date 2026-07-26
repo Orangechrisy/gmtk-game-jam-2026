@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Character" format=3 uid="uid://bewx0ls8brjmh"]
+
+[ext_resource type="Script" uid="uid://q6mopch5uf0f" path="res://Characters/character.gd" id="1_kbrlt"]
+
+[resource]
+script = ExtResource("1_kbrlt")
+char_name = &"CHAR_FARMER"
+metadata/_custom_type_script = "uid://q6mopch5uf0f"
