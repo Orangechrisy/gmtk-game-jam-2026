@@ -179,9 +179,6 @@
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="177_ghw5y"]
 [ext_resource type="Script" uid="uid://b72xfkhmnqyjl" path="res://Map/tutorial.gd" id="177_yhrl3"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
-font_size = 42
-
 [node name="Map" type="Node2D" unique_id=932399740]
 script = ExtResource("1_ptuj4")
 
@@ -302,7 +299,7 @@ province_name = "City"
 province_border_image = ExtResource("18_cflbt")
 province_graphics_image = ExtResource("19_fvyq6")
 potential_events = Array[ExtResource("2_lymsy")]([ExtResource("76_5eeoe"), ExtResource("8_1wgij"), ExtResource("77_hs4xj"), ExtResource("78_4s7c4"), ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("79_ab5du"), ExtResource("80_b58bq"), ExtResource("15_6t7vu"), ExtResource("81_5ayqr"), ExtResource("57_hy57x"), ExtResource("82_fbii6"), ExtResource("83_vwtlc"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("84_lc1h5"), ExtResource("85_2e67y"), ExtResource("86_ghqos"), ExtResource("87_8hisj"), ExtResource("88_3gavg"), ExtResource("89_0n1o4"), ExtResource("90_6r2uy"), ExtResource("47_lbv4l"), ExtResource("91_vugma"), ExtResource("92_xrirw"), ExtResource("93_6a5e6")])
-event_location = Vector2(1500, 750)
+event_location = Vector2(1550, 750)
 food_yield = 3.0
 food_consumption = 7.0
 gold_yield = 5.0
@@ -367,59 +364,59 @@ offset_left = -174.0
 offset_top = -259.0
 offset_right = 234.0
 offset_bottom = -206.0
+theme = ExtResource("177_ghw5y")
 text = "If this runs out, you lose!"
-label_settings = SubResource("LabelSettings_a6wwx")
 
 [node name="Label2" type="Label" parent="CanvasLayer/Tutorial" unique_id=1367869575]
 offset_left = -644.0
 offset_top = 277.0
 offset_right = -236.0
 offset_bottom = 330.0
-text = "If this runs out, you lose!"
-label_settings = SubResource("LabelSettings_a6wwx")
+theme = ExtResource("177_ghw5y")
+text = "If this fills up, you lose!"
 
 [node name="Label3" type="Label" parent="CanvasLayer/Tutorial" unique_id=1684237866]
 offset_left = 230.0
 offset_top = 286.0
 offset_right = 638.0
 offset_bottom = 339.0
+theme = ExtResource("177_ghw5y")
 text = "If this runs out, you lose!"
-label_settings = SubResource("LabelSettings_a6wwx")
 
 [node name="Label4" type="Label" parent="CanvasLayer/Tutorial" unique_id=2140374118]
 offset_left = -635.0
 offset_top = 177.0
 offset_right = -227.0
 offset_bottom = 230.0
+theme = ExtResource("177_ghw5y")
 text = "If this runs out, the people get angry!"
-label_settings = SubResource("LabelSettings_a6wwx")
 
 [node name="Label5" type="Label" parent="CanvasLayer/Tutorial" unique_id=1380465753]
 offset_left = 96.0
 offset_top = 40.0
 offset_right = 712.0
 offset_bottom = 93.0
+theme = ExtResource("177_ghw5y")
 text = "If this runs out, the nobles get angry!"
-label_settings = SubResource("LabelSettings_a6wwx")
 
 [node name="Label6" type="Label" parent="CanvasLayer/Tutorial" unique_id=1265191026]
 offset_left = -776.0
 offset_top = -150.0
 offset_right = -160.0
 offset_bottom = -97.0
+theme = ExtResource("177_ghw5y")
 text = "Use these to keep provinces in line!
 If their Fervor rises above Loyalty,
 the rebels take control!"
-label_settings = SubResource("LabelSettings_a6wwx")
 
 [node name="Label7" type="Label" parent="CanvasLayer/Tutorial" unique_id=641571301]
 offset_left = 274.0
 offset_top = -200.0
 offset_right = 890.0
 offset_bottom = -35.0
+theme = ExtResource("177_ghw5y")
 text = "Once you respond to each Event,
 you can end the day here!"
-label_settings = SubResource("LabelSettings_a6wwx")
 
 [node name="TutorialStartButton" type="Button" parent="CanvasLayer/Tutorial" unique_id=778824868]
 offset_left = -322.0
@@ -429,4 +426,5 @@ offset_bottom = 501.0
 theme = ExtResource("177_ghw5y")
 text = "Let the game begin."
 
+[connection signal="mouse_entered" from="CanvasLayer/Tutorial/TutorialStartButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/Tutorial/TutorialStartButton" to="CanvasLayer/Tutorial" method="_on_tutorial_start_button_pressed"]

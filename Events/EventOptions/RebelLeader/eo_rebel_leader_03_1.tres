@@ -19,7 +19,7 @@ metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_0xpfr"]
 script = ExtResource("6_qcdrv")
-char_name = &"CHAR_PARTY_GUY"
+char_name = &"CHAR_PARTYGUY"
 chance = 30
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 

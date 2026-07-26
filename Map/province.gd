@@ -127,7 +127,7 @@ func change_counter(counter: int, change: float) -> void:
 # TODO: more interesting
 ## try to do the event, based on rng and variables of the province or something
 func try_event(_event: MapEvent) -> bool:
-	if randf_range(0, 100) <= fervor:
+	if _event.can_appear():
 		return true
 	return false
 
@@ -163,7 +163,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 					GameState.MouseMode = GameState.Click.BASIC
 					print("Army placed!")
 					has_army = true
-					GameState.change_armies(-1) # for now
+					GameState.change_armies_left(-1) # for now
 				else: # if we clicked on an invalid province
 					print("Can't place here!")
 

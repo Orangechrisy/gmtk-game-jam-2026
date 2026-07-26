@@ -2,9 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cxk3n0dbgbcha" path="res://Assets/black_screen.png" id="1_gbno8"]
 [ext_resource type="Script" uid="uid://b03oi4rmoeel5" path="res://UI/results_popup.gd" id="1_uaq1k"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_5fbc5"]
-font_size = 22
+[ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="3_7infq"]
 
 [sub_resource type="Animation" id="Animation_gbno8"]
 length = 0.001
@@ -90,7 +88,7 @@ script = ExtResource("1_uaq1k")
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1998654390]
 modulate = Color(1, 1, 1, 0.4117647)
 position = Vector2(-2.336502e-05, 0.49998093)
-scale = Vector2(0.29791665, 0.36203703)
+scale = Vector2(0.25, 0.362)
 texture = ExtResource("1_gbno8")
 
 [node name="Label" type="Label" parent="Node2D" unique_id=489232458]
@@ -100,7 +98,10 @@ offset_left = -243.0
 offset_top = -173.0
 offset_right = 252.0
 offset_bottom = 177.0
-label_settings = SubResource("LabelSettings_5fbc5")
+theme = ExtResource("3_7infq")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 48
 horizontal_alignment = 1
 autowrap_mode = 2
 

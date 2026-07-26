@@ -288,9 +288,15 @@
 	"en": "[p]Results:[/p][p][color=green]Aristocrat dies[/color][/p][p][color=red]Chance of -5 Noble Favor[/color][/p]"
   },
   "SPYMASTER_EVENT_00_OPTION_4_TITLE": {
-	"en": "I will be fine, thank you."
+	"en": "Kill the Aristocrat."
   },
   "SPYMASTER_EVENT_00_OPTION_4_DESC": {
+	"en": "[p]Results:[/p][p][color=green]Aristocrat dies[/color][/p][p][color=red]Chance of -5 Noble Favor[/color][/p]"
+  },
+  "SPYMASTER_EVENT_00_OPTION_5_TITLE": {
+	"en": "I will be fine, thank you."
+  },
+  "SPYMASTER_EVENT_00_OPTION_5_DESC": {
 	"en": "[p]Results:[/p][p]None[/p]"
   },
   "SPYMASTER_EVENT_01_TITLE": {

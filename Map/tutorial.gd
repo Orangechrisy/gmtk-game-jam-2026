@@ -8,3 +8,4 @@ func on_update_tutorial(show: bool) -> void:
 	
 func _on_tutorial_start_button_pressed() -> void:
 	GameManager.update_tutorial(false)
+	MusicManager.play_sfx(MusicManager.SFX.CLICK)
