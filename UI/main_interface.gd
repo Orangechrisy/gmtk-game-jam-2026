@@ -15,6 +15,7 @@ func _ready() -> void:
 	GameState.connect("noble_sentiment_updated", on_noble_sentiment_updated)
 	GameState.connect("armies_left_updated", on_armies_left_updated)
 
+
 # UI Updates
 
 func on_mouse_mode_updated(new_mode) -> void:

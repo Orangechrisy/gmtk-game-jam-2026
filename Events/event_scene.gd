@@ -88,6 +88,7 @@ func close_event(removed: bool) -> void:
 	# so game manager can figure out if the day can end
 	GameManager.check_for_events()
 	GameState.MouseMode = GameState.Click.BASIC
+	GameState.reset_outlines()
 
 # button to hide the event without removing it
 func _on_close_pressed() -> void:

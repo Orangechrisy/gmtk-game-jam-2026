@@ -18,6 +18,13 @@ class_name Province
 @export var loyalty: int
 @export var fervor: int
 
+@onready var default_food_yield: float =  food_yield
+@onready var default_food_consumption: float =  food_consumption
+@onready var default_gold_yield: float =  gold_yield
+@onready var default_gold_consumption: float =  gold_consumption
+@onready var default_loyalty: float =  loyalty
+@onready var default_fervor: float =  fervor
+
 @export_group("Loss Effects")
 @export var loss_effects_instant: Array[EventEffect]
 @export var loss_effects_passive: Array[EventEffect]
@@ -42,6 +49,22 @@ func _ready() -> void:
 	$TooltipTimer.timeout.connect(_on_timer_timeout)
 	GameState.connect("day_updated", on_day_updated)
 	$ProvinceTooltip.update_values()
+	
+
+func _reset():
+	curr_owner = 0
+	food_yield = default_food_yield
+	food_consumption = default_food_consumption
+	gold_yield = default_gold_yield
+	gold_consumption = default_gold_consumption
+	loyalty = default_loyalty
+	fervor = default_fervor
+	
+	for event in potential_events:
+		if event.one_time == true:
+			event.has_happened = false
+	
+	$BorderSprite.texture = load("res://Assets/map/"+province_name.to_lower()+" borders.png")
 
 # TODO: does the province need to do something on the day update not handled elsewhere?
 # like random slight adjustment to yields/consumptions?
@@ -122,6 +145,8 @@ func roll_event_odds() -> bool:
 ## the province has been clicked on
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		show_outline()
+		
 		print("province ", province_name, " clicked")
 		if GameState.MouseMode == GameState.Click.BASIC:
 			if event_present:
@@ -143,6 +168,15 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 				GameState.change_armies(-1) # for now
 			else: # if we clicked on an invalid province
 				print("Can't place here!")
+
+func show_outline():
+	GameState.reset_outlines()
+	$BorderSprite.material = load("res://Assets/map/border_outline.tres")
+	$BorderSprite.z_index = -1
+
+func hide_outline():
+	$BorderSprite.material = null
+	$BorderSprite.z_index = -2
 
 func _on_area_2d_mouse_entered() -> void:
 	if not GameState.get_current_event():
