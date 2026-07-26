@@ -9,7 +9,7 @@ func on_game_ended(ending: int, ending_title: StringName, ending_desc: String) -
 	$AnimationPlayer.play("fade_in")
 	$EndingTitleLabel.text = TextManager.get_text(ending_title)
 	$EndingBodyLabel.text = TextManager.get_text(ending_desc)
-	$EndingScoreLabel.text = "FINAL SCORE: " + str(GameManager.calculate_score(ending))
+	$EndingScoreLabel.text = "Final Score: " + str(GameManager.calculate_score(ending))
 	
 	# Handle music (very awkward)
 	match ending:

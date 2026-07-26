@@ -56,6 +56,8 @@ func _reset():
 	for character in GameState.characters:
 		character.is_alive = true
 		character.quest_progress = 0
+	
+	MusicManager.start_base_track()
 
 # Characters
 @export var characters: Array[Character]

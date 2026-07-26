@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drvhsft0d4aim" path="res://Menus/game_over_menu.gd" id="1_0p1re"]
 [ext_resource type="Texture2D" uid="uid://cxk3n0dbgbcha" path="res://Assets/black_screen.png" id="2_ufej6"]
+[ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="3_ufej6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5fbc5"]
 font_size = 36
@@ -114,10 +115,11 @@ horizontal_alignment = 1
 
 [node name="ToMenuButton" type="Button" parent="." unique_id=1857041835]
 layout_mode = 0
-offset_left = 869.0
-offset_top = 957.0
-offset_right = 1130.0
-offset_bottom = 1061.0
+offset_left = 792.0
+offset_top = 943.0
+offset_right = 1151.0
+offset_bottom = 1047.0
+theme = ExtResource("3_ufej6")
 text = "TO MAIN MENU"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=499453540]

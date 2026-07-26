@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://cd44ccbatloiq" path="res://Audio/Music/villa theme.wav" id="10_63cj8"]
 [ext_resource type="AudioStream" uid="uid://ci86x5e45oqri" path="res://Audio/sfx/survived.wav" id="11_2dnvw"]
 [ext_resource type="AudioStream" uid="uid://gook6uq6l63b" path="res://Audio/sfx/death.wav" id="11_eohum"]
+[ext_resource type="AudioStream" uid="uid://djcfduu7y5qju" path="res://Audio/Music/city theme.wav" id="11_ruiyx"]
 [ext_resource type="AudioStream" uid="uid://2io8hruebxdc" path="res://Audio/sfx/negative_jingle.wav" id="12_63cj8"]
 [ext_resource type="AudioStream" uid="uid://bm2fleqcwt8us" path="res://Audio/sfx/click.wav" id="13_eohum"]
 [ext_resource type="AudioStream" uid="uid://wu11emnlmgaq" path="res://Audio/sfx/shop_cant_buy.wav" id="14_63cj8"]
@@ -72,6 +73,11 @@ stream = ExtResource("10_63cj8")
 volume_db = -15.0
 bus = &"Music"
 
+[node name="City" type="AudioStreamPlayer" parent="MainTheme" unique_id=1805488579]
+stream = ExtResource("11_ruiyx")
+volume_db = -15.0
+bus = &"Music"
+
 [node name="OtherMusic" type="Node" parent="." unique_id=1814811806]
 
 [node name="BadEnding" type="AudioStreamPlayer" parent="OtherMusic" unique_id=186018772]
@@ -113,4 +119,5 @@ bus = &"SFX"
 
 [node name="Revolt" type="AudioStreamPlayer" parent="SFX" unique_id=1561162754]
 stream = ExtResource("19_oxawt")
+volume_db = -7.0
 bus = &"SFX"

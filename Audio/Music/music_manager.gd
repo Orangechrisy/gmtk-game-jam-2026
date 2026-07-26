@@ -53,7 +53,7 @@ func add_track(province: Province):
 		"Villa":
 			track = $MainTheme/Villa
 		"City":
-			return
+			track = $MainTheme/City
 		"Port":
 			track = $MainTheme/Port
 		"Mine":
