@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cdokd6o2cq8ix"]
+
+[ext_resource type="Texture2D" uid="uid://cxk3n0dbgbcha" path="res://Assets/black_screen.png" id="1_gbno8"]
+[ext_resource type="Script" uid="uid://b03oi4rmoeel5" path="res://UI/results_popup.gd" id="1_uaq1k"]
+
+[sub_resource type="Animation" id="Animation_gbno8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uaq1k"]
+resource_name = "show_popup"
+length = 4.266667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 3.5, 4.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Node2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -100)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4.0333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"reset_label"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7infq"]
+_data = {
+&"RESET": SubResource("Animation_gbno8"),
+&"show_popup": SubResource("Animation_uaq1k")
+}
+
+[node name="ResultsPopup" type="Node2D" unique_id=1138084959]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("1_uaq1k")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=2048070945]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1998654390]
+modulate = Color(1, 1, 1, 0.4117647)
+position = Vector2(-2.336502e-05, 0.49998093)
+scale = Vector2(0.29791665, 0.36203703)
+texture = ExtResource("1_gbno8")
+
+[node name="Label" type="Label" parent="Node2D" unique_id=489232458]
+custom_minimum_size = Vector2(495, 350)
+custom_maximum_size = Vector2(495, 350)
+offset_left = -243.0
+offset_top = -173.0
+offset_right = 252.0
+offset_bottom = 177.0
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=698988762]
+libraries/ = SubResource("AnimationLibrary_7infq")

@@ -96,6 +96,9 @@ signal active_events(any_active)
 signal mouse_mode_updated(new_mode)
 signal province_owner_changed(province: Province)
 signal game_ended(ending: int, ending_name: StringName, ending_text: String)
+# For event results label
+signal reset_label()
+signal add_to_label(to_add: String)
 
 # Day
 
@@ -256,5 +259,12 @@ func get_character_by_name(val: StringName) -> Character:
 			
 	return null
 
+# Results popup
+func reset_results_label() -> void:
+	reset_label.emit()
+
+func add_to_results_popup(to_add: String) -> void:
+	add_to_label.emit(to_add)
+	
 func emit_ending(ending: int):
 	game_ended.emit(ending)

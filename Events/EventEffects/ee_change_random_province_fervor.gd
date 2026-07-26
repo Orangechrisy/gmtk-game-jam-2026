@@ -5,7 +5,9 @@ class_name EEChangeRandomFervor
 @export var fervor_change: int = 0
 
 func do_effect() -> void:
-	GameState.get_random_province().fervor += fervor_change
+	var selected_province = GameState.get_random_province()
+	selected_province.fervor += fervor_change
+	GameManager.add_to_results_popup("%+.f Fervor in %s" % [fervor_change, selected_province.province_name])
 
 func get_effect_desc() -> String:
 	return "%+.f Fervor in Random Province" % fervor_change

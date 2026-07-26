@@ -6,6 +6,7 @@ class_name EEChangeGold
 
 func do_effect() -> void:
 	GameState.change_gold(gold_change)
+	GameManager.add_to_results_popup("%+.f Gold" % gold_change)
 
 func get_effect_desc() -> String:
 	return "%+.f Gold" % gold_change

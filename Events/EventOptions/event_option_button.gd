@@ -32,6 +32,7 @@ func _on_mouse_exited() -> void:
 
 
 func _on_pressed() -> void:
+	GameManager.event_button_pressed() # Clears results label
 	MusicManager.play_sfx(MusicManager.SFX.CLICK)
 	if randf_range(0, 1) <= success_odds:
 		MusicManager.play_sfx(MusicManager.SFX.POSJINGLE)

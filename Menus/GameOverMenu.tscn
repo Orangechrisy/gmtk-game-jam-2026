@@ -83,11 +83,13 @@ offset_bottom = 159.0
 horizontal_alignment = 1
 
 [node name="EndingBodyLabel" type="Label" parent="." unique_id=646625852]
+custom_maximum_size = Vector2(1590, 696)
 layout_mode = 0
 offset_left = 174.0
 offset_top = 224.0
 offset_right = 1759.0
 offset_bottom = 908.0
+autowrap_mode = 2
 
 [node name="EndingScoreLabel" type="Label" parent="." unique_id=1913680615]
 layout_mode = 0
