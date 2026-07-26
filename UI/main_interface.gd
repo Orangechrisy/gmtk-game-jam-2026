@@ -51,6 +51,7 @@ func on_armies_left_updated(new_armies_left: int) -> void:
 
 
 func _on_menu_button_pressed() -> void:
+	play_click()
 	if GameState.MouseMode == GameState.Click.PAUSE:
 		unpause_game.emit()
 	else:
@@ -58,8 +59,10 @@ func _on_menu_button_pressed() -> void:
 
 ## Handles army placement button
 func _on_place_army_button_pressed() -> void:
-	if GameState.get_armies_left() <= 0: return
-	
+	if GameState.get_armies_left() <= 0: 
+		MusicManager.play_sfx(MusicManager.SFX.CLICKINVALID)
+		return
+	play_click()
 	if GameState.MouseMode == GameState.Click.BASIC:
 		GameState.MouseMode = GameState.Click.ARMY_PLACEMENT
 	elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
@@ -74,8 +77,15 @@ func show_end_day(val: bool) -> void:
 
 ## ends the day when pressed
 func _on_end_day_pressed() -> void:
+	play_click()
 	var tween = create_tween()
 	tween.tween_property(%End, "offset_transform_position", Vector2(0, -300), 1.0) \
 	.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	await tween.finished
 	GameManager.end_day()
+
+func play_click():
+	MusicManager.play_sfx(MusicManager.SFX.CLICK)
+
+func _on_mouse_entered() -> void:
+	MusicManager.play_sfx(MusicManager.SFX.MOUSEOVER)

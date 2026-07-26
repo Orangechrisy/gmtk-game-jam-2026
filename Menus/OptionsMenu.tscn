@@ -34,4 +34,5 @@ text = "OPTIONS"
 label_settings = SubResource("LabelSettings_a6wwx")
 horizontal_alignment = 1
 
+[connection signal="mouse_entered" from="BackButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
