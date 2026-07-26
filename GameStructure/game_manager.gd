@@ -7,6 +7,10 @@ signal quit_to_main
 func reset() -> void:
 	GameState.MouseMode = GameState.Click.BASIC
 	restart.emit()
+	
+	GameState._reset()
+	for province in GameState.provinces:
+		province._reset()
 
 ## TODO idk what we might want here
 func quit_to_menu() -> void:

@@ -13,8 +13,8 @@ var days_to_revolution: int = 30
 var revolt_stalled: bool = false
 var revolt_accelerated: bool = false
 
-var gold: int
-var food: int
+var gold: int = 50
+var food: int = 50
 var noble_sentiment: int = 100 
 var common_sentiment: int = 100
 
@@ -23,6 +23,39 @@ var armies_left: int = 3
 
 @export var provinces: Array[Province]
 var current_province: Province
+
+#DEFAULTS
+@onready var default_days_to_revolution = days_to_revolution
+
+@onready var default_revolt_stalled = revolt_stalled
+@onready var default_revolt_accelerated = revolt_accelerated
+
+@onready var default_gold = gold
+@onready var default_food = food
+@onready var default_noble_sentiment = noble_sentiment
+@onready var default_common_sentiment = common_sentiment
+
+@onready var default_armies = armies
+
+@onready var default_current_province = current_province
+
+
+func _reset():
+	reset_day()
+	set_days_to_revolution(default_days_to_revolution)
+	revolt_stalled = default_revolt_stalled
+	revolt_accelerated = default_revolt_accelerated
+	set_gold(default_gold)
+	set_food(default_food)
+	set_noble_sentiment(default_noble_sentiment)
+	set_common_sentiment(default_common_sentiment)
+	set_armies(default_armies)
+	reset_armies_left()
+	current_province = default_current_province
+	
+	for character in GameState.characters:
+		character.is_alive = true
+		character.quest_progress = 0
 
 # Characters
 @export var characters: Array[Character]
@@ -168,6 +201,12 @@ func reset_armies_left() -> void:
 func get_armies() -> int:
 	return armies
 
+func set_armies(val: int) -> void:
+	armies = val
+	if armies_left > armies:
+		armies_left = armies
+		armies_left_updated.emit(armies_left)
+
 func change_armies(val: int) -> void:
 	armies += val
 	if armies_left > armies:
@@ -197,6 +236,10 @@ func get_province_by_name(val: String) -> Province:
 			return province
 	
 	return null
+
+func reset_outlines():
+	for province in provinces:
+		province.hide_outline()
 
 func get_random_province() -> Province:
 	provinces.shuffle()
