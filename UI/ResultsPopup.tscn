@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdokd6o2cq8ix"]
 
-[ext_resource type="Texture2D" uid="uid://cxk3n0dbgbcha" path="res://Assets/black_screen.png" id="1_gbno8"]
 [ext_resource type="Script" uid="uid://b03oi4rmoeel5" path="res://UI/results_popup.gd" id="1_uaq1k"]
+[ext_resource type="Texture2D" uid="uid://cw16lggs6288t" path="res://Assets/event_paper.png" id="2_7infq"]
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="3_7infq"]
 
 [sub_resource type="Animation" id="Animation_gbno8"]
@@ -65,12 +65,24 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(4.0333333),
+"times": PackedFloat32Array(4.233333),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
 "method": &"reset_label"
 }]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Node2D/Sprite2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.033333335, 0.23333333, 3.5333333, 4.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.4862745), Color(1, 1, 1, 0.4862745), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7infq"]
@@ -86,10 +98,11 @@ script = ExtResource("1_uaq1k")
 [node name="Node2D" type="Node2D" parent="." unique_id=2048070945]
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1998654390]
-modulate = Color(1, 1, 1, 0.4117647)
-position = Vector2(-2.336502e-05, 0.49998093)
-scale = Vector2(0.25, 0.362)
-texture = ExtResource("1_gbno8")
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -10)
+rotation = 1.5707964
+scale = Vector2(0.8, 0.966)
+texture = ExtResource("2_7infq")
 
 [node name="Label" type="Label" parent="Node2D" unique_id=489232458]
 custom_minimum_size = Vector2(495, 350)
