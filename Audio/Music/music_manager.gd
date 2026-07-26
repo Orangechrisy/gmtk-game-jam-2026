@@ -31,9 +31,10 @@ func play_ending_song(ending_type: int = ENDINGTYPE.BAD):
 
 #Base Track
 func start_base_track():
-	_reset()
-	await get_tree().create_timer(1.0,false).timeout
-	$MainTheme/"Capital (Base)".play()
+	if not $"MainTheme/Capital (Base)".playing:
+		_reset()
+		await get_tree().create_timer(1.0,false).timeout
+		$MainTheme/"Capital (Base)".play()
 
 func get_current_time():
 	return $MainTheme/"Capital (Base)".get_playback_position()
