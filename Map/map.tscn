@@ -7,8 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://ybnjup5qrbgg" path="res://Assets/map/map no graphics.png" id="3_mxsvv"]
 [ext_resource type="Texture2D" uid="uid://dcxh4g3kklyli" path="res://Assets/map/capital borders.png" id="4_vhrv6"]
 [ext_resource type="Texture2D" uid="uid://beecgcyqxftdn" path="res://Assets/map/capital graphics.png" id="5_ry46t"]
-[ext_resource type="Texture2D" uid="uid://cxriw6tle5ah5" path="res://Assets/Portraits/PORTRAIT_spymaster.png" id="6_a0x20"]
-[ext_resource type="Resource" uid="uid://bmaufex3guxcl" path="res://Events/MapEvents/test_map_event.tres" id="7_vhrv6"]
 [ext_resource type="Resource" uid="uid://btiqxbrywe5l7" path="res://Events/MapEvents/PartyGuy/event_partyguy_10.tres" id="8_1wgij"]
 [ext_resource type="PackedScene" uid="uid://dv1r3qybxrmhh" path="res://UI/MainInterface.tscn" id="8_ry46t"]
 [ext_resource type="Resource" uid="uid://kn4ap1psmnqy" path="res://Events/MapEvents/Spymaster/event_spymaster_06.tres" id="9_0a72k"]
@@ -188,7 +186,6 @@ centered = false
 metadata/_edit_lock_ = true
 
 [node name="Map No Graphics" type="Sprite2D" parent="." unique_id=177261712]
-visible = false
 modulate = Color(0.4045111, 0.40451115, 0.4045111, 1)
 z_index = -2
 texture = ExtResource("3_mxsvv")
@@ -198,7 +195,7 @@ metadata/_edit_lock_ = true
 [node name="Provinces" type="Node2D" parent="." unique_id=1609533052]
 
 [node name="Military" parent="Provinces" unique_id=1109736334 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(664, 388, 813, 443, 781, 506, 983, 564, 1049, 328, 991, 278, 787, 239, 728, 285)
+vertices = PackedVector2Array(1065, 213, 1217, 220, 1318, 195, 1455, 233, 1555, 187, 1644, 188, 1721, 287, 1719, 377, 1644, 337, 1581, 354, 1588, 407, 1432, 423, 1401, 415, 1352, 416, 1352, 368, 1208, 324, 1190, 276, 1109, 284, 1028, 244)
 province_name = "Military"
 province_border_image = ExtResource("11_2s2l7")
 province_graphics_image = ExtResource("12_l4t2t")
@@ -207,7 +204,7 @@ event_location = Vector2(900, 380)
 loyalty = 100
 
 [node name="Capital" parent="Provinces" unique_id=1886263090 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(606, 484, 656, 385, 816, 449, 732, 564, 780, 635, 695, 643, 602, 606)
+vertices = PackedVector2Array(1381, 461, 1377, 442, 1402, 428, 1426, 437, 1521, 438, 1524, 459, 1553, 477, 1508, 518, 1506, 557, 1483, 616, 1508, 662, 1376, 667, 1308, 649, 1198, 660, 1186, 616, 1207, 606, 1231, 552, 1286, 531, 1312, 481)
 province_name = "Capital"
 province_border_image = ExtResource("4_vhrv6")
 province_graphics_image = ExtResource("5_ry46t")
@@ -221,7 +218,7 @@ loyalty = 53
 fervor = 17
 
 [node name="Town" parent="Provinces" unique_id=305634748 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(735, 285, 621, 445, 604, 597, 503, 589, 539, 527, 532, 373, 419, 385, 501, 335, 527, 189)
+vertices = PackedVector2Array(399, 929, 396, 863, 484, 848, 445, 792, 494, 766, 519, 803, 565, 806, 580, 846, 651, 844, 676, 871, 722, 835, 796, 877, 802, 921, 741, 939, 744, 975, 688, 980, 635, 962, 616, 1027, 689, 1060, 687, 1083, 222, 1084, 189, 1017, 323, 1043, 382, 1003, 365, 992, 365, 976, 322, 958, 318, 919)
 province_name = "Town"
 province_border_image = ExtResource("16_umtr8")
 province_graphics_image = ExtResource("17_elfnc")
@@ -229,7 +226,7 @@ potential_events = Array[ExtResource("2_lymsy")]([ExtResource("50_27812"), ExtRe
 loyalty = 100
 
 [node name="Villa" parent="Provinces" unique_id=448714367 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(784, 628, 733, 549, 784, 499, 944, 554, 951, 700, 1057, 760, 911, 793, 910, 901, 627, 889, 611, 709, 555, 705, 561, 608, 613, 609, 700, 638)
+vertices = PackedVector2Array(1613, 413, 1600, 365, 1645, 350, 1728, 407, 1723, 535, 1744, 634, 1771, 688, 1784, 729, 1707, 820, 1661, 786, 1660, 721, 1711, 706, 1705, 634, 1653, 636, 1647, 601, 1593, 544, 1567, 588, 1514, 593, 1524, 561, 1520, 528, 1596, 465, 1550, 450, 1546, 427)
 province_name = "Villa"
 province_border_image = ExtResource("18_tuo8d")
 province_graphics_image = ExtResource("19_mxsvv")
@@ -237,7 +234,7 @@ potential_events = Array[ExtResource("2_lymsy")]([ExtResource("65_yewd3"), ExtRe
 loyalty = 100
 
 [node name="City" parent="Provinces" unique_id=203984502 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(1030, 625, 1019, 537, 992, 530, 988, 561, 944, 554, 951, 700, 1057, 760, 964, 782, 987, 818, 1139, 793, 1144, 676)
+vertices = PackedVector2Array(1570, 603, 1599, 576, 1629, 608, 1628, 659, 1688, 659, 1686, 691, 1644, 707, 1639, 788, 1680, 830, 1533, 883, 1487, 857, 1489, 829, 1352, 867, 1315, 855, 1264, 929, 1230, 893, 1172, 930, 1144, 898, 1192, 817, 1176, 802, 1074, 817, 1074, 753, 1103, 754, 1117, 710, 1142, 717, 1206, 715, 1203, 684, 1304, 669, 1373, 686, 1456, 681, 1537, 693, 1510, 616)
 province_name = "City"
 province_border_image = ExtResource("18_cflbt")
 province_graphics_image = ExtResource("19_fvyq6")
@@ -246,7 +243,7 @@ loyalty = 100
 fervor = 150
 
 [node name="Port" parent="Provinces" unique_id=1295366853 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(1266, 333, 1311, 417, 1242, 427, 1246, 501, 1426, 580, 1517, 496, 1606, 582, 1673, 556, 1623, 510, 1595, 405, 1477, 397, 1491, 295, 1335, 242)
+vertices = PackedVector2Array(1513, 901, 1461, 859, 1352, 888, 1326, 879, 1267, 957, 1226, 923, 1162, 960, 1122, 899, 1156, 830, 1062, 840, 1034, 880, 1003, 854, 950, 831, 902, 837, 901, 892, 816, 859, 825, 940, 765, 954, 772, 982, 699, 999, 646, 987, 640, 1014, 711, 1053, 712, 1083, 1586, 1087, 1602, 1049, 1674, 1031, 1673, 991, 1597, 983)
 province_name = "Port"
 province_border_image = ExtResource("22_qttqk")
 province_graphics_image = ExtResource("23_mo27p")
@@ -254,7 +251,7 @@ potential_events = Array[ExtResource("2_lymsy")]([ExtResource("96_kpt1a"), ExtRe
 loyalty = 100
 
 [node name="Farm" parent="Provinces" unique_id=1918935467 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(996, 281, 1086, 228, 1164, 328, 1255, 332, 1305, 422, 1248, 433, 1241, 503, 1157, 522, 1127, 638, 1187, 650, 1183, 682, 1022, 614, 1022, 546, 993, 539, 1052, 318)
+vertices = PackedVector2Array(876, 857, 891, 824, 941, 806, 933, 752, 980, 739, 988, 662, 945, 678, 812, 622, 831, 588, 821, 567, 800, 548, 777, 564, 746, 537, 697, 540, 643, 467, 659, 409, 588, 419, 503, 412, 495, 442, 574, 458, 576, 476, 587, 479, 607, 579, 564, 581, 570, 606, 637, 617, 634, 684, 564, 736, 516, 699, 467, 703, 470, 739, 500, 730, 535, 777, 585, 777, 599, 818, 657, 815, 671, 829, 687, 828, 720, 796, 781, 841, 795, 839, 795, 823)
 province_name = "Farm"
 province_border_image = ExtResource("14_tuo8d")
 province_graphics_image = ExtResource("15_mxsvv")
@@ -262,7 +259,7 @@ potential_events = Array[ExtResource("2_lymsy")]([ExtResource("117_utumh"), ExtR
 loyalty = 100
 
 [node name="Church" parent="Provinces" unique_id=1489639061 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(1446, 716, 1330, 697, 1323, 644, 1268, 611, 1352, 553, 1426, 580, 1517, 496, 1606, 582, 1542, 647, 1518, 757, 1448, 760)
+vertices = PackedVector2Array(965, 815, 1029, 847, 1054, 822, 1056, 726, 1085, 730, 1120, 684, 1151, 700, 1185, 695, 1163, 608, 1195, 585, 1217, 537, 1273, 516, 1290, 490, 1286, 468, 1347, 451, 1347, 437, 1289, 433, 1260, 437, 1229, 411, 1187, 421, 1177, 445, 1110, 449, 1096, 489, 1078, 488, 1073, 496, 1007, 472, 967, 494, 932, 479, 938, 549, 1002, 582, 1000, 609, 994, 633, 1010, 670, 1007, 716, 991, 756, 960, 767)
 province_name = "Church"
 province_border_image = ExtResource("24_rtxnd")
 province_graphics_image = ExtResource("25_2fp1f")
@@ -270,7 +267,7 @@ potential_events = Array[ExtResource("2_lymsy")]([ExtResource("130_5bhnp"), ExtR
 loyalty = 100
 
 [node name="Outskirts" parent="Provinces" unique_id=1740394256 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(328, 987, 302, 882, 222, 849, 273, 503, 380, 506, 354, 668, 544, 738, 553, 709, 603, 704, 623, 887, 438, 902, 404, 1023)
+vertices = PackedVector2Array(1020, 268, 987, 292, 892, 292, 845, 336, 629, 296, 578, 385, 486, 374, 447, 455, 541, 488, 543, 498, 559, 502, 564, 545, 516, 544, 534, 598, 534, 627, 599, 648, 599, 674, 570, 697, 525, 667, 446, 670, 427, 647, 430, 584, 346, 577, 337, 531, 266, 527, 245, 444, 119, 428, 53, 370, 128, 363, 173, 322, 320, 307, 438, 226, 583, 246, 806, 238, 836, 218, 917, 223)
 province_name = "Outskirts"
 province_border_image = ExtResource("26_bhx0d")
 province_graphics_image = ExtResource("27_fo4gr")
@@ -278,13 +275,19 @@ potential_events = Array[ExtResource("2_lymsy")]([ExtResource("8_1wgij"), ExtRes
 loyalty = 150
 
 [node name="Mine" parent="Provinces" unique_id=1791617832 instance=ExtResource("1_5ej7w")]
-vertices = PackedVector2Array(1239, 510, 1160, 527, 1129, 637, 1187, 649, 1184, 680, 1330, 734, 1326, 644, 1264, 614, 1352, 553)
+vertices = PackedVector2Array(609, 379, 636, 329, 848, 368, 897, 324, 987, 320, 1047, 285, 1107, 304, 1176, 302, 1184, 331, 1210, 348, 1329, 384, 1324, 411, 1258, 408, 1236, 386, 1179, 397, 1161, 424, 1092, 425, 1080, 463, 1058, 466, 1005, 444, 971, 469, 901, 445, 914, 559, 969, 590, 968, 615, 960, 626, 962, 640, 938, 647, 856, 614, 872, 573, 852, 563, 854, 546, 799, 514, 782, 527, 768, 525, 750, 509, 706, 512, 673, 466, 703, 375)
 province_name = "Mine"
 province_border_image = ExtResource("20_2rup5")
 province_graphics_image = ExtResource("21_ddnc5")
 potential_events = Array[ExtResource("2_lymsy")]([ExtResource("10_v03vf"), ExtResource("31_rw81d"), ExtResource("158_tif3e"), ExtResource("159_5a3q0"), ExtResource("15_6t7vu"), ExtResource("57_hy57x"), ExtResource("160_mvfel"), ExtResource("161_xq04n"), ExtResource("162_t2bvp"), ExtResource("163_nfeuu"), ExtResource("164_caw4a"), ExtResource("19_pg5mm"), ExtResource("20_ho264"), ExtResource("165_66ifc"), ExtResource("166_q7wnd"), ExtResource("167_thq8r"), ExtResource("168_ly437"), ExtResource("169_b4jef"), ExtResource("170_v34en"), ExtResource("47_lbv4l")])
 loyalty = 100
 fervor = 150
+
+[node name="Area2D" type="Area2D" parent="Provinces" unique_id=1260220497]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Provinces/Area2D" unique_id=61778569]
+polygon = PackedVector2Array(609, 379, 636, 329, 848, 368, 897, 324, 987, 320, 1047, 285, 1107, 304, 1176, 302, 1184, 331, 1210, 348, 1329, 384, 1324, 411, 1258, 408, 1236, 386, 1179, 397, 1161, 424, 1092, 425, 1080, 463, 1058, 466, 1005, 444, 971, 469, 901, 445, 914, 559, 969, 590, 968, 615, 960, 626, 962, 640, 938, 647, 856, 614, 872, 573, 852, 563, 854, 546, 799, 514, 782, 527, 768, 525, 750, 509, 706, 512, 673, 466, 703, 375)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1264009811]
 
@@ -298,5 +301,6 @@ visible = false
 
 [node name="MainMenu" parent="CanvasLayer" unique_id=136163537 instance=ExtResource("12_rr5ff")]
 unique_name_in_owner = true
+visible = false
 
 [node name="GameOverMenu" parent="CanvasLayer" unique_id=1308238179 instance=ExtResource("174_0a72k")]

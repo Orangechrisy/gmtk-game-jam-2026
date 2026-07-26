@@ -49,7 +49,7 @@ expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6qegq"]
 
-[sub_resource type="Image" id="Image_hjn8r"]
+[sub_resource type="Image" id="Image_11awm"]
 data = {
 "data": PackedByteArray(255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255),
 "format": "RGBA8",
@@ -59,7 +59,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_hjn8r"]
-image = SubResource("Image_hjn8r")
+image = SubResource("Image_11awm")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_11awm"]
 content_margin_left = 0.0
