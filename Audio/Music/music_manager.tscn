@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://c1xbdwxwjw2wg" path="res://Audio/sfx/mouseover.wav" id="14_oxawt"]
 [ext_resource type="AudioStream" uid="uid://cjh41f4qspepf" path="res://Audio/sfx/popup.wav" id="15_ruiyx"]
 [ext_resource type="AudioStream" uid="uid://cjwcqpwkrsehg" path="res://Audio/sfx/positive_jingle.wav" id="16_04x8i"]
+[ext_resource type="AudioStream" uid="uid://b8ykvbj63yqfn" path="res://Audio/sfx/revolt.wav" id="19_oxawt"]
 
 [node name="MusicManager" type="Node" unique_id=972379771]
 process_mode = 3
@@ -103,3 +104,6 @@ stream = ExtResource("16_04x8i")
 
 [node name="NegativeJingle" type="AudioStreamPlayer" parent="SFX" unique_id=1496384122]
 stream = ExtResource("12_63cj8")
+
+[node name="Revolt" type="AudioStreamPlayer" parent="SFX" unique_id=1561162754]
+stream = ExtResource("19_oxawt")

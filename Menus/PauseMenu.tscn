@@ -23,7 +23,7 @@ offset_left = 885.0
 offset_top = 222.0
 offset_right = 1077.0
 offset_bottom = 264.0
-text = "PAUSE MENU"
+text = "Pause Menu"
 label_settings = SubResource("LabelSettings_a6wwx")
 
 [node name="ReturnToGameButton" type="Button" parent="PausePauseMenu" unique_id=1303846414]

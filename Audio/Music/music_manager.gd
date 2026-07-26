@@ -27,7 +27,6 @@ enum ENDINGTYPE { BAD, GOOD }
 func play_ending_song(ending_type: int = ENDINGTYPE.BAD):
 	_reset()
 	await get_tree().create_timer(1.0,false).timeout
-	print($OtherMusic.get_child(ending_type))
 	$OtherMusic.get_child(ending_type).play()
 
 #Base Track
@@ -76,7 +75,7 @@ func add_track(province: Province):
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 
 #SFX
-enum SFX {CLICK, CLICKINVALID, MOUSEOVER, POPUP, POSJINGLE, NEGJINGLE}
+enum SFX {CLICK, CLICKINVALID, MOUSEOVER, POPUP, POSJINGLE, NEGJINGLE, REVOLT}
 
 func play_sfx(SFX_ID: int):
 	var Audio = $SFX.get_child(SFX_ID)
