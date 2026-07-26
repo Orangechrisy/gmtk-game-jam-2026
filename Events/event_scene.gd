@@ -32,7 +32,7 @@ func event_selected(event: MapEvent):
 	GameManager.update_current_event(event)
 	%Title.text = event.get_event_name()
 	%Portrait.texture = event.get_portrait()
-	%CharacterName.text = event.get_character_name()
+	%CharacterName.text = TextManager.get_text(event.get_character_name())
 	if %CharacterName.text == "":
 		set_auto_event()
 	set_dialogue(event.get_event_dialogue())
@@ -52,7 +52,7 @@ func set_auto_event() -> void:
 func set_dialogue(dialogue_strings: Array[String]) -> void:
 	%Description.text = ""
 	for line in dialogue_strings:
-		%Description.text += line + '\n'
+		%Description.text += TextManager.get_text(line) + '\n'
 
 ## dynamically creates up to 6 buttons, if more than 3 then it goes to a new row
 func create_buttons(options: Array[EventOption]) -> void:
