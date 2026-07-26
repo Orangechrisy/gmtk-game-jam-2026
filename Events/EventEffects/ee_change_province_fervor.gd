@@ -5,7 +5,7 @@ class_name EEChangeFervor
 @export var fervor_change: int = 0
 
 func do_effect() -> void:
-	GameState.get_current_province().fervor += fervor_change
+	GameState.get_current_province().change_counter(Province.Counter.FERVOR, fervor_change)
 	GameManager.add_to_results_popup("%+.f Fervor in %s" % [fervor_change, GameState.get_current_province().province_name])
 
 func get_effect_desc() -> String:

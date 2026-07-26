@@ -86,7 +86,8 @@ func calculate_gold() -> void:
 func calculate_fervor() -> void:
 	for province in GameState.provinces:
 		if not province.has_army:
-			province.fervor += 1
+			province.change_counter(Province.Counter.FERVOR, 1)
+			# province.fervor += 1
 
 ## calculate_common_favor: Calculate changes to Common Favor based on fervor/loyalty
 func calculate_common_favor() -> void:

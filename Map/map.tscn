@@ -209,7 +209,7 @@ food_yield = 4.0
 food_consumption = 4.0
 gold_yield = 2.0
 gold_consumption = 5.0
-loyalty = 30
+loyalty = 25
 fervor = 10
 
 [node name="Military" parent="Provinces" unique_id=1109736334 instance=ExtResource("1_5ej7w")]
@@ -223,7 +223,7 @@ food_yield = 5.0
 food_consumption = 7.0
 gold_yield = 4.0
 gold_consumption = 7.0
-loyalty = 40
+loyalty = 30
 
 [node name="Mine" parent="Provinces" unique_id=1791617832 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(609, 379, 636, 329, 848, 368, 897, 324, 987, 320, 1047, 285, 1107, 304, 1176, 302, 1184, 331, 1210, 348, 1329, 384, 1324, 411, 1258, 408, 1236, 386, 1179, 397, 1161, 424, 1092, 425, 1080, 463, 1058, 466, 1005, 444, 971, 469, 901, 445, 914, 559, 969, 590, 968, 615, 960, 626, 962, 640, 938, 647, 856, 614, 872, 573, 852, 563, 854, 546, 799, 514, 782, 527, 768, 525, 750, 509, 706, 512, 673, 466, 703, 375)
@@ -236,7 +236,7 @@ food_yield = 4.0
 food_consumption = 5.0
 gold_yield = 10.0
 gold_consumption = 4.0
-loyalty = 40
+loyalty = 35
 fervor = 15
 
 [node name="Villa" parent="Provinces" unique_id=448714367 instance=ExtResource("1_5ej7w")]
@@ -250,7 +250,7 @@ food_yield = 4.0
 food_consumption = 6.0
 gold_yield = 3.0
 gold_consumption = 7.0
-loyalty = 40
+loyalty = 30
 
 [node name="Church" parent="Provinces" unique_id=1489639061 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(965, 815, 1029, 847, 1054, 822, 1056, 726, 1085, 730, 1120, 684, 1151, 700, 1185, 695, 1163, 608, 1195, 585, 1217, 537, 1273, 516, 1290, 490, 1286, 468, 1347, 451, 1347, 437, 1289, 433, 1260, 437, 1229, 411, 1187, 421, 1177, 445, 1110, 449, 1096, 489, 1078, 488, 1073, 496, 1007, 472, 967, 494, 932, 479, 938, 549, 1002, 582, 1000, 609, 994, 633, 1010, 670, 1007, 716, 991, 756, 960, 767)
@@ -263,7 +263,7 @@ food_yield = 4.0
 food_consumption = 2.0
 gold_yield = 3.0
 gold_consumption = 3.0
-loyalty = 40
+loyalty = 30
 fervor = 5
 
 [node name="Capital" parent="Provinces" unique_id=1886263090 instance=ExtResource("1_5ej7w")]
@@ -277,7 +277,7 @@ food_yield = 3.0
 food_consumption = 8.0
 gold_yield = 5.0
 gold_consumption = 8.0
-loyalty = 50
+loyalty = 45
 
 [node name="Farm" parent="Provinces" unique_id=1918935467 instance=ExtResource("1_5ej7w")]
 vertices = PackedVector2Array(876, 857, 891, 824, 941, 806, 933, 752, 980, 739, 988, 662, 945, 678, 812, 622, 831, 588, 821, 567, 800, 548, 777, 564, 746, 537, 697, 540, 643, 467, 659, 409, 588, 419, 503, 412, 495, 442, 574, 458, 576, 476, 587, 479, 607, 579, 564, 581, 570, 606, 637, 617, 634, 684, 564, 736, 516, 699, 467, 703, 470, 739, 500, 730, 535, 777, 585, 777, 599, 818, 657, 815, 671, 829, 687, 828, 720, 796, 781, 841, 795, 839, 795, 823)
@@ -290,7 +290,7 @@ food_yield = 10.0
 food_consumption = 4.0
 gold_yield = 6.0
 gold_consumption = 3.0
-loyalty = 40
+loyalty = 35
 fervor = 10
 
 [node name="City" parent="Provinces" unique_id=203984502 instance=ExtResource("1_5ej7w")]
@@ -304,7 +304,7 @@ food_yield = 3.0
 food_consumption = 7.0
 gold_yield = 5.0
 gold_consumption = 6.0
-loyalty = 45
+loyalty = 35
 fervor = 10
 
 [node name="Port" parent="Provinces" unique_id=1295366853 instance=ExtResource("1_5ej7w")]
@@ -318,7 +318,7 @@ food_yield = 7.0
 food_consumption = 4.0
 gold_yield = 7.0
 gold_consumption = 4.0
-loyalty = 40
+loyalty = 30
 fervor = 10
 
 [node name="Town" parent="Provinces" unique_id=305634748 instance=ExtResource("1_5ej7w")]
@@ -332,7 +332,7 @@ food_yield = 6.0
 food_consumption = 4.0
 gold_yield = 5.0
 gold_consumption = 4.0
-loyalty = 35
+loyalty = 25
 fervor = 10
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1264009811]
