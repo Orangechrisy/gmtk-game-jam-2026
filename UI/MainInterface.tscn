@@ -403,23 +403,6 @@ s"
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="NobleFervorBar" type="TextureProgressBar" parent="NobleTextureRect2/NoblePatch/NobleFervor" unique_id=1186775173]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -168.0
-offset_top = -152.0
-offset_right = -85.0
-offset_bottom = 161.0
-grow_horizontal = 0
-grow_vertical = 2
-value = 100.0
-fill_mode = 2
-
 [node name="Label" type="Label" parent="NobleTextureRect2/NoblePatch" unique_id=1159067989]
 z_index = 3
 layout_mode = 0

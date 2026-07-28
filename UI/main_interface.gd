@@ -53,7 +53,8 @@ func on_common_sentiment_updated(new_sentiment: int) -> void:
 	var alt_fire_height = (fire_height * (1.0 - box_height)) + box_height
 
 func on_noble_sentiment_updated(new_sentiment: int) -> void:
-	#%NobleFervorBar.value = new_sentiment
+	if new_sentiment < 0:
+		new_sentiment = 0
 	$NobleTextureRect2/NoblePatch/WineBar.set_value(new_sentiment)
 	$NobleTextureRect2/NoblePatch/Label.text = str(new_sentiment)
 

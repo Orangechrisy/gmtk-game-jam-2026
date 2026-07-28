@@ -122,6 +122,8 @@ func update_visuals():
 func set_value(val: int):
 	if val > 100:
 		val = 100
+	elif val <= 0:
+		val = 0
 	var val_diff: float = float(val-curr_val)
 	var change_y: float = 2.5*val_diff
 	water_size.y += change_y
