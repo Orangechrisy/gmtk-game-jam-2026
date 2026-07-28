@@ -27,8 +27,6 @@ func end_day() -> void:
 	# Don't bother with the rest of this function if the game is over
 	if game_ended:
 		return
-		
-	GameState.update_day()
 	
 	# Update Food/Gold stores
 	calculate_food()
@@ -55,6 +53,8 @@ func end_day() -> void:
 	handle_loss_effects()
 	
 	flip_provinces()
+	
+	GameState.update_day()
 	
 	roll_events()
 	check_for_events()
