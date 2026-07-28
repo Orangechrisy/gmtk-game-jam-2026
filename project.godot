@@ -28,6 +28,7 @@ TextManager="*uid://cbdwym1ikpuel"
 EventScene="*uid://dxd0a1wsh1fpq"
 MusicManager="*uid://5ndpv4478vvq"
 PopUpManager="*uid://c67fvfq1w68np"
+SaveData="*uid://b4dqehqgcahse"
 
 [display]
 

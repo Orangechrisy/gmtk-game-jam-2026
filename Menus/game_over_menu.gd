@@ -11,6 +11,8 @@ func on_game_ended(ending: int, ending_title: StringName, ending_desc: String) -
 	$EndingBodyLabel.text = TextManager.get_text(ending_desc)
 	$EndingScoreLabel.text = "Final Score: " + str(GameManager.calculate_score(ending))
 	
+	SaveData.save_data("EndingsCompleted", true, ending)
+	
 	# Handle music (very awkward)
 	match ending:
 		GameState.Ending.FLEE_DOCK_SUCCESS:

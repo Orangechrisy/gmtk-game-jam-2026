@@ -3,9 +3,27 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$EndingsContainer.hide()
 	for sub_menu in get_children():
 		if sub_menu.has_signal("back_up"):
 			sub_menu.connect("back_up", on_back_up)
+	
+	#ENDINGS
+	show_endings()
+	GameState.connect("game_ended", show_endings)
+
+func game_ended(_ending, _ending_names, _ending_texts):
+	show_endings()
+
+func show_endings():
+	await get_tree().physics_frame
+	var ending_count: int = 0
+	for endingID in GameState.Ending.size():
+		if SaveData.get_data("EndingsCompleted", endingID):
+			ending_count+=1
+	if ending_count > 0:
+		$EndingsContainer/HBoxContainer/Num.text = str(ending_count)
+		$EndingsContainer.show()
 
 func _on_start_game_button_pressed() -> void:
 	play_click()

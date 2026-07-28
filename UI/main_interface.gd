@@ -87,12 +87,18 @@ func show_end_day(_val: bool) -> void:
 	await tween.finished
 
 ## ends the day when pressed
+var end_day_anim_playing: bool = false
 func _on_end_day_pressed() -> void:
+	if end_day_anim_playing:
+		MusicManager.play_sfx(MusicManager.SFX.CLICKINVALID)
+		return
+	end_day_anim_playing=true
 	play_click()
 	var tween = create_tween()
 	tween.tween_property(%End, "offset_transform_position", Vector2(0, -300), 1.0) \
 	.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	await tween.finished
+	end_day_anim_playing=false
 	GameManager.end_day()
 
 func play_click():

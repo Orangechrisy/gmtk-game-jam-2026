@@ -8,7 +8,7 @@
 [ext_resource type="Shader" uid="uid://b8m8hefme75c2" path="res://UI/fervor_shader.gdshader" id="5_bpl6d"]
 [ext_resource type="Texture2D" uid="uid://dc1aecf3gci76" path="res://Assets/white_bar.png" id="6_hugk6"]
 [ext_resource type="Texture2D" uid="uid://qafjx3mknalx" path="res://Assets/extra_borders.png" id="7_1k4t5"]
-[ext_resource type="PackedScene" uid="uid://dg6gg8wow84om" path="res://winebar.tscn" id="7_bpl6d"]
+[ext_resource type="PackedScene" uid="uid://dg6gg8wow84om" path="res://UI/winebar.tscn" id="7_bpl6d"]
 [ext_resource type="PackedScene" uid="uid://tunjitqdflgg" path="res://UI/bubbles.tscn" id="8_hugk6"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_fcnqv"]

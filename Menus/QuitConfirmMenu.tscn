@@ -3,9 +3,6 @@
 [ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="1_dv7al"]
 [ext_resource type="Script" uid="uid://f7tc1mixxnhh" path="res://Menus/quit_confirm_menu.gd" id="1_sbb5r"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_a6wwx"]
-font_size = 48
-
 [node name="QuitConfirmMenu" type="Control" unique_id=806118121]
 layout_mode = 3
 anchors_preset = 15
@@ -39,7 +36,6 @@ offset_top = 246.0
 offset_right = 1173.0
 offset_bottom = 329.0
 text = "Really Quit?"
-label_settings = SubResource("LabelSettings_a6wwx")
 horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="BackButton" to="." method="_on_mouse_entered"]
