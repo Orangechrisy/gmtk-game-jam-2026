@@ -10,7 +10,7 @@ func _ready() -> void:
 	
 	#ENDINGS
 	show_endings()
-	GameState.connect("game_ended", show_endings)
+	GameState.connect("game_ended", game_ended)
 
 func game_ended(_ending, _ending_names, _ending_texts):
 	show_endings()
