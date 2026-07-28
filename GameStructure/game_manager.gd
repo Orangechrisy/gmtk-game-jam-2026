@@ -96,7 +96,7 @@ func calculate_common_favor() -> void:
 		if province.curr_owner != province.Owner.KING:
 			common_sentiment_change -= 2
 			GameState.change_noble_sentiment(-1)
-		elif province.fervor * 2 >= province.loyalty:
+		elif province.fervor * 3 >= province.loyalty * 2:
 			common_sentiment_change -= 1
 		
 		if GameState.get_food() <= 0:
@@ -111,7 +111,9 @@ func calculate_noble_favor() -> void:
 			GameState.change_noble_sentiment(-1)
 		
 		if GameState.get_gold() <= 0:
-			GameState.change_noble_sentiment(-1)
+			GameState.change_noble_sentiment(-5)
+			
+	GameState.change_noble_sentiment(-1)
 	
 ## reduce_days_to_revolution: Calculates number of days to lose, then updates
 ## Variables: NONE (for now)
@@ -152,7 +154,7 @@ func flip_provinces() -> void:
 ## if not enough events, roll again
 func roll_events() -> void:
 	var owned_provinces: Array[Province] = GameState.provinces.filter(func(province): return province.curr_owner == Province.Owner.KING)
-	owned_provinces.sort_custom(func(a, b): return a.fervor > b.fervor)
+	owned_provinces.shuffle()
 	var num_events: int = min(owned_provinces.size(), randi_range(3, 5))
 	while num_events > 0:
 		for province in owned_provinces:
