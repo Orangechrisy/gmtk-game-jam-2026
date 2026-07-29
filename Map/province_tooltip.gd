@@ -15,6 +15,11 @@ func _process(_delta: float) -> void:
 
 func update_values():
 	if province != null:
+		if province.has_army:
+			%Armies.show()
+		else:
+			%Armies.hide()
+		
 		var format_string = "[color={color}]{0} {yield}[/color] ([color=#37472a]{1} {yield} Yield[/color], [color=red]{2} {yield} Consumption[/color])"
 		var food_string = format_string.format(["%+.f" % province.calculate_food(), "%+.f" % province.food_yield, "-%.f" % province.food_consumption, ["yield", "Food"], ["color", "#37472a" if province.calculate_food() >= 0 else "red"]])
 		%Food.text = food_string

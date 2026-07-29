@@ -37,7 +37,10 @@ var tween: Tween
 enum Counter {FOODY, FOODC, GOLDY, GOLDC, LOYALTY, FERVOR}
 enum Owner {KING, REBELS}
 
-var has_army: bool = false
+var has_army: bool = false:
+	set(val):
+		has_army=val
+		$ProvinceTooltip.update_values()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -48,6 +51,7 @@ func _ready() -> void:
 	$EventPopup.position = event_location
 	$TooltipTimer.timeout.connect(_on_timer_timeout)
 	GameState.connect("day_updated", on_day_updated)
+	$ProvinceTooltip.hide()
 	$ProvinceTooltip.update_values()
 	
 
@@ -177,11 +181,13 @@ func hide_outline():
 	$BorderSprite.z_index = -2
 
 func _on_area_2d_mouse_entered() -> void:
+	$ProvinceTooltip.show()
 	if (GameState.MouseMode == GameState.Click.BASIC) or (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT):
 		if not GameState.get_current_event():
 			$TooltipTimer.start(TOOLTIP_TIME_DELAY)
 
 func _on_area_2d_mouse_exited() -> void:
+	#print("death")
 	$TooltipTimer.stop()
 	if tween: 
 		tween.kill()
