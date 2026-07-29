@@ -86,7 +86,7 @@ func calculate_gold() -> void:
 func calculate_fervor() -> void:
 	for province in GameState.provinces:
 		if not province.has_army:
-			province.change_counter(Province.Counter.FERVOR, 1)
+			province.change_counter(Province.Counter.FERVOR, province.fervor_gain)
 			# province.fervor += 1
 
 ## calculate_common_favor: Calculate changes to Common Favor based on fervor/loyalty
@@ -94,26 +94,31 @@ func calculate_common_favor() -> void:
 	for province in GameState.provinces:
 		var common_sentiment_change = 0
 		if province.curr_owner != province.Owner.KING:
-			common_sentiment_change -= 2
-			GameState.change_noble_sentiment(-1)
-		elif province.fervor * 3 >= province.loyalty * 2:
 			common_sentiment_change -= 1
 		
 		if GameState.get_food() <= 0:
 			common_sentiment_change *= 2
 		
 		GameState.change_common_sentiment(common_sentiment_change)
+	
+	if GameState.get_food() <= 0:
+		GameState.change_common_sentiment(GameState.common_sentiment_loss * 2)
+	else:
+		GameState.change_common_sentiment(GameState.common_sentiment_loss)
 
 ## calculate_noble_favor: Calculate changes to Noble Favor based on gold/control
 func calculate_noble_favor() -> void:
 	for province in GameState.provinces:
-		if province.curr_owner != 0:
-			GameState.change_noble_sentiment(-1)
+		if province.curr_owner != province.Owner.KING:
+			if GameState.get_gold() <= 0:
+				GameState.change_noble_sentiment(-2)
+			else:
+				GameState.change_noble_sentiment(-1)
 		
-		if GameState.get_gold() <= 0:
-			GameState.change_noble_sentiment(-5)
-			
-	GameState.change_noble_sentiment(-1)
+	if GameState.get_gold() <= 0:
+		GameState.change_noble_sentiment(-5)
+	else:
+		GameState.change_noble_sentiment(-1)
 	
 ## reduce_days_to_revolution: Calculates number of days to lose, then updates
 ## Variables: NONE (for now)
