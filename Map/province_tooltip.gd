@@ -20,15 +20,19 @@ func update_values():
 		else:
 			%Armies.hide()
 		
-		var format_string = "[color={color}]{0} {yield}[/color] ([color=#37472a]{1} {yield} Yield[/color], [color=red]{2} {yield} Consumption[/color])"
+		%Name.text = province.province_name
+		if province.get_curr_owner() != province.Owner.KING:
+			%Name.text = "[color=red]" + province.province_name + "[/color]"
+		
+		var format_string = "[color={color}]{0} {yield}[/color] ([color=#37472a]{1} Yield[/color], [color=red]{2} Consumption[/color])"
 		var food_string = format_string.format(["%+.f" % province.calculate_food(), "%+.f" % province.food_yield, "-%.f" % province.food_consumption, ["yield", "Food"], ["color", "#37472a" if province.calculate_food() >= 0 else "red"]])
 		%Food.text = food_string
 		var gold_string = format_string.format(["%+.f" % province.calculate_gold(), "%+.f" % province.gold_yield, "-%.f" % province.gold_consumption, ["yield", "Gold"], ["color", "#37472a" if province.calculate_gold() >= 0 else "red"]])
 		%Gold.text =  gold_string
 		
 		var loyaltyperc = str(province.loyalty * 2)
-		$PanelContainer/MarginContainer/VBoxContainer/Loyalty/HBoxContainer/Num.text = loyaltyperc
+		%Loyalty/Label.text = "Loyalty:    %.f%%" % province.loyalty
 		%Loyalty.value = province.loyalty
 		var fervorperc = str(province.fervor * 2)
-		$PanelContainer/MarginContainer/VBoxContainer/Fervor/HBoxContainer/Num.text = fervorperc
+		%Fervor/Label.text = "Fervor:    %.f%%" % province.fervor
 		%Fervor.value = province.fervor
