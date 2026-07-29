@@ -17,6 +17,8 @@ var gold: int = 50
 var food: int = 50
 var noble_sentiment: int = 100 
 var common_sentiment: int = 100
+var noble_sentiment_loss: int = -1
+var common_sentiment_loss: int = -1
 
 var armies: int = 3
 var armies_left: int = 3
@@ -48,7 +50,9 @@ func _reset():
 	set_gold(default_gold)
 	set_food(default_food)
 	set_noble_sentiment(default_noble_sentiment)
+	noble_sentiment_loss = -1
 	set_common_sentiment(default_common_sentiment)
+	common_sentiment_loss = -1
 	set_armies(default_armies)
 	reset_armies_left()
 	current_province = default_current_province
@@ -176,6 +180,12 @@ func change_common_sentiment(val: int) -> void:
 	common_sentiment += val
 	common_sentiment_updated.emit(common_sentiment)
 
+func get_common_sentiment_loss() -> int:
+	return common_sentiment_loss
+
+func change_common_sentiment_loss(val: int) -> void:
+	common_sentiment_loss += val
+
 
 # Noble Sentiment
 
@@ -189,6 +199,12 @@ func set_noble_sentiment(val: int) -> void:
 func change_noble_sentiment(val: int) -> void:
 	noble_sentiment += val
 	noble_sentiment_updated.emit(noble_sentiment)
+
+func get_noble_sentiment_loss() -> int:
+	return noble_sentiment_loss
+
+func change_noble_sentiment_loss(val: int) -> void:
+	noble_sentiment_loss += val
 
 # Armies
 

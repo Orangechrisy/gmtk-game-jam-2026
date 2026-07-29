@@ -34,13 +34,16 @@ var province_tooltip: Control
 var tween: Tween
 
 
-enum Counter {FOODY, FOODC, GOLDY, GOLDC, LOYALTY, FERVOR}
+enum Counter {FOODY, FOODC, GOLDY, GOLDC, LOYALTY, FERVOR, PERMFERVOR}
 enum Owner {KING, REBELS}
+
+var fervor_gain: int = 1
 
 var has_army: bool = false:
 	set(val):
 		has_army=val
 		$ProvinceTooltip.update_values()
+var can_have_army: bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -63,6 +66,8 @@ func _reset():
 	gold_consumption = default_gold_consumption
 	loyalty = default_loyalty
 	fervor = default_fervor
+	fervor_gain = 1
+	can_have_army = true
 	
 	for event in potential_events:
 		if event.one_time == true:
@@ -127,6 +132,8 @@ func change_counter(counter: int, change: float) -> void:
 		Counter.FERVOR:
 			fervor = max(0, fervor + change)
 			$ProvinceTooltip.update_values()
+		Counter.PERMFERVOR:
+			fervor_gain = max(0, fervor_gain + change)
 
 # TODO: more interesting
 ## try to do the event, based on rng and variables of the province or something
@@ -163,7 +170,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 					tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
 			elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
 				# TODO: visual effect of some sort? sound?
-				if curr_owner == Owner.KING and not has_army: # No placing armies in unowned provinces
+				if curr_owner == Owner.KING and not has_army and can_have_army: # No placing armies in unowned provinces
 					GameState.MouseMode = GameState.Click.BASIC
 					print("Army placed!")
 					has_army = true
