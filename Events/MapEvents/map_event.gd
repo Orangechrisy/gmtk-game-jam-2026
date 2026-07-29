@@ -30,10 +30,18 @@ func get_portrait() -> Texture2D:
 func get_character_name() -> StringName:
 	return character_name
 
+func get_character() -> Character:
+	return GameState.get_character_by_name(character_name)
+
 # Functionality
 
 # can_appear: Checks whether event is able to appear
 func can_appear() -> bool:
+	var char = GameState.get_character_by_name(character_name)
+	if char and char.is_alive:
+		if not GameManager.check_char_already_in_event(char):
+			return false
+	
 	for condition in conditions:
 		if not condition.evaluate():
 			return false

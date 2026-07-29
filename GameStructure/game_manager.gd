@@ -171,6 +171,13 @@ func roll_auto_event_chance() -> void:
 				event.event_fired()
 				return
 
+func check_char_already_in_event(char: Character) -> bool:
+	for province in GameState.provinces:
+		if province.event_present:
+			if char == province.event_present.get_character():
+				return false
+	return true
+
 ## update the current province in the gamestate, 
 func update_current_province(province: Province):
 	GameState.set_current_province(province)
