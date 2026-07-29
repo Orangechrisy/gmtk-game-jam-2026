@@ -34,9 +34,11 @@ offset_bottom = 50.0
 grow_vertical = 0
 
 [node name="ProvinceTooltip" parent="." unique_id=1231974182 instance=ExtResource("3_2gmdq")]
+visible = false
 z_index = 1
 
 [node name="TooltipTimer" type="Timer" parent="." unique_id=1803725361]
+wait_time = 1.2
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

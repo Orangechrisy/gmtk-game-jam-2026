@@ -181,9 +181,9 @@ func hide_outline():
 	$BorderSprite.z_index = -2
 
 func _on_area_2d_mouse_entered() -> void:
-	$ProvinceTooltip.show()
 	if (GameState.MouseMode == GameState.Click.BASIC) or (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT):
 		if not GameState.get_current_event():
+			$ProvinceTooltip.show()
 			$TooltipTimer.start(TOOLTIP_TIME_DELAY)
 
 func _on_area_2d_mouse_exited() -> void:
