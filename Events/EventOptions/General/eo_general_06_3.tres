@@ -8,7 +8,7 @@
 
 [sub_resource type="Resource" id="Resource_sflv2"]
 script = ExtResource("4_t85bl")
-favor_change = -2
+favor_change = -5
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_5g5hf"]

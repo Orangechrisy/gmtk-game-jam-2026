@@ -8,12 +8,12 @@
 
 [sub_resource type="Resource" id="Resource_dg5wx"]
 script = ExtResource("4_261mx")
-loyalty_change = 2
+loyalty_change = -2
 metadata/_custom_type_script = "uid://2k5y8ducn717"
 
 [sub_resource type="Resource" id="Resource_o88vb"]
 script = ExtResource("5_238oj")
-favor_change = -2
+favor_change = 2
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [resource]

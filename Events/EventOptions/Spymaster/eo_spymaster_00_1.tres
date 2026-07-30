@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://de4uysua35cqx" path="res://Events/EventEffects/ee_character_dies.gd" id="4_mqdpw"]
 [ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="6_4m4jo"]
 [ext_resource type="Script" uid="uid://c1ok7bn8ayury" path="res://Events/EventEffects/ee_stall_revolt.gd" id="6_mqdpw"]
+[ext_resource type="Script" uid="uid://33udxalqbbjk" path="res://Events/EventEffects/ee_change_noble_favor_loss.gd" id="7_3hmnp"]
 
 [sub_resource type="Resource" id="Resource_vsmt6"]
 script = ExtResource("2_arkbk")
@@ -27,6 +28,11 @@ metadata/_custom_type_script = "uid://lb70iqf47cna"
 script = ExtResource("6_mqdpw")
 metadata/_custom_type_script = "uid://c1ok7bn8ayury"
 
+[sub_resource type="Resource" id="Resource_3qs1o"]
+script = ExtResource("7_3hmnp")
+favor_change = -1
+metadata/_custom_type_script = "uid://33udxalqbbjk"
+
 [sub_resource type="Resource" id="Resource_vyy4h"]
 script = ExtResource("4_mqdpw")
 char_name = &"CHAR_PARTYGUY"
@@ -42,5 +48,5 @@ option_name = &"SPYMASTER_EVENT_00_OPTION_1_TITLE"
 conditions = Array[ExtResource("1_m3vo3")]([SubResource("Resource_vsmt6")])
 success_odds = 0.5
 success_effects = Array[ExtResource("3_ni0yo")]([SubResource("Resource_vyy4h"), SubResource("Resource_smd2h")])
-failure_effects = Array[ExtResource("3_ni0yo")]([SubResource("Resource_32s20"), SubResource("Resource_8ftix"), SubResource("Resource_tblah")])
+failure_effects = Array[ExtResource("3_ni0yo")]([SubResource("Resource_32s20"), SubResource("Resource_8ftix"), SubResource("Resource_tblah"), SubResource("Resource_3qs1o")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

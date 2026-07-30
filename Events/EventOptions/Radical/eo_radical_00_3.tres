@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_4n6pq"]
 [ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_jo5uv"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_fxl3m"]
-[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_lxlkr"]
+[ext_resource type="Script" uid="uid://bgkgevvrd87qr" path="res://Events/EventEffects/ee_change_province_fervor_loss.gd" id="4_5pf7a"]
 [ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="5_fxl3m"]
 [ext_resource type="Script" uid="uid://d2b0vdmevwa6y" path="res://Events/EventEffects/ee_common_assassin_chance.gd" id="6_lxlkr"]
 [ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="8_5pf7a"]
@@ -15,10 +15,10 @@ script = ExtResource("2_jo5uv")
 val = 1
 metadata/_custom_type_script = "uid://cc4k7bh7u82el"
 
-[sub_resource type="Resource" id="Resource_ny8mm"]
-script = ExtResource("4_lxlkr")
-fervor_change = 3
-metadata/_custom_type_script = "uid://cal8op6buuvb6"
+[sub_resource type="Resource" id="Resource_ja0en"]
+script = ExtResource("4_5pf7a")
+fervor_change = 1
+metadata/_custom_type_script = "uid://bgkgevvrd87qr"
 
 [sub_resource type="Resource" id="Resource_p5qko"]
 script = ExtResource("5_fxl3m")
@@ -40,10 +40,10 @@ metadata/_custom_type_script = "uid://skdjmxp8agwp"
 script = ExtResource("8_pfhyf")
 metadata/_custom_type_script = "uid://vkkxn3ufe2qd"
 
-[sub_resource type="Resource" id="Resource_tw4no"]
-script = ExtResource("4_lxlkr")
-fervor_change = 3
-metadata/_custom_type_script = "uid://cal8op6buuvb6"
+[sub_resource type="Resource" id="Resource_o3rkk"]
+script = ExtResource("4_5pf7a")
+fervor_change = 1
+metadata/_custom_type_script = "uid://bgkgevvrd87qr"
 
 [sub_resource type="Resource" id="Resource_jo5uv"]
 script = ExtResource("5_fxl3m")
@@ -65,6 +65,6 @@ metadata/_custom_type_script = "uid://skdjmxp8agwp"
 script = ExtResource("3_fxl3m")
 option_name = &"RADICAL_EVENT_00_OPTION_3_TITLE"
 conditions = Array[ExtResource("1_dkl6i")]([SubResource("Resource_boqe5")])
-success_effects = Array[ExtResource("2_4n6pq")]([SubResource("Resource_tw4no"), SubResource("Resource_jo5uv"), SubResource("Resource_5pf7a"), SubResource("Resource_ta0a1")])
-failure_effects = Array[ExtResource("2_4n6pq")]([SubResource("Resource_ny8mm"), SubResource("Resource_p5qko"), SubResource("Resource_4rgfy"), SubResource("Resource_0ify2"), SubResource("Resource_vhhr5")])
+success_effects = Array[ExtResource("2_4n6pq")]([SubResource("Resource_o3rkk"), SubResource("Resource_jo5uv"), SubResource("Resource_5pf7a"), SubResource("Resource_ta0a1")])
+failure_effects = Array[ExtResource("2_4n6pq")]([SubResource("Resource_ja0en"), SubResource("Resource_p5qko"), SubResource("Resource_4rgfy"), SubResource("Resource_0ify2"), SubResource("Resource_vhhr5")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

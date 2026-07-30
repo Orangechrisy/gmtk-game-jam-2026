@@ -7,12 +7,12 @@
 
 [sub_resource type="Resource" id="Resource_bih6n"]
 script = ExtResource("5_kdxt7")
-favor_change = -2
+favor_change = -3
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_x52mm"]
 script = ExtResource("5_kdxt7")
-favor_change = 2
+favor_change = 3
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [resource]

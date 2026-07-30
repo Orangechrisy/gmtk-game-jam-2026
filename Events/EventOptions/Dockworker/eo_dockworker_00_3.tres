@@ -18,7 +18,7 @@ metadata/_custom_type_script = "uid://88ckwkesx5tb"
 
 [resource]
 script = ExtResource("5_2qmmq")
-option_name = &"DOCKWORKER_EVENT_00_OPTION_2_TITLE"
+option_name = &"DOCKWORKER_EVENT_00_OPTION_3_TITLE"
 success_odds = 0.5
 success_effects = Array[ExtResource("2_c7y4d")]([SubResource("Resource_h4g3a"), SubResource("Resource_234bd")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

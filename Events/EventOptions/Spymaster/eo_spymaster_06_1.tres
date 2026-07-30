@@ -16,12 +16,12 @@ metadata/_custom_type_script = "uid://bh13srps2stqj"
 
 [sub_resource type="Resource" id="Resource_aanp4"]
 script = ExtResource("9_ihok0")
-loyalty_change = 3
+loyalty_change = 2
 metadata/_custom_type_script = "uid://2k5y8ducn717"
 
 [sub_resource type="Resource" id="Resource_41ffo"]
 script = ExtResource("7_cguoe")
-favor_change = -1
+favor_change = -2
 metadata/_custom_type_script = "uid://cixtddcjgh6op"
 
 [sub_resource type="Resource" id="Resource_op7v5"]
@@ -42,7 +42,7 @@ metadata/_custom_type_script = "uid://2k5y8ducn717"
 
 [sub_resource type="Resource" id="Resource_i62rx"]
 script = ExtResource("7_cguoe")
-favor_change = -1
+favor_change = -2
 metadata/_custom_type_script = "uid://cixtddcjgh6op"
 
 [sub_resource type="Resource" id="Resource_8pf8j"]

@@ -27,13 +27,13 @@ metadata/_custom_type_script = "uid://skdjmxp8agwp"
 
 [sub_resource type="Resource" id="Resource_3a0m2"]
 script = ExtResource("3_nk0x6")
-fervor_change = 2
+fervor_change = 3
 metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
 [sub_resource type="Resource" id="Resource_6swlt"]
 script = ExtResource("7_6swlt")
 char_name = &"CHAR_RADICAL"
-chance = 1
+chance = 20
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
 [sub_resource type="Resource" id="Resource_qmqdv"]
