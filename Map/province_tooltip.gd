@@ -31,8 +31,8 @@ func update_values():
 		%Gold.text =  gold_string
 		
 		var loyaltyperc = str(province.loyalty * 2)
-		%Loyalty/Label.text = "Loyalty:    %.f%%" % province.loyalty
+		%Loyalty/Label.text = "Loyalty: %s%%" % loyaltyperc
 		%Loyalty.value = province.loyalty
 		var fervorperc = str(province.fervor * 2)
-		%Fervor/Label.text = "Fervor:    %.f%%" % province.fervor
+		%Fervor/Label.text = "Fervor: %s%%" % fervorperc
 		%Fervor.value = province.fervor
