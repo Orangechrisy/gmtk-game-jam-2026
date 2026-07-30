@@ -20,6 +20,8 @@
 [ext_resource type="AudioStream" uid="uid://cjh41f4qspepf" path="res://Audio/sfx/popup.wav" id="15_ruiyx"]
 [ext_resource type="AudioStream" uid="uid://cjwcqpwkrsehg" path="res://Audio/sfx/positive_jingle.wav" id="16_04x8i"]
 [ext_resource type="AudioStream" uid="uid://b8ykvbj63yqfn" path="res://Audio/sfx/revolt.wav" id="19_oxawt"]
+[ext_resource type="AudioStream" uid="uid://bv2mmebpgethd" path="res://Audio/sfx/char_death.wav" id="21_4y4kq"]
+[ext_resource type="AudioStream" uid="uid://bspi5xyc0vap" path="res://Audio/sfx/army_place.wav" id="22_2a36x"]
 
 [node name="MusicManager" type="Node" unique_id=972379771]
 process_mode = 3
@@ -122,4 +124,14 @@ bus = &"SFX"
 [node name="Revolt" type="AudioStreamPlayer" parent="SFX" unique_id=1561162754]
 stream = ExtResource("19_oxawt")
 volume_db = -7.0
+bus = &"SFX"
+
+[node name="CharDeath" type="AudioStreamPlayer" parent="SFX" unique_id=1341153979]
+stream = ExtResource("21_4y4kq")
+volume_db = -5.0
+bus = &"SFX"
+
+[node name="ArmyPlace" type="AudioStreamPlayer" parent="SFX" unique_id=1062018291]
+stream = ExtResource("22_2a36x")
+volume_db = -10.0
 bus = &"SFX"

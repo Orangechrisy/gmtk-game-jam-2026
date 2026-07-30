@@ -76,7 +76,7 @@ func add_track(province: Province):
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 
 #SFX
-enum SFX {CLICK, CLICKINVALID, MOUSEOVER, POPUP, POSJINGLE, NEGJINGLE, REVOLT}
+enum SFX {CLICK, CLICKINVALID, MOUSEOVER, POPUP, POSJINGLE, NEGJINGLE, REVOLT, CHARDEATH, ARMYPLACE}
 
 func play_sfx(SFX_ID: int, change_pitch: bool = true):
 	var Audio = $SFX.get_child(SFX_ID)

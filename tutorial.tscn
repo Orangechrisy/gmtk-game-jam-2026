@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://cpe0r0ni6d3h5"]
+
+[ext_resource type="Script" uid="uid://7gja2ft6qu8f" path="res://tutorial.gd" id="1_yb1ct"]
+[ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="2_ehuit"]
+[ext_resource type="Texture2D" uid="uid://b852kkvub2oeb" path="res://Assets/tutorial block out.png" id="3_ehuit"]
+[ext_resource type="Texture2D" uid="uid://c48jgi5plauw2" path="res://Assets/arrow_down.png" id="4_0cr88"]
+[ext_resource type="Texture2D" uid="uid://b7fvpjso7ojaa" path="res://Assets/arrow_left.png" id="5_4t6hg"]
+[ext_resource type="Texture2D" uid="uid://cklmbwv8ibl0" path="res://Assets/arrow_right.png" id="6_7vrqn"]
+[ext_resource type="Texture2D" uid="uid://bxdjcil2ox520" path="res://Assets/arrow_up.png" id="7_bhfnd"]
+
+[sub_resource type="Animation" id="Animation_0cr88"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4t6hg"]
+resource_name = "fadein_blockout"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7vrqn"]
+_data = {
+&"RESET": SubResource("Animation_0cr88"),
+&"fadein_blockout": SubResource("Animation_4t6hg")
+}
+
+[sub_resource type="Animation" id="Animation_5mrt3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rwowx"]
+resource_name = "fadein_text"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hu44a"]
+_data = {
+&"RESET": SubResource("Animation_5mrt3"),
+&"fadein_text": SubResource("Animation_rwowx")
+}
+
+[sub_resource type="Animation" id="Animation_ehuit"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hu44a"]
+resource_name = "fadein_button"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0cr88"]
+_data = {
+&"RESET": SubResource("Animation_ehuit"),
+&"fadein_button": SubResource("Animation_hu44a")
+}
+
+[sub_resource type="Animation" id="Animation_7vrqn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bhfnd"]
+resource_name = "fadein_arrows"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tvjhf"]
+_data = {
+&"RESET": SubResource("Animation_7vrqn"),
+&"fadein_arrows": SubResource("Animation_bhfnd")
+}
+
+[node name="Tutorial" type="Control" unique_id=734501673]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yb1ct")
+
+[node name="TutorialBlockOut" type="Sprite2D" parent="." unique_id=552969348]
+position = Vector2(141, 687)
+texture = ExtResource("3_ehuit")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TutorialBlockOut" unique_id=861329727]
+libraries/ = SubResource("AnimationLibrary_7vrqn")
+
+[node name="Label" type="Label" parent="." unique_id=1218234303]
+layout_mode = 1
+offset_left = 450.0
+offset_top = 346.0
+offset_right = 1474.0
+offset_bottom = 646.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 40
+text = "You are the ruler of a once great kingdom.
+At the current moment, you kingdom is at risk of falling to rebellion."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=1768719049]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_hu44a")
+
+[node name="ContinueButton" type="Button" parent="." unique_id=745481461]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 853.0
+offset_top = 603.0
+offset_right = 1085.0
+offset_bottom = 689.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_ehuit")
+text = "Continue"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ContinueButton" unique_id=1135077690]
+libraries/ = SubResource("AnimationLibrary_0cr88")
+
+[node name="Arrows" type="Control" parent="." unique_id=702951989]
+anchors_preset = 0
+offset_left = 358.0
+offset_top = 645.0
+offset_right = 398.0
+offset_bottom = 685.0
+
+[node name="ArrowDown" type="Sprite2D" parent="Arrows" unique_id=269347448]
+visible = false
+texture = ExtResource("4_0cr88")
+metadata/_edit_lock_ = true
+
+[node name="ArrowLeft" type="Sprite2D" parent="Arrows" unique_id=2079507356]
+texture = ExtResource("5_4t6hg")
+metadata/_edit_lock_ = true
+
+[node name="ArrowRight" type="Sprite2D" parent="Arrows" unique_id=1094779134]
+visible = false
+texture = ExtResource("6_7vrqn")
+metadata/_edit_lock_ = true
+
+[node name="ArrowUp" type="Sprite2D" parent="Arrows" unique_id=516755043]
+visible = false
+texture = ExtResource("7_bhfnd")
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrows" unique_id=13294082]
+libraries/ = SubResource("AnimationLibrary_tvjhf")
+
+[connection signal="mouse_entered" from="ContinueButton" to="." method="_on_continue_button_mouse_entered"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

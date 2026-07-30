@@ -43,6 +43,8 @@ var has_army: bool = false:
 	set(val):
 		has_army=val
 		$ProvinceTooltip.update_values()
+		if has_army:
+			MusicManager.play_sfx(MusicManager.SFX.ARMYPLACE)
 var can_have_army: bool = true
 
 # Called when the node enters the scene tree for the first time.

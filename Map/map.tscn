@@ -175,9 +175,7 @@
 [ext_resource type="Resource" uid="uid://b3tr2c35igges" path="res://Events/MapEvents/Foreman/event_foreman_06.tres" id="170_v34en"]
 [ext_resource type="PackedScene" uid="uid://cirml1k3rad5a" path="res://Menus/GameOverMenu.tscn" id="174_0a72k"]
 [ext_resource type="PackedScene" uid="uid://cdokd6o2cq8ix" path="res://UI/ResultsPopup.tscn" id="175_v03vf"]
-[ext_resource type="Texture2D" uid="uid://6t50wamhve8b" path="res://Assets/Portraits/tutorialarrows.png" id="176_fmnyg"]
-[ext_resource type="Theme" uid="uid://cqeqtwae5syvw" path="res://base_theme.tres" id="177_ghw5y"]
-[ext_resource type="Script" uid="uid://b72xfkhmnqyjl" path="res://Map/tutorial.gd" id="177_yhrl3"]
+[ext_resource type="PackedScene" uid="uid://cpe0r0ni6d3h5" path="res://tutorial.tscn" id="176_fmnyg"]
 
 [node name="Map" type="Node2D" unique_id=932399740]
 script = ExtResource("1_ptuj4")
@@ -339,7 +337,8 @@ fervor = 10
 
 [node name="MainInterface" parent="CanvasLayer" unique_id=1175301398 instance=ExtResource("8_ry46t")]
 unique_name_in_owner = true
-visible = false
+
+[node name="Tutorial" parent="CanvasLayer" unique_id=2129602844 instance=ExtResource("176_fmnyg")]
 
 [node name="PauseMenu" parent="CanvasLayer" unique_id=273141382 instance=ExtResource("10_5cbny")]
 unique_name_in_owner = true
@@ -353,79 +352,3 @@ position = Vector2(964, 559)
 
 [node name="GameOverMenu" parent="CanvasLayer" unique_id=1308238179 instance=ExtResource("174_0a72k")]
 z_index = 5
-
-[node name="Tutorial" type="Sprite2D" parent="CanvasLayer" unique_id=1440512382]
-visible = false
-position = Vector2(960, 540)
-texture = ExtResource("176_fmnyg")
-script = ExtResource("177_yhrl3")
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorial" unique_id=2111592220]
-offset_left = -174.0
-offset_top = -259.0
-offset_right = 234.0
-offset_bottom = -206.0
-theme = ExtResource("177_ghw5y")
-text = "If this runs out, you lose!"
-
-[node name="Label2" type="Label" parent="CanvasLayer/Tutorial" unique_id=1367869575]
-offset_left = -644.0
-offset_top = 277.0
-offset_right = -236.0
-offset_bottom = 330.0
-theme = ExtResource("177_ghw5y")
-text = "If this fills up, you lose!"
-
-[node name="Label3" type="Label" parent="CanvasLayer/Tutorial" unique_id=1684237866]
-offset_left = 230.0
-offset_top = 286.0
-offset_right = 638.0
-offset_bottom = 339.0
-theme = ExtResource("177_ghw5y")
-text = "If this runs out, you lose!"
-
-[node name="Label4" type="Label" parent="CanvasLayer/Tutorial" unique_id=2140374118]
-offset_left = -635.0
-offset_top = 177.0
-offset_right = -227.0
-offset_bottom = 230.0
-theme = ExtResource("177_ghw5y")
-text = "If this runs out, the people get angry!"
-
-[node name="Label5" type="Label" parent="CanvasLayer/Tutorial" unique_id=1380465753]
-offset_left = 96.0
-offset_top = 40.0
-offset_right = 712.0
-offset_bottom = 93.0
-theme = ExtResource("177_ghw5y")
-text = "If this runs out, the nobles get angry!"
-
-[node name="Label6" type="Label" parent="CanvasLayer/Tutorial" unique_id=1265191026]
-offset_left = -776.0
-offset_top = -150.0
-offset_right = -160.0
-offset_bottom = -97.0
-theme = ExtResource("177_ghw5y")
-text = "Use these to keep provinces in line!
-If their Fervor rises above Loyalty,
-the rebels take control!"
-
-[node name="Label7" type="Label" parent="CanvasLayer/Tutorial" unique_id=641571301]
-offset_left = 274.0
-offset_top = -200.0
-offset_right = 890.0
-offset_bottom = -35.0
-theme = ExtResource("177_ghw5y")
-text = "Once you respond to each Event,
-you can end the day here!"
-
-[node name="TutorialStartButton" type="Button" parent="CanvasLayer/Tutorial" unique_id=778824868]
-offset_left = -322.0
-offset_top = 415.0
-offset_right = 364.0
-offset_bottom = 501.0
-theme = ExtResource("177_ghw5y")
-text = "Let the game begin."
-
-[connection signal="mouse_entered" from="CanvasLayer/Tutorial/TutorialStartButton" to="." method="_on_mouse_entered"]
-[connection signal="pressed" from="CanvasLayer/Tutorial/TutorialStartButton" to="CanvasLayer/Tutorial" method="_on_tutorial_start_button_pressed"]
