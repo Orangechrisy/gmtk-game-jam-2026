@@ -3,6 +3,10 @@ extends Control
 signal pause_game()
 signal unpause_game()
 
+var favor_tooltip_tween: Tween
+var storage_tooltip_tween: Tween
+@export var OFFSET: Vector2
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameState.connect("mouse_mode_updated", on_mouse_mode_updated)
@@ -18,6 +22,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		_on_menu_button_pressed()
+	if $FavorTooltip.visible:
+		$FavorTooltip.position = get_global_mouse_position() + OFFSET - Vector2(0, $FavorTooltip.size.y)
+		if OFFSET.x < 0:
+			$FavorTooltip.position.x -= $FavorTooltip.size.x
 
 
 # UI Updates
@@ -107,3 +115,91 @@ func play_click():
 
 func _on_mouse_entered() -> void:
 	MusicManager.play_sfx(MusicManager.SFX.MOUSEOVER)
+
+
+func _on_commoner_favor_hover_mouse_entered() -> void:
+	if (GameState.MouseMode == GameState.Click.BASIC):
+		if not GameState.get_current_event():
+			if OFFSET.x < 0:
+				OFFSET.x *= -1
+				$FavorTooltip.set_anchors_and_offsets_preset(PRESET_BOTTOM_LEFT, PRESET_MODE_MINSIZE, 0)
+				$FavorTooltip.set_h_grow_direction(GROW_DIRECTION_END)
+			$FavorTooltip.show()
+			$FavorTooltip/TooltipTimer.start()
+			$FavorTooltip/MarginContainer/VBoxContainer/Title.text = "Common Favor"
+			if GameState.get_noble_sentiment_loss() < -1:
+				$FavorTooltip/MarginContainer/VBoxContainer/Events.show()
+				$FavorTooltip/MarginContainer/VBoxContainer/Events.text = str(GameState.get_common_sentiment_loss() + 1) + " Events"
+			else:
+				$FavorTooltip/MarginContainer/VBoxContainer/Events.hide()
+			var revolting_provinces: int = 0
+			for province in GameState.provinces:
+				if province.curr_owner != province.Owner.KING:
+					revolting_provinces -= 1
+			if revolting_provinces < 0:
+				$FavorTooltip/MarginContainer/VBoxContainer/ProvincesLost.show()
+				$FavorTooltip/MarginContainer/VBoxContainer/ProvincesLost.text = str(revolting_provinces) + " Provinces Lost"
+			else:
+				$FavorTooltip/MarginContainer/VBoxContainer/ProvincesLost.hide()
+
+func _on_favor_bar_hover_mouse_exited() -> void:
+	$FavorTooltip/TooltipTimer.stop()
+	$FavorTooltip.hide()
+	if favor_tooltip_tween: 
+		favor_tooltip_tween.kill()
+	favor_tooltip_tween = create_tween()
+	favor_tooltip_tween.tween_property($FavorTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
+
+func _on_noble_favor_hover_mouse_entered() -> void:
+	if (GameState.MouseMode == GameState.Click.BASIC):
+		if not GameState.get_current_event():
+			if OFFSET.x > 0:
+				OFFSET.x *= -1
+				$FavorTooltip.set_anchors_and_offsets_preset(PRESET_BOTTOM_RIGHT, PRESET_MODE_MINSIZE, 0)
+				$FavorTooltip.set_h_grow_direction(GROW_DIRECTION_BEGIN)
+			$FavorTooltip.show()
+			$FavorTooltip/TooltipTimer.start()
+			$FavorTooltip/MarginContainer/VBoxContainer/Title.text = "Noble Favor"
+			if GameState.get_noble_sentiment_loss() < -1:
+				$FavorTooltip/MarginContainer/VBoxContainer/Events.show()
+				$FavorTooltip/MarginContainer/VBoxContainer/Events.text = str(GameState.get_noble_sentiment_loss() + 1) + " Events"
+			else:
+				$FavorTooltip/MarginContainer/VBoxContainer/Events.hide()
+			var revolting_provinces: int = 0
+			for province in GameState.provinces:
+				if province.curr_owner != province.Owner.KING:
+					revolting_provinces -= 1
+			if revolting_provinces < 0:
+				$FavorTooltip/MarginContainer/VBoxContainer/ProvincesLost.show()
+				$FavorTooltip/MarginContainer/VBoxContainer/ProvincesLost.text = str(revolting_provinces) + " Provinces Lost"
+			else:
+				$FavorTooltip/MarginContainer/VBoxContainer/ProvincesLost.hide()
+
+func _on_noble_favor_hover_mouse_exited() -> void:
+	$FavorTooltip/TooltipTimer.stop()
+	$FavorTooltip.hide()
+	if favor_tooltip_tween: 
+		favor_tooltip_tween.kill()
+	favor_tooltip_tween = create_tween()
+	favor_tooltip_tween.tween_property($FavorTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
+
+func _on_tooltip_timer_timeout() -> void:
+	favor_tooltip_tween = create_tween()
+	print("timer finished, show")
+	favor_tooltip_tween.tween_property($FavorTooltip, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
+
+
+func _on_food_hover_mouse_entered() -> void:
+	pass # Replace with function body.
+
+
+func _on_food_hover_mouse_exited() -> void:
+	pass # Replace with function body.
+
+
+func _on_gold_hover_mouse_entered() -> void:
+	pass # Replace with function body.
+
+
+func _on_gold_hover_mouse_exited() -> void:
+	pass # Replace with function body.

@@ -45,6 +45,7 @@ grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("3_tllhj")
 script = ExtResource("1_51hqq")
+OFFSET = Vector2(25, -5)
 
 [node name="DayTextureRect" type="TextureRect" parent="." unique_id=1746535586]
 layout_mode = 0
@@ -286,6 +287,23 @@ patch_margin_top = 12
 patch_margin_right = 52
 patch_margin_bottom = 59
 
+[node name="FoodHover" type="Control" parent="CommonerTextureRect" unique_id=715482853]
+anchors_preset = 0
+offset_top = -12.0
+offset_right = 232.0
+offset_bottom = 73.0
+mouse_filter = 1
+
+[node name="CommonerFavorHover" type="Control" parent="CommonerTextureRect" unique_id=1657244057]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -366.0
+offset_right = 232.0
+grow_vertical = 0
+mouse_filter = 1
+
 [node name="NobleTextureRect2" type="TextureRect" parent="." unique_id=88494692]
 layout_mode = 1
 anchors_preset = 3
@@ -417,6 +435,30 @@ theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="GoldHover" type="Control" parent="NobleTextureRect2" unique_id=877128254]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -228.0
+offset_top = -8.0
+offset_bottom = 73.0
+grow_horizontal = 0
+mouse_filter = 1
+
+[node name="NobleFavorHover" type="Control" parent="NobleTextureRect2" unique_id=2147330396]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -228.0
+offset_top = -367.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 1
+
 [node name="Armies" type="TextureRect" parent="." unique_id=342733701]
 layout_mode = 1
 offset_left = 325.0
@@ -500,17 +542,19 @@ grow_horizontal = 0
 mouse_behavior_recursive = 2
 text = "MENU"
 
-[node name="FavorTooltip" type="Control" parent="." unique_id=2093043985]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="FavorTooltip" type="PanelContainer" parent="." unique_id=934886474]
+visible = false
+z_index = 4
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -140.0
+offset_right = 360.0
+grow_vertical = 0
+mouse_filter = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="FavorTooltip" unique_id=934886474]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="NinePatchRect" type="NinePatchRect" parent="FavorTooltip/PanelContainer" unique_id=512252607]
+[node name="NinePatchRect" type="NinePatchRect" parent="FavorTooltip" unique_id=512252607]
 layout_mode = 2
 texture = ExtResource("11_i4s74")
 patch_margin_left = 7
@@ -518,38 +562,54 @@ patch_margin_top = 7
 patch_margin_right = 7
 patch_margin_bottom = 7
 
-[node name="MarginContainer" type="MarginContainer" parent="FavorTooltip/PanelContainer" unique_id=56337886]
+[node name="MarginContainer" type="MarginContainer" parent="FavorTooltip" unique_id=56337886]
 layout_mode = 2
 theme_override_constants/margin_left = 7
 theme_override_constants/margin_top = 7
 theme_override_constants/margin_right = 7
 theme_override_constants/margin_bottom = 7
 
-[node name="VBoxContainer" type="VBoxContainer" parent="FavorTooltip/PanelContainer/MarginContainer" unique_id=888644975]
+[node name="VBoxContainer" type="VBoxContainer" parent="FavorTooltip/MarginContainer" unique_id=888644975]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="FavorTooltip/PanelContainer/MarginContainer/VBoxContainer" unique_id=1916416847]
+[node name="Title" type="RichTextLabel" parent="FavorTooltip/MarginContainer/VBoxContainer" unique_id=1916416847]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Commoner Favor"
 fit_content = true
 autowrap_mode = 0
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="FavorTooltip/PanelContainer/MarginContainer/VBoxContainer" unique_id=551725751]
+[node name="Base" type="RichTextLabel" parent="FavorTooltip/MarginContainer/VBoxContainer" unique_id=551725751]
 layout_mode = 2
+theme_override_colors/default_color = Color(0.9019608, 0.32941177, 0, 1)
 text = "-1 Base"
 fit_content = true
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="FavorTooltip/PanelContainer/MarginContainer/VBoxContainer" unique_id=956471491]
+[node name="Events" type="RichTextLabel" parent="FavorTooltip/MarginContainer/VBoxContainer" unique_id=956471491]
+visible = false
 layout_mode = 2
+theme_override_colors/default_color = Color(0.9912048, 0.21373615, 3.85046e-07, 1)
 text = "-1 Events"
 fit_content = true
 
-[node name="RichTextLabel4" type="RichTextLabel" parent="FavorTooltip/PanelContainer/MarginContainer/VBoxContainer" unique_id=104949617]
+[node name="ProvincesLost" type="RichTextLabel" parent="FavorTooltip/MarginContainer/VBoxContainer" unique_id=104949617]
+visible = false
 layout_mode = 2
+theme_override_colors/default_color = Color(0.9137255, 0, 0.101960786, 1)
 text = "-1 Provinces Lost"
 fit_content = true
 
+[node name="TooltipTimer" type="Timer" parent="FavorTooltip" unique_id=1475756438]
+wait_time = 0.5
+
+[connection signal="mouse_entered" from="CommonerTextureRect/FoodHover" to="." method="_on_food_hover_mouse_entered"]
+[connection signal="mouse_exited" from="CommonerTextureRect/FoodHover" to="." method="_on_food_hover_mouse_exited"]
+[connection signal="mouse_entered" from="CommonerTextureRect/CommonerFavorHover" to="." method="_on_commoner_favor_hover_mouse_entered"]
+[connection signal="mouse_exited" from="CommonerTextureRect/CommonerFavorHover" to="." method="_on_favor_bar_hover_mouse_exited"]
+[connection signal="mouse_entered" from="NobleTextureRect2/GoldHover" to="." method="_on_gold_hover_mouse_entered"]
+[connection signal="mouse_exited" from="NobleTextureRect2/GoldHover" to="." method="_on_gold_hover_mouse_exited"]
+[connection signal="mouse_entered" from="NobleTextureRect2/NobleFavorHover" to="." method="_on_noble_favor_hover_mouse_entered"]
+[connection signal="mouse_exited" from="NobleTextureRect2/NobleFavorHover" to="." method="_on_noble_favor_hover_mouse_exited"]
 [connection signal="mouse_entered" from="Armies/PlaceArmyLabel/PlaceArmyButton" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Armies/PlaceArmyLabel/PlaceArmyButton" to="." method="_on_place_army_button_mouse_exited"]
 [connection signal="pressed" from="Armies/PlaceArmyLabel/PlaceArmyButton" to="." method="_on_place_army_button_pressed"]
@@ -557,3 +617,4 @@ fit_content = true
 [connection signal="pressed" from="End/EndDay" to="." method="_on_end_day_pressed"]
 [connection signal="mouse_entered" from="MenuButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="timeout" from="FavorTooltip/TooltipTimer" to="." method="_on_tooltip_timer_timeout"]
