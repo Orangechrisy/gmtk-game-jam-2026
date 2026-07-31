@@ -142,6 +142,19 @@ func reset_days_to_revolution() -> void:
 	days_to_revolution = base_days_to_revolution
 	days_to_revolution_updated.emit(days_to_revolution)
 
+## Sets Food, Gold, and Days to Revolution to 0 after all end-of-day calculations
+func stop_negative_resources() -> void:
+	if gold < 0:
+		gold = 0
+		gold_updated.emit()
+	
+	if food < 0:
+		food = 0
+		food_updated.emit()
+	
+	if days_to_revolution < 0:
+		days_to_revolution = 0
+
 # Gold
 
 func get_gold() -> int:
@@ -175,10 +188,14 @@ func get_common_sentiment() -> int:
 
 func set_common_sentiment(val: int) -> void:
 	common_sentiment = val
+	if common_sentiment < 0:
+		common_sentiment = 0
 	common_sentiment_updated.emit(common_sentiment)
 
 func change_common_sentiment(val: int) -> void:
 	common_sentiment += val
+	if common_sentiment < 0:
+		common_sentiment = 0
 	common_sentiment_updated.emit(common_sentiment)
 
 func get_common_sentiment_loss() -> int:
@@ -195,10 +212,14 @@ func get_noble_sentiment() -> int:
 
 func set_noble_sentiment(val: int) -> void:
 	noble_sentiment = val
+	if noble_sentiment < 0:
+		noble_sentiment = 0
 	noble_sentiment_updated.emit(noble_sentiment)
 
 func change_noble_sentiment(val: int) -> void:
 	noble_sentiment += val
+	if noble_sentiment < 0:
+		noble_sentiment = 0
 	noble_sentiment_updated.emit(noble_sentiment)
 
 func get_noble_sentiment_loss() -> int:
@@ -231,13 +252,17 @@ func set_armies(val: int) -> void:
 	armies = val
 	if armies_left > armies:
 		armies_left = armies
+		armies_left_updated.emit(armies_left)
 
 func change_armies(val: int) -> void:
 	armies += val
 	if armies_left > armies:
 		armies_left = armies
+		armies_left_updated.emit(armies_left)
 	if armies < 0:
 		armies = 0
+		armies_left = armies
+		armies_left_updated.emit(armies_left)
 
 # Province check
 

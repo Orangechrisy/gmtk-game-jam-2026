@@ -50,6 +50,9 @@ func end_day() -> void:
 	
 	reduce_days_to_revolution()
 	
+	# Handle negative values after all calculations complete
+	GameState.stop_negative_resources()
+	
 	handle_loss_effects()
 	
 	flip_provinces()
@@ -91,16 +94,29 @@ func calculate_fervor() -> void:
 
 ## calculate_common_favor: Calculate changes to Common Favor based on fervor/loyalty
 func calculate_common_favor() -> void:
+	
+	# Per-province common favor loss handling
 	for province in GameState.provinces:
+		var num_unhappy_provinces = 0
 		var common_sentiment_change = 0
+		
+		# Each revolting province takes one common favor
 		if province.curr_owner != province.Owner.KING:
 			common_sentiment_change -= 1
 		
+		# Each province that is unhappy (fervor is at least 2/3 loyalty) takes 1/3 common favor
+		if province.fervor * 3 > province.loyalty * 2:
+			num_unhappy_provinces += 1
+		
+		common_sentiment_change -= floor(num_unhappy_provinces / 3)
+		
+		# Common favor loss doubled if Food is below 0
 		if GameState.get_food() <= 0:
 			common_sentiment_change *= 2
 		
 		GameState.change_common_sentiment(common_sentiment_change)
 	
+	# Per-turn common favor loss handling
 	if GameState.get_food() <= 0:
 		GameState.change_common_sentiment(GameState.common_sentiment_loss * 2)
 	else:
@@ -127,10 +143,10 @@ func calculate_noble_favor() -> void:
 func reduce_days_to_revolution() -> void:
 	var days_to_reduce: int = 1
 	# Run some calculations here based on events that happened
-	if GameState.get_common_sentiment() <= 50:
+	if GameState.get_common_sentiment() <= 30:
 		days_to_reduce += 1
 		
-	if GameState.get_common_sentiment() <= 25:
+	if GameState.get_common_sentiment() <= 0:
 		days_to_reduce += 1
 		
 	if GameState.revolt_accelerated:
@@ -212,10 +228,10 @@ func check_game_end() -> bool:
 	if GameState.get_noble_sentiment() <= 0:
 		end_game(GameState.Ending.NOBLE_ASSASSIN)
 		return true
-	# Common favor
-	if GameState.get_common_sentiment() <= 0:
-		end_game(GameState.Ending.REVOLUTION)
-		return true
+	# Common favor (removed)
+	#if GameState.get_common_sentiment() <= 0:
+		#end_game(GameState.Ending.REVOLUTION)
+		#return true
 		
 	return false
 
