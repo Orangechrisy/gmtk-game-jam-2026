@@ -14,12 +14,12 @@ func _ready() -> void:
 	GameState.connect("game_ended", game_ended)
 	
 	#TUTORIAL
-	await get_tree().physics_frame
-	if SaveData.get_data("TutorialCompleted"):
-		$MainMainMenu/TutorialButton.show()
+	GameManager.connect("quit_to_main", show_tutorial)
+	show_tutorial()
 
 func game_ended(_ending, _ending_names, _ending_texts):
 	show_endings()
+	show_tutorial()
 
 func show_endings():
 	await get_tree().physics_frame
@@ -30,6 +30,11 @@ func show_endings():
 	if ending_count > 0:
 		$EndingsContainer/HBoxContainer/Num.text = str(ending_count)
 		$EndingsContainer.show()
+
+func show_tutorial():
+	await get_tree().physics_frame
+	if SaveData.get_data("TutorialCompleted"):
+		$MainMainMenu/TutorialButton.show()
 
 func _on_start_game_button_pressed() -> void:
 	play_click()
