@@ -1,7 +1,20 @@
 extends Node
 
 @onready var playing: bool = false
+@export var web: bool = false
 @export var default_db: float = -15.0
+
+var tracks_playing = {
+	"Military": false,
+	"Farm": false,
+	"Church": false,
+	"Mine": false,
+	"Outskirts": false,
+	"City": false,
+	"Villa": false,
+	"Port": false,
+	"Town": false
+}
 
 func _ready() -> void:
 	GameState.connect("province_owner_changed", add_track)
@@ -39,6 +52,17 @@ func start_base_track():
 func get_current_time():
 	return $MainTheme/"Capital (Base)".get_playback_position()
 
+func loop():
+	_reset()
+	await get_tree().physics_frame
+	$"MainTheme/Capital (Base)".play()
+	if web:
+		var i: int = 1
+		for track_name in tracks_playing:
+			if tracks_playing[track_name]:
+				$MainTheme.get_child(i).play()
+			i+=1
+
 func add_track(province: Province):
 	var province_name = province.province_name
 	#print(province_name)
@@ -68,12 +92,14 @@ func add_track(province: Province):
 		_:
 			print("Error: cannot add music, unknown Province")
 			return
-	track.volume_linear = 0.0
-	track.play(time)
-	var tween = create_tween()
-	tween.set_parallel()
-	tween.tween_property(track, "volume_linear", db_to_linear(default_db), 1.0)
-	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	tracks_playing[province_name] = true
+	if !web:
+		track.volume_linear = 0.0
+		track.play(time)
+		var tween = create_tween()
+		tween.set_parallel()
+		tween.tween_property(track, "volume_linear", db_to_linear(default_db), 1.0)
+		tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 
 #SFX
 enum SFX {CLICK, CLICKINVALID, MOUSEOVER, POPUP, POSJINGLE, NEGJINGLE, REVOLT, CHARDEATH, ARMYPLACE}
@@ -83,3 +109,7 @@ func play_sfx(SFX_ID: int, change_pitch: bool = true):
 	if change_pitch:
 		Audio.pitch_scale = randf_range(0.8,1.2)
 	Audio.play()
+
+
+func _on_capital_base_finished() -> void:
+	loop()

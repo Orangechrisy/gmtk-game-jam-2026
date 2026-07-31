@@ -108,7 +108,6 @@ func hide_arrows():
 
 #TUTORIAL
 func next_step():
-	print(step)
 	step+=1
 	match step:
 		1: #INTRO
