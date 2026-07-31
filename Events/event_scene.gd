@@ -38,7 +38,7 @@ func event_selected(event: MapEvent):
 	%Title.text = "[font_size=28]" + TextManager.get_text(event.get_event_name()) + "[/font_size]"
 	%Portrait.texture = event.get_portrait()
 	%CharacterName.text = "[font_size=28]" + TextManager.get_text(event.get_character_name()) + "[/font_size]"
-	if %CharacterName.text == "":
+	if event.get_character_name() == "":
 		set_auto_event()
 	set_dialogue(event.get_event_dialogue())
 	create_buttons(event.get_options())
@@ -50,7 +50,9 @@ func event_selected(event: MapEvent):
 func set_auto_event() -> void:
 	%Close.visible = false
 	%CharacterName.get_parent().visible = false
-	if %Portrait.texture != null:
+	print(%Portrait.texture)
+	if %Portrait.texture == null:
+		print("hiding portrait?")
 		%PortraitBorder.visible = false
 
 # TODO: handle dialogue text better than just basically a block with newlines
