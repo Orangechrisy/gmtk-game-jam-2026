@@ -12,4 +12,4 @@ func do_effect() -> void:
 			GameManager.end_game(GameState.Ending.NOBLE_ASSASSIN)
 
 func get_effect_desc() -> String:
-	return "Chance of Assassination if Noble Favor is below %f" % int(favor_threshold)
+	return "Chance of Assassination if Noble Favor is below %.f" % favor_threshold
