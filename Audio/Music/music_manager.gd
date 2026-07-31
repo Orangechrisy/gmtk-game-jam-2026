@@ -56,12 +56,11 @@ func loop():
 	_reset()
 	await get_tree().physics_frame
 	$"MainTheme/Capital (Base)".play()
-	if web:
-		var i: int = 1
-		for track_name in tracks_playing:
-			if tracks_playing[track_name]:
-				$MainTheme.get_child(i).play()
-			i+=1
+	var i: int = 1
+	for track_name in tracks_playing:
+		if tracks_playing[track_name]:
+			$MainTheme.get_child(i).play()
+		i+=1
 
 func add_track(province: Province):
 	var province_name = province.province_name

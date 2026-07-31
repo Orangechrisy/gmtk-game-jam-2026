@@ -194,7 +194,7 @@ func next_step():
 			if !text_showing:
 				step=8
 				return
-			var text: String = "Now, click on a province.\nThis will block Fervor gain this turn, and it will block Fervor gain from any Events."
+			var text: String = "Now, click on a province.\nThis will block Fervor gain this turn, and it will block Fervor gain from any Events that happen at the start of the day."
 			var textpos: Vector2 = Vector2(194.0, 364.0)
 			show_text(text, textpos)
 			var blockoutpos: Vector2 = Vector2(743.0, 694.0)
