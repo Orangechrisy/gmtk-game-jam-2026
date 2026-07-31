@@ -6,6 +6,11 @@ var current_event: MapEvent
 func _ready() -> void:
 	reset_event_scene()
 	GameState.connect("mouse_mode_updated", on_mouse_mode_updated)
+	GameManager.connect("restart", _reset)
+
+func _reset():
+	reset_event_scene()
+	#close_event(false)
 
 func on_mouse_mode_updated(new_mode) -> void:
 	if new_mode == GameState.Click.EVENT:

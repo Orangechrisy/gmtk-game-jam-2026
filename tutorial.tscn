@@ -162,7 +162,7 @@ anchors_preset = 0
 script = ExtResource("1_yb1ct")
 
 [node name="TutorialBlockOut" type="Sprite2D" parent="." unique_id=552969348]
-position = Vector2(141, 687)
+position = Vector2(510, 107)
 texture = ExtResource("3_ehuit")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TutorialBlockOut" unique_id=861329727]
@@ -170,15 +170,15 @@ libraries/ = SubResource("AnimationLibrary_7vrqn")
 
 [node name="Label" type="Label" parent="." unique_id=1218234303]
 layout_mode = 1
-offset_left = 450.0
-offset_top = 346.0
-offset_right = 1474.0
-offset_bottom = 646.0
+offset_left = 6.0
+offset_top = 287.0
+offset_right = 1053.0
+offset_bottom = 587.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 40
-text = "You are the ruler of a once great kingdom.
-At the current moment, you kingdom is at risk of falling to rebellion."
+text = "This the Favor of the Nobles in your Empire.
+If your Noble Favor reaches 0, the nobles will start acting deceitful."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -193,10 +193,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 853.0
-offset_top = 603.0
-offset_right = 1085.0
-offset_bottom = 689.0
+offset_left = 885.0
+offset_top = 593.0
+offset_right = 1117.0
+offset_bottom = 679.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_ehuit")
@@ -207,10 +207,10 @@ libraries/ = SubResource("AnimationLibrary_0cr88")
 
 [node name="Arrows" type="Control" parent="." unique_id=702951989]
 anchors_preset = 0
-offset_left = 358.0
-offset_top = 645.0
-offset_right = 398.0
-offset_bottom = 685.0
+offset_left = 368.0
+offset_top = 259.0
+offset_right = 405.0
+offset_bottom = 299.0
 
 [node name="ArrowDown" type="Sprite2D" parent="Arrows" unique_id=269347448]
 visible = false
@@ -218,6 +218,7 @@ texture = ExtResource("4_0cr88")
 metadata/_edit_lock_ = true
 
 [node name="ArrowLeft" type="Sprite2D" parent="Arrows" unique_id=2079507356]
+visible = false
 texture = ExtResource("5_4t6hg")
 metadata/_edit_lock_ = true
 
@@ -227,7 +228,6 @@ texture = ExtResource("6_7vrqn")
 metadata/_edit_lock_ = true
 
 [node name="ArrowUp" type="Sprite2D" parent="Arrows" unique_id=516755043]
-visible = false
 texture = ExtResource("7_bhfnd")
 metadata/_edit_lock_ = true
 

@@ -107,6 +107,7 @@ signal game_ended(ending: int, ending_name: StringName, ending_text: String)
 signal show_results_popup()
 signal add_to_label(to_add: String)
 signal update_tutorial(show: bool)
+signal tutorial_next_step(step: int)
 
 # Day
 

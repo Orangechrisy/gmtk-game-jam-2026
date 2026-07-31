@@ -56,6 +56,7 @@ func _ready() -> void:
 	$EventPopup.position = event_location
 	$TooltipTimer.timeout.connect(_on_timer_timeout)
 	GameState.connect("day_updated", on_day_updated)
+	GameState.connect("tutorial_next_step", tutorial_next_step)
 	$ProvinceTooltip.hide()
 	$ProvinceTooltip.update_values()
 	
@@ -71,11 +72,15 @@ func _reset():
 	fervor_gain = 1
 	can_have_army = true
 	
+	$EventPopup.visible = false
+	event_present = null
 	for event in potential_events:
 		if event.one_time == true:
 			event.has_happened = false
 	
 	$BorderSprite.texture = load("res://Assets/map/"+province_name.to_lower()+" borders.png")
+	hide_outline()
+	$EventPopup._on_mouse_exited()
 
 
 func on_day_updated(_new_day):
@@ -156,13 +161,16 @@ func roll_event_odds() -> bool:
 
 ## the province has been clicked on
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if (GameState.MouseMode == GameState.Click.BASIC) or (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT):
+	if (GameState.MouseMode == GameState.Click.BASIC) or (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT) or ((GameState.MouseMode == GameState.Click.TUTORIAL) and tutorial_can_use_army):
 		if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			show_outline()
 			
 			print("province ", province_name, " clicked")
 			if GameState.MouseMode == GameState.Click.BASIC:
 				if event_present:
+					if tutorial_can_event:
+						GameState.tutorial_next_step.emit(11)
+					
 					update_events(event_present, false)
 					GameManager.update_current_province(self)
 					event_present.event_fired()
@@ -170,13 +178,16 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 						tween.kill()
 					tween = create_tween()
 					tween.tween_property($ProvinceTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
-			elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+			elif (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT):
 				# TODO: visual effect of some sort? sound?
 				if curr_owner == Owner.KING and not has_army and can_have_army: # No placing armies in unowned provinces
 					GameState.MouseMode = GameState.Click.BASIC
 					print("Army placed!")
 					has_army = true
 					GameState.change_armies_left(-1) # for now
+					
+					if tutorial_can_use_army:
+						GameState.tutorial_next_step.emit(10)
 				else: # if we clicked on an invalid province
 					print("Can't place here!")
 
@@ -190,7 +201,7 @@ func hide_outline():
 	$BorderSprite.z_index = -2
 
 func _on_area_2d_mouse_entered() -> void:
-	if (GameState.MouseMode == GameState.Click.BASIC) or (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT):
+	if (GameState.MouseMode == GameState.Click.BASIC) or (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT) or tutorial_can_hover:
 		if not GameState.get_current_event():
 			$ProvinceTooltip.show()
 			$TooltipTimer.start(TOOLTIP_TIME_DELAY)
@@ -206,3 +217,21 @@ func _on_area_2d_mouse_exited() -> void:
 func _on_timer_timeout() -> void:
 	tween = create_tween()
 	tween.tween_property($ProvinceTooltip, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
+
+#tutorial
+var tutorial_can_hover: bool = false
+var tutorial_can_use_army: bool = false
+var tutorial_can_event: bool = false
+func tutorial_next_step(step: int):
+	if step==7:
+		tutorial_can_hover=true
+	else:
+		tutorial_can_hover=false
+	if step==9:
+		tutorial_can_use_army=true
+	else:
+		tutorial_can_use_army=false
+	if step==10:
+		if event_present:
+			$EventPopup._on_mouse_entered()
+			tutorial_can_event=true

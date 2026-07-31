@@ -63,6 +63,15 @@ offset_bottom = 863.0
 theme = ExtResource("2_5ncg0")
 text = "Quit Game"
 
+[node name="TutorialButton" type="Button" parent="MainMainMenu" unique_id=568881997]
+layout_mode = 0
+offset_left = 1516.0
+offset_top = 589.0
+offset_right = 1848.0
+offset_bottom = 675.0
+theme = ExtResource("2_5ncg0")
+text = "Tutorial"
+
 [node name="OptionsMenu" parent="." unique_id=806118121 instance=ExtResource("2_lbqne")]
 visible = false
 
@@ -127,3 +136,5 @@ metadata/_edit_lock_ = true
 [connection signal="pressed" from="MainMainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="mouse_entered" from="MainMainMenu/QuitGameButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MainMainMenu/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
+[connection signal="mouse_entered" from="MainMainMenu/TutorialButton" to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="MainMainMenu/TutorialButton" to="." method="_on_tutorial_button_pressed"]

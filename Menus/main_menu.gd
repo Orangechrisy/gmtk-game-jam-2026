@@ -4,6 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$EndingsContainer.hide()
+	$MainMainMenu/TutorialButton.hide()
 	for sub_menu in get_children():
 		if sub_menu.has_signal("back_up"):
 			sub_menu.connect("back_up", on_back_up)
@@ -11,6 +12,11 @@ func _ready() -> void:
 	#ENDINGS
 	show_endings()
 	GameState.connect("game_ended", game_ended)
+	
+	#TUTORIAL
+	await get_tree().physics_frame
+	if SaveData.get_data("TutorialCompleted"):
+		$MainMainMenu/TutorialButton.show()
 
 func game_ended(_ending, _ending_names, _ending_texts):
 	show_endings()
@@ -55,14 +61,21 @@ func _on_quit_game_button_pressed() -> void:
 	play_click()
 	$TitleFlag.visible = false
 	$MainMainMenu.visible = false
+	$EndingsContainer.visible = false
 	$QuitConfirmMenu.visible = true
 
 func on_back_up() -> void:
 	$TitleFlag.visible = true
 	$MainMainMenu.visible = true
+	show_endings()
 
 func play_click():
 	MusicManager.play_sfx(MusicManager.SFX.CLICK)
 
 func _on_mouse_entered() -> void:
 	MusicManager.play_sfx(MusicManager.SFX.MOUSEOVER)
+
+
+func _on_tutorial_button_pressed() -> void:
+	SaveData.save_data("TutorialCompleted", false)
+	_on_start_game_button_pressed()

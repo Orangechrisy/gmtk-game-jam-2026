@@ -8,19 +8,26 @@ func _ready() -> void:
 	$Arrows/ArrowRight.hide()
 	$Arrows/ArrowUp.hide()
 	GameState.connect("update_tutorial", on_update_tutorial)
+	GameState.connect("tutorial_next_step", tutorial_next_step)
 
 func on_update_tutorial(show: bool) -> void:
 	if show:
 		start_tutorial()
 
+func tutorial_next_step(nextstep: int):
+	if nextstep > 8:
+		next_step()
+
 func start_tutorial():
 	await get_tree().physics_frame
+	step=0
 	if SaveData.get_data("TutorialCompleted"):
 		hide()
 		end_tutorial()
 	else:
+		GameState.MouseMode = GameState.Click.TUTORIAL
 		next_step()
-		#SaveData.save_data("TutorialCompleted", true)
+		SaveData.save_data("TutorialCompleted", true)
 
 var text_showing: bool = false
 func show_text(text: String, pos: Vector2):
@@ -101,6 +108,7 @@ func hide_arrows():
 
 #TUTORIAL
 func next_step():
+	print(step)
 	step+=1
 	match step:
 		1: #INTRO
@@ -109,6 +117,7 @@ func next_step():
 			show_text(text, textpos)
 			var buttonpos: Vector2 = Vector2(841, 574)
 			show_button(buttonpos)
+			show()
 		2: #DAYS
 			var text: String = "This is how many days you have until your empire falls into rebellion.\nCan you change your fate before that happens?"
 			var textpos: Vector2 = Vector2(360.5, 300.0)
@@ -130,7 +139,7 @@ func next_step():
 			var arrowpos: Vector2 = Vector2(302.0, 934.0)
 			show_arrow("Left", arrowpos)
 		4: #FOOD
-			var text: String = "This your Food.\nIf you run out of Food, your Commoner Favor will considerably decrease each turn!"
+			var text: String = "This the Empire's Food.\nIf you run out of Food, your Commoner Favor will considerably decrease each turn!"
 			var textpos: Vector2 = Vector2(316.0, 379.0)
 			show_text(text, textpos)
 			var buttonpos: Vector2 = Vector2(853.0, 603.0)
@@ -139,16 +148,68 @@ func next_step():
 			show_blockout(blockoutpos)
 			var arrowpos: Vector2 = Vector2(358.0, 645.0)
 			show_arrow("Left", arrowpos)
-		4: #FOOD
-			var text: String = "This your Food.\nIf you run out of Food, your Commoner Favor will considerably decrease each turn!"
-			var textpos: Vector2 = Vector2(316.0, 379.0)
+		5: #NOBLE
+			var text: String = "This the Favor of the Nobles in your Empire.\nIf your Noble Favor reaches 0, the nobles will start acting deceitful."
+			var textpos: Vector2 = Vector2(434.0, 642.0)
 			show_text(text, textpos)
-			var buttonpos: Vector2 = Vector2(853.0, 603.0)
+			var buttonpos: Vector2 = Vector2(1059.0, 853.0)
 			show_button(buttonpos)
-			var blockoutpos: Vector2 = Vector2(141.0, 687.0)
+			var blockoutpos: Vector2 = Vector2(1786.0, 870.0)
 			show_blockout(blockoutpos)
-			var arrowpos: Vector2 = Vector2(358.0, 645.0)
-			show_arrow("Left", arrowpos)
+			var arrowpos: Vector2 = Vector2(1645.0, 903.0)
+			show_arrow("Right", arrowpos)
+		6: #GOLD
+			var text: String = "This the Empire's Gold.\nYou can purchase things during events, but careful!\nIf you run out, Noble Favor will dramatically decrease!"
+			var textpos: Vector2 = Vector2(580.0, 387.0)
+			show_text(text, textpos)
+			var buttonpos: Vector2 = Vector2(1140.0, 630.0)
+			show_button(buttonpos)
+			var blockoutpos: Vector2 = Vector2(1800.0, 687.0)
+			show_blockout(blockoutpos)
+			var arrowpos: Vector2 = Vector2(1641.0, 672.0)
+			show_arrow("Right", arrowpos)
+		7: #HOVER
+			GameState.tutorial_next_step.emit(step)
+			
+			var text: String = "Hover your mouse over a province to see its gold and food output, as well as its fervor and loyalty.\nFervor naturally increases each turn. If Fervor increases past Loyalty, it may fall, so be cautious."
+			var textpos: Vector2 = Vector2(194.0, 364.0)
+			show_text(text, textpos)
+			var buttonpos: Vector2 = Vector2(885.0, 593.0)
+			show_button(buttonpos)
+			var blockoutpos: Vector2 = Vector2(743.0, 694.0)
+			show_blockout(blockoutpos)
+			var arrowpos: Vector2 = Vector2(621.0, 692.0)
+			show_arrow("Right", arrowpos)
+		8: #ARMY
+			GameState.tutorial_next_step.emit(step)
+			
+			var text: String = "A way to mitigate Fervor is by placing Armies.\nTo do this, first click Place Army."
+			var textpos: Vector2 = Vector2(-20.0, 293.0)
+			show_text(text, textpos)
+			hide_button()
+			var blockoutpos: Vector2 = Vector2(510.0, 107.0)
+			show_blockout(blockoutpos)
+			var arrowpos: Vector2 = Vector2(368.0, 259.0)
+			show_arrow("Up", arrowpos)
+		9: #ARMY 2
+			if !text_showing:
+				step=8
+				return
+			var text: String = "Now, click on a province.\nThis will block Fervor gain this turn, and it will block Fervor gain from any Events."
+			var textpos: Vector2 = Vector2(194.0, 364.0)
+			show_text(text, textpos)
+			var blockoutpos: Vector2 = Vector2(743.0, 694.0)
+			show_blockout(blockoutpos)
+			var arrowpos: Vector2 = Vector2(621.0, 692.0)
+			show_arrow("Right", arrowpos)
+		10: #EVENTS
+			GameState.tutorial_next_step.emit(step)
+			
+			var text: String = "To end the day, you must complete every event. To do this, simply click on the province with an event icon.\nBut, be careful! A wrong decision could put the future of your nation at peril!\nGood luck!"
+			var textpos: Vector2 = Vector2(194.0, 364.0)
+			show_text(text, textpos)
+			hide_blockout()
+			hide_arrows()
 		_:
 			end_tutorial()
 		
