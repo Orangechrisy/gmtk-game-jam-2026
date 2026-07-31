@@ -72,14 +72,14 @@ func check_for_events() -> void:
 ## calculate_food: Calculates new Food total based on output/consumption of each province
 func calculate_food() -> void:
 	for province in GameState.provinces:
-		if province.get_curr_owner() == 0:
+		if province.get_curr_owner() == province.Owner.KING:
 			GameState.change_food(province.calculate_food())
 		
 			
 ## calculate_gold: Calculates new Gold total based on output/consumption of each province
 func calculate_gold() -> void:
 	for province in GameState.provinces:
-		if province.get_curr_owner() == 0:
+		if province.get_curr_owner() == province.Owner.KING:
 			GameState.change_gold(province.calculate_gold())
 
 ## calculate_fervor: Calculate fervor updates in all provinces

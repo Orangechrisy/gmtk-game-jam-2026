@@ -6,6 +6,7 @@ signal unpause_game()
 var favor_tooltip_tween: Tween
 var storage_tooltip_tween: Tween
 @export var OFFSET: Vector2
+@export var OFFSET2: Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,6 +28,10 @@ func _process(_delta: float) -> void:
 		$FavorTooltip.position = get_global_mouse_position() + OFFSET - Vector2(0, $FavorTooltip.size.y)
 		if OFFSET.x < 0:
 			$FavorTooltip.position.x -= $FavorTooltip.size.x
+	if $StorageTooltip.visible:
+		$StorageTooltip.position = get_global_mouse_position() + OFFSET2 - Vector2(0, $StorageTooltip.size.y)
+		if OFFSET2.x < 0:
+			$StorageTooltip.position.x -= $StorageTooltip.size.x
 
 
 # UI Updates
@@ -128,7 +133,7 @@ func _on_commoner_favor_hover_mouse_entered() -> void:
 				$FavorTooltip.set_anchors_and_offsets_preset(PRESET_BOTTOM_LEFT, PRESET_MODE_MINSIZE, 0)
 				$FavorTooltip.set_h_grow_direction(GROW_DIRECTION_END)
 			$FavorTooltip.show()
-			$FavorTooltip/TooltipTimer.start()
+			$FavorTooltip/FavorTooltipTimer.start()
 			$FavorTooltip/MarginContainer/VBoxContainer/Title.text = "Common Favor"
 			if GameState.get_noble_sentiment_loss() < -1:
 				$FavorTooltip/MarginContainer/VBoxContainer/Events.show()
@@ -146,7 +151,7 @@ func _on_commoner_favor_hover_mouse_entered() -> void:
 				$FavorTooltip/MarginContainer/VBoxContainer/ProvincesLost.hide()
 
 func _on_favor_bar_hover_mouse_exited() -> void:
-	$FavorTooltip/TooltipTimer.stop()
+	$FavorTooltip/FavorTooltipTimer.stop()
 	$FavorTooltip.hide()
 	if favor_tooltip_tween: 
 		favor_tooltip_tween.kill()
@@ -161,7 +166,7 @@ func _on_noble_favor_hover_mouse_entered() -> void:
 				$FavorTooltip.set_anchors_and_offsets_preset(PRESET_BOTTOM_RIGHT, PRESET_MODE_MINSIZE, 0)
 				$FavorTooltip.set_h_grow_direction(GROW_DIRECTION_BEGIN)
 			$FavorTooltip.show()
-			$FavorTooltip/TooltipTimer.start()
+			$FavorTooltip/FavorTooltipTimer.start()
 			$FavorTooltip/MarginContainer/VBoxContainer/Title.text = "Noble Favor"
 			if GameState.get_noble_sentiment_loss() < -1:
 				$FavorTooltip/MarginContainer/VBoxContainer/Events.show()
@@ -179,33 +184,67 @@ func _on_noble_favor_hover_mouse_entered() -> void:
 				$FavorTooltip/MarginContainer/VBoxContainer/ProvincesLost.hide()
 
 func _on_noble_favor_hover_mouse_exited() -> void:
-	$FavorTooltip/TooltipTimer.stop()
+	$FavorTooltip/FavorTooltipTimer.stop()
 	$FavorTooltip.hide()
 	if favor_tooltip_tween: 
 		favor_tooltip_tween.kill()
 	favor_tooltip_tween = create_tween()
 	favor_tooltip_tween.tween_property($FavorTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
 
-func _on_tooltip_timer_timeout() -> void:
+func _on_favor_tooltip_timer_timeout() -> void:
 	favor_tooltip_tween = create_tween()
 	favor_tooltip_tween.tween_property($FavorTooltip, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
 
 
 func _on_food_hover_mouse_entered() -> void:
-	pass # Replace with function body.
-
+	if (GameState.MouseMode == GameState.Click.BASIC):
+		if not GameState.get_current_event():
+			if OFFSET2.x < 0:
+				OFFSET2.x *= -1
+				$StorageTooltip.set_anchors_and_offsets_preset(PRESET_BOTTOM_LEFT, PRESET_MODE_MINSIZE, 0)
+				$StorageTooltip.set_h_grow_direction(GROW_DIRECTION_END)
+			$StorageTooltip.show()
+			$StorageTooltip/StorageTooltipTimer.start()
+			var total_food_change: int = 0
+			for province in GameState.provinces:
+				if province.get_curr_owner() == province.Owner.KING:
+					total_food_change += province.calculate_food()
+			%StorageChange.text = "[color={color}]{amount} Total Food from Provinces[/color]".format([["color", "#37472a" if total_food_change >= 0 else "#AD321F"], ["amount", "%+.f" % total_food_change]])
 
 func _on_food_hover_mouse_exited() -> void:
-	pass # Replace with function body.
-
+	$StorageTooltip/StorageTooltipTimer.stop()
+	$StorageTooltip.hide()
+	if storage_tooltip_tween: 
+		storage_tooltip_tween.kill()
+	storage_tooltip_tween = create_tween()
+	storage_tooltip_tween.tween_property($StorageTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
 
 func _on_gold_hover_mouse_entered() -> void:
-	pass # Replace with function body.
-
+	if (GameState.MouseMode == GameState.Click.BASIC):
+		if not GameState.get_current_event():
+			if OFFSET2.x > 0:
+				OFFSET2.x *= -1
+				$StorageTooltip.set_anchors_and_offsets_preset(PRESET_BOTTOM_RIGHT, PRESET_MODE_MINSIZE, 0)
+				$StorageTooltip.set_h_grow_direction(GROW_DIRECTION_BEGIN)
+			$StorageTooltip.show()
+			$StorageTooltip/StorageTooltipTimer.start()
+			var total_gold_change: int = 0
+			for province in GameState.provinces:
+				if province.get_curr_owner() == province.Owner.KING:
+					total_gold_change += province.calculate_gold()
+			%StorageChange.text = "[color={color}]{amount} Total Gold from Provinces[/color]".format([["color", "#37472a" if total_gold_change >= 0 else "#AD321F"], ["amount", "%+.f" % total_gold_change]])
 
 func _on_gold_hover_mouse_exited() -> void:
-	pass # Replace with function body.
+	$StorageTooltip/StorageTooltipTimer.stop()
+	$StorageTooltip.hide()
+	if storage_tooltip_tween: 
+		storage_tooltip_tween.kill()
+	storage_tooltip_tween = create_tween()
+	storage_tooltip_tween.tween_property($StorageTooltip, "modulate", Color(0.0, 0.0, 0.0, 0.0), 0.05)
 
+func _on_storage_tooltip_timer_timeout() -> void:
+	storage_tooltip_tween = create_tween()
+	storage_tooltip_tween.tween_property($StorageTooltip, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
 
 #tutorial
 var tutorial_can_use_army: bool = false

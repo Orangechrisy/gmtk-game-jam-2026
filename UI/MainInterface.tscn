@@ -46,6 +46,7 @@ mouse_filter = 1
 theme = ExtResource("3_tllhj")
 script = ExtResource("1_51hqq")
 OFFSET = Vector2(25, -5)
+OFFSET2 = Vector2(25, -5)
 
 [node name="DayTextureRect" type="TextureRect" parent="." unique_id=1746535586]
 layout_mode = 0
@@ -603,7 +604,57 @@ text = "-1 Provinces Lost"
 fit_content = true
 autowrap_mode = 0
 
-[node name="TooltipTimer" type="Timer" parent="FavorTooltip" unique_id=1475756438]
+[node name="FavorTooltipTimer" type="Timer" parent="FavorTooltip" unique_id=1475756438]
+wait_time = 0.5
+
+[node name="StorageTooltip" type="PanelContainer" parent="." unique_id=847143122]
+visible = false
+z_index = 4
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -140.0
+offset_right = 360.0
+grow_vertical = 0
+mouse_filter = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="StorageTooltip" unique_id=287027196]
+layout_mode = 2
+texture = ExtResource("11_i4s74")
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="MarginContainer" type="MarginContainer" parent="StorageTooltip" unique_id=1338907639]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StorageTooltip/MarginContainer" unique_id=1321279948]
+layout_mode = 2
+
+[node name="Info" type="RichTextLabel" parent="StorageTooltip/MarginContainer/VBoxContainer" unique_id=547489109]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+text = "If this is below 0, favor will drop dramatically!"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="StorageChange" type="RichTextLabel" parent="StorageTooltip/MarginContainer/VBoxContainer" unique_id=709697864]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = " +5 Total Gold from Provinces"
+fit_content = true
+
+[node name="StorageTooltipTimer" type="Timer" parent="StorageTooltip" unique_id=172687216]
 wait_time = 0.5
 
 [connection signal="mouse_entered" from="CommonerTextureRect/FoodHover" to="." method="_on_food_hover_mouse_entered"]
@@ -621,4 +672,5 @@ wait_time = 0.5
 [connection signal="pressed" from="End/EndDay" to="." method="_on_end_day_pressed"]
 [connection signal="mouse_entered" from="MenuButton" to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
-[connection signal="timeout" from="FavorTooltip/TooltipTimer" to="." method="_on_tooltip_timer_timeout"]
+[connection signal="timeout" from="FavorTooltip/FavorTooltipTimer" to="." method="_on_favor_tooltip_timer_timeout"]
+[connection signal="timeout" from="StorageTooltip/StorageTooltipTimer" to="." method="_on_storage_tooltip_timer_timeout"]

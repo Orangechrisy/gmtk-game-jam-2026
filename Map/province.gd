@@ -8,7 +8,7 @@ class_name Province
 @export var curr_owner: int = 0 # not sure what this should be, but could be an enum
 @export var potential_events: Array[MapEvent]
 @export var event_location: Vector2
-@export var TOOLTIP_TIME_DELAY: float = 1.0
+@export var TOOLTIP_TIME_DELAY: float = 0.75
 
 @export_group("Counters")
 @export var food_yield: float

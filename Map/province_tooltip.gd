@@ -22,10 +22,10 @@ func update_values():
 		
 		%Name.text = province.province_name
 		if province.get_curr_owner() != province.Owner.KING:
-			%Name.text = "[color=red]" + province.province_name + "[/color]"
+			%Name.text = "[color=#AD321F]" + province.province_name + "[/color]"
 			
-			%Food.text = "+0 Food [color=red](Revolted)[/color]"
-			%Gold.text = "+0 Gold [color=red](Revolted)[/color]"
+			%Food.text = "+0 Food [color=#AD321F](Revolted)[/color]"
+			%Gold.text = "+0 Gold [color=#AD321F](Revolted)[/color]"
 			
 			%Loyalty/Label.text = "Loyalty: 0%" 
 			%Loyalty.value = 0
@@ -33,10 +33,10 @@ func update_values():
 			%Fervor.value = 59
 			$PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/Label.hide()
 		else:
-			var format_string = "[color={color}]{0} {yield}[/color] ([color=#37472a]{1} Yield[/color], [color=red]{2} Consumption[/color])"
-			var food_string = format_string.format(["%+.f" % province.calculate_food(), "%+.f" % province.food_yield, "-%.f" % province.food_consumption, ["yield", "Food"], ["color", "#37472a" if province.calculate_food() >= 0 else "red"]])
+			var format_string = "[color={color}]{0} {yield}[/color] ([color=#37472a]{1} Yield[/color], [color=#AD321F]{2} Consumption[/color])"
+			var food_string = format_string.format(["%+.f" % province.calculate_food(), "%+.f" % province.food_yield, "-%.f" % province.food_consumption, ["yield", "Food"], ["color", "#37472a" if province.calculate_food() >= 0 else "#AD321F"]])
 			%Food.text = food_string
-			var gold_string = format_string.format(["%+.f" % province.calculate_gold(), "%+.f" % province.gold_yield, "-%.f" % province.gold_consumption, ["yield", "Gold"], ["color", "#37472a" if province.calculate_gold() >= 0 else "red"]])
+			var gold_string = format_string.format(["%+.f" % province.calculate_gold(), "%+.f" % province.gold_yield, "-%.f" % province.gold_consumption, ["yield", "Gold"], ["color", "#37472a" if province.calculate_gold() >= 0 else "#AD321F"]])
 			%Gold.text =  gold_string
 			
 			var loyaltyperc = str(province.loyalty * 2)
