@@ -12,4 +12,4 @@ var is_alive: bool = true:
 @export var has_quest: bool = false
 var quest_progress: int = 0:
 	set(change):
-		quest_progress += 1
+		quest_progress = change

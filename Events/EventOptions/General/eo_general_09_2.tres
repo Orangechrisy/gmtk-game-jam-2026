@@ -25,6 +25,6 @@ metadata/_custom_type_script = "uid://bh13srps2stqj"
 
 [resource]
 script = ExtResource("3_eqwp8")
-option_name = &"GENERAL_EVENT_09_OPTION_1_TITLE"
+option_name = &"GENERAL_EVENT_09_OPTION_2_TITLE"
 success_effects = Array[ExtResource("2_4u4dg")]([SubResource("Resource_xuhol"), SubResource("Resource_o1yfc"), SubResource("Resource_i3uiq")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

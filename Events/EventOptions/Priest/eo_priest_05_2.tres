@@ -12,7 +12,7 @@ metadata/_custom_type_script = "uid://88ckwkesx5tb"
 
 [resource]
 script = ExtResource("3_2ayd5")
-option_name = &"PRIEST_EVENT_05_OPTION_1_TITLE"
+option_name = &"PRIEST_EVENT_05_OPTION_2_TITLE"
 success_odds = 0.5
 success_effects = Array[ExtResource("2_165te")]([SubResource("Resource_g52gt")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

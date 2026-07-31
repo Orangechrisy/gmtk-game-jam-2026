@@ -7,7 +7,7 @@ class_name ECCharQuestLevel
 func evaluate() -> bool:
 	var character = GameState.get_character_by_name(char_name)
 	if character and character.has_quest:
-		return character.quest_progress == quest_level
+		return (character.quest_progress == quest_level)
 	return false
 
 func get_condition_desc() -> String:

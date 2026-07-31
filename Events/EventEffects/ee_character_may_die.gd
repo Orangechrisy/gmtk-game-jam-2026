@@ -15,4 +15,8 @@ func do_effect() -> void:
 		print("ERROR: Character name not found!!!")
 
 func get_effect_desc() -> String:
-	return "%s may die" % TextManager.get_text(char_name)
+	var char = GameState.get_character_by_name(char_name)
+	if char.is_alive:
+		return "%s may die" % TextManager.get_text(char_name)
+	else:
+		return "(character already dead)"
