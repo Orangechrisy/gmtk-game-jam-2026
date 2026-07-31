@@ -8,3 +8,6 @@ func evaluate() -> bool:
 	
 func get_condition_desc() -> String:
 	return "Noble Favor at least %f" % val
+
+func get_unavailable_desc() -> String:
+	return "No Noble Favor Remaining."

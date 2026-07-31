@@ -12,3 +12,6 @@ func evaluate() -> bool:
 
 func get_condition_desc() -> String:
 	return "%s likes you" % TextManager.get_text(char_name)
+
+func get_unavailable_desc() -> String:
+	return "%s dislikes you." % TextManager.get_text(char_name)

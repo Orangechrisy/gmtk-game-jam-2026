@@ -75,10 +75,10 @@ func create_buttons(options: Array[EventOption]) -> void:
 func set_button_placements(container: HBoxContainer, options: Array[EventOption], option_range: Vector2i, num_buttons: int) -> void:
 	for i in option_range:
 		var option = options[i]
-		if option.calculate_available():
-			var button = load("res://Events/EventOptions/event_option_button.tscn").instantiate()
-			button.set_values(option)
-			container.add_child(button)
+		var button = load("res://Events/EventOptions/event_option_button.tscn").instantiate()
+		button.unavailable = !option.calculate_available()
+		button.set_values(option)
+		container.add_child(button)
 	# idk why this needs to go up to the hbox, but otherwise it returns 0
 	var area_size = container.get_parent().get_parent().size.x
 	var button_size = container.get_child(0).get_combined_maximum_size().x

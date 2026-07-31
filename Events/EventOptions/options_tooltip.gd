@@ -3,9 +3,13 @@ extends Control
 @export var OFFSET: Vector2
 
 ## shows what would happen if selected
-func set_values(desc: StringName, success_outcome: Array[EventEffect], failure_outcome: Array[EventEffect]):
+func set_values(desc: StringName, success_outcome: Array[EventEffect], failure_outcome: Array[EventEffect], unavailable: bool):
 	%OptionDescription.text = desc
-	set_outcome_text(success_outcome, failure_outcome)
+	if !unavailable:
+		set_outcome_text(success_outcome, failure_outcome)
+	else:
+		%SuccessEffect.hide()
+		%FailureEffect.hide()
 
 ## makes the above a bit cleaner
 func set_outcome_text(successes: Array[EventEffect], failures: Array[EventEffect]):
@@ -21,6 +25,10 @@ func set_outcome_text(successes: Array[EventEffect], failures: Array[EventEffect
 	if failures.size() > 0:
 		%SuccessEffect.text = "On success: \n[color=#37472a]" + %SuccessEffect.text
 		%FailureEffect.text = "On failure: \n[color=red]" + %FailureEffect.text
+		%FailureEffect.show()
+	else:
+		%FailureEffect.hide()
+	%SuccessEffect.show()
 
 # tracks the mouse position
 func _process(_delta: float) -> void:

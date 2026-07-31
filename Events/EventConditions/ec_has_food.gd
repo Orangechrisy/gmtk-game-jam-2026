@@ -8,3 +8,6 @@ func evaluate() -> bool:
 
 func get_condition_desc() -> String:
 	return "Food at least %f" % val
+
+func get_unavailable_desc() -> String:
+	return "No Food Remaining."

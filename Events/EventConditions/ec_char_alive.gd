@@ -11,3 +11,6 @@ func evaluate() -> bool:
 
 func get_condition_desc() -> String:
 	return "%s is alive" % TextManager.get_text(char_name)
+
+func get_unavailable_desc() -> String:
+	return "%s is dead." % TextManager.get_text(char_name)

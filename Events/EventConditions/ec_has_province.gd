@@ -11,3 +11,6 @@ func evaluate() -> bool:
 
 func get_condition_desc() -> String:
 	return "Province of %s is loyal" % province_name
+
+func get_unavailable_desc() -> String:
+	return "Province of %s is revolting." % province_name

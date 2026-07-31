@@ -25,7 +25,16 @@ func calculate_available() -> bool:
 			return false
 	
 	return true
-	
+
+func get_failed_conditions() -> String:
+	var text: String = ""
+	for condition in conditions:
+		if not condition.evaluate():
+			if len(text) > 0:
+				text+="\n"
+			text += condition.get_unavailable_desc()
+	return text
+
 func calculate_success() -> void:
 	if success_odds == 1:
 		do_success_effects()
