@@ -578,12 +578,14 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Commoner Favor"
 fit_content = true
 autowrap_mode = 0
+horizontal_alignment = 1
 
 [node name="Base" type="RichTextLabel" parent="FavorTooltip/MarginContainer/VBoxContainer" unique_id=551725751]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.9019608, 0.32941177, 0, 1)
 text = "-1 Base"
 fit_content = true
+autowrap_mode = 0
 
 [node name="Events" type="RichTextLabel" parent="FavorTooltip/MarginContainer/VBoxContainer" unique_id=956471491]
 visible = false
@@ -591,6 +593,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.9912048, 0.21373615, 3.85046e-07, 1)
 text = "-1 Events"
 fit_content = true
+autowrap_mode = 0
 
 [node name="ProvincesLost" type="RichTextLabel" parent="FavorTooltip/MarginContainer/VBoxContainer" unique_id=104949617]
 visible = false
@@ -598,6 +601,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.9137255, 0, 0.101960786, 1)
 text = "-1 Provinces Lost"
 fit_content = true
+autowrap_mode = 0
 
 [node name="TooltipTimer" type="Timer" parent="FavorTooltip" unique_id=1475756438]
 wait_time = 0.5

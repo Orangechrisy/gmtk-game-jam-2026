@@ -188,7 +188,6 @@ func _on_noble_favor_hover_mouse_exited() -> void:
 
 func _on_tooltip_timer_timeout() -> void:
 	favor_tooltip_tween = create_tween()
-	print("timer finished, show")
 	favor_tooltip_tween.tween_property($FavorTooltip, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
 
 
