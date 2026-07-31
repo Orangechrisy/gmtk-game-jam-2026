@@ -23,7 +23,7 @@ metadata/_custom_type_script = "uid://33udxalqbbjk"
 
 [sub_resource type="Resource" id="Resource_nlc1t"]
 script = ExtResource("4_44k3a")
-favor_change = 2
+favor_change = 3
 metadata/_custom_type_script = "uid://cixtddcjgh6op"
 
 [resource]

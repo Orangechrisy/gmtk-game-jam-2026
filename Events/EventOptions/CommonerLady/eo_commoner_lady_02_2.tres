@@ -3,13 +3,13 @@
 [ext_resource type="Script" uid="uid://5jgxt4qdei0u" path="res://Events/event_condition.gd" id="1_nsyyn"]
 [ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_orfwv"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_bcyld"]
-[ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="4_g41o7"]
+[ext_resource type="Script" uid="uid://bgkgevvrd87qr" path="res://Events/EventEffects/ee_change_province_fervor_loss.gd" id="4_g41o7"]
 [ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="7_gpqvd"]
 
-[sub_resource type="Resource" id="Resource_v03vf"]
+[sub_resource type="Resource" id="Resource_5h726"]
 script = ExtResource("4_g41o7")
-fervor_change = 2
-metadata/_custom_type_script = "uid://cal8op6buuvb6"
+fervor_change = 1
+metadata/_custom_type_script = "uid://bgkgevvrd87qr"
 
 [sub_resource type="Resource" id="Resource_ssoe8"]
 script = ExtResource("7_gpqvd")
@@ -19,5 +19,5 @@ metadata/_custom_type_script = "uid://lb70iqf47cna"
 [resource]
 script = ExtResource("4_bcyld")
 option_name = &"COMMONER_LADY_EVENT_02_OPTION_2_TITLE"
-success_effects = Array[ExtResource("3_orfwv")]([SubResource("Resource_v03vf"), SubResource("Resource_ssoe8")])
+success_effects = Array[ExtResource("3_orfwv")]([SubResource("Resource_5h726"), SubResource("Resource_ssoe8")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

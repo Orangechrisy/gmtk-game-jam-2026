@@ -13,6 +13,6 @@ metadata/_custom_type_script = "uid://bgkgevvrd87qr"
 [resource]
 script = ExtResource("3_a6bn8")
 option_name = &"MODERATE_EVENT_04_OPTION_3_TITLE"
-success_odds = 0.5
+success_odds = 0.4
 failure_effects = Array[ExtResource("2_4c143")]([SubResource("Resource_ucuyw")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

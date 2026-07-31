@@ -8,7 +8,7 @@
 
 [sub_resource type="Resource" id="Resource_app28"]
 script = ExtResource("3_ab6x1")
-fervor_change = 1
+fervor_change = 2
 metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
 [sub_resource type="Resource" id="Resource_lokss"]
@@ -18,7 +18,7 @@ metadata/_custom_type_script = "uid://u81kgotj4jti"
 
 [sub_resource type="Resource" id="Resource_obout"]
 script = ExtResource("3_ab6x1")
-fervor_change = 1
+fervor_change = 2
 metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
 [resource]

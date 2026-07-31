@@ -16,12 +16,12 @@ metadata/_custom_type_script = "uid://rxidys118nij"
 
 [sub_resource type="Resource" id="Resource_yacsh"]
 script = ExtResource("3_jf0cu")
-val = 2
+val = 3
 metadata/_custom_type_script = "uid://bi67gb5c67xmd"
 
 [sub_resource type="Resource" id="Resource_adiyb"]
 script = ExtResource("6_xxitq")
-food_change = -2
+food_change = -3
 metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
 
 [sub_resource type="Resource" id="Resource_6wgp8"]

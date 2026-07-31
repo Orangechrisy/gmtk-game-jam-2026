@@ -19,7 +19,7 @@ metadata/_custom_type_script = "uid://skdjmxp8agwp"
 
 [sub_resource type="Resource" id="Resource_ebaxg"]
 script = ExtResource("6_sfxkm")
-loyalty_change = 2
+loyalty_change = 3
 metadata/_custom_type_script = "uid://2k5y8ducn717"
 
 [resource]

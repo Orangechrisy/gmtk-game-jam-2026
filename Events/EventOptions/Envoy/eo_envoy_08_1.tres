@@ -9,7 +9,7 @@
 
 [sub_resource type="Resource" id="Resource_7bn4d"]
 script = ExtResource("4_cegkp")
-gold_change = 8
+gold_change = 10
 metadata/_custom_type_script = "uid://u81kgotj4jti"
 
 [sub_resource type="Resource" id="Resource_wofcx"]
@@ -19,7 +19,7 @@ metadata/_custom_type_script = "uid://88ckwkesx5tb"
 
 [sub_resource type="Resource" id="Resource_axpam"]
 script = ExtResource("6_7bn4d")
-fervor_change = 2
+fervor_change = 3
 metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
 [resource]

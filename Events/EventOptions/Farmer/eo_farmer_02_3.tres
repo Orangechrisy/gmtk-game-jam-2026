@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="4_agnt0"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_o1bax"]
 [ext_resource type="Script" uid="uid://cal8op6buuvb6" path="res://Events/EventEffects/ee_change_province_fervor.gd" id="5_e73d2"]
+[ext_resource type="Script" uid="uid://cf4bc85w0hnct" path="res://Events/EventEffects/ee_change_province_food.gd" id="6_e73d2"]
 
 [sub_resource type="Resource" id="Resource_kxphk"]
 script = ExtResource("4_agnt0")
@@ -13,11 +14,16 @@ metadata/_custom_type_script = "uid://cixtddcjgh6op"
 
 [sub_resource type="Resource" id="Resource_pm5ma"]
 script = ExtResource("5_e73d2")
-fervor_change = 1
+fervor_change = 2
 metadata/_custom_type_script = "uid://cal8op6buuvb6"
+
+[sub_resource type="Resource" id="Resource_weocf"]
+script = ExtResource("6_e73d2")
+food_change = -1
+metadata/_custom_type_script = "uid://cf4bc85w0hnct"
 
 [resource]
 script = ExtResource("4_o1bax")
 option_name = &"FARMER_EVENT_02_OPTION_3_TITLE"
-success_effects = Array[ExtResource("3_okjob")]([SubResource("Resource_kxphk"), SubResource("Resource_pm5ma")])
+success_effects = Array[ExtResource("3_okjob")]([SubResource("Resource_kxphk"), SubResource("Resource_pm5ma"), SubResource("Resource_weocf")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

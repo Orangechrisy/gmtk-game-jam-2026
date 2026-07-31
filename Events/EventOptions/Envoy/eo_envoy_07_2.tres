@@ -7,7 +7,7 @@
 
 [sub_resource type="Resource" id="Resource_yx7xs"]
 script = ExtResource("4_vv57b")
-loyalty_change = 5
+loyalty_change = 7
 metadata/_custom_type_script = "uid://2k5y8ducn717"
 
 [resource]

@@ -13,12 +13,12 @@
 
 [sub_resource type="Resource" id="Resource_lohpp"]
 script = ExtResource("2_kyh4u")
-val = 1
+val = 2
 metadata/_custom_type_script = "uid://rxidys118nij"
 
 [sub_resource type="Resource" id="Resource_kbg2p"]
 script = ExtResource("3_gl7mq")
-val = 1
+val = 2
 metadata/_custom_type_script = "uid://bi67gb5c67xmd"
 
 [sub_resource type="Resource" id="Resource_pm34t"]
@@ -28,12 +28,12 @@ metadata/_custom_type_script = "uid://cc4k7bh7u82el"
 
 [sub_resource type="Resource" id="Resource_6wgp8"]
 script = ExtResource("5_gl7mq")
-gold_change = -1
+gold_change = -2
 metadata/_custom_type_script = "uid://u81kgotj4jti"
 
 [sub_resource type="Resource" id="Resource_tmt58"]
 script = ExtResource("8_kbg2p")
-food_change = -1
+food_change = -2
 metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
 
 [sub_resource type="Resource" id="Resource_donks"]

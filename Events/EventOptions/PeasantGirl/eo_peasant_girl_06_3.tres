@@ -20,7 +20,7 @@ metadata/_custom_type_script = "uid://cixtddcjgh6op"
 
 [sub_resource type="Resource" id="Resource_bs3pi"]
 script = ExtResource("6_omg7y")
-favor_change = -2
+favor_change = -3
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_ur0hs"]
