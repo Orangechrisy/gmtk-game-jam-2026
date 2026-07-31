@@ -132,28 +132,19 @@ func get_days_to_revolution() -> int:
 
 func set_days_to_revolution(val: int) -> void:
 	days_to_revolution = val
+	if days_to_revolution < 0:
+		days_to_revolution = 0
 	days_to_revolution_updated.emit(days_to_revolution)
 	
 func reduce_days_to_revolution(val: int) -> void:
 	days_to_revolution -= val
+	if days_to_revolution < 0:
+		days_to_revolution = 0
 	days_to_revolution_updated.emit(days_to_revolution)
 
 func reset_days_to_revolution() -> void:
 	days_to_revolution = base_days_to_revolution
 	days_to_revolution_updated.emit(days_to_revolution)
-
-## Sets Food, Gold, and Days to Revolution to 0 after all end-of-day calculations
-func stop_negative_resources() -> void:
-	if gold < 0:
-		gold = 0
-		gold_updated.emit()
-	
-	if food < 0:
-		food = 0
-		food_updated.emit()
-	
-	if days_to_revolution < 0:
-		days_to_revolution = 0
 
 # Gold
 
@@ -162,10 +153,14 @@ func get_gold() -> int:
 
 func set_gold(val: int) -> void:
 	gold = val
+	if gold < 0:
+		gold = 0
 	gold_updated.emit(gold)
 
 func change_gold(val: int) -> void:
 	gold += val
+	if gold < 0:
+		gold = 0
 	gold_updated.emit(gold)
 
 # Food
@@ -175,10 +170,14 @@ func get_food() -> int:
 
 func set_food(val: int) -> void:
 	food = val
+	if food < 0:
+		food = 0
 	food_updated.emit(food)
 
 func change_food(val: int) -> void:
 	food += val
+	if food < 0:
+		food = 0
 	food_updated.emit(food)
 	
 # Common Sentiment

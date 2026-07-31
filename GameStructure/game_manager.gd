@@ -30,14 +30,8 @@ func end_day() -> void:
 	
 	# Update Food/Gold stores
 	calculate_food()
-	if GameState.get_food() <= 0:
-		print("Out of Food!")
-		GameState.set_food(0)
 	
 	calculate_gold()
-	if GameState.get_gold() <= 0:
-		print("Out of Gold!")
-		GameState.set_gold(0)
 	
 	GameState.reset_armies_left()
 	
@@ -49,9 +43,6 @@ func end_day() -> void:
 	calculate_noble_favor()
 	
 	reduce_days_to_revolution()
-	
-	# Handle negative values after all calculations complete
-	GameState.stop_negative_resources()
 	
 	handle_loss_effects()
 	
@@ -74,16 +65,21 @@ func check_for_events() -> void:
 
 ## calculate_food: Calculates new Food total based on output/consumption of each province
 func calculate_food() -> void:
+	var food_change: int = 0
 	for province in GameState.provinces:
 		if province.get_curr_owner() == province.Owner.KING:
-			GameState.change_food(province.calculate_food())
-		
+			food_change += province.calculate_food()
+	
+	GameState.change_food(food_change)
 			
 ## calculate_gold: Calculates new Gold total based on output/consumption of each province
 func calculate_gold() -> void:
+	var gold_change: int = 0
 	for province in GameState.provinces:
 		if province.get_curr_owner() == province.Owner.KING:
-			GameState.change_gold(province.calculate_gold())
+			gold_change += province.calculate_gold()
+	
+	GameState.change_gold(gold_change)
 
 ## calculate_fervor: Calculate fervor updates in all provinces
 func calculate_fervor() -> void:
