@@ -10,7 +10,7 @@
 
 [sub_resource type="Resource" id="Resource_awj3b"]
 script = ExtResource("5_jf7fc")
-favor_change = 1
+favor_change = 2
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_jjcx8"]
@@ -24,7 +24,7 @@ metadata/_custom_type_script = "uid://vkkxn3ufe2qd"
 
 [sub_resource type="Resource" id="Resource_meopn"]
 script = ExtResource("5_jf7fc")
-favor_change = 1
+favor_change = 2
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_cqdsu"]

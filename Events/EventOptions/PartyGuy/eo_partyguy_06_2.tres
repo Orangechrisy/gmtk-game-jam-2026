@@ -5,19 +5,24 @@
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_c705d"]
 [ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="4_p20km"]
 [ext_resource type="Script" uid="uid://2k5y8ducn717" path="res://Events/EventEffects/ee_change_province_loyalty.gd" id="5_ht1r5"]
+[ext_resource type="Script" uid="uid://dfyrltt3u20qj" path="res://Events/EventEffects/ee_no_armies_allowed.gd" id="6_43a2s"]
 
 [sub_resource type="Resource" id="Resource_jm8w4"]
 script = ExtResource("4_p20km")
-favor_change = -2
+favor_change = -3
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_04ol2"]
 script = ExtResource("5_ht1r5")
-loyalty_change = 2
+loyalty_change = 4
 metadata/_custom_type_script = "uid://2k5y8ducn717"
+
+[sub_resource type="Resource" id="Resource_iud1u"]
+script = ExtResource("6_43a2s")
+metadata/_custom_type_script = "uid://dfyrltt3u20qj"
 
 [resource]
 script = ExtResource("3_c705d")
 option_name = &"PARTYGUY_EVENT_06_OPTION_2_TITLE"
-success_effects = Array[ExtResource("2_maome")]([SubResource("Resource_jm8w4"), SubResource("Resource_04ol2")])
+success_effects = Array[ExtResource("2_maome")]([SubResource("Resource_jm8w4"), SubResource("Resource_04ol2"), SubResource("Resource_iud1u")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

@@ -9,7 +9,7 @@
 
 [sub_resource type="Resource" id="Resource_p54kh"]
 script = ExtResource("2_3yh3h")
-val = 1
+val = 2
 metadata/_custom_type_script = "uid://rxidys118nij"
 
 [sub_resource type="Resource" id="Resource_4fqoa"]
@@ -19,7 +19,7 @@ metadata/_custom_type_script = "uid://2k5y8ducn717"
 
 [sub_resource type="Resource" id="Resource_axqok"]
 script = ExtResource("6_ry8o2")
-gold_change = -1
+gold_change = -2
 metadata/_custom_type_script = "uid://u81kgotj4jti"
 
 [resource]

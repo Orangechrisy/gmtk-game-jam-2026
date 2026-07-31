@@ -537,7 +537,7 @@
 	"en": "If we let this stand, our finances will suffer."
   },
   "DUCHESS_EVENT_03_OPTION_1_TITLE": {
-	"en": "Unacceptable. We will force their prices down."
+	"en": "We will force their prices down."
   },
   "DUCHESS_EVENT_03_OPTION_1_DESC": {
 	"en": "[p]Results:[/p][p][color=green]+2 Noble Favor[/color][/p][p][color=red]Chance to kill Envoy[/p][p]+2 Fervor[/color][/p]"
@@ -1560,7 +1560,7 @@
 	"en": "I need more support to hold them off, and quickly!"
   },
   "BARON_EVENT_01_OPTION_1_TITLE": {
-	"en": "Reinforcements are on the way."
+	"en": "Help is on the way."
   },
   "BARON_EVENT_01_OPTION_1_DESC": {
 	"en": "Results: +2 Loyalty, -1 Army"
@@ -2262,7 +2262,7 @@
 	"en": "Do not shield them from justice. Make them pay for their crimes."
   },
   "REBEL_LEADER_EVENT_03_OPTION_1_TITLE": {
-	"en": "I agree, their actions are unacceptable."
+	"en": "I agree, their actions must be punished."
   },
   "REBEL_LEADER_EVENT_03_OPTION_1_DESC": {
 	"en": "Results: -3 Noble Favor, +2 Common Favor, chance for Aristocrat to die, chance for Party Guy to die"

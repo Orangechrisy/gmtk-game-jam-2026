@@ -18,6 +18,7 @@ func _ready() -> void:
 	GameState.connect("common_sentiment_updated", on_common_sentiment_updated)
 	GameState.connect("noble_sentiment_updated", on_noble_sentiment_updated)
 	GameState.connect("armies_left_updated", on_armies_left_updated)
+	GameState.connect("tutorial_next_step", tutorial_next_step)
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
@@ -83,9 +84,11 @@ func _on_place_army_button_pressed() -> void:
 		MusicManager.play_sfx(MusicManager.SFX.CLICKINVALID)
 		return
 	play_click()
-	if GameState.MouseMode == GameState.Click.BASIC:
+	if (GameState.MouseMode == GameState.Click.BASIC) or tutorial_can_use_army:
+		if tutorial_can_use_army:
+			GameState.tutorial_next_step.emit(9)
 		GameState.MouseMode = GameState.Click.ARMY_PLACEMENT
-	elif GameState.MouseMode == GameState.Click.ARMY_PLACEMENT:
+	elif (GameState.MouseMode == GameState.Click.ARMY_PLACEMENT):
 		GameState.MouseMode = GameState.Click.BASIC
 
 ## adjust end day button visibility (val = true means there is an active event)
@@ -203,3 +206,14 @@ func _on_gold_hover_mouse_entered() -> void:
 
 func _on_gold_hover_mouse_exited() -> void:
 	pass # Replace with function body.
+
+
+#tutorial
+var tutorial_can_use_army: bool = false
+func tutorial_next_step(step: int):
+	if step==8:
+		tutorial_can_use_army=true
+		set_mouse_behavior_recursive(MOUSE_BEHAVIOR_INHERITED)
+	else:
+		tutorial_can_use_army=false
+		set_mouse_behavior_recursive(MOUSE_BEHAVIOR_DISABLED)

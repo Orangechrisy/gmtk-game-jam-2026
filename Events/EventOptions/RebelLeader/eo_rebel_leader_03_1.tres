@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="4_b6s7d"]
 [ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_lh01f"]
 [ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="6_qcdrv"]
+[ext_resource type="Script" uid="uid://33udxalqbbjk" path="res://Events/EventEffects/ee_change_noble_favor_loss.gd" id="7_3ammt"]
 
 [sub_resource type="Resource" id="Resource_b4yde"]
 script = ExtResource("4_b6s7d")
@@ -14,7 +15,7 @@ metadata/_custom_type_script = "uid://cixtddcjgh6op"
 
 [sub_resource type="Resource" id="Resource_c26uk"]
 script = ExtResource("5_lh01f")
-favor_change = -3
+favor_change = -2
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_0xpfr"]
@@ -29,8 +30,13 @@ char_name = &"CHAR_ARISTOCRAT"
 chance = 30
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
+[sub_resource type="Resource" id="Resource_6mqho"]
+script = ExtResource("7_3ammt")
+favor_change = -1
+metadata/_custom_type_script = "uid://33udxalqbbjk"
+
 [resource]
 script = ExtResource("3_qc5pc")
 option_name = &"REBEL_LEADER_EVENT_03_OPTION_1_TITLE"
-success_effects = Array[ExtResource("2_0211i")]([SubResource("Resource_b4yde"), SubResource("Resource_c26uk"), SubResource("Resource_0xpfr"), SubResource("Resource_y00x6")])
+success_effects = Array[ExtResource("2_0211i")]([SubResource("Resource_b4yde"), SubResource("Resource_c26uk"), SubResource("Resource_0xpfr"), SubResource("Resource_y00x6"), SubResource("Resource_6mqho")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

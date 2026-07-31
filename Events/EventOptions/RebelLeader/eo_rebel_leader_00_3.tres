@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="2_747q3"]
 [ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_kx0x6"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="3_lujbw"]
-[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="4_kx0x6"]
+[ext_resource type="Script" uid="uid://dygrqqsytu8ac" path="res://Events/EventEffects/ee_change_common_favor_loss.gd" id="4_0i3a4"]
 [ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="6_0i3a4"]
 [ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="7_vtk3t"]
 [ext_resource type="Script" uid="uid://c1ok7bn8ayury" path="res://Events/EventEffects/ee_stall_revolt.gd" id="8_0i3a4"]
@@ -14,10 +14,10 @@ script = ExtResource("2_kx0x6")
 val = 1
 metadata/_custom_type_script = "uid://cc4k7bh7u82el"
 
-[sub_resource type="Resource" id="Resource_kx0x6"]
-script = ExtResource("4_kx0x6")
-favor_change = -3
-metadata/_custom_type_script = "uid://cixtddcjgh6op"
+[sub_resource type="Resource" id="Resource_rx0eg"]
+script = ExtResource("4_0i3a4")
+favor_change = -1
+metadata/_custom_type_script = "uid://dygrqqsytu8ac"
 
 [sub_resource type="Resource" id="Resource_dyuwc"]
 script = ExtResource("6_0i3a4")
@@ -30,10 +30,10 @@ char_name = &"CHAR_REBEL_LEADER"
 chance = 30
 metadata/_custom_type_script = "uid://bh13srps2stqj"
 
-[sub_resource type="Resource" id="Resource_agchg"]
-script = ExtResource("4_kx0x6")
-favor_change = -3
-metadata/_custom_type_script = "uid://cixtddcjgh6op"
+[sub_resource type="Resource" id="Resource_ihwgc"]
+script = ExtResource("4_0i3a4")
+favor_change = -1
+metadata/_custom_type_script = "uid://dygrqqsytu8ac"
 
 [sub_resource type="Resource" id="Resource_vtk3t"]
 script = ExtResource("6_0i3a4")
@@ -55,6 +55,6 @@ script = ExtResource("3_lujbw")
 option_name = &"REBEL_LEADER_EVENT_00_OPTION_3_TITLE"
 conditions = Array[ExtResource("1_u4q0k")]([SubResource("Resource_0i3a4")])
 success_odds = 0.5
-success_effects = Array[ExtResource("2_747q3")]([SubResource("Resource_agchg"), SubResource("Resource_vtk3t"), SubResource("Resource_xuju6"), SubResource("Resource_2i1aa")])
-failure_effects = Array[ExtResource("2_747q3")]([SubResource("Resource_kx0x6"), SubResource("Resource_dyuwc"), SubResource("Resource_oj18s")])
+success_effects = Array[ExtResource("2_747q3")]([SubResource("Resource_ihwgc"), SubResource("Resource_vtk3t"), SubResource("Resource_xuju6"), SubResource("Resource_2i1aa")])
+failure_effects = Array[ExtResource("2_747q3")]([SubResource("Resource_rx0eg"), SubResource("Resource_dyuwc"), SubResource("Resource_oj18s")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

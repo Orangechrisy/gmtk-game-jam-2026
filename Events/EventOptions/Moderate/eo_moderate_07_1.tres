@@ -20,7 +20,7 @@ metadata/_custom_type_script = "uid://skdjmxp8agwp"
 
 [sub_resource type="Resource" id="Resource_amwxm"]
 script = ExtResource("5_2y77d")
-fervor_change = 1
+fervor_change = 2
 metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
 [sub_resource type="Resource" id="Resource_lqq6l"]

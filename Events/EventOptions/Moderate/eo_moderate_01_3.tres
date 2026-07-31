@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://cc4k7bh7u82el" path="res://Events/EventConditions/ec_has_armies.gd" id="2_7jnm7"]
 [ext_resource type="Script" uid="uid://bmlhq4tab5dw0" path="res://Events/event_effect.gd" id="3_ix2a7"]
 [ext_resource type="Script" uid="uid://db3u1h61ikpph" path="res://Events/event_option.gd" id="4_tpo2h"]
+[ext_resource type="Script" uid="uid://dygrqqsytu8ac" path="res://Events/EventEffects/ee_change_common_favor_loss.gd" id="5_7jnm7"]
 [ext_resource type="Script" uid="uid://lb70iqf47cna" path="res://Events/EventEffects/ee_change_noble_favor.gd" id="5_22di3"]
-[ext_resource type="Script" uid="uid://cixtddcjgh6op" path="res://Events/EventEffects/ee_change_common_favor.gd" id="6_fqaua"]
 [ext_resource type="Script" uid="uid://skdjmxp8agwp" path="res://Events/EventEffects/ee_change_armies_left.gd" id="7_1lghv"]
 [ext_resource type="Script" uid="uid://bh13srps2stqj" path="res://Events/EventEffects/ee_character_may_die.gd" id="8_llg64"]
 [ext_resource type="Script" uid="uid://c1ok7bn8ayury" path="res://Events/EventEffects/ee_stall_revolt.gd" id="9_7jnm7"]
@@ -17,13 +17,13 @@ metadata/_custom_type_script = "uid://cc4k7bh7u82el"
 
 [sub_resource type="Resource" id="Resource_ix2a7"]
 script = ExtResource("5_22di3")
-favor_change = 1
+favor_change = 2
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
-[sub_resource type="Resource" id="Resource_tpo2h"]
-script = ExtResource("6_fqaua")
-favor_change = -3
-metadata/_custom_type_script = "uid://cixtddcjgh6op"
+[sub_resource type="Resource" id="Resource_lpe6t"]
+script = ExtResource("5_7jnm7")
+favor_change = -1
+metadata/_custom_type_script = "uid://dygrqqsytu8ac"
 
 [sub_resource type="Resource" id="Resource_22di3"]
 script = ExtResource("7_1lghv")
@@ -38,13 +38,13 @@ metadata/_custom_type_script = "uid://bh13srps2stqj"
 
 [sub_resource type="Resource" id="Resource_dls5w"]
 script = ExtResource("5_22di3")
-favor_change = 1
+favor_change = 2
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
-[sub_resource type="Resource" id="Resource_uimwu"]
-script = ExtResource("6_fqaua")
-favor_change = -3
-metadata/_custom_type_script = "uid://cixtddcjgh6op"
+[sub_resource type="Resource" id="Resource_qgx3k"]
+script = ExtResource("5_7jnm7")
+favor_change = -1
+metadata/_custom_type_script = "uid://dygrqqsytu8ac"
 
 [sub_resource type="Resource" id="Resource_yumhk"]
 script = ExtResource("7_1lghv")
@@ -65,6 +65,6 @@ metadata/_custom_type_script = "uid://c1ok7bn8ayury"
 script = ExtResource("4_tpo2h")
 option_name = &"MODERATE_EVENT_01_OPTION_3_TITLE"
 conditions = Array[ExtResource("1_d1qrj")]([SubResource("Resource_a1r88")])
-success_effects = Array[ExtResource("3_ix2a7")]([SubResource("Resource_dls5w"), SubResource("Resource_uimwu"), SubResource("Resource_yumhk"), SubResource("Resource_h4314"), SubResource("Resource_v4uhb")])
-failure_effects = Array[ExtResource("3_ix2a7")]([SubResource("Resource_ix2a7"), SubResource("Resource_tpo2h"), SubResource("Resource_22di3"), SubResource("Resource_fqaua")])
+success_effects = Array[ExtResource("3_ix2a7")]([SubResource("Resource_dls5w"), SubResource("Resource_qgx3k"), SubResource("Resource_yumhk"), SubResource("Resource_h4314"), SubResource("Resource_v4uhb")])
+failure_effects = Array[ExtResource("3_ix2a7")]([SubResource("Resource_ix2a7"), SubResource("Resource_lpe6t"), SubResource("Resource_22di3"), SubResource("Resource_fqaua")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

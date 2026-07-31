@@ -14,12 +14,12 @@ metadata/_custom_type_script = "uid://bsfdc1pc8iyve"
 
 [sub_resource type="Resource" id="Resource_3altg"]
 script = ExtResource("5_weocf")
-favor_change = 2
+favor_change = 3
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_i2rea"]
 script = ExtResource("6_qjfun")
-fervor_change = 1
+fervor_change = 2
 metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
 [resource]

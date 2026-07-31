@@ -7,7 +7,7 @@
 
 [sub_resource type="Resource" id="Resource_4ij44"]
 script = ExtResource("4_mu3t2")
-fervor_change = 2
+fervor_change = 3
 metadata/_custom_type_script = "uid://cal8op6buuvb6"
 
 [resource]

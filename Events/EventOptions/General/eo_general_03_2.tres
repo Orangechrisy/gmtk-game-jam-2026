@@ -8,7 +8,7 @@
 
 [sub_resource type="Resource" id="Resource_soo5k"]
 script = ExtResource("7_s82go")
-gold_change = -1
+gold_change = -3
 metadata/_custom_type_script = "uid://u81kgotj4jti"
 
 [sub_resource type="Resource" id="Resource_mrs5g"]

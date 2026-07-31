@@ -18,13 +18,13 @@ metadata/_custom_type_script = "uid://cixtddcjgh6op"
 
 [sub_resource type="Resource" id="Resource_w3ops"]
 script = ExtResource("9_didss")
-loyalty_change = 1
+loyalty_change = 3
 metadata/_custom_type_script = "uid://2k5y8ducn717"
 
 [resource]
 script = ExtResource("8_cd2h6")
 option_name = &"SPYMASTER_EVENT_05_OPTION_2_TITLE"
-success_odds = 0.6
+success_odds = 0.5
 success_effects = Array[ExtResource("3_jdeci")]([SubResource("Resource_w3ops")])
 failure_effects = Array[ExtResource("3_jdeci")]([SubResource("Resource_y106r"), SubResource("Resource_niq5d")])
 metadata/_custom_type_script = "uid://db3u1h61ikpph"

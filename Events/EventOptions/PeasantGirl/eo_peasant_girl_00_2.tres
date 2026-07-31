@@ -22,12 +22,12 @@ metadata/_custom_type_script = "uid://rxidys118nij"
 
 [sub_resource type="Resource" id="Resource_jqfqg"]
 script = ExtResource("6_4vtnn")
-favor_change = 2
+favor_change = 3
 metadata/_custom_type_script = "uid://cixtddcjgh6op"
 
 [sub_resource type="Resource" id="Resource_4vtnn"]
 script = ExtResource("7_ireus")
-favor_change = -2
+favor_change = -3
 metadata/_custom_type_script = "uid://lb70iqf47cna"
 
 [sub_resource type="Resource" id="Resource_ireus"]
