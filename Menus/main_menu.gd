@@ -1,6 +1,7 @@
 extends Control
 
-
+@export var web: bool = false
+var first_play: bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$EndingsContainer.hide()
@@ -37,6 +38,9 @@ func show_tutorial():
 		$MainMainMenu/TutorialButton.show()
 
 func _on_start_game_button_pressed() -> void:
+	if web and first_play:
+		SaveData.save_data("TutorialCompleted", false)
+		first_play=false
 	play_click()
 	GameManager.reset()
 	GameManager.roll_events()
