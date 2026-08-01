@@ -11,6 +11,8 @@ func reset() -> void:
 	GameState._reset()
 	for province in GameState.provinces:
 		province._reset()
+	
+	MusicManager._reset()
 
 ## TODO idk what we might want here
 func quit_to_menu() -> void:

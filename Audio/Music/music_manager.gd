@@ -21,8 +21,13 @@ func _ready() -> void:
 	
 	_reset()
 
-#stopping music
 func _reset():
+	for track_name in tracks_playing:
+		tracks_playing[track_name] = false
+	start_base_track()
+
+#stopping music
+func stop_music():
 	var nodes: Array = [$MainTheme, $OtherMusic]
 	for parentnode in nodes:
 		for track in parentnode.get_children():
@@ -38,14 +43,14 @@ func _reset():
 enum ENDINGTYPE { BAD, GOOD }
 
 func play_ending_song(ending_type: int = ENDINGTYPE.BAD):
-	_reset()
+	stop_music()
 	await get_tree().create_timer(1.0,false).timeout
 	$OtherMusic.get_child(ending_type).play()
 
 #Base Track
 func start_base_track():
 	if not $"MainTheme/Capital (Base)".playing:
-		_reset()
+		stop_music()
 		await get_tree().create_timer(1.0,false).timeout
 		$MainTheme/"Capital (Base)".play()
 
