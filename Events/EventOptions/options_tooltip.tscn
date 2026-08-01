@@ -19,11 +19,12 @@ script = ExtResource("1_adssf")
 OFFSET = Vector2(10, -5)
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1806888856]
+custom_minimum_size = Vector2(130, 0)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -169.0
+offset_top = -76.0
 offset_right = 130.0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_m61pn")
@@ -55,6 +56,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
+text = "desc"
 fit_content = true
 
 [node name="SuccessEffect" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=296027316]
@@ -63,6 +65,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
+text = "succ"
 fit_content = true
 
 [node name="FailureEffect" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1908653324]
@@ -71,4 +74,5 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
+text = "fail"
 fit_content = true

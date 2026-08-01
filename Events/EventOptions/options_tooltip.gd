@@ -16,19 +16,23 @@ func set_outcome_text(successes: Array[EventEffect], failures: Array[EventEffect
 	%SuccessEffect.text = ""
 	%FailureEffect.text = ""
 	
-	for succ in successes:
-		%SuccessEffect.text += succ.get_effect_desc() + '\n'
 	if successes.size() == 0:
 		%SuccessEffect.text += "Nothing happens"
+	else:
+		for succ in successes:
+			%SuccessEffect.text += succ.get_effect_desc() + '\n'
+	%SuccessEffect.text.trim_suffix("\n")
 	for fail in failures:
 		%FailureEffect.text += fail.get_effect_desc() + '\n'
+	%FailureEffect.text.trim_suffix("\n")
 	if failures.size() > 0:
 		%SuccessEffect.text = "On success: \n[color=#37472a]" + %SuccessEffect.text
-		%FailureEffect.text = "On failure: \n[color=red]" + %FailureEffect.text
+		%FailureEffect.text = "On failure: \n[color=#AD321F]" + %FailureEffect.text
 		%FailureEffect.show()
 	else:
 		%FailureEffect.hide()
 	%SuccessEffect.show()
+	%SuccessEffect.get_parent().size = %SuccessEffect.get_minimum_size()
 
 # tracks the mouse position
 func _process(_delta: float) -> void:
