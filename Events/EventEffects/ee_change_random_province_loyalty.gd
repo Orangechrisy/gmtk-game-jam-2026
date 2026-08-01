@@ -10,4 +10,9 @@ func do_effect() -> void:
 	GameManager.add_to_results_popup("%+.f Loyalty in %s" % [loyalty_change, selected_province.province_name])
 
 func get_effect_desc() -> String:
-	return "%+.f Loyalty in Random Province" % loyalty_change
+	var color: String
+	if loyalty_change > 0:
+		color = "[color=#517633]"
+	else:
+		color = "[color=#AD321F]"
+	return color+"%+.f Loyalty in Random Province" % loyalty_change

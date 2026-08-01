@@ -13,4 +13,4 @@ func do_effect() -> void:
 		print("ERROR: Character name not found!!!")
 
 func get_effect_desc() -> String:
-	return "%s dies" % TextManager.get_text(char_name)
+	return "[color=#5a0000]%s dies[/color]" % TextManager.get_text(char_name)

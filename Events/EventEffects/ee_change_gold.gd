@@ -9,4 +9,9 @@ func do_effect() -> void:
 	GameManager.add_to_results_popup("%+.f Gold" % gold_change)
 
 func get_effect_desc() -> String:
-	return "%+.f Gold" % gold_change
+	var color: String
+	if gold_change > 0:
+		color = "[color=#517633]"
+	else:
+		color = "[color=#AD321F]"
+	return color+"%+.f Gold[/color]" % gold_change

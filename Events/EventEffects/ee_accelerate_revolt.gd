@@ -7,4 +7,4 @@ func do_effect() -> void:
 	GameState.days_to_revolution_updated.emit(GameState.days_to_revolution-1)
 
 func get_effect_desc() -> String:
-	return "Accelerate Revolution by 1 Day"
+	return "[color=#AD321F]Accelerate Revolution by 1 Day[/color]"

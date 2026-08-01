@@ -128,7 +128,7 @@ func next_step():
 			var arrowpos: Vector2 = Vector2(792.0, 267.0)
 			show_arrow("Up", arrowpos)
 		3: #COMMONER
-			var text: String = "This the Favor of the Commoners in your Empire.\nIf your Commoner Favor reaches 0, this could spell trouble for your empire."
+			var text: String = "This the Favor of the Commoners in your Empire.\nIf your Commoner Favor reaches 0, the people will start growing restless."
 			var textpos: Vector2 = Vector2(247.0, 668.0)
 			show_text(text, textpos)
 			var buttonpos: Vector2 = Vector2(742.0, 894.0)
@@ -194,8 +194,8 @@ func next_step():
 			if !text_showing:
 				step=8
 				return
-			var text: String = "Now, click on a province.\nThis will block Fervor gain this turn, and it will block Fervor gain from any Events that happen at the start of the day."
-			var textpos: Vector2 = Vector2(194.0, 364.0)
+			var text: String = "Now, click on a province.\nThis will block Fervor gain this turn.\n It will also block Fervor gain from any Events that happen at the start of the day."
+			var textpos: Vector2 = Vector2(194.0, 330.0)
 			show_text(text, textpos)
 			var blockoutpos: Vector2 = Vector2(743.0, 694.0)
 			show_blockout(blockoutpos)

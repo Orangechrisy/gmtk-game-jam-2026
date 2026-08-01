@@ -7,4 +7,4 @@ func do_effect() -> void:
 	GameManager.add_to_results_popup("Cannot place Armies in %s" % GameState.get_current_province())
 
 func get_effect_desc() -> String:
-	return "Armies banned in %s" % GameState.get_current_province()
+	return "[color=#AD321F]Armies banned in %s[/color]" % GameState.get_current_province()

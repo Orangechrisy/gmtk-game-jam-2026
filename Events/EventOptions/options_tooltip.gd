@@ -26,8 +26,8 @@ func set_outcome_text(successes: Array[EventEffect], failures: Array[EventEffect
 		%FailureEffect.text += fail.get_effect_desc() + '\n'
 	%FailureEffect.text.trim_suffix("\n")
 	if failures.size() > 0:
-		%SuccessEffect.text = "On success: \n[color=#37472a]" + %SuccessEffect.text
-		%FailureEffect.text = "On failure: \n[color=#AD321F]" + %FailureEffect.text
+		%SuccessEffect.text = "[font_size=30][u]On success:[/u][/font_size] \n[color=#517633]" + %SuccessEffect.text
+		%FailureEffect.text = "\n[font_size=30][u]On failure:[/u][/font_size] \n[color=AD321F]" + %FailureEffect.text
 		%FailureEffect.show()
 	else:
 		%FailureEffect.hide()

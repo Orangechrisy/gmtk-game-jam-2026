@@ -9,4 +9,9 @@ func do_effect() -> void:
 	GameManager.add_to_results_popup("%+.f Armies" % armies_change)
 
 func get_effect_desc() -> String:
-	return "%+.f Armies" % armies_change
+	var color: String
+	if armies_change > 0:
+		color = "[color=#517633]"
+	else:
+		color = "[color=#AD321F]"
+	return color+"%+.f Armies[/color]" % armies_change

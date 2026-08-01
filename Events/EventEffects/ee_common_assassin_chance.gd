@@ -12,4 +12,4 @@ func do_effect() -> void:
 			GameManager.end_game(GameState.Ending.COMMON_ASSASSIN)
 
 func get_effect_desc() -> String:
-	return "Chance of Assassination if Common Favor is below %.f" % favor_threshold
+	return "[color=#5a0000]Chance of Assassination if Common Favor is below %.f[/color]" % favor_threshold

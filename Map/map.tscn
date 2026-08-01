@@ -334,6 +334,7 @@ loyalty = 25
 fervor = 10
 
 [node name="ResultsPopup" parent="." unique_id=1138084959 instance=ExtResource("175_v03vf")]
+z_index = 3
 position = Vector2(964, 559)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1264009811]

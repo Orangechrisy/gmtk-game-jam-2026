@@ -101,7 +101,7 @@ bus = &"SFX"
 
 [node name="ClickInvalid" type="AudioStreamPlayer" parent="SFX" unique_id=838130123]
 stream = ExtResource("14_63cj8")
-volume_db = -3.0
+volume_db = -5.0
 bus = &"SFX"
 
 [node name="MouseOver" type="AudioStreamPlayer" parent="SFX" unique_id=1786285962]
