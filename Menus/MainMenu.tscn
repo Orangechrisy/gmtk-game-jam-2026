@@ -72,6 +72,18 @@ offset_bottom = 675.0
 theme = ExtResource("2_5ncg0")
 text = "Tutorial"
 
+[node name="Label" type="Label" parent="MainMainMenu" unique_id=834146928]
+layout_mode = 0
+offset_left = 1699.0
+offset_top = 908.0
+offset_right = 1885.0
+offset_bottom = 959.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 40
+text = "Version 2.1"
+horizontal_alignment = 1
+
 [node name="OptionsMenu" parent="." unique_id=806118121 instance=ExtResource("2_lbqne")]
 visible = false
 
